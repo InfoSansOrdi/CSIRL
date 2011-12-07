@@ -1,0 +1,330 @@
+\def\raggedright{}
+\documentclass[final,hyperref={pdfpagelabels=false}]{beamer}
+%\usepackage{grffile}
+%\mode<presentation>{\usetheme{I6dv}}
+\usepackage[french]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+\usepackage{amsmath,amsthm, amssymb, latexsym}
+\usepackage{figlatex}
+\usepackage{multicol}
+\usepackage{tikz,url}
+%\usepackage{times}\usefonttheme{professionalfonts}  % obsolete
+%\usefonttheme[onlymath]{serif}
+\boldmath
+%\usepackage[orientation=portrait,size=custom,height=20cm,width=20cm,debug]{beamerposter}
+%\usepackage[orientation=portrait,size=custom,debug]{beamerposter}
+% change list indention level
+% \setdefaultleftmargin{3em}{}{}{}{}{}
+\definecolor{orange1}{rgb}{0.988,0.686,0.243}
+\definecolor{orange2}{rgb}{0.961,0.475,0.000}
+\definecolor{orange3}{rgb}{0.808,0.361,0.000}
+
+% Work around a bug in beamer?
+% http://tex.stackexchange.com/questions/4436/beamer-undefined-control-sequence
+\providecommand\thispdfpagelabel[1]{}
+
+\setlength{\paperwidth}{20cm}
+\setlength{\paperheight}{20cm}
+\setlength{\textwidth}{18cm}
+\setlength{\textheight}{18cm}
+\edef\fontscale{0.5}    % fontscale=(1/sqrt(2))^3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fp}
+\edef\myfontscale{1.0}
+%% normalize scale depending on poster size
+\FPupn{\myfontscale}{myfontscale fontscale * 2 round}
+%% scalable vector fonts
+\edef\fontSizeX{12}\edef\fontSizeY{14}
+\FPupn{\resulttinyX}{myfontscale fontSizeX * 2 round}
+\FPupn{\resulttinyY}{myfontscale fontSizeY * 2 round}
+\renewcommand*{\tiny}{\fontsize{\resulttinyX}{\resulttinyY}\selectfont}
+
+\edef\fontSizeX{14.4}\edef\fontSizeY{18}   
+\FPupn{\resultscriptsizeX}{myfontscale fontSizeX * 2 round}
+\FPupn{\resultscriptsizeY}{myfontscale fontSizeY * 2 round}
+\renewcommand*{\scriptsize}{\fontsize{\resultscriptsizeX}{\resultscriptsizeY}\selectfont}
+
+\edef\fontSizeX{17.28}\edef\fontSizeY{22}
+\FPupn{\resultfootnotesizeX}{myfontscale fontSizeX * 2 round}
+\FPupn{\resultfootnotesizeY}{myfontscale fontSizeY * 2 round}
+\renewcommand*{\footnotesize}{\fontsize{\resultfootnotesizeX}{\resultfootnotesizeY}\selectfont}
+
+\edef\fontSizeX{20.74}\edef\fontSizeY{25}
+\FPupn{\resultsmallX}{myfontscale fontSizeX * 2 round}
+\FPupn{\resultsmallY}{myfontscale fontSizeY * 2 round}
+\renewcommand*{\small}{\fontsize{\resultsmallX}{\resultsmallY}\selectfont}
+
+\edef\fontSizeX{24.88}\edef\fontSizeY{30}
+\FPupn{\resultnormalsizeX}{myfontscale fontSizeX * 2 round}
+\FPupn{\resultnormalsizeY}{myfontscale fontSizeY * 2 round}
+\renewcommand*{\normalsize}{\fontsize{\resultnormalsizeX}{\resultnormalsizeY}\selectfont}
+
+\edef\fontSizeX{29.86}\edef\fontSizeY{37}
+\FPupn{\resultlargeX}{myfontscale fontSizeX * 2 round}
+\FPupn{\resultlargeY}{myfontscale fontSizeY * 2 round}
+\renewcommand*{\large}{\fontsize{\resultlargeX}{\resultlargeY}\selectfont}
+
+\edef\fontSizeX{35.83}\edef\fontSizeY{45}
+\FPupn{\resultLargeX}{myfontscale fontSizeX * 2 round}
+\FPupn{\resultLargeY}{myfontscale fontSizeY * 2 round}
+\renewcommand*{\Large}{\fontsize{\resultLargeX}{\resultLargeY}\selectfont}
+
+\edef\fontSizeX{43}\edef\fontSizeY{54}
+\FPupn{\resultLARGEX}{myfontscale fontSizeX * 2 round}
+\FPupn{\resultLARGEY}{myfontscale fontSizeY * 2 round}
+\renewcommand*{\LARGE}{\fontsize{\resultLARGEX}{\resultLARGEY}\selectfont}
+
+\edef\fontSizeX{51.6}\edef\fontSizeY{64}
+\FPupn{\resulthugeX}{myfontscale fontSizeX * 2 round}
+\FPupn{\resulthugeY}{myfontscale fontSizeY * 2 round}
+\renewcommand*{\huge}{\fontsize{\resulthugeX}{\resulthugeY}\selectfont}
+
+\edef\fontSizeX{61.92}\edef\fontSizeY{77}
+\FPupn{\resultHugeX}{myfontscale fontSizeX * 2 round}
+\FPupn{\resultHugeY}{myfontscale fontSizeY * 2 round}
+\renewcommand*{\Huge}{\fontsize{\resultHugeX}{\resultHugeY}\selectfont}
+
+\edef\fontSizeX{74.3}\edef\fontSizeY{93}
+\FPupn{\resultveryHugeX}{myfontscale fontSizeX * 2 round}
+\FPupn{\resultveryHugeY}{myfontscale fontSizeY * 2 round}
+\newcommand*{\veryHuge}{\fontsize{\resultveryHugeX}{\resultveryHugeY}\selectfont}
+
+\edef\fontSizeX{89.16}\edef\fontSizeY{112}
+\FPupn{\resultVeryHugeX}{myfontscale fontSizeX * 2 round}
+\FPupn{\resultVeryHugeY}{myfontscale fontSizeY * 2 round}
+\newcommand*{\VeryHuge}{\fontsize{\resultVeryHugeX}{\resultVeryHugeY}\selectfont}
+
+\edef\fontSizeX{107}\edef\fontSizeY{134}
+\FPupn{\resultVERYHugeX}{myfontscale fontSizeX * 2 round}
+\FPupn{\resultVERYHugeY}{myfontscale fontSizeY * 2 round}
+\newcommand*{\VERYHuge}{\fontsize{\resultVERYHugeX}{\resultVERYHugeY}\selectfont}
+
+% set the normalfont (default)
+\renewcommand*{\normalfont}{\normalsize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%
+%%% No navigation, thanks
+%%%
+\usenavigationsymbolstemplate{}
+
+%\beamertemplategridbackground[1cm]
+
+%\usepackage{snapshot} % will write a .dep file with all dependencies, allows for easy bundling
+
+\usepackage{array,booktabs,tabularx}
+\newcolumntype{Z}{>{\centering\arraybackslash}X} % centered tabularx columns
+\newcommand{\pphantom}{\textcolor{ta3aluminium}} % phantom introduces a vertical space in p formatted table columns??!!
+
+\listfiles
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\graphicspath{{figures/}}
+
+\begin{document}
+\begin{frame}{}
+
+  \begin{center}
+    \structure{\Huge CS IRL}
+
+    \medskip
+    \structure{\large Computer Science In Real Life}
+
+    \bigskip
+    \includegraphics[width=.7\linewidth]{img/Hamiltonian_path.pdf}
+    \rotatebox{90}{\tiny\url{http://en.wikipedia.org/wiki/File:Hamiltonian_path.svg}
+      (CC-BY-SA)}
+  \end{center}
+  
+  \bigskip
+  \bigskip
+  {\hfill\small\url{http://wiki.nybi.cc/index.php/CSIRL}~~}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Computer Science IRL -- Informatique sans ordinateur\\[-5pt]
+  {\large Séance Algorithmique}}
+  % Contrairement à ce que beaucoup de monde pense, les ordinateurs ne sont pas
+  % la seule raison d'être de l'informatique. Pour preuve, ce projet développe
+  % diverses activités à faire avec des pions, des jetons ou des bouts de bois,
+  % mais sans aucun ordinateur et même sans électricité. Pourtant, ces petits
+  % jeux permettront à chacun de découvrir de manière ludique les notions au c\oe
+  % ur de l'informatique: ce qu'est un algorithme et qu'est ce qui fait qu'un
+  % algorithme est meilleur qu'un autre, ou encore comment coder et transmettre
+  % une information.
+
+
+  \begin{block}{CS IRL? Qu'est ce que c'est?}
+    \begin{itemize}
+    \item Une série d'activités présentant les bases de l'informatique, mais
+      sans ordinateur
+    \item Pour chaque activité, un support matériel est proposé pour permettre
+      d'\textit{apprendre avec les mains}
+    \item C'est un projet libre, que vous pouvez télécharger, améliorer et
+      diffuser librement
+    \end{itemize}
+  \end{block}\vspace{-.5\baselineskip}
+
+  \begin{block}{Objectif de cette séance}
+    \begin{itemize}
+    \item Expliquer ce qu'est un algorithme et à quoi ça sert quand on veut
+      utiliser un ordinateur
+    \item Montrer un aspect du travail d'un informaticien, et de celui d'un
+      chercheur en informatique
+    \end{itemize}
+  \end{block}\vspace{-.5\baselineskip}
+
+  \begin{block}{Matériel nécessaire pour cette séance}
+    \begin{itemize}
+    \item Des clous, dont un coloré
+    \item Des petites planches de tailles différentes
+    \item Des legos: cinq couleurs, avec à chaque fois deux pièces $2\times2$ et une
+      pièce $4\times2$
+    \item Une planche avec des clous plantés (mais qui dépassent); Une cordelette et un marqueur
+    \end{itemize}
+  \end{block}\vspace{.5\baselineskip}
+
+  \begin{block}{Introduction: les principales caractéristiques d'un ordinateur}
+    \begin{itemize}
+    \item \structure{Il est très \alert{rapide}:} il peut calculer de 1 à 1
+      million en moins d'une seconde
+    \item \structure{Il est très \alert{obéissant}:} il fait tout ce qu'on lui demande
+    \item \structure{Il est absolument \alert{stupide}:} il exécute les
+      ordres qu'on lui donne, sans la moindre capacité d'initiative.\\
+      Par exemple, si on lui demande de s'arrêter, il le fait.
+    \end{itemize}
+  \end{block}\vspace{-.5\baselineskip}
+
+  \begin{block}{Le travail d'un informaticien}
+    \begin{itemize}
+    \item Se faire obéir d'un serviteur aussi stupide qu'un tas de fil demande
+      un peu d'organisation
+    \item Pour décomposer suffisamment les tâches à réaliser, il réfléchit à
+      \textbf{comment} faire\\
+      {\small (un peu comme un cycliste qui descendrait du vélo pour se regarder
+        pédaler pour expliquer ensuite comment faire)}
+    \item Pour chaque problème, il faut d'abord définir:
+      \begin{itemize}
+      \item \structure{la situation initiale:} le point de départ du problème
+      \item \structure{les opérations possibles:} ce que j'ai le droit de faire pour faire
+        évoluer la situation
+      \item \structure{la situation finale:} ce vers quoi je veux tendre, l'état
+        du problème quand je l'ai résolu
+      \end{itemize}
+    \end{itemize}
+  \end{block}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Activité: le jeu de Nim}
+
+  \begin{block}{Matériel}
+    \begin{itemize}
+    \item 15 clous identiques
+    \item 1 clou différencié (ou une vis)
+    \end{itemize}
+  \end{block}
+  
+  \begin{block}{Règle du jeu}
+    \begin{itemize}
+    \item Chaque joueur prend tour à tour entre 1 et 3 clous
+    \item Celui qui prend le dernier clou a gagné
+    \end{itemize}
+  \end{block}
+
+  \bigskip\bigskip
+  \centerline{\includegraphics[height=20\baselineskip]{img/Pyramidal_matches.pdf}
+  %
+  \rotatebox{90}{\tiny\url{http://fr.wikipedia.org/wiki/Fichier:Pyramidal_matches.svg}
+    (CC-BY-SA)}} 
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Ce qu'il faut retenir du jeu de Nim}
+
+  \begin{block}{L'intérêt majeur de ce jeu est qu'il est sans suspense}
+    \begin{itemize}
+    \item Celui qui commence gagne, car il existe un truc pour gagner à tous
+      les coups
+    \item \structure{Stratégie gagnante:} Laisser 4, 8 ou 12 clous à
+      l'adversaire (un multiple de 4)
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{Variante du jeu de Nim}
+    \begin{itemize}
+    \item Le dernier clou est empoisonné, et celui qui le prend a perdu
+    \item Dans ce cas, il faut laisser 1, 5, 9, 13 clous à l'adversaire (1
+      modulo 4)
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{Le rapport avec l'informatique}
+    \begin{itemize}
+    \item Passer de la situation initiale à la situation finale à coup sûr demande d'avoir
+      une \textit{stratégie gagnante}
+    \item C'est un \alert{\textbf{algorithme}} en informatique, une recette de
+      cuisine ou un manuel de montage de meubles
+    \item Pour se faire obéir du tas de fils, l'informaticien cherche
+      l'algorithme pour résoudre le problème,\\
+      puis il écrit le \alert{\textbf{programme}} (traduction de l'algorithme
+      dans un langage informatique)
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{Pour aller plus loin}
+    \begin{itemize}
+    \item Présenter d'autres variantes, et un mot de l'historique
+    \end{itemize}
+  \end{block}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Activité: Le crêpier psycho-rigide}
+  
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Ce qu'il faut retenir du  crêpier psycho-rigide}
+  
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Le coin de l'animateur}
+  \begin{block}{Remarques générales}
+    \begin{itemize}
+    \item Il faut vous approprier les activités. N'hésitez pas à ne pas suivre
+      les consignes à la lettre, l'important est que cela vous plaise.
+    \end{itemize}
+  \end{block}
+  \begin{block}{À propos du jeu de Nim}
+    \begin{itemize}
+    \item L'objectif de cette activité est simplement d'introduire la notion d'algorithme
+    \item On propose le jeu avec le participant, mais sans dire trop vite qu'on
+      a un truc
+    \item Il faut bien sûr laisser commencer le participant pour gagner à coup
+      sûr. S'il insiste pour ne pas commencer, on peut le faire (et rattraper
+      la stratégie gagnante à la première erreur du participant)
+    \item On n'introduit l'existence du truc pour gagner que plus tard, quand
+      on gagne à plate couture
+    \item Attention, il faut parvenir à compter les clous discrètement\ldots
+    \item On peut amener le participant à découvrir la stratégie gagnante en
+      groupant les clous par paquets de 4 au lieu de la disposition pyramidale.
+    \item Si l'un des participants connaît déjà la stratégie gagnante du jeu,
+      il peut remplacer l'animateur dans une partie avec d'autres participants
+    \end{itemize}    
+  \end{block}
+\end{frame}
+\end{document}
