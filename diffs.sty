@@ -1,0 +1,61 @@
+%% Informations générales
+\NeedsTeXFormat{LaTeX2e}[1999/01/01]
+\ProvidesPackage{diffs}[2003/01/01]
+
+\RequirePackage{color}
+\RequirePackage{ulem}
+\RequirePackage{xspace}
+\normalem
+
+\newif\if@final \@finalfalse
+\newif\if@french \@frenchfalse
+\DeclareOption{final}{\@finaltrue}
+\DeclareOption{french}{\@frenchtrue}
+\DeclareOption{francais}{\@frenchtrue}
+\DeclareOption*{}%% Ne rien faire quand une option est inconnue
+\ProcessOptions
+
+\newcommand{\kw@replacedby}{ [replaced by] }
+\renewcommand{\kw@replacedby}{}
+
+\if@french
+  \renewcommand{\kw@replacedby}{remplac\'e par}
+\fi
+
+\if@final
+  \newcommand{\addText}[3]{\ifhmode \@bsphack \@esphack \fi
+    #3
+    \ifhmode \@bsphack \@esphack \fi}
+  \newcommand{\removeText}[3]{\ifhmode \@bsphack \@esphack \fi}
+  \newcommand{\changeText}[4]{\ifhmode \@bsphack \@esphack \fi
+    #4% % added by XC to avoid unwanted space on final version
+    \ifhmode \@bsphack \@esphack \fi}
+  \newcommand{\fixme}[1]{\ifhmode \@bsphack \@esphack \fi}
+  \newcommand{\l@fixme}{\@dottedtocline{0}{0pt}{0pt}}
+  \newcommand{\listoffix}{\ifhmode \@bsphack \@esphack \fi}
+\else
+  \newcommand{\addText}[3]{
+    \textcolor{#2}{$<$#1$>$ #3 $<$#1$>$}
+  }
+  \newcommand{\removeText}[3]{
+    \textcolor{#2}{$<$#1$>$ \sout{#3} $<$#1$>$}
+  }
+  \newcommand{\changeText}[4]{
+    \textcolor{#2}{$<$#1$>$ \sout{#3}\kw@replacedby #4 $<$#1$>$}
+  }
+  \newcommand{\fixme}[1]{\textcolor{red}{[\textsc{fixme: }#1]} % Une commande pour mettre 
+    \addcontentsline{fix}{fixme}{#1}}                          % en valeur les choses à retoucher.
+  \newcommand{\l@fixme}{\@dottedtocline{0}{0pt}{0pt}}          % affichage des fix-me dans
+  \newcommand{\listoffix}{                                     % une table spéciale invoquée
+    \@starttoc{fix}}                                           % grâce à \listoffix
+\fi
+
+                                % Arguments : Nom d'utilisateur / Nom affiché / couleur
+\newcommand{\declareuser}[3]{
+  \expandafter\def\csname add#1\endcsname##1{\addText{#2}{#3}{##1}}%\addText{#2}{#3}}
+  \expandafter\def\csname remove#1\endcsname##1{\removeText{#2}{#3}{##1}}%\addText{#2}{#3}}
+  \expandafter\def\csname change#1\endcsname##1##2{\changeText{#2}{#3}{##1}{##2}}%\addText{#2}{#3}}
+}
+
+\newcommand{\Omit}[1]{\ifhmode \@bsphack \@esphack \fi}
+
