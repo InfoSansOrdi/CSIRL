@@ -1,4 +1,4 @@
-%% Informations gÈnÈrales
+%% Informations g√©n√©rales
 \NeedsTeXFormat{LaTeX2e}[1999/01/01]
 \ProvidesPackage{diffs}[2003/01/01]
 
@@ -44,13 +44,13 @@
     \textcolor{#2}{$<$#1$>$ \sout{#3}\kw@replacedby #4 $<$#1$>$}
   }
   \newcommand{\fixme}[1]{\textcolor{red}{[\textsc{fixme: }#1]} % Une commande pour mettre 
-    \addcontentsline{fix}{fixme}{#1}}                          % en valeur les choses ‡ retoucher.
+    \addcontentsline{fix}{fixme}{#1}}                          % en valeur les choses √† retoucher.
   \newcommand{\l@fixme}{\@dottedtocline{0}{0pt}{0pt}}          % affichage des fix-me dans
-  \newcommand{\listoffix}{                                     % une table spÈciale invoquÈe
-    \@starttoc{fix}}                                           % gr‚ce ‡ \listoffix
+  \newcommand{\listoffix}{                                     % une table sp√©ciale invoqu√©e
+    \@starttoc{fix}}                                           % gr√¢ce √† \listoffix
 \fi
 
-                                % Arguments : Nom d'utilisateur / Nom affichÈ / couleur
+                                % Arguments : Nom d'utilisateur / Nom affich√© / couleur
 \newcommand{\declareuser}[3]{
   \expandafter\def\csname add#1\endcsname##1{\addText{#2}{#3}{##1}}%\addText{#2}{#3}}
   \expandafter\def\csname remove#1\endcsname##1{\removeText{#2}{#3}{##1}}%\addText{#2}{#3}}
