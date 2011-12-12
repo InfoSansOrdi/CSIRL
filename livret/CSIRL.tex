@@ -7,7 +7,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{ae,aecompl}
 \usepackage{amsmath,amsthm, amssymb, latexsym}
-\usepackage{figlatex}
+%\usepackage{figlatex}
 \usepackage{multicol}
 \usepackage{tikz,url}
 %\usepackage{times}\usefonttheme{professionalfonts}  % obsolete
@@ -435,11 +435,51 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Activité: Le crêpier psycho-rigide}
+ 
+  \begin{block}{Matériel}
+    \begin{itemize}
+    \item des planchettes en bois de tailles et de couleurs différentes (faces reconnaissables)
+    \item éventuellement une pelle à tarte pour retourner les planchettes
+    \end{itemize}
+  \end{block}
   
+  \begin{block}{Règle du jeu}
+    \begin{itemize}
+    \item Le crêpier doit ranger ses crêpes de la plus grande à la plus petite,
+      face colorée vers le haut
+    \item il peut retourner une ou plusieurs crêpes à la fois
+    \item l'odre des crêpes ne peut pas être modifié au moment de retouner
+      une pile
+    \end{itemize}
+  \end{block}
+
+%  mettre une illustration ici ?
+  
+
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Ce qu'il faut retenir du  crêpier psycho-rigide}
-  
+
+  \begin{block}{Un algorithme}
+    \begin{itemize}
+    \item n'a d'intérêt que si on peut l'expliquer
+    \item doit être suffisamment simple pour pouvoir l'expliquer à une machine
+    \item on essaie toujours de décomposer un algorithme en tâches simples
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{L'algorithme que doit suivre le crêpier est :}
+    \begin{itemize}
+    \item ramener la plus grande crêpe en haut de la pile
+    \item retourner pour que la face brûlée soit vers le haut
+    \item retourner la pile de sorte à mettre la plus grande crêpe en bas
+    \item réitérer avec la crêpe de taille inférieure
+    \end{itemize}
+  \end{block}
+
+
+
+
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
