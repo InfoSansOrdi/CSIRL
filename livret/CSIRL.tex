@@ -291,7 +291,7 @@
 \end{frame}
 
 
-%\newcommand{\clou}[2]{\draw[#2] #1 -- (++.4,++0) -- (++.2,++0) -- (++.2,++.6);}
+\newcommand{\clou}[2]{\draw[#2] #1 -- +(.4,0) -- +(.2,0) -- +(.2,.5);}
 \begin{frame}{Ce qu'il faut retenir du jeu de Nim}
 
   \begin{block}{L'intérêt majeur de ce jeu est qu'il est sans suspense}
@@ -304,23 +304,118 @@
   \end{block}
 
   \begin{block}{Se convaincre de l'efficacité de la stratégie gagnante}
+    Prenons le dernier coup comme exemple.
     \begin{itemize}
-    \item Prenons le dernier coup comme exemple:
-%      \begin{tikzpicture}
-%        \clou{(.5,1)}{draw=red}
-%         \clou{(0,0)}{draw=black}
-% % 
-%       \end{tikzpicture}
+    \item Si le joueur dont c'est le tour prend 1 clou, son adversaire en prend
+      3 et gagne
+    \item Si le joueur dont c'est le tour prend 2 clous, son adversaire en
+      prend 2 et gagne
+    \item Si le joueur dont c'est le tour prend 3 clous, son adversaire en
+      prend 1 et gagne 
     \end{itemize}
+    Quoi qu'il fasse, le joueur dont c'est le tour a donc perdu si son
+    adversaire sait jouer.
   \end{block}
 
-  \begin{block}{Variante du jeu de Nim}
-    \begin{itemize}
-    \item Le dernier clou est empoisonné, et celui qui le prend a perdu
-    \item Dans ce cas, il faut laisser 1, 5, 9, 13 clous à l'adversaire (1
-      modulo 4)
-    \end{itemize}
-  \end{block}
+  \begin{center}
+    \begin{tabular}{|c|cccc|c|}\hline
+      \structure{Situation au dernier tour}
+      &
+      \multicolumn{4}{c|}{\structure{Évolutions possibles}}&
+      \structure{Situation après}
+      \\
+      &\alert{Joueur 1}&1 clou&2 clous&3 clous&\\\cline{2-5}
+      &\structure{Joueur 2}&3 clous&2 clous&1 clou&\\\hline
+      Reste 4 clous:
+      \begin{tikzpicture}[baseline=\baselineskip]
+        \clou{(.5,.6)}{draw=black}
+        \clou{(0,0)}{draw=black}
+        \clou{(.5,0)}{draw=black}
+        \clou{(1,0)}{draw=black}
+      \end{tikzpicture}
+      &&
+      \begin{tikzpicture}[baseline=\baselineskip]
+        \clou{(.5,.6)}{draw=blue}
+        \clou{(0,0)}{draw=blue}
+        \clou{(.5,0)}{draw=blue}
+        \clou{(1,0)}{draw=red}
+      \end{tikzpicture} &
+      \begin{tikzpicture}[baseline=\baselineskip]
+        \clou{(.5,.6)}{draw=blue}
+        \clou{(0,0)}{draw=blue}
+        \clou{(.5,0)}{draw=red}
+        \clou{(1,0)}{draw=red}
+      \end{tikzpicture} & 
+      \begin{tikzpicture}[baseline=\baselineskip]
+        \clou{(.5,.6)}{draw=blue}
+        \clou{(0,0)}{draw=red}
+        \clou{(.5,0)}{draw=red}
+        \clou{(1,0)}{draw=red}
+      \end{tikzpicture}
+      &Joueur 2 gagne
+      \\\hline
+    \end{tabular}
+  \end{center}
+
+  Et le joueur 2 peut faire en sorte qu'on arrive toujours dans cette situation
+  depuis le coup précédent:
+  \begin{center}
+    \begin{tabular}{|c|cccc|c|}\hline
+      \structure{Situation au tour d'avant}
+      &
+      \multicolumn{4}{c|}{\structure{Évolutions possibles}}
+      &\structure{Situation après}
+      \\
+      &\alert{Joueur 1}&1 clou&2 clous&3 clous&\\\cline{2-5}
+      &\structure{Joueur 2}&3 clous&2 clous&1 clou&\\\hline
+      Reste 8 clous:
+      \begin{tikzpicture}[baseline=\baselineskip]
+        \clou{(.5,.6)}{draw=black}
+        \clou{(0,0)}{draw=black}
+        \clou{(.5,0)}{draw=black}
+        \clou{(1,0)}{draw=black}
+        \clou{(-.5,-.6)}{draw=black}
+        \clou{(0,-.6)}{draw=black}
+        \clou{(.5,-.6)}{draw=black}
+        \clou{(1,-.6)}{draw=black}
+      \end{tikzpicture}
+      &&
+      \begin{tikzpicture}[baseline=\baselineskip]
+        \clou{(.5,.6)}{draw=black}
+        \clou{(0,0)}{draw=black}
+        \clou{(.5,0)}{draw=black}
+        \clou{(1,0)}{draw=black}
+        \clou{(-.5,-.6)}{draw=blue}
+        \clou{(0,-.6)}{draw=blue}
+        \clou{(.5,-.6)}{draw=blue}
+        \clou{(1,-.6)}{draw=red}
+      \end{tikzpicture} &
+      \begin{tikzpicture}[baseline=\baselineskip]
+        \clou{(.5,.6)}{draw=black}
+        \clou{(0,0)}{draw=black}
+        \clou{(.5,0)}{draw=black}
+        \clou{(1,0)}{draw=black}
+        \clou{(-.5,-.6)}{draw=blue}
+        \clou{(0,-.6)}{draw=blue}
+        \clou{(.5,-.6)}{draw=red}
+        \clou{(1,-.6)}{draw=red}
+      \end{tikzpicture} & 
+      \begin{tikzpicture}[baseline=\baselineskip]
+        \clou{(.5,.6)}{draw=black}
+        \clou{(0,0)}{draw=black}
+        \clou{(.5,0)}{draw=black}
+        \clou{(1,0)}{draw=black}
+        \clou{(-.5,-.6)}{draw=blue}
+        \clou{(0,-.6)}{draw=red}
+        \clou{(.5,-.6)}{draw=red}
+        \clou{(1,-.6)}{draw=red}
+      \end{tikzpicture}
+      &Reste 4 clous
+      \\\hline
+    \end{tabular}
+  \end{center}
+  Et ainsi de suite
+  
 
   \begin{block}{Le rapport avec l'informatique}
     \begin{itemize}
@@ -332,12 +427,6 @@
       l'algorithme pour résoudre le problème,\\
       puis il écrit le \alert{\textbf{programme}} (traduction de l'algorithme
       dans un langage informatique)
-    \end{itemize}
-  \end{block}
-
-  \begin{block}{Pour aller plus loin}
-    \begin{itemize}
-    \item Présenter d'autres variantes, et un mot de l'historique
     \end{itemize}
   \end{block}
 \end{frame}
