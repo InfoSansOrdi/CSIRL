@@ -491,22 +491,46 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\maisonQuatre}[3]{  \begin{tikzpicture}
+\newcommand{\maisonQuatre}[2]{  \begin{tikzpicture}
     \node[name=m,shape=regular polygon,regular polygon sides=4,inner sep=.7cm]{};
     \node[name=b,shape=regular polygon,regular polygon sides=12,inner sep=.6cm,rotate=15]{};
-    \foreach \base/\maison in {#1} {
+    \foreach \base/\maison in {1/A,2/B,3/C,4/D} {
       \draw[shift=(m.corner \base)] 
-         node[shape=ellipse,fill=\maison,draw=black,rotate=90*(\base-1)-45] {~~~~};
+         node[shape=ellipse,fill=\maison,draw=black,rotate=90*(\base-1)-45]
+        {~~~~};
+%         {\maison};
     }
-    \foreach \base/\maison in {#2} {
+    \foreach \base/\maison in {#1} {
       \draw[shift=(b.corner \base)] 
          node[name=bb \base,shape=circle,fill=\maison,draw=\maison,inner sep=.1] 
          {~~~}; % Comment this, and uncomment next to get debug mode
 %         {\base};
     }
-    #3
+    #2
   \end{tikzpicture}
 }
+\newcommand{\maisonCinq}[2]{  \begin{tikzpicture}
+    \node[name=m,shape=regular polygon,regular polygon sides=5,inner sep=.7cm]{};
+    \node[name=b,shape=regular polygon,regular polygon sides=20,inner sep=.57cm]{};
+    \foreach \base/\maison in {1/A,2/B,3/C,4/D,5/E} {
+      \draw[shift=(m.corner \base)] 
+         node[shape=ellipse,fill=\maison,draw=black,rotate=72*(\base-1)] {~~~~};
+    }
+    \foreach \base/\maison in {#1} {
+      \draw[shift=(b.corner \base)] 
+         node[shape=circle,fill=\maison,draw=\maison,inner sep=.1] 
+         {~~~};
+%         {\footnotesize\base};
+    }
+    #2
+  \end{tikzpicture}
+}
+\colorlet{A}{green!60}
+\colorlet{B}{red!60}
+\colorlet{C}{purple!40}
+\colorlet{D}{orange!80}
+\colorlet{E}{blue!80}
+\colorlet{Z}{white}
 
 \begin{frame}{Activité: Base-ball multicolor}
   \begin{block}{Matériel nécessaire}
@@ -521,84 +545,77 @@
     \end{itemize}
   \end{block}
 
-  \begin{block}{Règles du jeu}
+  \begin{block}{Règles du jeu à quatre équipes}
     \begin{itemize}
-    \item On place 4 maisons autour du terrain, et on réparti 7 bonshommes au
+    \item \structure{Situation initiale:}~\\
+      On place 4 maisons autour du terrain, et on réparti 7 bonshommes au
       hasard dans les maisons\\
      (il manque donc l'un des bonshommes, qui est mis de coté et ne sera
       pas utilisé)
-    \item L'objectif est de ramener tous les bonshommes dans leur maison.
-    \item 
+    \item \structure{Coups autorisés:}
+      \begin{itemize}\normalsize
+      \item On peut déplacer un seul bonhomme à la fois, d'une maison vers une
+        maison adjacente\\
+        $\leadsto$ il est interdit de traverser le terrain
+      \item On ne peut jamais avoir plus de 2 bonshommes par maison\\
+        $\leadsto$ on ne peut bouger que d'une maison adjacente vers la maison
+        où il y a un trou
+      \end{itemize}
+    \item  \structure{Situation finale:}
+      L'objectif est de ramener tous les bonshommes dans la maison de leur couleur.
     \end{itemize}
   \end{block}
 
+%  \bigskip
   \begin{columns}
-    \begin{column}{.25\linewidth}
-\maisonQuatre{1/red,2/green,3/purple!30,4/yellow}
-             {1/white,2/red,3/green,
-               4/white,5/yellow,6/white,
-               7/white,8/red,9/purple!30,
-               10/white,11/yellow,12/green}
-             {
-             }
+    \begin{column}{.17\linewidth}
+      \maisonQuatre{2/B,3/A, 5/D,6/Z, 8/B,9/C, 11/D,12/A} {}
 
-\structure{Situation initiale}      
+      \structure{Situation initiale}      
     \end{column}
-    \begin{column}{.25\linewidth}
-\maisonQuatre{1/red,2/green,3/purple!30,4/yellow}
-             {1/white,2/red,3/green,
-               4/white,5/yellow,6/white,
-               7/white,8/red,9/purple!30,
-               10/white,11/yellow,12/green}
-             {
-               \draw[->,ultra thick,draw=black!10!green] (bb 2) -> (bb 6);
-               \draw[->,ultra thick,draw=black!10!green] (bb 3) -> (bb 6);
-               \draw[->,ultra thick,draw=black!10!green] (bb 9) -> (bb 6);
-               \draw[->,ultra thick,draw=black!10!green] (bb 8) -> (bb 6);
-             }
+    \begin{column}{.17\linewidth}
+      \maisonQuatre{2/B,3/A, 5/D,6/Z, 8/B,9/C, 11/D,12/A}
+                   { \draw[->,ultra thick,draw=black!10!green] (bb 2) -> (bb 6);
+                     \draw[->,ultra thick,draw=black!10!green] (bb 3) -> (bb 6);
+                     \draw[->,ultra thick,draw=black!10!green] (bb 9) -> (bb 6);
+                     \draw[->,ultra thick,draw=black!10!green] (bb 8) -> (bb 6);}
 
-\structure{Coups autorisés}      
+      \structure{Coups autorisés}      
     \end{column}
-    \begin{column}{.25\linewidth}
-\maisonQuatre{1/red,2/green,3/purple!30,4/yellow}
-             {1/white,2/red,3/green,
-               4/white,5/yellow,6/white,
-               7/white,8/red,9/purple!30,
-               10/white,11/yellow,12/green}
-             {
-               \draw[->,ultra thick,draw=red] (bb 11) -> (bb 6);
-               \draw[->,ultra thick,draw=red] (bb 12) -> (bb 6);
-             }
+    \begin{column}{.17\linewidth}
+      \maisonQuatre{2/B,3/A, 5/D,6/Z, 8/B,9/C, 11/D,12/A}
+                   { \draw[->,ultra thick,draw=red] (bb 11) -> (bb 6);
+                     \draw[->,ultra thick,draw=red] (bb 12) -> (bb 6);
+                     \draw[->,ultra thick,draw=red] (bb 12) -> (bb 2);
+                     \draw[->,ultra thick,draw=red] (bb 2) -> (bb 12);
+                     \draw[->,ultra thick,draw=red] (bb 5) -> (bb 3);
+                     \draw[->,ultra thick,draw=red] (bb 5) 
+                        .. controls (0pt,0pt) .. (bb 8);
+                     \draw[->,ultra thick,draw=red] (bb 11) -> (bb 9);
+                     \draw[->,ultra thick,draw=red] (bb 9) -> (bb 11);
+                   }
 
-\structure{Coups interdits}      
+      \structure{Coups interdits}      
     \end{column}
-    \begin{column}{.25\linewidth}
-\maisonQuatre{1/red,2/green,3/purple!30,4/yellow}
-             {1/white,2/green,3/green,
-               4/white,5/purple!30,6/white,
-               7/white,8/yellow,9/yellow,
-               10/white,11/red,12/red}
-             {
-             }
+    \begin{column}{.17\linewidth}
+      \maisonQuatre{11/A,12/A, 2/B,3/B, 5/C,6/Z, 8/D,9/D}{}
 
-\structure{Situation finale}      
+      \structure{Situation finale}      
     \end{column}
   \end{columns}
-  % \begin{tikzpicture} Future maisonCinq
-  %   \node[name=m,shape=regular polygon,regular polygon sides=5,inner sep=.7cm]{};
-  %   \node[name=b,shape=regular polygon,regular polygon sides=10,inner sep=.57cm]{};
 
-  %   \foreach \base/\maison in {1/red,2/green,3/blue,4/yellow,5/purple!30} {
-  %     \draw[shift=(m.corner \base)] 
-  %        node[shape=ellipse,fill=\maison,draw=black,rotate=72*(\base-1)] {~~~~};
-  %   }
+  \bigskip
+  \begin{block}{Objectif de l'activité}
+    \begin{itemize}
+    \item Le plus important n'est pas  de ramener les bonshommes dans leurs
+      maisons
+    \item L'objectif est d'expliquer comment on fait. On cherche donc
+      l'algorithme correspondant
+    \item Si on veut utiliser plus de couleurs, c'est possible:
+    \end{itemize}
+  \end{block}
 
-  %   \foreach \base/\maison in {1/red,2/green,3/blue,4/yellow,5/purple!30} {
-  %     \draw[shift=(b.corner \base)] 
-  %        node[shape=circle,fill=\maison,draw=\maison,inner sep=.1] {~~~};
-  %   }
-
-  % \end{tikzpicture}
+  \maisonCinq{1/A,2/A, 5/B,6/B, 9/C,10/C, 13/D,14/D, 17/E}{}  
 
   
 \end{frame}
