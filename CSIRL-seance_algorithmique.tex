@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[a4paper]{article}
 \usepackage{diffs} %pour les diff de couleur, cf declareuser{user}{color}
 \usepackage{authblk}
 \usepackage{fullpage}
@@ -66,15 +66,15 @@ Wikipedia : \url{http://fr.wikipedia.org/wiki/Jeu_de_Nim}}
 \item quelques parties
 \item constat du gain à coup sûr
 \item explication : "j'ai un truc", une stratégie gagnante (laisser l'adversaire dans une situation à 1 modulo 4 clous - attention, si variante du clou en or, laisser un multiple de 4)
-\item trouver une représentation visuelle de la stratégie gagnante : un jeton sur les clous particuliers ? une bande de papier avec la suite de chiffres marqués ? 
+\item trouver une représentation visuelle de la stratégie gagnante : un jeton sur les clous particuliers ? une bande de papier avec la suite de chiffres marqués ?
 \item idée de la stratégie gagnante (situation initiale, coups autorisés, méthode pour arriver à une situation finale gagnante)
 \end{itemize}
 
 Intérêt en informatique : on peut expliquer une stratégie gagnante, comme en informatique où il faut expliquer à l'ordinateur ce qu'il faut faire.
 
-Introduction des trois caractéristiques d'un ordinateur : 
+Introduction des trois caractéristiques d'un ordinateur :
 \begin{itemize}
-\item rapide 
+\item rapide
 \item fidèle ("il fait tout ce qu'on lui demande")
 \item stupide
 \end{itemize}
@@ -85,7 +85,7 @@ Objectif de cette activité : expliquer pourquoi est-ce qu'un algorithme est imp
 $\Rightarrow$ algorithme : situation initiale, modification, situation cible
 
 Le travail de l'informaticien n'est pas de résoudre les problèmes, mais de comprendre suffisamment pour l'expliquer à un "crétin fini".
-Travail de l'informaticien = travail de fénéant : l'informaticien est capable de réfléchir longtemps pour ne plus réfléchir après.
+Travail de l'informaticien = travail de fainéant : l'informaticien est capable de réfléchir longtemps pour ne plus réfléchir après.
 
 
 
@@ -109,8 +109,8 @@ Travail de l'informaticien = travail de fénéant : l'informaticien est capable 
 \item on prend une ou plusieurs crêpes en haut de la pile et on retourne le
 tout d'un coup
 
-\item attention vous ne serez pas toujours là pour aider le crêpier. Il n
-es'agit pas de trier ses crêpes mais de lui montrer comment trier ses crêpes
+\item attention vous ne serez pas toujours là pour aider le crêpier. Il ne
+s'agit pas de trier ses crêpes mais de lui montrer comment trier ses crêpes
 
 \end{itemize}
 \item faire tester à quelqu'un
@@ -145,7 +145,7 @@ pouvoir l'expliquer à un imbécile (référence à l'activité précédente)
 
 \deroulement
 \begin{itemize}
-\item Situation initiale - disposition 
+\item Situation initiale - disposition
 \begin{itemize}
 \item on dépose les maisons aux 4 coins du terrain
 \item on retire un bonhomme quelconque du jeu
@@ -160,10 +160,10 @@ pouvoir l'expliquer à un imbécile (référence à l'activité précédente)
 \item Note : les joueurs font moins de fautes de jeu en n'utilisant qu'une seule main et un seul doigt
 \end{itemize}
 \item on demande d'abord aux spectateurs de faire rentrer les bonhommes intuitivement
-\item on demande aux spectateurs d'expliquer comment ils ont fait => 2 cas : 
+\item on demande aux spectateurs d'expliquer comment ils ont fait $\Rightarrow$ 2 cas :
 \begin{itemize}
 \item ils y arrivent et on ajoute des couleurs
-\item ça bloque et il faut les aider : on pose une pièce avec une flèche qui indique un sens de rotation, une nouvelle couleur et on propose un algoritme (qui se révèlera faux)
+\item ça bloque et il faut les aider : on pose une pièce avec une flèche qui indique un sens de rotation, une nouvelle couleur et on propose un algorithme (qui se révélera faux)
 \begin{itemize}
 \item sens donné par la pièce
 \item à chaque étape, la maison de destination est imposée (celle où il y a trou, donc il faut choisir quel bonhomme bouger)
@@ -179,12 +179,12 @@ pouvoir l'expliquer à un imbécile (référence à l'activité précédente)
 \item on va chercher le bon algorithme. On change la disposition du plateau : on dispose les pions en ligne et on peut même ajouter d'autres couleurs. On respecte bien toujours les règles, on s'est même interdit de faire quelque chose d'autorisé par les règles. Note : pour la suite c'est mieux que la couleur à un seul bonhomme se situe à une extrémité.
 \begin{itemize}
 \item on se fixe des objectifs intermédiaires comme lors de l'activité du crêpier psycho-rigide : on veut amener les pions de la couleur de l'extrémité
-\item mécanisme : [schemas ou photos ou video]
-\item on peut se poser la question de performance : c'est lors des choix que l'on peut amélioreor les performances. Soit on fait au hasard, soit on choisit de déplacer le pion le plus éloigné
+\item mécanisme : [schémas ou photos ou vidéo]
+\item on peut se poser la question de performance : c'est lors des choix que l'on peut améliorer les performances. Soit on fait au hasard, soit on choisit de déplacer le pion le plus éloigné
 \item on fait tourner l'algorithme jusqu'à ce que le participant soit convaincu qu'il fonctionne
 \item question de la correction de cet algorithme :
 \item et si c'était encore un algorithme incorrect ? Non, c'est un algorithme connu, que l'on apprend au deuxième cours d'algorithmique.
-\item analogie informaticien/musicien : le musicien fait ses gammes, l'informaticien apprend par coeur des algorithmes
+\item analogie informaticien/musicien : le musicien fait ses gammes, l'informaticien apprend par c\oe{}ur des algorithmes
 \item lorsque l'on soumet un problème à un informaticien, il essaie de se raccrocher à des problèmes qu'il connait (ex. du cas du crêpier : est-ce les tours de Hanoï ? Non, l'histoire ressemble mais la résolution est totalement différente)
 \end{itemize}
 \end{itemize}
@@ -192,7 +192,7 @@ pouvoir l'expliquer à un imbécile (référence à l'activité précédente)
 
 Debrief :
 \begin{itemize}
-\item travail du rogrammeur = se faire obéir par des tas de fils. Méthode = apprendre des algorithmes abstraits qu'ils appliquer aux problèmes qu'ils rencontrent. le principe de la décomposition en sous-problèmes plus simples = grand classique souvent gagnant.
+\item travail du programmeur = se faire obéir par des tas de fils. Méthode = apprendre des algorithmes abstraits qu'ils appliquer aux problèmes qu'ils rencontrent. le principe de la décomposition en sous-problèmes plus simples = grand classique souvent gagnant.
 \item qualité d'un algorithme = performance et correction.
 \item métier de certains chercheurs en informatique = inventer de nouveaux algorithmes, étudier la correction des algorithmes et leurs performances
 \end{itemize}
@@ -215,7 +215,7 @@ différentes longueurs record. Si le participant fait plus court, on fait un
 trait au marqueur sur la longueur obtenue.
 \begin{itemize}
 \item La discussion après l'étape 2 est qu'en beaucoup plus de temps, on a
-trouvé une solution marginalement meilleure. 
+trouvé une solution marginalement meilleure.
 \item On peut aussi évoquer à quoi ressemblerait l'algo exact et sa complexité,
 mais c'est pas central pour l'activité. D'autant qu'il est tellement con qu'il
 n'est pas facile de convaincre qu'il n'en existe pas de meilleur. On peut
@@ -224,7 +224,7 @@ déplier les différents algos tentants et faux connus si on a peur de s'ennuyer
 120-123}). Mais bon, c'est probablement déroutant pour les participants de se
 trouver face à face avec un problème ouvert...
 
-\item En fait la discussion est plutot sur les heuristiques, avec un message de
+\item En fait la discussion est plutôt sur les heuristiques, avec un message de
 la forme "trouver la solution optimale est parfois très dur, alors qu'on peut
 trouver un truc pas trop con très vite -- ce n'est plus un algo mais une
 heuristique".
@@ -246,17 +246,17 @@ Pour l'instant, personne n'en a trouvé, mais personne n'a réussi à démontrer
 qu'il n'en existe pas, non plus. Pour prouver que P != NP, il faudrait trouver
 un problème pour lequel on démontre qu'il n'existe pas d'algo P pour le
 résoudre, mais dont les solutions sont vérifiables en temps polynomial.
-\item On a alors envie de parler de NP-completude, mais c'est un peu difficile.
+\item On a alors envie de parler de NP-complétude, mais c'est un peu difficile.
 L'idée est que les informaticiens classifient les problèmes qu'ils n'arrivent
 pas à résoudre selon la difficulté de les résoudre. C'est un peu tordu car on
-réfléchi à ce qu'on gagnerait à savoir faire des trucs impossibles pour
+réfléchit à ce qu'on gagnerait à savoir faire des trucs impossibles pour
 l'instant, mais bon. On regarde si on saurait résoudre un problème impossible
 avec la solution d'un autre problème impossible. C'est comme si on se posait
-des questions comme "et si je savais voler, est ce que je pourrais résoudre de
+des questions comme "et si je savais voler, est-ce que je pourrais résoudre de
 la famine dans le monde? Par ailleurs, si je savais résoudre la famine dans le
-monde, est ce que je saurais voler?". Certains chercheurs en informatique sont
+monde, est-ce que je saurais voler?". Certains chercheurs en informatique sont
 payés pour répondre à ce genre de question, avec juste un peu d'enrobage
-mathématique pour éviter les questions embarassantes des passants :)
+mathématique pour éviter les questions embarrassantes des passants :)
 \item On peut passer par l'introduction des problèmes NP-difficiles. On peut
 voir leurs solutions comme des outils sur-puissants, qui seraient capable de
 résoudre tous les problèmes NP si on savait construire ces solutions. Ce sont
@@ -270,7 +270,7 @@ NP-difficile (si on savait les résoudre, on saurait résoudre tous les problèm
 NP). Le schéma en haut de \url{http://en.wikipedia.org/wiki/NP-complete} est
 pas mal pour aider à se repérer. Une conclusion amusante de cette double
 appartenance est qu'ils sont à la fois outils permettant de résoudre les NP, et
-problèmes qu'on peut résoudre avec un tel outil. Ca serait vraiment bien de
+problèmes qu'on peut résoudre avec un tel outil. Ça serait vraiment bien de
 faire sentir aux participants cette histoire d'équivalence de complexité entre
 tous ces problèmes, mais c'est pas forcément simple.
 \item Pour aller plus loin
@@ -289,7 +289,7 @@ vain. Mais ce n'est qu'une supposition, rien n'est sûr.
 \item la question "trouver le plus court chemin" est NP-difficile et pas NP.
 Quand on me donne une solution, je peux pas vérifier simplement si c'est la
 plus courte.
-\item La question "est ce qu'il existe une solution de longueur inférieure à k"
+\item La question "est-ce qu'il existe une solution de longueur inférieure à k"
 est NP car on ne connait pas d'algo polynomial pour répondre, mais quand on me
 propose une solution, je peux vérifier sa longueur facilement. Et par ailleurs,
 on a fait toutes les réductions qui vont bien pour montrer que ce problème est
@@ -300,7 +300,7 @@ NP-complet (le schéma de
 faire une division à la main que de vérifier que la solution d'une division est
 correcte en multipliant les opérandes. On a donc une sorte de classification de
 la complexité des problèmes, même si l'exemple est un peu mou car on n'a pas
-quantifié proprement la complexité de résolution dans ce cas. Il n'empêche, ca
+quantifié proprement la complexité de résolution dans ce cas. Il n'empêche, ça
 peut faire un exemple un peu "avec les mains" à utiliser pour faire saisir le
 sens général à l'auditoire.
 \end{itemize}
