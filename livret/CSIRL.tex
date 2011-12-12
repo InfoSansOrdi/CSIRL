@@ -7,7 +7,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{ae,aecompl}
 \usepackage{amsmath,amsthm, amssymb, latexsym}
-\usepackage{figlatex}
+%\usepackage{figlatex}
 \usepackage{multicol}
 \usepackage{tikz,url}
 \usetikzlibrary{shapes.geometric}
@@ -436,11 +436,56 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Activité: Le crêpier psycho-rigide}
+ 
+  \begin{block}{Matériel}
+    \begin{itemize}
+    \item des planchettes en bois de tailles et de couleurs différentes (faces reconnaissables)
+    \item éventuellement une pelle à tarte pour retourner les planchettes
+    \end{itemize}
+  \end{block}
   
+  \begin{block}{Règle du jeu}
+    \begin{itemize}
+    \item Le crêpier doit ranger ses crêpes de la plus grande à la plus petite,
+      face colorée vers le haut
+    \item il peut retourner une ou plusieurs crêpes à la fois
+    \item l'ordre des crêpes ne peut pas être modifié au moment de retouner
+      une pile
+    \end{itemize}
+  \end{block}
+
+%  mettre une illustration ici ?
+
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Ce qu'il faut retenir du  crêpier psycho-rigide}
-  
+
+  \begin{block}{Un algorithme}
+    \begin{itemize}
+    \item n'a d'intérêt que si on peut l'expliquer
+    \item doit être suffisamment simple pour pouvoir l'expliquer à une machine
+    \item \alert{\textbf{\og~Diviser pour mieux régner~\fg}} : on essaie
+    toujours de décomposer un algorithme en tâches simples
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{L'algorithme que doit suivre le crêpier est :}
+    \begin{itemize}
+    \item ramener la plus grande crêpe en haut de la pile
+    \item retourner pour que la face brûlée soit vers le haut
+    \item retourner la pile de sorte à mettre la plus grande crêpe en bas
+    \item réitérer avec la crêpe de taille inférieure
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{Le rapport avec l'informatique}
+    \begin{itemize}
+    \item l'informaticien passe son temps à trouver des algorithmes et  à les
+    expliquer à la machine
+    \item le principe \alert{\textbf{\og~Diviser pour mieux régner~\fg}} est
+    fondamental en informatique
+    \end{itemize}
+  \end{block}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -599,5 +644,27 @@
       il peut remplacer l'animateur dans une partie avec d'autres participants
     \end{itemize}    
   \end{block}
+\end{frame}
+
+\begin{frame}{Le coin de l'animateur\\[-5pt]
+  {\large Trucs et astuces pour simplifier la présentation de la séance}}
+  \begin{block}{À propos du jeu du crêpier psycho-rigide}
+    \begin{itemize}
+    \item L'objectif de cette activité est de trouver un algorithme et de
+    l'expliquer 
+    \item On propose au participant de d'abord tenter de le résoudre
+    intuitivement, sans réfléchir
+    \item Si le participant bloque, on peut lui donner un conseil : \og~Une
+    bonne première étape est de se débrouiller pour mettre la grande en bas~\fg
+    \item Si le participant bloque toujours, on peut lui donner un second
+    conseil : \og~où est-ce que la grande devrait être pour pouvoir la mettre en
+    bas ? ~\fg puis le guider pour l'étape suivante.
+    \item On essaie ensuite de faire expliquer l'algorithme par le participant.
+    On gagne à ce que ce soit le participant et non l'animateur qui explique aux
+    autres, avec ses propres mots.
+    \end{itemize}    
+  \end{block}
+%\url{http://interstices.info/jcms/n_52318/genese-dun-algorithme?hlText=cr\%C3\%A8pes}
+
 \end{frame}
 \end{document}
