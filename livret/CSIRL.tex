@@ -10,6 +10,7 @@
 \usepackage{figlatex}
 \usepackage{multicol}
 \usepackage{tikz,url}
+\usetikzlibrary{shapes.geometric}
 %\usepackage{times}\usefonttheme{professionalfonts}  % obsolete
 %\usefonttheme[onlymath]{serif}
 \boldmath
@@ -441,6 +442,122 @@
 \begin{frame}{Ce qu'il faut retenir du  crêpier psycho-rigide}
   
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\maisonQuatre}[3]{  \begin{tikzpicture}
+    \node[name=m,shape=regular polygon,regular polygon sides=4,inner sep=.7cm]{};
+    \node[name=b,shape=regular polygon,regular polygon sides=12,inner sep=.6cm,rotate=15]{};
+    \foreach \base/\maison in {#1} {
+      \draw[shift=(m.corner \base)] 
+         node[shape=ellipse,fill=\maison,draw=black,rotate=90*(\base-1)-45] {~~~~};
+    }
+    \foreach \base/\maison in {#2} {
+      \draw[shift=(b.corner \base)] 
+         node[name=bb \base,shape=circle,fill=\maison,draw=\maison,inner sep=.1] 
+         {~~~}; % Comment this, and uncomment next to get debug mode
+%         {\base};
+    }
+    #3
+  \end{tikzpicture}
+}
+
+\begin{frame}{Activité: Base-ball multicolor}
+  \begin{block}{Matériel nécessaire}
+    \begin{itemize}
+    \item Plusieurs équipes bien différenciables, chacune composée d'une maison
+      et de deux bonshommes\\
+      (des legos, des bouts de bois, des caillous, du fil électrique de
+      différentes couleurs, ou autres)
+      
+    \item Il faut 5 équipes au minimum. 7 équipes sont préférables, et on peut
+      en utiliser une dizaine
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{Règles du jeu}
+    \begin{itemize}
+    \item On place 4 maisons autour du terrain, et on réparti 7 bonshommes au
+      hasard dans les maisons\\
+     (il manque donc l'un des bonshommes, qui est mis de coté et ne sera
+      pas utilisé)
+    \item L'objectif est de ramener tous les bonshommes dans leur maison.
+    \item 
+    \end{itemize}
+  \end{block}
+
+  \begin{columns}
+    \begin{column}{.25\linewidth}
+\maisonQuatre{1/red,2/green,3/purple!30,4/yellow}
+             {1/white,2/red,3/green,
+               4/white,5/yellow,6/white,
+               7/white,8/red,9/purple!30,
+               10/white,11/yellow,12/green}
+             {
+             }
+
+\structure{Situation initiale}      
+    \end{column}
+    \begin{column}{.25\linewidth}
+\maisonQuatre{1/red,2/green,3/purple!30,4/yellow}
+             {1/white,2/red,3/green,
+               4/white,5/yellow,6/white,
+               7/white,8/red,9/purple!30,
+               10/white,11/yellow,12/green}
+             {
+               \draw[->,ultra thick,draw=black!10!green] (bb 2) -> (bb 6);
+               \draw[->,ultra thick,draw=black!10!green] (bb 3) -> (bb 6);
+               \draw[->,ultra thick,draw=black!10!green] (bb 9) -> (bb 6);
+               \draw[->,ultra thick,draw=black!10!green] (bb 8) -> (bb 6);
+             }
+
+\structure{Coups autorisés}      
+    \end{column}
+    \begin{column}{.25\linewidth}
+\maisonQuatre{1/red,2/green,3/purple!30,4/yellow}
+             {1/white,2/red,3/green,
+               4/white,5/yellow,6/white,
+               7/white,8/red,9/purple!30,
+               10/white,11/yellow,12/green}
+             {
+               \draw[->,ultra thick,draw=red] (bb 11) -> (bb 6);
+               \draw[->,ultra thick,draw=red] (bb 12) -> (bb 6);
+             }
+
+\structure{Coups interdits}      
+    \end{column}
+    \begin{column}{.25\linewidth}
+\maisonQuatre{1/red,2/green,3/purple!30,4/yellow}
+             {1/white,2/green,3/green,
+               4/white,5/purple!30,6/white,
+               7/white,8/yellow,9/yellow,
+               10/white,11/red,12/red}
+             {
+             }
+
+\structure{Situation finale}      
+    \end{column}
+  \end{columns}
+  % \begin{tikzpicture} Future maisonCinq
+  %   \node[name=m,shape=regular polygon,regular polygon sides=5,inner sep=.7cm]{};
+  %   \node[name=b,shape=regular polygon,regular polygon sides=10,inner sep=.57cm]{};
+
+  %   \foreach \base/\maison in {1/red,2/green,3/blue,4/yellow,5/purple!30} {
+  %     \draw[shift=(m.corner \base)] 
+  %        node[shape=ellipse,fill=\maison,draw=black,rotate=72*(\base-1)] {~~~~};
+  %   }
+
+  %   \foreach \base/\maison in {1/red,2/green,3/blue,4/yellow,5/purple!30} {
+  %     \draw[shift=(b.corner \base)] 
+  %        node[shape=circle,fill=\maison,draw=\maison,inner sep=.1] {~~~};
+  %   }
+
+  % \end{tikzpicture}
+
+  
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
