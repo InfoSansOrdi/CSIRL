@@ -175,36 +175,53 @@
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Computer Science IRL -- Informatique sans ordinateur\\[-5pt]
-  {\large Séance Algorithmique}}
-  % Contrairement à ce que beaucoup de monde pense, les ordinateurs ne sont pas
-  % la seule raison d'être de l'informatique. Pour preuve, ce projet développe
-  % diverses activités à faire avec des pions, des jetons ou des bouts de bois,
-  % mais sans aucun ordinateur et même sans électricité. Pourtant, ces petits
-  % jeux permettront à chacun de découvrir de manière ludique les notions au c\oe
-  % ur de l'informatique: ce qu'est un algorithme et qu'est ce qui fait qu'un
-  % algorithme est meilleur qu'un autre, ou encore comment coder et transmettre
-  % une information.
+  {\large Présentation du projet}}
+
+% Contrairement à ce que beaucoup de monde pense, les ordinateurs ne sont pas la
+% seule raison d'être de l'informatique. Pour preuve, ce projet développe
+% diverses activités à faire avec des pions, des jetons ou des bouts de bois,
+% mais sans aucun ordinateur et même sans électricité. Pourtant, ces petits jeux
+% permettront à chacun de découvrir de manière ludique les notions au cœur de
+% l'informatique: ce qu'est un algorithme et qu'est ce qui fait qu'un algorithme
+% est meilleur qu'un autre, ou encore comment coder et transmettre une
+% information.
 
 
   \begin{block}{CS IRL? Qu'est ce que c'est?}
     \begin{itemize}
-    \item Une série d'activités présentant les bases de l'informatique, mais
-      sans ordinateur
+    \item Des activités présentant les bases de l'informatique, mais sans
+      ordinateur
     \item Pour chaque activité, un support matériel est proposé pour permettre
       d'\textit{apprendre avec les mains}
-    \item C'est un projet libre, que vous pouvez télécharger, améliorer et
-      diffuser librement
+    \item Les activités sont rangées en séances cohérentes et progressives
+%    \item C'est un projet libre, que vous pouvez télécharger, améliorer et
+%      diffuser librement
+    \item[\includegraphics{img/rightpointing_magnifying_glass.pdf}]
+      Computer Science In Real Life: Computer Science est la science
+      informatique en anglais, tandis que IRL est l'abréviation utilisée sur
+      internet pour décrire la vraie vie, ce qui n'est pas sur internet.
     \end{itemize}
-  \end{block}\vspace{-.5\baselineskip}
+  \end{block}
 
-  \begin{block}{Objectif de cette séance}
+  \begin{block}{Les séances existantes dans la série}
+    \begin{itemize}
+    \item \structure{Séance 1:} Qu'est ce qu'un algorithme, et à quoi ça sert 
+    \item \structure{Séance 2:} Comment les ordinateurs codent et manipulent les données (à
+      venir)
+    \item \structure{Séance 3:} Turzzle, le puzzle de programmation sans
+      ordinateur (à venir)
+    \end{itemize}
+  \end{block}
+  \vspace{2\baselineskip}
+
+  \begin{block}{Objectif de la séance algorithmique}
     \begin{itemize}
     \item Expliquer ce qu'est un algorithme et à quoi ça sert quand on veut
       utiliser un ordinateur
     \item Montrer un aspect du travail d'un informaticien, et de celui d'un
       chercheur en informatique
     \end{itemize}
-  \end{block}\vspace{-.5\baselineskip}
+  \end{block}
 
   \begin{block}{Matériel nécessaire pour cette séance}
     \begin{itemize}
@@ -214,8 +231,10 @@
       pièce $4\times2$
     \item Une planche avec des clous plantés (mais qui dépassent); Une cordelette et un marqueur
     \end{itemize}
-  \end{block}\vspace{.5\baselineskip}
-
+  \end{block}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Computer Science IRL -- La séance algorithmique}
   \begin{block}{Introduction: les principales caractéristiques d'un ordinateur}
     \begin{itemize}
     \item \structure{Il est très \alert{rapide}:} il peut calculer de 1 à 1
@@ -249,6 +268,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Activité: le jeu de Nim}
 
+  Voici un premier petit jeu simple, pour rentrer dans le sujet.
+
   \begin{block}{Matériel}
     \begin{itemize}
     \item 15 clous identiques
@@ -258,7 +279,7 @@
   
   \begin{block}{Règle du jeu}
     \begin{itemize}
-    \item Chaque joueur prend tour à tour entre 1 et 3 clous
+    \item Chaque joueur prend tour à tour soit 1 soit 2 soit 3 clous
     \item Celui qui prend le dernier clou a gagné
     \end{itemize}
   \end{block}
@@ -269,15 +290,27 @@
 
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newcommand{\clou}[2]{\draw[#2] #1 -- (++.4,++0) -- (++.2,++0) -- (++.2,++.6);}
 \begin{frame}{Ce qu'il faut retenir du jeu de Nim}
 
   \begin{block}{L'intérêt majeur de ce jeu est qu'il est sans suspense}
     \begin{itemize}
-    \item Celui qui commence gagne, car il existe un truc pour gagner à tous
+    \item Celui qui commence perd, car il existe un truc pour gagner à tous
       les coups
-    \item \structure{Stratégie gagnante:} Laisser 4, 8 ou 12 clous à
+    \item \structure{Stratégie gagnante:} Laisser 4, 8, 12 ou 16 clous à
       l'adversaire (un multiple de 4)
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{Se convaincre de l'efficacité de la stratégie gagnante}
+    \begin{itemize}
+    \item Prenons le dernier coup comme exemple:
+%      \begin{tikzpicture}
+%        \clou{(.5,1)}{draw=red}
+%         \clou{(0,0)}{draw=black}
+% % 
+%       \end{tikzpicture}
     \end{itemize}
   \end{block}
 
@@ -323,23 +356,36 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Le coin de l'animateur}
+\begin{frame}{Le coin de l'animateur\\[-5pt]
+  {\large Trucs et astuces pour simplifier la présentation de la séance}}
   \begin{block}{Remarques générales}
     \begin{itemize}
     \item Il faut vous approprier les activités. N'hésitez pas à ne pas suivre
       les consignes à la lettre, l'important est que cela vous plaise.
     \end{itemize}
   \end{block}
+  \begin{block}{À propos du mot d'introduction}
+    \begin{itemize}
+    \item On peut faire cette présentation soit au début, soit juste après
+      l'activité sur le jeu de Nim. Commencer directement par un petit jeu
+      permet d'éviter que les participants ne décrochent avant même qu'on ne commence.
+    \end{itemize}
+  \end{block}
   \begin{block}{À propos du jeu de Nim}
     \begin{itemize}
     \item L'objectif de cette activité est simplement d'introduire la notion d'algorithme
     \item On propose le jeu avec le participant, mais sans dire trop vite qu'on
-      a un truc
+      a un truc. S'il y a plusieurs participants, on jouera avec plusieurs
+      personnes, pour laisser sa chance à chacun. On peut faire une sorte de
+      petit tournois.
     \item Il faut bien sûr laisser commencer le participant pour gagner à coup
       sûr. S'il insiste pour ne pas commencer, on peut le faire (et rattraper
       la stratégie gagnante à la première erreur du participant)
     \item On n'introduit l'existence du truc pour gagner que plus tard, quand
       on gagne à plate couture
+    \item Si on perd, c'est à dire si on n'a pas réussi à appliquer la
+      stratégie gagnante, il faut proposer un match en 3 (ou en 5 en cas de
+      coup dur ;)
     \item Attention, il faut parvenir à compter les clous discrètement\ldots
     \item On peut amener le participant à découvrir la stratégie gagnante en
       groupant les clous par paquets de 4 au lieu de la disposition pyramidale.
