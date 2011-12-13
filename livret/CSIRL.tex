@@ -267,6 +267,10 @@
   \end{block}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%                          LE JEU DE NIM
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Activité: le jeu de Nim}
 
   Voici un premier petit jeu simple, pour rentrer dans le sujet.
@@ -290,7 +294,7 @@
 
 
 \end{frame}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\clou}[2]{\draw[#2] #1 -- +(.4,0) -- +(.2,0) -- +(.2,.5);}
 \begin{frame}{Ce qu'il faut retenir du jeu de Nim}
@@ -433,6 +437,7 @@
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% LE JEU DU CRÊPIER
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Activité: Le crêpier psycho-rigide}
@@ -489,6 +494,7 @@
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%   LES BONSHOMMES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\maisonPair}[5]{  \begin{tikzpicture}
@@ -523,8 +529,8 @@
       \draw[shift=(b.corner \base)] 
          node[shape=circle,fill=\maison,draw=black,inner sep=.1] {~~~};
     }
-    \foreach \bb in {1,...,#4} {\draw[shift=(b.corner \bb)] node[name=bb \bb]{};
-%    \foreach \bb in {1,...,#4} {\draw[shift=(b.corner \bb)] node[name=bb \bb]{\tiny\bb};}%name the bonshommes
+    \foreach \bb in {1,...,#4} {\draw[shift=(b.corner \bb)] node[name=bb \bb] {};}
+%    \foreach \bb in {1,...,#4} {\draw[shift=(b.corner \bb)] node[name=bb \bb]{\tiny\bb};}%debug the bonshommes names
     #2
   \end{tikzpicture}
 }
@@ -544,7 +550,7 @@
 \colorlet{I}{lime}
 \colorlet{J}{pink}
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Activité: Base-ball multicolor}
   \begin{block}{Matériel nécessaire}
     \begin{itemize}
@@ -655,7 +661,7 @@
   \draw[ultra thick,rotate=#1*72] (3mm,0) -- +(.08,-.15);
   \draw[fill=white,draw=white,rotate=#1*72] (3mm,2.5pt) circle (2pt);
 }
-\begin{frame}{Un premier algorithme pour le base-ball multicolor}
+\begin{frame}<0>{Un premier algorithme pour le base-ball multicolor}
   \begin{block}{L'algorithme}
     \begin{itemize}
     \item On ne s'autorise qu'à tourner dans un seul sens.
@@ -669,6 +675,7 @@
 
   \begin{block}{Exemple d'exécution}
     \begin{columns}
+      % J'avais une case de trop...
       % \begin{column}{.15\linewidth}\center
       %   \maisonCinq{1/D,2/B, 5/A,6/C, 9/E,10/D, 13/A,14/C, 17/B}{\flecherond{0}}\\
       %   {\small $4>2\Rightarrow$ violet}        
@@ -789,10 +796,21 @@
     \item Il est très simple: on pourrait l'expliquer à un ordinateur
     \item Il est relativement rapide: 20 coups pour 9 bonshommes, ce n'est pas
       si mal
-    \item Seul problème: cet algorithme est faux\ldots
+    \item Seul problème: cet algorithme est faux: dans certains cas, il ne
+      termine jamais\ldots
     \end{itemize}
   \end{block}
+
+  \begin{block}{Exemple d'exécution incorrecte}
+    \begin{columns}[t]
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/A,2/D, 5/B,6/B, 9/C,10/C, 13/A,14/D, 17/E}{\flecherond{0}}\\
+         {\small $2>0\Rightarrow$ vert}
+      \end{column}
+    \end{columns}
+  \end{block}
 \end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
