@@ -137,14 +137,18 @@
 \begin{frame}{}
 
   \begin{center}
-    \structure{\Huge CS IRL}
+    \structure{\LARGE CS IRL}
 
     \medskip
-    \structure{\large Computer Science In Real Life}
+    {\large Computer Science In Real Life}
 
     \bigskip
     \bigskip
     \includegraphics[width=.7\linewidth]{img/Hamiltonian_path.pdf}\label{img:hamiltonian}
+    \bigskip
+    \bigskip
+
+    \structure{\Huge Les algorithmes}
   \end{center}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -171,8 +175,8 @@
     licence GFDL/CC-BY-SA
     \url{http://en.wikipedia.org/wiki/File:Hamiltonian_path.svg}
 
-    P\pageref{img:matches}: Pyramide d'allumettes par M0tty, licence CC-BY-SA
-    \url{http://fr.wikipedia.org/wiki/Fichier:Pyramidal_matches.svg}
+    P\pageref{img:realprog}: Real programmers: Dessin non libre, à refaire.
+    \url{http://www.ninisworld.com/oddsends/justforfun/50realprogrammers.html}
 
     P\pageref{img:electric:city}: Electric City par Mathias M, licence CC-BY-SA
     \url{http://www.flickr.com/photos/mathias_m/342535332/}
@@ -210,11 +214,12 @@
 
   \begin{block}{Les séances existantes dans la série}
     \begin{itemize}
-    \item \structure{Séance 1:} Qu'est ce qu'un algorithme, et à quoi ça sert
-    \item \structure{Séance 2:} Comment les ordinateurs codent et manipulent les données (à
-      venir)
-    \item \structure{Séance 3:} Turzzle, le puzzle de programmation sans
-      ordinateur (à venir)
+    \item \structure{Les algorithmes:} Qu'est ce qu'un algorithme? Et une
+      heuristique? À quoi ça sert?
+    \item \structure{Codes et représentations:} Comment les ordinateurs codent
+      et manipulent les données \textit{(à venir)}
+    \item \structure{Turzzle:} puzzle de programmation sans ordinateur 
+      \textit{(à venir)}
     \end{itemize}
   \end{block}
   \vspace{2\baselineskip}
@@ -269,12 +274,19 @@
       \end{itemize}
     \end{itemize}
   \end{block}
+
+  \bigskip\bigskip
+  \bigskip\bigskip
+  \centerline{\includegraphics[width=.25\linewidth]{img/realprogrammers.jpg}\label{img:realprog}}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%                          LE JEU DE NIM
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\clou}[3]{\draw[#3,line width=2pt] (.5*#1,.6*#2) -- +(.3,0) --  +(.15,0) -- +(.15,.5);}
+\newcommand{\clous}[2]{\foreach \x/\y in {#2} {\clou{\x}{\y}{#1}}}
+
 \begin{frame}{Activité: le jeu de Nim}
 
   Voici un premier petit jeu simple, pour rentrer dans le sujet.
@@ -294,13 +306,19 @@
   \end{block}
 
   \bigskip\bigskip
-  \centerline{\includegraphics[height=20\baselineskip]{img/Pyramidal_matches.pdf}}\label{img:matches}
+  \centerline{
+    \begin{tikzpicture}[scale=3]
+      \clous{draw=black}{ 0/ 0, 
+                    -1/-1,0/-1,1/-1,
+              -2/-2,-1/-2,0/-2,1/-2,2/-2,
+        -3/-3,-2/-3,-1/-3,0/-3,1/-3,2/-3,3/-3}
+    \end{tikzpicture}
+  }
 
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\clou}[2]{\draw[#2] #1 -- +(.4,0) -- +(.2,0) -- +(.2,.5);}
 \begin{frame}{Ce qu'il faut retenir du jeu de Nim}
 
   \begin{block}{L'intérêt majeur de ce jeu est qu'il est sans suspense}
@@ -337,31 +355,23 @@
       &\structure{Joueur 2}&3 clous&2 clous&1 clou&\\\hline
       Reste 4 clous:
       \begin{tikzpicture}[baseline=\baselineskip]
-        \clou{(.5,.6)}{draw=black}
-        \clou{(0,0)}{draw=black}
-        \clou{(.5,0)}{draw=black}
-        \clou{(1,0)}{draw=black}
+        \clous{draw=black}{0/ 0, 
+                    -1/-1,0/-1,1/-1}
       \end{tikzpicture}
       &&
-      \begin{tikzpicture}[baseline=\baselineskip]
-        \clou{(.5,.6)}{draw=blue}
-        \clou{(0,0)}{draw=blue}
-        \clou{(.5,0)}{draw=blue}
-        \clou{(1,0)}{draw=red}
-      \end{tikzpicture} &
-      \begin{tikzpicture}[baseline=\baselineskip]
-        \clou{(.5,.6)}{draw=blue}
-        \clou{(0,0)}{draw=blue}
-        \clou{(.5,0)}{draw=red}
-        \clou{(1,0)}{draw=red}
-      \end{tikzpicture} &
-      \begin{tikzpicture}[baseline=\baselineskip]
-        \clou{(.5,.6)}{draw=blue}
-        \clou{(0,0)}{draw=red}
-        \clou{(.5,0)}{draw=red}
-        \clou{(1,0)}{draw=red}
-      \end{tikzpicture}
-      &Joueur 2 gagne
+       \begin{tikzpicture}[baseline=\baselineskip]
+         \clous{draw=blue}{0/ 0, -1/-1,0/-1}
+         \clous{draw=red}{1/-1}
+       \end{tikzpicture} &
+       \begin{tikzpicture}[baseline=\baselineskip]
+         \clous{draw=blue}{0/ 0, -1/-1}
+         \clous{draw=red}{0/-1,1/-1}
+       \end{tikzpicture} &
+       \begin{tikzpicture}[baseline=\baselineskip]
+         \clous{draw=blue}{0/ 0}
+         \clous{draw=red}{-1/-1,0/-1,1/-1}
+       \end{tikzpicture} &
+      Joueur 2 gagne
       \\\hline
     \end{tabular}
   \end{center}
@@ -377,47 +387,29 @@
       \\
       &\alert{Joueur 1}&1 clou&2 clous&3 clous&\\\cline{2-5}
       &\structure{Joueur 2}&3 clous&2 clous&1 clou&\\\hline
-      Reste 8 clous:
-      \begin{tikzpicture}[baseline=\baselineskip]
-        \clou{(.5,.6)}{draw=black}
-        \clou{(0,0)}{draw=black}
-        \clou{(.5,0)}{draw=black}
-        \clou{(1,0)}{draw=black}
-        \clou{(-.5,-.6)}{draw=black}
-        \clou{(0,-.6)}{draw=black}
-        \clou{(.5,-.6)}{draw=black}
-        \clou{(1,-.6)}{draw=black}
-      \end{tikzpicture}
-      &&
-      \begin{tikzpicture}[baseline=\baselineskip]
-        \clou{(.5,.6)}{draw=black}
-        \clou{(0,0)}{draw=black}
-        \clou{(.5,0)}{draw=black}
-        \clou{(1,0)}{draw=black}
-        \clou{(-.5,-.6)}{draw=blue}
-        \clou{(0,-.6)}{draw=blue}
-        \clou{(.5,-.6)}{draw=blue}
-        \clou{(1,-.6)}{draw=red}
-      \end{tikzpicture} &
-      \begin{tikzpicture}[baseline=\baselineskip]
-        \clou{(.5,.6)}{draw=black}
-        \clou{(0,0)}{draw=black}
-        \clou{(.5,0)}{draw=black}
-        \clou{(1,0)}{draw=black}
-        \clou{(-.5,-.6)}{draw=blue}
-        \clou{(0,-.6)}{draw=blue}
-        \clou{(.5,-.6)}{draw=red}
-        \clou{(1,-.6)}{draw=red}
-      \end{tikzpicture} &
-      \begin{tikzpicture}[baseline=\baselineskip]
-        \clou{(.5,.6)}{draw=black}
-        \clou{(0,0)}{draw=black}
-        \clou{(.5,0)}{draw=black}
-        \clou{(1,0)}{draw=black}
-        \clou{(-.5,-.6)}{draw=blue}
-        \clou{(0,-.6)}{draw=red}
-        \clou{(.5,-.6)}{draw=red}
-        \clou{(1,-.6)}{draw=red}
+      Reste 8 clous:&
+      \begin{tikzpicture}
+        \clous{draw=black}{ 0/ 0, 
+                      -1/-1,0/-1,1/-1,
+                -2/-2,-1/-2,0/-2,1/-2}        
+      \end{tikzpicture}&
+      \begin{tikzpicture}
+        \clous{draw=black}{ 0/ 0, 
+                      -1/-1,0/-1,1/-1}
+        \clous{draw=blue}{-2/-2,-1/-2,0/-2     }        
+        \clous{draw=red} {                 1/-2}        
+      \end{tikzpicture}&
+      \begin{tikzpicture}
+        \clous{draw=black}{ 0/ 0, 
+                      -1/-1,0/-1,1/-1}
+        \clous{draw=blue}{-2/-2,-1/-2          }        
+        \clous{draw=red} {            0/-2,1/-2}        
+      \end{tikzpicture}&
+      \begin{tikzpicture}
+        \clous{draw=black}{ 0/ 0, 
+                      -1/-1,0/-1,1/-1}
+        \clous{draw=blue}{-2/-2                }        
+        \clous{draw=red} {      -1/-2,0/-2,1/-2}        
       \end{tikzpicture}
       &Reste 4 clous
       \\\hline
