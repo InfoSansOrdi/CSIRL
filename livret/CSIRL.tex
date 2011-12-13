@@ -10,7 +10,7 @@
 \usepackage{amsmath,amsthm, amssymb, latexsym}
 %\usepackage{figlatex}
 \usepackage{multicol}
-\usepackage{tikz,url}
+\usepackage{tikz,url,marvosym}
 \usetikzlibrary{shapes.geometric}
 %\usepackage{times}\usefonttheme{professionalfonts}  % obsolete
 %\usefonttheme[onlymath]{serif}
@@ -519,7 +519,8 @@
   \end{tikzpicture}
 }
 \newcommand{\maisonImpair}[5]{  \begin{tikzpicture}
-    \node[name=m,shape=regular polygon,regular polygon sides=#3,minimum size=22mm]{};
+    \node[name=m,shape=regular polygon,regular polygon sides=#3,
+          minimum size=22mm, inner sep=0pt]{};
     \node[name=b,shape=regular polygon,regular polygon sides=#4,minimum size=14mm]{};
     \foreach \base/\maison in {#5} {
       \draw[shift=(m.corner \base)] 
@@ -544,12 +545,14 @@
 \colorlet{B}{red!80}
 \colorlet{C}{purple!40}
 \colorlet{D}{orange!80}
-\colorlet{E}{blue!80}
+\colorlet{E}{blue!70}
 \colorlet{F}{black!10!yellow}
 \colorlet{G}{olive}
 \colorlet{H}{magenta}
 \colorlet{I}{lime}
 \colorlet{J}{pink}
+
+\newcommand{\pawn}[1]{\tikz \draw node[shape=circle,fill=#1,draw=black,inner sep=.1] {~~~};}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Activité: Base-ball multicolore}
@@ -679,118 +682,118 @@
       % J'avais une case de trop...
       % \begin{column}{.15\linewidth}\center
       %   \maisonCinq{1/D,2/B, 5/A,6/C, 9/E,10/D, 13/A,14/C, 17/B}{\flecherond{0}}\\
-      %   {\small $4>2\Rightarrow$ violet}        
+      %   {\small $4>2\leadsto$ \pawn{C}}        
       % \end{column}
 
       \begin{column}{.15\linewidth}\center
         \maisonCinq{1/D,2/B, 5/A,6/C, 9/E,10/D, 13/A, 17/B,18/C}{\flecherond{4}}\\
-        {\small $2>1\Rightarrow$ bleu}        
+        {\small $2>1\leadsto$ \pawn{E}}        
       \end{column}
 
       \begin{column}{.15\linewidth}\center
         \maisonCinq{1/D,2/B, 5/A,6/C, 10/D, 13/A,14/E, 17/B,18/C}{\flecherond{3}}\\
-        {\small $4>1\Rightarrow$ vert}        
+        {\small $4>1\leadsto$ \pawn{A}}        
       \end{column}
 
       \begin{column}{.15\linewidth}\center
         \maisonCinq{1/D,2/B, 6/C, 9/A,10/D, 13/A,14/E, 17/B,18/C}{\flecherond{2}}\\
-        {\small $3>1\Rightarrow$ orange}        
+        {\small $3>1\leadsto$ \pawn{D}}        
       \end{column}
 
       \begin{column}{.15\linewidth}\center
         \maisonCinq{2/B, 5/D,6/C, 9/A,10/D, 13/A,14/E, 17/B,18/C}{\flecherond{1}}\\
-        {\small $3>2\Rightarrow$ violet}        
+        {\small $3>2\leadsto$ \pawn{C}}        
       \end{column}
       \begin{column}{.15\linewidth}\center
         \maisonCinq{1/C,2/B, 5/D,6/C, 9/A,10/D, 13/A,14/E, 17/B}{\flecherond{0}}\\
-        {\small $2>1\Rightarrow$ vert}        
+        {\small $2>1\leadsto$ \pawn{A}}        
       \end{column}
     \end{columns}
     %%%%%%%%%%%%%
     \begin{columns}
       \begin{column}{.15\linewidth}\center
         \maisonCinq{1/C,2/B, 5/D,6/C, 9/A,10/D, 14/E, 17/B,18/A}{\flecherond{4}}\\
-        {\small $2>1\Rightarrow$ vert}        
+        {\small $2>1\leadsto$ \pawn{A}}        
       \end{column}
 
       \begin{column}{.15\linewidth}\center
         \maisonCinq{1/C,2/B, 5/D,6/C, 10/D, 13/A,14/E, 17/B,18/A}{\flecherond{3}}\\
-         {\small $2>1\Rightarrow$ orange}        
+         {\small $2>1\leadsto$ \pawn{D}}        
       \end{column}
 
       \begin{column}{.15\linewidth}\center
         \maisonCinq{1/C,2/B, 6/C, 9/D,10/D, 13/A,14/E, 17/B,18/A}{\flecherond{2}}\\
-         {\small $2>1\Rightarrow$ violet}        
+         {\small $2>1\leadsto$ \pawn{C}}        
       \end{column}
 
       \begin{column}{.15\linewidth}\center
         \maisonCinq{2/B, 5/C,6/C, 9/D,10/D, 13/A,14/E, 17/B,18/A}{\flecherond{1}}\\
-         {\small $2>1\Rightarrow$ rouge}        
+         {\small $2>1\leadsto$ \pawn{B}}        
       \end{column}
       \begin{column}{.15\linewidth}\center
         \maisonCinq{1/B,2/B, 5/C,6/C, 9/D,10/D, 13/A,14/E, 18/A}{\flecherond{0}}\\
-         {\small $2>1\Rightarrow$ vert}        
+         {\small $2>1\leadsto$ \pawn{A}}        
       \end{column}
     \end{columns}
     %%%%%%%%%%%%%
     \begin{columns}
       \begin{column}{.15\linewidth}\center
         \maisonCinq{1/B,2/B, 5/C,6/C, 9/D,10/D, 14/E, 17/A,18/A}{\flecherond{4}}\\
-         {\small $1=1\Rightarrow$ orange}        
+         {\small $1=1\leadsto$ \pawn{D}}        
       \end{column}
 
       \begin{column}{.15\linewidth}\center
         \maisonCinq{1/B,2/B, 5/C,6/C, 10/D, 13/D,14/E, 17/A,18/A}{\flecherond{3}}\\
-         {\small $1=1\Rightarrow$ violet}        
+         {\small $1=1\leadsto$ \pawn{C}}        
       \end{column}
 
       \begin{column}{.15\linewidth}\center
         \maisonCinq{1/B,2/B, 6/C, 9/C,10/D, 13/D,14/E, 17/A,18/A}{\flecherond{2}}\\
-         {\small $1=1\Rightarrow$ rouge}        
+         {\small $1=1\leadsto$ \pawn{B}}        
       \end{column}
 
       \begin{column}{.15\linewidth}\center
         \maisonCinq{2/B, 5/B,6/C, 9/C,10/D, 13/D,14/E, 17/A,18/A}{\flecherond{1}}\\
-         {\small $1=1\Rightarrow$ vert}        
+         {\small $1=1\leadsto$ \pawn{A}}        
       \end{column}
 
       \begin{column}{.15\linewidth}\center
         \maisonCinq{1/A,2/B, 5/B,6/C, 9/C,10/D, 13/D,14/E, 18/A}{\flecherond{0}}\\
-         {\small $1>0\Rightarrow$ bleu}        
+         {\small $1>0\leadsto$ \pawn{E}}        
       \end{column}
     \end{columns}
     %%%%%%%%%%%%%
     \begin{columns}[t]
       \begin{column}{.15\linewidth}\center
         \maisonCinq{1/A,2/B, 5/B,6/C, 9/C,10/D, 13/D, 17/E,18/A}{\flecherond{4}}\\
-         {\small $1>0\Rightarrow$ orange}
+         {\small $1>0\leadsto$ \pawn{D}}
       \end{column}
 
       \begin{column}{.15\linewidth}\center
         \maisonCinq{1/A,2/B, 5/B,6/C, 9/C, 13/D,14/D, 17/E,18/A}{\flecherond{3}}\\
-         {\small $1>0\Rightarrow$ violet}
+         {\small $1>0\leadsto$ \pawn{C}}
       \end{column}
 
       \begin{column}{.15\linewidth}\center
         \maisonCinq{1/A,2/B, 5/B, 9/C,10/C, 13/D,14/D, 17/E,18/A}{\flecherond{2}}\\
-         {\small $1>0\Rightarrow$ rouge}
+         {\small $1>0\leadsto$ \pawn{B}}
       \end{column}
 
       \begin{column}{.15\linewidth}\center
         \maisonCinq{1/A, 5/B,6/B, 9/C,10/C, 13/D,14/D, 17/E,18/A}{\flecherond{1}}\\
-         {\small $1>0\Rightarrow$ vert}
+         {\small $1>0\leadsto$ \pawn{A}}
       \end{column}
 
       \begin{column}{.15\linewidth}\center
         \maisonCinq{1/A,2/A, 5/B,6/B, 9/C,10/C, 13/D,14/D, 17/E}{\flecherond{0}}\\
-         {\small $1>0\Rightarrow$ vert}
-
          \alert{Gagné!}
       \end{column}
     \end{columns}
   \end{block}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\maisonOk}[1]{\foreach \x in {#1} {\draw[shift=(m.corner \x)] node
+    {\small \Smiley};}}
 \begin{frame}{Étude du premier algorithme pour le base-ball multicolore}
   \begin{block}{Cet algorithme est bel et bon}
     \begin{itemize}
@@ -803,15 +806,162 @@
   \end{block}
 
   \begin{block}{Exemple d'exécution incorrecte}
+    \begin{itemize}
+    \item Il suffit d'inverser deux pions sur une situation gagnée (ici,
+      \pawn{A} et \pawn{D}), et on applique l'algorithme 
+    \end{itemize}\vspace{-\baselineskip}
+
     \begin{columns}[t]
       \begin{column}{.15\linewidth}\center
-        \maisonCinq{1/A,2/D, 5/B,6/B, 9/C,10/C, 13/A,14/D, 17/E}{\flecherond{0}}\\
-         {\small $2>0\Rightarrow$ vert}
+        \maisonCinq{1/A,2/D, 5/B,6/B, 9/C,10/C, 13/A,14/D, 18/E}{
+          \flecherond{0}\maisonOk{2,3,5} }\\
+         {\small $2>0\leadsto$ \pawn{A}}
       \end{column}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/A,2/D, 5/B,6/B, 9/C,10/C, 14/D, 17/A,18/E}
+          {\flecherond{4}\maisonOk{2,3,5}}\\
+         {\small $0=0\leadsto$ \pawn{C}}
+      \end{column}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/A,2/D, 5/B,6/B, 10/C, 13/C,14/D, 17/A,18/E}
+          {\flecherond{3}\maisonOk{2,5}}\\
+         {\small $0=0\leadsto$ \pawn{B}}
+      \end{column}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/A,2/D, 6/B, 9/B,10/C, 13/C,14/D, 17/A,18/E}
+          {\flecherond{2}\maisonOk{5}}\\
+         {\small $3>0\leadsto$ \pawn{D}}
+      \end{column}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/A, 5/D,6/B, 9/B,10/C, 13/C,14/D, 17/A,18/E}
+          {\flecherond{1}\maisonOk{5}}\\
+         {\small $1>0\leadsto$ \pawn{A}}
+      \end{column}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/A,2/A, 5/D,6/B, 9/B,10/C, 13/C,14/D, 18/E}
+          {\flecherond{0}\maisonOk{1,5}}\\
+         {\small $4>0\leadsto$ \pawn{C}}
+      \end{column}
+    \end{columns}
+    %%%%%%%%%%%%%
+    \begin{columns}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/A,2/A, 5/D,6/B, 9/B,10/C, 14/D, 17/C,18/E}
+          {\flecherond{4}\maisonOk{1,5}}\\
+          {\small $4>0\leadsto$ \pawn{B}}
+      \end{column}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/A,2/A, 5/D,6/B, 10/C, 13/B,14/D, 17/C,18/E}
+          {\flecherond{3}\maisonOk{1,5}}\\
+         {\small $2>0\leadsto$ \pawn{D}}
+      \end{column}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/A,2/A, 6/B, 9/D,10/C, 13/B,14/D, 17/C,18/E}
+          {\flecherond{2}\maisonOk{1,5}}\\
+         {\small $0=0\leadsto$ \pawn{A}}
+      \end{column}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/A, 5/A,6/B, 9/D,10/C, 13/B,14/D, 17/C,18/E}
+          {\flecherond{1}\maisonOk{5}}\\
+         {\small $3>0\leadsto$ \pawn{C}}
+      \end{column}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/A,2/C, 5/A,6/B, 9/D,10/C, 13/B,14/D, 18/E}
+          {\flecherond{0}\maisonOk{5}}\\
+         {\small $3>0\leadsto$ \pawn{B}}
+      \end{column}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/A,2/C, 5/A,6/B, 9/D,10/C, 14/D, 17/B,18/E}
+          {\flecherond{4}\maisonOk{5}}\\
+          {\small $1>0\leadsto$ \pawn{D}}
+      \end{column}
+    \end{columns}
+    %%%%%%%%%%%%%
+    \begin{columns}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/A,2/C, 5/A,6/B, 10/C, 13/D,14/D, 17/B,18/E}
+          {\flecherond{3}\maisonOk{4,5}}\\
+         {\small $4>0\leadsto$ \pawn{A}}
+      \end{column}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/A,2/C, 6/B, 9/A,10/C, 13/D,14/D, 17/B,18/E}
+          {\flecherond{2}\maisonOk{4,5}}\\
+         {\small $2>0\leadsto$ \pawn{C}}
+      \end{column}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/A, 5/C,6/B, 9/A,10/C, 13/D,14/D, 17/B,18/E}
+          {\flecherond{1}\maisonOk{4,5}}\\
+         {\small $2>0\leadsto$ \pawn{B}}
+      \end{column}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/A,2/B, 5/C,6/B, 9/A,10/C, 13/D,14/D, 18/E}
+          {\flecherond{0}\maisonOk{4,5}}\\
+         {\small $0=0\leadsto$ \pawn{D}}
+      \end{column}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/A,2/B, 5/C,6/B, 9/A,10/C, 14/D, 17/D,18/E}
+          {\flecherond{4}\maisonOk{5}}\\
+         {\small $3>0\leadsto$ \pawn{A}}
+      \end{column}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/A,2/B, 5/C,6/B, 10/C, 13/A,14/D, 17/D,18/E}
+          {\flecherond{3}\maisonOk{5}}\\
+         {\small $1>0\leadsto$ \pawn{C}}
+      \end{column}
+    \end{columns}
+    %%%%%%%%%%%%%
+    \begin{columns}
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/A,2/B, 6/B, 9/C,10/C, 13/A,14/D, 17/D,18/E}
+          {\flecherond{2}\maisonOk{3,5}}\\
+         {\small $1>0\leadsto$ \pawn{B}}
+      \end{column}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/A, 5/B,6/B, 9/C,10/C, 13/A,14/D, 17/D,18/E}
+          {\flecherond{1}\maisonOk{2,3,5}}\\
+         {\small $4>0\leadsto$ \pawn{D}}
+      \end{column}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/A,2/D, 5/B,6/B, 9/C,10/C, 13/A,14/D, 18/E}
+          {\flecherond{1}\maisonOk{2,3,5}}\\
+         {\small On boucle!}
+      \end{column}
+
+      \begin{column}{.51\linewidth}
+        \begin{itemize}
+        \item On est revenu à notre situation initiale\\
+          $\Rightarrow$ on va boucler à l'infini
+        \item Cet algorithme ne marche pas ici, \\il faut chercher autre chose\ldots
+        \end{itemize}
+      \end{column}
+
     \end{columns}
   \end{block}
 \end{frame}
 
+\begin{frame}{Activité: la planche à clous}
+  
+  \centerline{\includegraphics[width=.7\linewidth]{img/electric_city.jpg}}
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
