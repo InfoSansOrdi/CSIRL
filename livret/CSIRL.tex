@@ -10,18 +10,17 @@
 \usepackage{amsmath,amsthm, amssymb, latexsym}
 %\usepackage{figlatex}
 \usepackage{multicol}
-\usepackage{tikz,url,marvosym}
+\usepackage{tikz,url,marvosym,moreverb}
 \usetikzlibrary{shapes.geometric}
 %\usepackage{times}\usefonttheme{professionalfonts}  % obsolete
 %\usefonttheme[onlymath]{serif}
 \boldmath
-%\usepackage[orientation=portrait,size=custom,height=20cm,width=20cm,debug]{beamerposter}
-%\usepackage[orientation=portrait,size=custom,debug]{beamerposter}
-% change list indention level
-% \setdefaultleftmargin{3em}{}{}{}{}{}
-\definecolor{orange1}{rgb}{0.988,0.686,0.243}
-\definecolor{orange2}{rgb}{0.961,0.475,0.000}
-\definecolor{orange3}{rgb}{0.808,0.361,0.000}
+
+
+%%% Mon slicing manuel
+\let\Coupe=\comment \let\endCoupe=\endcomment
+\renewenvironment{Coupe}{   }{   }
+
 
 % Work around a bug in beamer?
 % http://tex.stackexchange.com/questions/4436/beamer-undefined-control-sequence
@@ -134,6 +133,7 @@
 \graphicspath{{figures/}}
 
 \begin{document}
+\begin{Coupe}
 \begin{frame}{}
 
   \begin{center}
@@ -500,6 +500,7 @@
 %%%%%%%%%%%%%%%%%   LES BONSHOMMES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{Coupe}
 \newcommand{\maisonPair}[5]{  \begin{tikzpicture}
     \node[name=m,shape=regular polygon,regular polygon sides=#3,minimum size=22mm,
           rotate=(360/#3)]{};
@@ -556,6 +557,8 @@
 \colorlet{J}{pink}
 
 \newcommand{\pawn}[1]{\tikz \draw node[shape=circle,fill=#1,draw=black,inner sep=.1] {~~~};}
+
+\begin{Coupe}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Activité: Base-ball multicolore}
@@ -959,6 +962,149 @@
 
     \end{columns}
   \end{block}
+\end{frame}
+\end{Coupe}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\newcommand{\ligneMaison}[2]{
+  \begin{tikzpicture}
+    \foreach \x/\col in {#1} {
+      \draw (.55*\x,.65) node[shape=circle,fill=\col,draw=black,inner sep=.1] {~~~};
+    }
+    \foreach \x/\col in {#2} {
+      \draw (.55*\x,.3) node[shape=circle,fill=\col,draw=black,inner sep=.1] {~~~};
+    }
+    \foreach \x/\col in {1/A, 2/B, 3/C, 4/D, 5/E} {
+      \draw (.55*\x,-.25) node[shape=ellipse,fill=\col,draw=black,rotate=90] {~~};
+    }
+  \end{tikzpicture}
+}
+\begin{frame}{Un autre algorithme pour le base-ball multicolore}
+  \begin{block}{Apprendre de ses échecs: {\color{black}notre algorithme boucle parfois à l'infini}}
+    \begin{itemize}
+    \item Pour réparer cela, le plus simple est de s'interdire de boucler, en
+      coupant le cercle
+    \item Les bonhommes ne peuvent plus passer directement de la maison
+      \pawn{A} à \pawn{E}\\
+      (pour ne pas se tromper, le plus simple est de placer les maisons en ligne)
+%    \item Les règles de déplacement restent inchangées par ailleurs
+    \end{itemize}
+
+    \begin{columns}
+      \begin{column}{.2\linewidth}
+        ~
+      \end{column}
+      \begin{column}{.2\linewidth}\center
+        \maisonCinq{1/D,2/B, 5/A,6/C, 9/E, 12/D,13/A, 17/B,18/C}{
+          \draw[dashed,draw=red,ultra thick] (0,0) -- (.9,1.1);
+        }         
+      \end{column}
+
+      \begin{column}{.1\linewidth}\center
+        \Large$\leadsto$
+      \end{column}
+
+      \begin{column}{.2\linewidth}\center
+        \ligneMaison{1/B, 2/C,      4/D, 5/B}
+                    {1/D, 2/A, 3/E, 4/A, 5/C}
+      \end{column}
+      \begin{column}{.2\linewidth}
+        ~
+      \end{column}
+    \end{columns}
+  \end{block}
+
+  \bigskip
+
+  \begin{block}{Apprendre de ses réussites: {\color{black}le crépier}}
+    \begin{itemize}
+    \item On a cherché à réduire la taille du problème à peu à peu\\
+      {(il y a 7 crèpes à trier. La plus grande va définitivement à sa place; il
+        reste 6 crèpes à trier)}
+    \item On s'est fixé des objectifs intermédiaires, qui décomposent le
+      problème en étapes que je sais faire\\
+      {(mettre la plus grande en haut pour parvenir à la mettre en bas)}
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{Nouvel algorithme}
+    \begin{itemize}
+    \item On place les bonshommes de la première maison en premier, et on n'y
+      touche plus ensuite
+    \item On fera ensuite pareil pour la seconde maison, puis la troisième, et
+      ainsi de suite pour toutes
+    \item Pour ammener les pions \pawn{A} dans leur maison, je déplace tous
+      ceux qui me gène
+    \item Pour déplacer ceux qui me gène, je déplace le trou pour leur faire de
+      la place
+    \end{itemize}
+  \end{block}
+  \begin{columns}
+    % \begin{column}{.15\linewidth}\center
+    %     \ligneMaison{1/B, 2/C, 3/D, 4/B}
+    %                 {1/D, 2/A, 3/E, 4/A, 5/C}
+    % \end{column}
+
+    % \begin{column}{.15\linewidth}\center
+    %     \ligneMaison{1/B, 2/C, 3/D,      5/B}
+    %                 {1/D, 2/A, 3/E, 4/A, 5/C}
+    % \end{column}
+    \begin{column}{.15\linewidth}\center
+        \ligneMaison{1/B, 2/C,      4/D, 5/B}
+                    {1/D, 2/A, 3/E, 4/A, 5/C}
+    \end{column}
+    \begin{column}{.15\linewidth}\center
+        \ligneMaison{1/B,      3/C, 4/D, 5/B}
+                    {1/D, 2/A, 3/E, 4/A, 5/C}
+    \end{column}
+    \begin{column}{.15\linewidth}\center
+        \ligneMaison{     2/B, 3/C, 4/D, 5/B}
+                    {1/D, 2/A, 3/E, 4/A, 5/C}
+    \end{column}
+    \begin{column}{.15\linewidth}\center
+        \ligneMaison{1/A, 2/B, 3/C, 4/D, 5/B}
+                    {1/D,      3/E, 4/A, 5/C}
+    \end{column}
+    \begin{column}{.15\linewidth}\center
+        \ligneMaison{1/A, 2/B, 3/C, 4/D, 5/B}
+                    {1/D, 2/E,      4/A, 5/C}
+    \end{column}    
+    \begin{column}{.15\linewidth}\center
+        \ligneMaison{1/A, 2/B, 3/C, 4/D, 5/B}
+                    {1/D, 2/E, 3/A,      5/C}
+    \end{column}    
+  \end{columns}\vspace{-\baselineskip}
+  \begin{columns}
+    \begin{column}{.15\linewidth}\center
+        \ligneMaison{1/A, 2/B,      4/D, 5/B}
+                    {1/D, 2/E, 3/A, 4/C, 5/C}
+    \end{column}    
+    \begin{column}{.15\linewidth}\center
+        \ligneMaison{1/A,      3/B, 4/D, 5/B}
+                    {1/D, 2/E, 3/A, 4/C, 5/C}
+    \end{column}    
+    \begin{column}{.15\linewidth}\center
+        \ligneMaison{1/A, 2/A, 3/B, 4/D, 5/B}
+                    {1/D, 2/E,      4/C, 5/C}
+    \end{column}    
+    \begin{column}{.15\linewidth}\center
+        \ligneMaison{1/A, 2/A, 3/B, 4/D, 5/B}
+                    {1/D,      3/E, 4/C, 5/C}
+    \end{column}    
+    \begin{column}{.15\linewidth}\center
+        \ligneMaison{1/A, 2/A, 3/B, 4/D, 5/B}
+                    {     2/D, 3/E, 4/C, 5/C}
+    \end{column}    
+    \begin{column}{.15\linewidth}\center
+        \ligneMaison{1/A,      3/B, 4/D, 5/B}
+                    {1/A, 2/D, 3/E, 4/C, 5/C}
+    \end{column}    
+  \end{columns}
+
+  \begin{itemize}
+  \item On peut maintenant oublier les \pawn{A}, qui sont à leur place définitive.
+  \item On place maintenant les \pawn{B} de la même manière, puis les \pawn{C},
+    puis les \pawn{D} et enfin le \pawn{E}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Activité: la planche à clous}
