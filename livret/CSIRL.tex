@@ -519,15 +519,12 @@
       \draw[shift=(m.corner \base)] 
          node[shape=ellipse,fill=\maison,draw=black,rotate=(360/#3)*(\base-1)] {~~};
     }
-    \foreach \bb in {1,...,#4} {
-      \draw[shift=(b.corner \bb)] node[name=bb \bb]{};
-    }
     \foreach \base/\maison in {#1} {
       \draw[shift=(b.corner \base)] 
-         node[shape=circle,fill=\maison,draw=black,inner sep=.1] 
-         {~~~};
-%         {\footnotesize\base};
+         node[shape=circle,fill=\maison,draw=black,inner sep=.1] {~~~};
     }
+    \foreach \bb in {1,...,#4} {\draw[shift=(b.corner \bb)] node[name=bb \bb]{};
+%    \foreach \bb in {1,...,#4} {\draw[shift=(b.corner \bb)] node[name=bb \bb]{\tiny\bb};}%name the bonshommes
     #2
   \end{tikzpicture}
 }
@@ -537,7 +534,7 @@
 \newcommand{\maisonSept}[2]{\maisonImpair{#1}{#2}{7}{28}{1/A,2/B,3/C,4/D,5/E,6/F,7/G}}
 
 \colorlet{A}{green!60}
-\colorlet{B}{red!60}
+\colorlet{B}{red!80}
 \colorlet{C}{purple!40}
 \colorlet{D}{orange!80}
 \colorlet{E}{blue!80}
@@ -582,14 +579,14 @@
     \end{itemize}
   \end{block}
 
-%  \bigskip
+  \vspace{-\baselineskip}
   \begin{columns}
-    \begin{column}{.17\linewidth}
+    \begin{column}{.17\linewidth}\center
       \maisonQuatre{2/B,3/A, 5/D, 8/B,9/C, 11/D,12/A} {}
 
       \structure{Situation initiale}      
     \end{column}
-    \begin{column}{.17\linewidth}
+    \begin{column}{.17\linewidth}\center
       \maisonQuatre{2/B,3/A, 5/D, 8/B,9/C, 11/D,12/A}
                    { 
                      \draw[->,ultra thick,draw=black!10!green] (bb 2) -> (bb 6);
@@ -599,7 +596,7 @@
 
       \structure{Coups autorisés}      
     \end{column}
-    \begin{column}{.17\linewidth}
+    \begin{column}{.17\linewidth}\center
       \maisonQuatre{2/B,3/A, 5/D, 8/B,9/C, 11/D,12/A}
                    { \draw[->,ultra thick,draw=red] (bb 11) -> (bb 6);
                      \draw[->,ultra thick,draw=red] (bb 12) -> (bb 6);
@@ -614,8 +611,8 @@
 
       \structure{Coups interdits}      
     \end{column}
-    \begin{column}{.17\linewidth}
-      \maisonQuatre{11/A,12/A, 2/B,3/B, 5/C, 8/D,9/D}{}
+    \begin{column}{.17\linewidth}\center
+      \maisonQuatre{2/A,3/A, 5/B,6/B, 8/C,9/C, 11/D}{}
 
       \structure{Situation finale}      
     \end{column}
@@ -628,7 +625,7 @@
       maisons
     \item L'objectif est d'expliquer comment on fait. On cherche donc
       l'algorithme correspondant
-    \item Si on veut utiliser plus de couleurs, c'est possible:
+    \item Si on veut utiliser plus de couleurs, c'est possible.
     \end{itemize}
   \end{block}
 
@@ -651,7 +648,151 @@
 
   
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\flecherond}[1]{
+  \draw[ultra thick] (0,0) circle (3mm);
+  \draw[ultra thick,rotate=#1*72] (3mm,0) -- +(-.15,-.08);
+  \draw[ultra thick,rotate=#1*72] (3mm,0) -- +(.08,-.15);
+  \draw[fill=white,draw=white,rotate=#1*72] (3mm,2.5pt) circle (2pt);
+}
+\begin{frame}{Un premier algorithme pour le base-ball multicolor}
+  \begin{block}{L'algorithme}
+    \begin{itemize}
+    \item On ne s'autorise qu'à tourner dans un seul sens.
+    \item On n'a plus 4 coups possibles, mais deux seulement (car 2 bonshommes
+      tourneraient à l'envers)
+    \item Entre ces deux bonshommes, je déplace celui dont la destination est la
+      plus lointaine
+    \end{itemize}
+  \end{block}
 
+
+  \begin{block}{Exemple d'exécution}
+    \begin{columns}
+      % \begin{column}{.15\linewidth}\center
+      %   \maisonCinq{1/D,2/B, 5/A,6/C, 9/E,10/D, 13/A,14/C, 17/B}{\flecherond{0}}\\
+      %   {\small $4>2\Rightarrow$ violet}        
+      % \end{column}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/D,2/B, 5/A,6/C, 9/E,10/D, 13/A, 17/B,18/C}{\flecherond{4}}\\
+        {\small $2>1\Rightarrow$ bleu}        
+      \end{column}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/D,2/B, 5/A,6/C, 10/D, 13/A,14/E, 17/B,18/C}{\flecherond{3}}\\
+        {\small $4>1\Rightarrow$ vert}        
+      \end{column}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/D,2/B, 6/C, 9/A,10/D, 13/A,14/E, 17/B,18/C}{\flecherond{2}}\\
+        {\small $3>1\Rightarrow$ orange}        
+      \end{column}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{2/B, 5/D,6/C, 9/A,10/D, 13/A,14/E, 17/B,18/C}{\flecherond{1}}\\
+        {\small $3>2\Rightarrow$ violet}        
+      \end{column}
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/C,2/B, 5/D,6/C, 9/A,10/D, 13/A,14/E, 17/B}{\flecherond{0}}\\
+        {\small $2>1\Rightarrow$ vert}        
+      \end{column}
+    \end{columns}
+    %%%%%%%%%%%%%
+    \begin{columns}
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/C,2/B, 5/D,6/C, 9/A,10/D, 14/E, 17/B,18/A}{\flecherond{4}}\\
+        {\small $2>1\Rightarrow$ vert}        
+      \end{column}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/C,2/B, 5/D,6/C, 10/D, 13/A,14/E, 17/B,18/A}{\flecherond{3}}\\
+         {\small $2>1\Rightarrow$ orange}        
+      \end{column}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/C,2/B, 6/C, 9/D,10/D, 13/A,14/E, 17/B,18/A}{\flecherond{2}}\\
+         {\small $2>1\Rightarrow$ violet}        
+      \end{column}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{2/B, 5/C,6/C, 9/D,10/D, 13/A,14/E, 17/B,18/A}{\flecherond{1}}\\
+         {\small $2>1\Rightarrow$ rouge}        
+      \end{column}
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/B,2/B, 5/C,6/C, 9/D,10/D, 13/A,14/E, 18/A}{\flecherond{0}}\\
+         {\small $2>1\Rightarrow$ vert}        
+      \end{column}
+    \end{columns}
+    %%%%%%%%%%%%%
+    \begin{columns}
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/B,2/B, 5/C,6/C, 9/D,10/D, 14/E, 17/A,18/A}{\flecherond{4}}\\
+         {\small $1=1\Rightarrow$ orange}        
+      \end{column}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/B,2/B, 5/C,6/C, 10/D, 13/D,14/E, 17/A,18/A}{\flecherond{3}}\\
+         {\small $1=1\Rightarrow$ violet}        
+      \end{column}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/B,2/B, 6/C, 9/C,10/D, 13/D,14/E, 17/A,18/A}{\flecherond{2}}\\
+         {\small $1=1\Rightarrow$ rouge}        
+      \end{column}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{2/B, 5/B,6/C, 9/C,10/D, 13/D,14/E, 17/A,18/A}{\flecherond{1}}\\
+         {\small $1=1\Rightarrow$ vert}        
+      \end{column}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/A,2/B, 5/B,6/C, 9/C,10/D, 13/D,14/E, 18/A}{\flecherond{0}}\\
+         {\small $1>0\Rightarrow$ bleu}        
+      \end{column}
+    \end{columns}
+    %%%%%%%%%%%%%
+    \begin{columns}[t]
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/A,2/B, 5/B,6/C, 9/C,10/D, 13/D, 17/E,18/A}{\flecherond{4}}\\
+         {\small $1>0\Rightarrow$ orange}
+      \end{column}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/A,2/B, 5/B,6/C, 9/C, 13/D,14/D, 17/E,18/A}{\flecherond{3}}\\
+         {\small $1>0\Rightarrow$ violet}
+      \end{column}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/A,2/B, 5/B, 9/C,10/C, 13/D,14/D, 17/E,18/A}{\flecherond{2}}\\
+         {\small $1>0\Rightarrow$ rouge}
+      \end{column}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/A, 5/B,6/B, 9/C,10/C, 13/D,14/D, 17/E,18/A}{\flecherond{1}}\\
+         {\small $1>0\Rightarrow$ vert}
+      \end{column}
+
+      \begin{column}{.15\linewidth}\center
+        \maisonCinq{1/A,2/A, 5/B,6/B, 9/C,10/C, 13/D,14/D, 17/E}{\flecherond{0}}\\
+         {\small $1>0\Rightarrow$ vert}
+
+         \alert{Gagné!}
+      \end{column}
+    \end{columns}
+  \end{block}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Étude du premier algorithme pour le base-ball multicolor}
+  \begin{block}{Cet algorithme est bel et bon}
+    \begin{itemize}
+    \item Il est très simple: on pourrait l'expliquer à un ordinateur
+    \item Il est relativement rapide: 20 coups pour 9 bonshommes, ce n'est pas
+      si mal
+    \item Seul problème: cet algorithme est faux\ldots
+    \end{itemize}
+  \end{block}
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
