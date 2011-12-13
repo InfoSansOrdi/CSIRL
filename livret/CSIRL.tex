@@ -47,7 +47,7 @@
 \FPupn{\resulttinyY}{myfontscale fontSizeY * 2 round}
 \renewcommand*{\tiny}{\fontsize{\resulttinyX}{\resulttinyY}\selectfont}
 
-\edef\fontSizeX{14.4}\edef\fontSizeY{18}   
+\edef\fontSizeX{14.4}\edef\fontSizeY{18}
 \FPupn{\resultscriptsizeX}{myfontscale fontSizeX * 2 round}
 \FPupn{\resultscriptsizeY}{myfontscale fontSizeY * 2 round}
 \renewcommand*{\scriptsize}{\fontsize{\resultscriptsizeX}{\resultscriptsizeY}\selectfont}
@@ -171,7 +171,7 @@
     licence GFDL/CC-BY-SA
     \url{http://en.wikipedia.org/wiki/File:Hamiltonian_path.svg}
 
-    P\pageref{img:matches}: Pyramide d'allumettes par M0tty, licence CC-BY-SA 
+    P\pageref{img:matches}: Pyramide d'allumettes par M0tty, licence CC-BY-SA
     \url{http://fr.wikipedia.org/wiki/Fichier:Pyramidal_matches.svg}
   \end{block}
 \end{frame}
@@ -207,7 +207,7 @@
 
   \begin{block}{Les séances existantes dans la série}
     \begin{itemize}
-    \item \structure{Séance 1:} Qu'est ce qu'un algorithme, et à quoi ça sert 
+    \item \structure{Séance 1:} Qu'est ce qu'un algorithme, et à quoi ça sert
     \item \structure{Séance 2:} Comment les ordinateurs codent et manipulent les données (à
       venir)
     \item \structure{Séance 3:} Turzzle, le puzzle de programmation sans
@@ -282,7 +282,7 @@
     \item 1 clou différencié (ou une vis)
     \end{itemize}
   \end{block}
-  
+
   \begin{block}{Règle du jeu}
     \begin{itemize}
     \item Chaque joueur prend tour à tour soit 1 soit 2 soit 3 clous
@@ -317,7 +317,7 @@
     \item Si le joueur dont c'est le tour prend 2 clous, son adversaire en
       prend 2 et gagne
     \item Si le joueur dont c'est le tour prend 3 clous, son adversaire en
-      prend 1 et gagne 
+      prend 1 et gagne
     \end{itemize}
     Quoi qu'il fasse, le joueur dont c'est le tour a donc perdu si son
     adversaire sait jouer.
@@ -351,7 +351,7 @@
         \clou{(0,0)}{draw=blue}
         \clou{(.5,0)}{draw=red}
         \clou{(1,0)}{draw=red}
-      \end{tikzpicture} & 
+      \end{tikzpicture} &
       \begin{tikzpicture}[baseline=\baselineskip]
         \clou{(.5,.6)}{draw=blue}
         \clou{(0,0)}{draw=red}
@@ -405,7 +405,7 @@
         \clou{(0,-.6)}{draw=blue}
         \clou{(.5,-.6)}{draw=red}
         \clou{(1,-.6)}{draw=red}
-      \end{tikzpicture} & 
+      \end{tikzpicture} &
       \begin{tikzpicture}[baseline=\baselineskip]
         \clou{(.5,.6)}{draw=black}
         \clou{(0,0)}{draw=black}
@@ -421,7 +421,7 @@
     \end{tabular}
   \end{center}
   Et ainsi de suite
-  
+
 
   \begin{block}{Le rapport avec l'informatique}
     \begin{itemize}
@@ -442,20 +442,20 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Activité: Le crêpier psycho-rigide}
- 
+
   \begin{block}{Matériel}
     \begin{itemize}
     \item des planchettes en bois de tailles et de couleurs différentes (faces reconnaissables)
     \item éventuellement une pelle à tarte pour retourner les planchettes
     \end{itemize}
   \end{block}
-  
+
   \begin{block}{Règle du jeu}
     \begin{itemize}
     \item Le crêpier doit ranger ses crêpes de la plus grande à la plus petite,
       face colorée vers le haut
     \item il peut retourner une ou plusieurs crêpes à la fois
-    \item l'ordre des crêpes ne peut pas être modifié au moment de retouner
+    \item l'ordre des crêpes ne peut pas être modifié au moment de retourner
       une pile
     \end{itemize}
   \end{block}
@@ -503,15 +503,15 @@
     \node[name=b,shape=regular polygon,regular polygon sides=#4,minimum size=14mm,
           rotate=(360/#4)/2]{};
     \foreach \base/\maison in {#5} {
-      \draw[shift=(m.corner \base)] 
+      \draw[shift=(m.corner \base)]
          node[shape=ellipse,fill=\maison,draw=black,rotate=((360/#3)*(\base-1))+(360/#3/2)] {~~};
     }
     \foreach \bb in {1,...,#4} {
       \draw[shift=(b.corner \bb)] node[name=bb \bb]{};
     }
     \foreach \base/\maison in {#1} {
-      \draw[shift=(b.corner \base)] 
-         node[name=bb \base,shape=circle,fill=\maison,draw=black,inner sep=.1] 
+      \draw[shift=(b.corner \base)]
+         node[name=bb \base,shape=circle,fill=\maison,draw=black,inner sep=.1]
          {~~~};
 %         {\footnotesize\base};
     }
@@ -522,11 +522,11 @@
     \node[name=m,shape=regular polygon,regular polygon sides=#3,minimum size=22mm]{};
     \node[name=b,shape=regular polygon,regular polygon sides=#4,minimum size=14mm]{};
     \foreach \base/\maison in {#5} {
-      \draw[shift=(m.corner \base)] 
+      \draw[shift=(m.corner \base)]
          node[shape=ellipse,fill=\maison,draw=black,rotate=(360/#3)*(\base-1)] {~~};
     }
     \foreach \base/\maison in {#1} {
-      \draw[shift=(b.corner \base)] 
+      \draw[shift=(b.corner \base)]
          node[shape=circle,fill=\maison,draw=black,inner sep=.1] {~~~};
     }
     \foreach \bb in {1,...,#4} {\draw[shift=(b.corner \bb)] node[name=bb \bb] {};}
@@ -555,11 +555,11 @@
 \begin{frame}{Activité: Base-ball multicolore}
   \begin{block}{Matériel nécessaire}
     \begin{itemize}
-    \item Plusieurs équipes bien différenciables, chacune composée d'une maison
+    \item Plusieurs équipes bien différentiables, chacune composée d'une maison
       et de deux bonshommes\\
       (des legos, des bouts de bois, des cailloux, du fil électrique de
       différentes couleurs, ou autres)
-      
+
     \item Il faut 5 équipes au minimum. 7 équipes sont préférables, et on peut
       en utiliser une dizaine
     \end{itemize}
@@ -591,17 +591,17 @@
     \begin{column}{.17\linewidth}\center
       \maisonQuatre{2/B,3/A, 5/D, 8/B,9/C, 11/D,12/A} {}
 
-      \structure{Situation initiale}      
+      \structure{Situation initiale}
     \end{column}
     \begin{column}{.17\linewidth}\center
       \maisonQuatre{2/B,3/A, 5/D, 8/B,9/C, 11/D,12/A}
-                   { 
+                   {
                      \draw[->,ultra thick,draw=black!10!green] (bb 2) -> (bb 6);
                      \draw[->,ultra thick,draw=black!10!green] (bb 3) -> (bb 6);
                      \draw[->,ultra thick,draw=black!10!green] (bb 9) -> (bb 6);
                      \draw[->,ultra thick,draw=black!10!green] (bb 8) -> (bb 6);}
 
-      \structure{Coups autorisés}      
+      \structure{Coups autorisés}
     \end{column}
     \begin{column}{.17\linewidth}\center
       \maisonQuatre{2/B,3/A, 5/D, 8/B,9/C, 11/D,12/A}
@@ -610,18 +610,18 @@
                      \draw[->,ultra thick,draw=red] (bb 12) -> (bb 2);
                      \draw[->,ultra thick,draw=red] (bb 2) -> (bb 12);
                      \draw[->,ultra thick,draw=red] (bb 5) -> (bb 3);
-                     \draw[->,ultra thick,draw=red] (bb 5) 
+                     \draw[->,ultra thick,draw=red] (bb 5)
                         .. controls (0pt,0pt) .. (bb 8);
                      \draw[->,ultra thick,draw=red] (bb 11) -> (bb 9);
                      \draw[->,ultra thick,draw=red] (bb 9) -> (bb 11);
                    }
 
-      \structure{Coups interdits}      
+      \structure{Coups interdits}
     \end{column}
     \begin{column}{.17\linewidth}\center
       \maisonQuatre{2/A,3/A, 5/B,6/B, 8/C,9/C, 11/D}{}
 
-      \structure{Situation finale}      
+      \structure{Situation finale}
     \end{column}
   \end{columns}
 
@@ -637,9 +637,9 @@
   \end{block}
 
   \centerline{
-    \maisonCinq{1/A,2/A, 5/B,6/B, 9/C,10/C, 13/D,14/D, 17/E}{}  
-    \maisonSix{2/A,4/A,  6/B,8/B, 10/C,12/C, 14/D,16/D, 18/E,20/E, 22/F}{}  
-    \maisonSept{1/A,2/A, 5/B,6/B, 9/C,10/C, 13/D,14/D, 17/E,18/E, 21/F,22/F, 25/G}{}  
+    \maisonCinq{1/A,2/A, 5/B,6/B, 9/C,10/C, 13/D,14/D, 17/E}{}
+    \maisonSix{2/A,4/A,  6/B,8/B, 10/C,12/C, 14/D,16/D, 18/E,20/E, 22/F}{}
+    \maisonSept{1/A,2/A, 5/B,6/B, 9/C,10/C, 13/D,14/D, 17/E,18/E, 21/F,22/F, 25/G}{}
     \maisonPair{2/A,4/A, 6/B,8/B, 10/C,12/C, 14/D,16/D, 18/E,20/E, 22/F,24/F,
       26/G,28/G, 30/H}{}{8}{32}
                {1/A,2/B,3/C,4/D,5/E,6/F,7/G,8/H}
@@ -653,7 +653,7 @@
                {1/A,2/B,3/C,4/D,5/E,6/F,7/G,8/H,9/I,10/J}
   }
 
-  
+
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\flecherond}[1]{
@@ -679,84 +679,84 @@
       % J'avais une case de trop...
       % \begin{column}{.15\linewidth}\center
       %   \maisonCinq{1/D,2/B, 5/A,6/C, 9/E,10/D, 13/A,14/C, 17/B}{\flecherond{0}}\\
-      %   {\small $4>2\Rightarrow$ violet}        
+      %   {\small $4>2\Rightarrow$ violet}
       % \end{column}
 
       \begin{column}{.15\linewidth}\center
         \maisonCinq{1/D,2/B, 5/A,6/C, 9/E,10/D, 13/A, 17/B,18/C}{\flecherond{4}}\\
-        {\small $2>1\Rightarrow$ bleu}        
+        {\small $2>1\Rightarrow$ bleu}
       \end{column}
 
       \begin{column}{.15\linewidth}\center
         \maisonCinq{1/D,2/B, 5/A,6/C, 10/D, 13/A,14/E, 17/B,18/C}{\flecherond{3}}\\
-        {\small $4>1\Rightarrow$ vert}        
+        {\small $4>1\Rightarrow$ vert}
       \end{column}
 
       \begin{column}{.15\linewidth}\center
         \maisonCinq{1/D,2/B, 6/C, 9/A,10/D, 13/A,14/E, 17/B,18/C}{\flecherond{2}}\\
-        {\small $3>1\Rightarrow$ orange}        
+        {\small $3>1\Rightarrow$ orange}
       \end{column}
 
       \begin{column}{.15\linewidth}\center
         \maisonCinq{2/B, 5/D,6/C, 9/A,10/D, 13/A,14/E, 17/B,18/C}{\flecherond{1}}\\
-        {\small $3>2\Rightarrow$ violet}        
+        {\small $3>2\Rightarrow$ violet}
       \end{column}
       \begin{column}{.15\linewidth}\center
         \maisonCinq{1/C,2/B, 5/D,6/C, 9/A,10/D, 13/A,14/E, 17/B}{\flecherond{0}}\\
-        {\small $2>1\Rightarrow$ vert}        
+        {\small $2>1\Rightarrow$ vert}
       \end{column}
     \end{columns}
     %%%%%%%%%%%%%
     \begin{columns}
       \begin{column}{.15\linewidth}\center
         \maisonCinq{1/C,2/B, 5/D,6/C, 9/A,10/D, 14/E, 17/B,18/A}{\flecherond{4}}\\
-        {\small $2>1\Rightarrow$ vert}        
+        {\small $2>1\Rightarrow$ vert}
       \end{column}
 
       \begin{column}{.15\linewidth}\center
         \maisonCinq{1/C,2/B, 5/D,6/C, 10/D, 13/A,14/E, 17/B,18/A}{\flecherond{3}}\\
-         {\small $2>1\Rightarrow$ orange}        
+         {\small $2>1\Rightarrow$ orange}
       \end{column}
 
       \begin{column}{.15\linewidth}\center
         \maisonCinq{1/C,2/B, 6/C, 9/D,10/D, 13/A,14/E, 17/B,18/A}{\flecherond{2}}\\
-         {\small $2>1\Rightarrow$ violet}        
+         {\small $2>1\Rightarrow$ violet}
       \end{column}
 
       \begin{column}{.15\linewidth}\center
         \maisonCinq{2/B, 5/C,6/C, 9/D,10/D, 13/A,14/E, 17/B,18/A}{\flecherond{1}}\\
-         {\small $2>1\Rightarrow$ rouge}        
+         {\small $2>1\Rightarrow$ rouge}
       \end{column}
       \begin{column}{.15\linewidth}\center
         \maisonCinq{1/B,2/B, 5/C,6/C, 9/D,10/D, 13/A,14/E, 18/A}{\flecherond{0}}\\
-         {\small $2>1\Rightarrow$ vert}        
+         {\small $2>1\Rightarrow$ vert}
       \end{column}
     \end{columns}
     %%%%%%%%%%%%%
     \begin{columns}
       \begin{column}{.15\linewidth}\center
         \maisonCinq{1/B,2/B, 5/C,6/C, 9/D,10/D, 14/E, 17/A,18/A}{\flecherond{4}}\\
-         {\small $1=1\Rightarrow$ orange}        
+         {\small $1=1\Rightarrow$ orange}
       \end{column}
 
       \begin{column}{.15\linewidth}\center
         \maisonCinq{1/B,2/B, 5/C,6/C, 10/D, 13/D,14/E, 17/A,18/A}{\flecherond{3}}\\
-         {\small $1=1\Rightarrow$ violet}        
+         {\small $1=1\Rightarrow$ violet}
       \end{column}
 
       \begin{column}{.15\linewidth}\center
         \maisonCinq{1/B,2/B, 6/C, 9/C,10/D, 13/D,14/E, 17/A,18/A}{\flecherond{2}}\\
-         {\small $1=1\Rightarrow$ rouge}        
+         {\small $1=1\Rightarrow$ rouge}
       \end{column}
 
       \begin{column}{.15\linewidth}\center
         \maisonCinq{2/B, 5/B,6/C, 9/C,10/D, 13/D,14/E, 17/A,18/A}{\flecherond{1}}\\
-         {\small $1=1\Rightarrow$ vert}        
+         {\small $1=1\Rightarrow$ vert}
       \end{column}
 
       \begin{column}{.15\linewidth}\center
         \maisonCinq{1/A,2/B, 5/B,6/C, 9/C,10/D, 13/D,14/E, 18/A}{\flecherond{0}}\\
-         {\small $1>0\Rightarrow$ bleu}        
+         {\small $1>0\Rightarrow$ bleu}
       \end{column}
     \end{columns}
     %%%%%%%%%%%%%
@@ -851,7 +851,7 @@
       groupant les clous par paquets de 4 au lieu de la disposition pyramidale.
     \item Si l'un des participants connaît déjà la stratégie gagnante du jeu,
       il peut remplacer l'animateur dans une partie avec d'autres participants
-    \end{itemize}    
+    \end{itemize}
   \end{block}
 \end{frame}
 
@@ -860,7 +860,7 @@
   \begin{block}{À propos du jeu du crêpier psycho-rigide}
     \begin{itemize}
     \item L'objectif de cette activité est de trouver un algorithme et de
-    l'expliquer 
+    l'expliquer
     \item On propose au participant de d'abord tenter de le résoudre
     intuitivement, sans réfléchir
     \item Si le participant bloque, on peut lui donner un conseil : \og~Une
@@ -871,7 +871,7 @@
     \item On essaie ensuite de faire expliquer l'algorithme par le participant.
     On gagne à ce que ce soit le participant et non l'animateur qui explique aux
     autres, avec ses propres mots.
-    \end{itemize}    
+    \end{itemize}
   \end{block}
 %\url{http://interstices.info/jcms/n_52318/genese-dun-algorithme?hlText=cr\%C3\%A8pes}
 
