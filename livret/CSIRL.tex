@@ -1,3 +1,4 @@
+% vim:spell spelllang=fr:
 \def\raggedright{}
 \documentclass[final,hyperref={pdfpagelabels=false}]{beamer}
 %\usepackage{grffile}
@@ -458,7 +459,6 @@
       une pile
     \end{itemize}
   \end{block}
-
 %  mettre une illustration ici ?
 
 \end{frame}
@@ -534,6 +534,7 @@
     #2
   \end{tikzpicture}
 }
+
 \newcommand{\maisonQuatre}[2]{\maisonPair{#1}{#2}{4}{12}{1/A,2/B,3/C,4/D}}
 \newcommand{\maisonCinq}[2]{\maisonImpair{#1}{#2}{5}{20}{1/A,2/B,3/C,4/D,5/E}}
 \newcommand{\maisonSix}[2]{\maisonPair{#1}{#2}{6}{24}{1/A,2/B,3/C,4/D,5/E,6/F}}
@@ -551,12 +552,12 @@
 \colorlet{J}{pink}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Activité: Base-ball multicolor}
+\begin{frame}{Activité: Base-ball multicolore}
   \begin{block}{Matériel nécessaire}
     \begin{itemize}
     \item Plusieurs équipes bien différenciables, chacune composée d'une maison
       et de deux bonshommes\\
-      (des legos, des bouts de bois, des caillous, du fil électrique de
+      (des legos, des bouts de bois, des cailloux, du fil électrique de
       différentes couleurs, ou autres)
       
     \item Il faut 5 équipes au minimum. 7 équipes sont préférables, et on peut
@@ -661,7 +662,7 @@
   \draw[ultra thick,rotate=#1*72] (3mm,0) -- +(.08,-.15);
   \draw[fill=white,draw=white,rotate=#1*72] (3mm,2.5pt) circle (2pt);
 }
-\begin{frame}<0>{Un premier algorithme pour le base-ball multicolor}
+\begin{frame}{Un premier algorithme pour le base-ball multicolore}
   \begin{block}{L'algorithme}
     \begin{itemize}
     \item On ne s'autorise qu'à tourner dans un seul sens.
@@ -790,7 +791,7 @@
   \end{block}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Étude du premier algorithme pour le base-ball multicolor}
+\begin{frame}{Étude du premier algorithme pour le base-ball multicolore}
   \begin{block}{Cet algorithme est bel et bon}
     \begin{itemize}
     \item Il est très simple: on pourrait l'expliquer à un ordinateur
