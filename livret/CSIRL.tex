@@ -308,10 +308,11 @@
   \bigskip\bigskip
   \centerline{
     \begin{tikzpicture}[scale=3]
-      \clous{draw=black}{ 0/ 0, 
+      \clous{draw=black}{
                     -1/-1,0/-1,1/-1,
               -2/-2,-1/-2,0/-2,1/-2,2/-2,
         -3/-3,-2/-3,-1/-3,0/-3,1/-3,2/-3,3/-3}
+      \clous{draw=black!3!red!15!yellow}{ 0/ 0}
     \end{tikzpicture}
   }
 
@@ -321,27 +322,24 @@
 
 \begin{frame}{Ce qu'il faut retenir du jeu de Nim}
 
-  \begin{block}{L'intérêt majeur de ce jeu est qu'il est sans suspense}
+  \begin{block}{L'intérêt majeur de ce jeu est qu'il est sans suspense 
+      {\color{black}\normalsize(voire, sans intérêt ;)}}
     \begin{itemize}
-    \item Celui qui commence perd, car il existe un truc pour gagner à tous
-      les coups
+    \item Celui qui commence (\structure{J1}) perd, car il existe un truc pour
+      que \structure{J2} gagne à tous les coups
     \item \structure{Stratégie gagnante:} Laisser 4, 8, 12 ou 16 clous à
       l'adversaire (un multiple de 4)
     \end{itemize}
   \end{block}
 
   \begin{block}{Se convaincre de l'efficacité de la stratégie gagnante}
-    Prenons le dernier coup comme exemple.
+    Prenons le dernier coup comme exemple. Il reste 4 clous, et J1 joue.
     \begin{itemize}
-    \item Si le joueur dont c'est le tour prend 1 clou, son adversaire en prend
-      3 et gagne
-    \item Si le joueur dont c'est le tour prend 2 clous, son adversaire en
-      prend 2 et gagne
-    \item Si le joueur dont c'est le tour prend 3 clous, son adversaire en
-      prend 1 et gagne
+    \item Si J1 prend 1 clou, J2 en prend 3 (dont le dernier) et gagne
+    \item Si J1 prend 2 clous, J2 en prend 2 (dont le dernier) et gagne
+    \item Si J1 prend 3 clous, J2 en prend 1 (le dernier) et gagne
     \end{itemize}
-    Quoi qu'il fasse, le joueur dont c'est le tour a donc perdu si son
-    adversaire sait jouer.
+    Quoi qu'il fasse, J1 a donc perdu si J2 sait jouer.
   \end{block}
 
   \begin{center}
@@ -351,8 +349,8 @@
       \multicolumn{4}{c|}{\structure{Évolutions possibles}}&
       \structure{Situation après}
       \\
-      &\alert{Joueur 1}&1 clou&2 clous&3 clous&\\\cline{2-5}
-      &\structure{Joueur 2}&3 clous&2 clous&1 clou&\\\hline
+      &\alert{J1}&1 clou&2 clous&3 clous&\\\cline{2-5}
+      &\structure{J2}&3 clous&2 clous&1 clou&\\\hline
       Reste 4 clous:
       \begin{tikzpicture}[baseline=\baselineskip]
         \clous{draw=black}{0/ 0, 
@@ -371,12 +369,12 @@
          \clous{draw=blue}{0/ 0}
          \clous{draw=red}{-1/-1,0/-1,1/-1}
        \end{tikzpicture} &
-      Joueur 2 gagne
+      J2 gagne
       \\\hline
     \end{tabular}
   \end{center}
 
-  Et le joueur 2 peut faire en sorte qu'on arrive toujours dans cette situation
+  Et J2 peut faire en sorte qu'on arrive toujours dans cette situation
   depuis le coup précédent:
   \begin{center}
     \begin{tabular}{|c|cccc|c|}\hline
@@ -385,27 +383,27 @@
       \multicolumn{4}{c|}{\structure{Évolutions possibles}}
       &\structure{Situation après}
       \\
-      &\alert{Joueur 1}&1 clou&2 clous&3 clous&\\\cline{2-5}
-      &\structure{Joueur 2}&3 clous&2 clous&1 clou&\\\hline
-      Reste 8 clous:&
-      \begin{tikzpicture}
+      &\alert{J1}&1 clou&2 clous&3 clous&\\\cline{2-5}
+      &\structure{J2}&3 clous&2 clous&1 clou&\\\hline
+      Reste 8 clous:
+      \begin{tikzpicture}[baseline=\baselineskip]
         \clous{draw=black}{ 0/ 0, 
                       -1/-1,0/-1,1/-1,
                 -2/-2,-1/-2,0/-2,1/-2}        
-      \end{tikzpicture}&
-      \begin{tikzpicture}
+      \end{tikzpicture}&&
+      \begin{tikzpicture}[baseline=\baselineskip]
         \clous{draw=black}{ 0/ 0, 
                       -1/-1,0/-1,1/-1}
         \clous{draw=blue}{-2/-2,-1/-2,0/-2     }        
         \clous{draw=red} {                 1/-2}        
       \end{tikzpicture}&
-      \begin{tikzpicture}
+      \begin{tikzpicture}[baseline=\baselineskip]
         \clous{draw=black}{ 0/ 0, 
                       -1/-1,0/-1,1/-1}
         \clous{draw=blue}{-2/-2,-1/-2          }        
         \clous{draw=red} {            0/-2,1/-2}        
       \end{tikzpicture}&
-      \begin{tikzpicture}
+      \begin{tikzpicture}[baseline=\baselineskip]
         \clous{draw=black}{ 0/ 0, 
                       -1/-1,0/-1,1/-1}
         \clous{draw=blue}{-2/-2                }        
