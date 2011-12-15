@@ -251,8 +251,19 @@
       million en moins d'une seconde
     \item \structure{Il est très \alert{obéissant}:} il fait tout ce qu'on lui demande
     \item \structure{Il est absolument \alert{stupide}:} il exécute les
-      ordres qu'on lui donne, sans la moindre capacité d'initiative.\\
-      Par exemple, si on lui demande de s'arrêter, il le fait.
+      ordres qu'on lui donne, sans la moindre capacité d'initiative.
+      \begin{itemize}\vspace{-.8\baselineskip}
+      \item Par exemple, si on demande à un ordinateur de s'arrêter, il le fait.
+      \item Autre exemple, quand j'indique à des amis comment venir chez moi,
+        je leur donne des indications comme "troisième à droite" ou "à gauche
+        au 2ieme feu". Si je me trompe dans mes indications ("à gauche" au lieu
+        de "à droite") et que cela les ferait prendre l'autoroute à
+        contre-sens, mes amis vont faire preuve de sens commun et ne pas
+        appliquer la consigne. Les ordinateurs n'ont \textbf{aucun} sens commun.
+      \item Bug (n.m.): consigne erronée donnée par un humain et appliquée bêtement par une machine.
+
+      \end{itemize}
+
     \end{itemize}
   \end{block}\vspace{-.5\baselineskip}
 
@@ -263,7 +274,7 @@
     \item Pour décomposer suffisamment les tâches à réaliser, il réfléchit à
       \textbf{comment} faire\\
       {\small (un peu comme un cycliste qui descendrait du vélo pour se regarder
-        pédaler pour expliquer ensuite comment faire)}
+        pédaler afin d'expliquer ensuite comment faire)}
     \item Pour chaque problème, il faut d'abord définir:
       \begin{itemize}
       \item \structure{la situation initiale:} le point de départ du problème
@@ -275,7 +286,6 @@
     \end{itemize}
   \end{block}
 
-  \bigskip\bigskip
   \bigskip\bigskip
   \centerline{\includegraphics[width=.25\linewidth]{img/realprogrammers.jpg}\label{img:realprog}}
 \end{frame}
@@ -1142,7 +1152,7 @@
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{Coupe}
-\begin{frame}{Ce qu'il faut retenir du base-ball multicolore}
+\begin{frame}{Ce qu'il faut retenir du base-ball multicolore: corrections d'algorithmes}
 
   Cet algorithme n'est pas tellement plus complexe ou plus long que le
   précédent, et il est correct, lui.
@@ -1203,9 +1213,62 @@
       modèles, etc)
     \end{itemize}
   \end{block}
-
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Ce qu'il faut retenir du base-ball multicolore: performance d'algorithmes}
+  \begin{block}{Comment comparer la performance des algorithmes?}
+    \begin{itemize}
+    \item Simplement en comptant les étapes. Par exemple sur le crépier, placer
+      la grande crêpe prend 3 coups au pire. Et c'est pareil pour les
+      suivantes, donc au pire, en $3\times n$ coups, j'ai tout trié
+    \item La performance de mon algo dépend beaucoup de la situation initiale:
+      \begin{itemize}
+      \item Si c'est déjà trié, c'est de la chance, je n'ai rien à faire
+        (\alert{pire cas}).
+      \item Si j'ai vraiment pas de bol, il faut que je fasse les 3 étapes par
+        crêpes (\alert{meilleur cas}).
+      \item En pratique, j'ai souvent quelques crêpes qui arrivent déjà face
+        cramée en haut, par exemple (\alert{cas moyen}).
+      \end{itemize}
+      Il faut bien comprendre que ceci ne dépend pas vraiment de l'algorithme,
+      mais plutôt de la situation initiale. Le pire cas n'est pas un bug de
+      l'algorithme, mais une situation initiale qui n'aide pas vraiment notre
+      façon de faire (pour le cas moyen, il faut faire des probas).
+    \item En pratique, une estimation de la performance est suffisante. Savoir
+      que le crêpier nécessite environ $n^2$ étapes suffit, pas besoin de
+      savoir que c'est $n^2+4$ ou $n^2-2$. On le note $O(n^2)$      
+    \end{itemize}
+  \end{block}
 
+  \begin{block}{À la recherche du meilleur algorithme possible}
+    \begin{itemize}
+    \item On arrive parfois à montrer qu'on a le meilleur algorithme
+      possible. Par exemple on ne peut pas trier les éléments en moins de $n$
+      étapes, car on doit forcément tous les considérer.
+    \item On peut aussi prouver qu'un tri comparatif ne peut pas se faire en
+      moins de $n\times log(n)$ étapes, car il n'accumule pas assez
+      d'information pour choisir la bonne permutation en moins d'étapes.
+    \item Et puis la plupart du temps, on ne sait pas prouver que l'algorithme
+      connu est le meilleur possible.  C'est alors le meilleur \textit{connu},
+      sans être forcément le meilleur \textit{possible}.
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{À la recherche de problèmes difficiles}
+    \begin{itemize}
+    \item On peut classifier les problèmes en fonction de la performance des
+      algorithmes les résolvant. \\
+      (cela permet de se forger un sens commun de ce qui est faisable avec un
+      ordinateur et éviter les problèmes si difficiles qu'ils sont quasi impossibles)
+    \item Il existe énormément de problèmes relativement simples pour lesquels
+      personne ne connaît de bon algorithme, sans que personne n'arrive non plus à
+      démontrer qu'un tel algorithme n'existe pas.
+    \item L'activité suivante sera l'occasion d'explorer un peu cette
+      classification des problèmes très durs.
+    \end{itemize}
+  \end{block}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Activité: la planche à clous}
   
   \centerline{\includegraphics[width=.7\linewidth]{img/electric_city.jpg}\label{img:electric:city}}
@@ -1313,6 +1376,9 @@
       de l'autre extrémité. Sinon, on se retrouve avec une maison remplie de un
       seul au milieu, et il faut comprendre que la solution passe par le
       stockage temporaire d'un pion de la maison d'à coté sur le trou.
+    \item Le discours sur le $O(n)$ est volontairement approximatif. On veut
+      faire sentir les choses; faire un vrai cours prend une douzaine d'heures
+      (cf. \url{http://www.loria.fr/~quinson/Teaching/TOP/}).
     \item Il serait intéressant de prouver effectivement la correction de
       l'algorithme linéaire, ainsi que de quantifier la probabilité de
       fonctionner de l'algo qui tourne en fonction du nombre de maisons
