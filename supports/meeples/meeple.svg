@@ -1,0 +1,961 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="40.476mm" height="41.065mm"
+ viewBox="0 0 40.476 41.065"
+ xmlns="http://www.w3.org/2000/svg" version="1.1"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+<desc>Output from Flights of Ideas SVG Sketchup Plugin</desc>
+
+<g id="text_annotations" font-size="10" stroke="rgb(255,0,0)" stroke-width="1">
+</g>
+  <g id="face0" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line x1="10.0" y1="10.0" x2="10.0" y2="31.065"/>
+    <line x1="10.0" y1="31.065" x2="30.476" y2="31.065"/>
+    <line x1="30.476" y1="31.065" x2="30.476" y2="10.0"/>
+    <line x1="30.476" y1="10.0" x2="10.0" y2="10.0"/>
+  </g>
+  <g id="face1" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.3127269475214" y1="27.0095010793482" x2="22.8158549803129" y2="27.0095010793482"/>
+    <line stroke="rgb(0,255,0)" x1="22.8158549803129" y1="27.0095010793482" x2="14.3127269475214" y2="27.0095010793482"/>
+  </g>
+  <g id="face2" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.3127269475214" y1="27.0095010793482" x2="14.3127269475214" y2="26.4435742288739"/>
+    <line stroke="rgb(0,255,0)" x1="14.3127269475214" y1="26.4435742288739" x2="14.3127269475214" y2="27.0095010793482"/>
+  </g>
+  <g id="face3" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="23.0969191669475" y1="26.9871326929938" x2="29.1615997028762" y2="27.0095010793482"/>
+    <line stroke="rgb(0,255,0)" x1="29.1615997028762" y1="27.0095010793482" x2="23.0969191669475" y2="26.9871326929938"/>
+  </g>
+  <g id="face4" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="22.8158549803129" y1="27.0095010793482" x2="23.0969191669475" y2="26.9871326929938"/>
+    <line stroke="rgb(0,255,0)" x1="23.0969191669475" y1="26.9871326929938" x2="22.8158549803129" y2="27.0095010793482"/>
+  </g>
+  <g id="face5" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="17.5875197448466" y1="19.3711863732506" x2="17.676433007724" y2="19.4841834407283"/>
+    <line stroke="rgb(0,255,0)" x1="17.676433007724" y1="19.4841834407283" x2="17.5875197448466" y2="19.3711863732506"/>
+  </g>
+  <g id="face6" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="17.4477991075403" y1="19.2581890673548" x2="17.5875197448466" y2="19.3711863732506"/>
+    <line stroke="rgb(0,255,0)" x1="17.5875197448466" y1="19.3711863732506" x2="17.4477991075403" y2="19.2581890673548"/>
+  </g>
+  <g id="face7" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="17.2641995258572" y1="19.1451919998771" x2="17.4477991075403" y2="19.2581890673548"/>
+    <line stroke="rgb(0,255,0)" x1="17.4477991075403" y1="19.2581890673548" x2="17.2641995258572" y2="19.1451919998771"/>
+  </g>
+  <g id="face8" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="17.0436484761765" y1="19.032193978727" x2="17.2641995258572" y2="19.1451919998771"/>
+    <line stroke="rgb(0,255,0)" x1="17.2641995258572" y1="19.1451919998771" x2="17.0436484761765" y2="19.032193978727"/>
+  </g>
+  <g id="face9" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="16.79307438855" y1="18.9191971496674" x2="17.0436484761765" y2="19.032193978727"/>
+    <line stroke="rgb(0,255,0)" x1="17.0436484761765" y1="19.032193978727" x2="16.79307438855" y2="18.9191971496674"/>
+  </g>
+  <g id="face10" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="16.519406646702" y1="18.8061996053535" x2="16.79307438855" y2="18.9191971496674"/>
+    <line stroke="rgb(0,255,0)" x1="16.79307438855" y1="18.9191971496674" x2="16.519406646702" y2="18.8061996053535"/>
+  </g>
+  <g id="face11" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="16.2295722501757" y1="18.6932027762939" x2="16.519406646702" y2="18.8061996053535"/>
+    <line stroke="rgb(0,255,0)" x1="16.519406646702" y1="18.8061996053535" x2="16.2295722501757" y2="18.6932027762939"/>
+  </g>
+  <g id="face12" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="15.9305005826952" y1="18.5802049935619" x2="16.2295722501757" y2="18.6932027762939"/>
+    <line stroke="rgb(0,255,0)" x1="16.2295722501757" y1="18.6932027762939" x2="15.9305005826952" y2="18.5802049935619"/>
+  </g>
+  <g id="face13" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="15.62911912064" y1="18.4672072108299" x2="15.9305005826952" y2="18.5802049935619"/>
+    <line stroke="rgb(0,255,0)" x1="15.9305005826952" y1="18.5802049935619" x2="15.62911912064" y2="18.4672072108299"/>
+  </g>
+  <g id="face14" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="15.3323562940619" y1="18.3542108586065" x2="15.62911912064" y2="18.4672072108299"/>
+    <line stroke="rgb(0,255,0)" x1="15.62911912064" y1="18.4672072108299" x2="15.3323562940619" y2="18.3542108586065"/>
+  </g>
+  <g id="face15" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="15.0471410098488" y1="18.2412125990383" x2="15.3323562940619" y2="18.3542108586065"/>
+    <line stroke="rgb(0,255,0)" x1="15.3323562940619" y1="18.3542108586065" x2="15.0471410098488" y2="18.2412125990383"/>
+  </g>
+  <g id="face16" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.780402651725" y1="18.1282162468149" x2="15.0471410098488" y2="18.2412125990383"/>
+    <line stroke="rgb(0,255,0)" x1="15.0471410098488" y1="18.2412125990383" x2="14.780402651725" y2="18.1282162468149"/>
+  </g>
+  <g id="face17" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.5390663118889" y1="18.0152182256648" x2="14.780402651725" y2="18.1282162468149"/>
+    <line stroke="rgb(0,255,0)" x1="14.780402651725" y1="18.1282162468149" x2="14.5390663118889" y2="18.0152182256648"/>
+  </g>
+  <g id="face18" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.5101447655756" y1="17.9992938037783" x2="14.5390663118889" y2="18.0152182256648"/>
+    <line stroke="rgb(0,255,0)" x1="14.5390663118889" y1="18.0152182256648" x2="14.5101447655756" y2="17.9992938037783"/>
+  </g>
+  <g id="face19" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.4828644894783" y1="17.9812789319712" x2="14.5101447655756" y2="17.9992938037783"/>
+    <line stroke="rgb(0,255,0)" x1="14.5101447655756" y1="17.9992938037783" x2="14.4828644894783" y2="17.9812789319712"/>
+  </g>
+  <g id="face20" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.457307022588" y1="17.9613033096911" x2="14.4828644894783" y2="17.9812789319712"/>
+    <line stroke="rgb(0,255,0)" x1="14.4828644894783" y1="17.9812789319712" x2="14.457307022588" y2="17.9613033096911"/>
+  </g>
+  <g id="face21" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.4335510428784" y1="17.9394971132218" x2="14.457307022588" y2="17.9613033096911"/>
+    <line stroke="rgb(0,255,0)" x1="14.457307022588" y1="17.9613033096911" x2="14.4335510428784" y2="17.9394971132218"/>
+  </g>
+  <g id="face22" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.4116766588318" y1="17.9159886115023" x2="14.4335510428784" y2="17.9394971132218"/>
+    <line stroke="rgb(0,255,0)" x1="14.4335510428784" y1="17.9394971132218" x2="14.4116766588318" y2="17.9159886115023"/>
+  </g>
+  <g id="face23" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.3917639789307" y1="17.8909084576527" x2="14.4116766588318" y2="17.9159886115023"/>
+    <line stroke="rgb(0,255,0)" x1="14.4116766588318" y1="17.9159886115023" x2="14.3917639789307" y2="17.8909084576527"/>
+  </g>
+  <g id="face24" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.3738940653298" y1="17.8643863511206" x2="14.3917639789307" y2="17.8909084576527"/>
+    <line stroke="rgb(0,255,0)" x1="14.3917639789307" y1="17.8909084576527" x2="14.3738940653298" y2="17.8643863511206"/>
+  </g>
+  <g id="face25" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.3581475033476" y1="17.8365515145175" x2="14.3738940653298" y2="17.8643863511206"/>
+    <line stroke="rgb(0,255,0)" x1="14.3738940653298" y1="17.8643863511206" x2="14.3581475033476" y2="17.8365515145175"/>
+  </g>
+  <g id="face26" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.344602970958" y1="17.8075336472909" x2="14.3581475033476" y2="17.8365515145175"/>
+    <line stroke="rgb(0,255,0)" x1="14.3581475033476" y1="17.8365515145175" x2="14.344602970958" y2="17.8075336472909"/>
+  </g>
+  <g id="face27" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.333340099807" y1="17.7774610183798" x2="14.344602970958" y2="17.8075336472909"/>
+    <line stroke="rgb(0,255,0)" x1="14.344602970958" y1="17.8075336472909" x2="14.333340099807" y2="17.7774610183798"/>
+  </g>
+  <g id="face28" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.3244432899029" y1="17.7464661882493" x2="14.333340099807" y2="17.7774610183798"/>
+    <line stroke="rgb(0,255,0)" x1="14.333340099807" y1="17.7774610183798" x2="14.3244432899029" y2="17.7464661882493"/>
+  </g>
+  <g id="face29" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.3179874045298" y1="17.7146764721657" x2="14.3244432899029" y2="17.7464661882493"/>
+    <line stroke="rgb(0,255,0)" x1="14.3244432899029" y1="17.7464661882493" x2="14.3179874045298" y2="17.7146764721657"/>
+  </g>
+  <g id="face30" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.3140558900234" y1="17.6822234769217" x2="14.3179874045298" y2="17.7146764721657"/>
+    <line stroke="rgb(0,255,0)" x1="14.3179874045298" y1="17.7146764721657" x2="14.3140558900234" y2="17.6822234769217"/>
+  </g>
+  <g id="face31" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.3127269475214" y1="17.64923499462" x2="14.3140558900234" y2="17.6822234769217"/>
+    <line stroke="rgb(0,255,0)" x1="14.3140558900234" y1="17.6822234769217" x2="14.3127269475214" y2="17.64923499462"/>
+  </g>
+  <g id="face32" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.3127269475214" y1="12.8932020262362" x2="14.3127269475214" y2="17.64923499462"/>
+    <line stroke="rgb(0,255,0)" x1="14.3127269475214" y1="17.64923499462" x2="14.3127269475214" y2="12.8932020262362"/>
+  </g>
+  <g id="face33" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.406221652652" y1="12.772556744456" x2="14.3828089950096" y2="12.7854589784781"/>
+    <line stroke="rgb(0,255,0)" x1="14.3828089950096" y1="12.7854589784781" x2="14.406221652652" y2="12.772556744456"/>
+  </g>
+  <g id="face34" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.4323680122549" y1="12.7621998620936" x2="14.406221652652" y2="12.772556744456"/>
+    <line stroke="rgb(0,255,0)" x1="14.406221652652" y1="12.772556744456" x2="14.4323680122549" y2="12.7621998620936"/>
+  </g>
+  <g id="face35" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.4610149009144" y1="12.7548069935786" x2="14.4323680122549" y2="12.7621998620936"/>
+    <line stroke="rgb(0,255,0)" x1="14.4323680122549" y1="12.7621998620936" x2="14.4610149009144" y2="12.7548069935786"/>
+  </g>
+  <g id="face36" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.4919310530712" y1="12.7507872643744" x2="14.4610149009144" y2="12.7548069935786"/>
+    <line stroke="rgb(0,255,0)" x1="14.4610149009144" y1="12.7548069935786" x2="14.4919310530712" y2="12.7507872643744"/>
+  </g>
+  <g id="face37" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.5248866336748" y1="12.7505583829962" x2="14.4919310530712" y2="12.7507872643744"/>
+    <line stroke="rgb(0,255,0)" x1="14.4919310530712" y1="12.7507872643744" x2="14.5248866336748" y2="12.7505583829962"/>
+  </g>
+  <g id="face38" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.559645608804" y1="12.7545304285799" x2="14.5248866336748" y2="12.7505583829962"/>
+    <line stroke="rgb(0,255,0)" x1="14.5248866336748" y1="12.7505583829962" x2="14.559645608804" y2="12.7545304285799"/>
+  </g>
+  <g id="face39" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.5959795739166" y1="12.763123970658" x2="14.559645608804" y2="12.7545304285799"/>
+    <line stroke="rgb(0,255,0)" x1="14.559645608804" y1="12.7545304285799" x2="14.5959795739166" y2="12.763123970658"/>
+  </g>
+  <g id="face40" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.6336534487641" y1="12.7767452736765" x2="14.5959795739166" y2="12.763123970658"/>
+    <line stroke="rgb(0,255,0)" x1="14.5959795739166" y1="12.763123970658" x2="14.6336534487641" y2="12.7767452736765"/>
+  </g>
+  <g id="face41" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="15.297835737035" y1="13.0589369395167" x2="14.6336534487641" y2="12.7767452736765"/>
+    <line stroke="rgb(0,255,0)" x1="14.6336534487641" y1="12.7767452736765" x2="15.297835737035" y2="13.0589369395167"/>
+  </g>
+  <g id="face42" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="15.9545598302309" y1="13.3368790411021" x2="15.297835737035" y2="13.0589369395167"/>
+    <line stroke="rgb(0,255,0)" x1="15.297835737035" y1="13.0589369395167" x2="15.9545598302309" y2="13.3368790411021"/>
+  </g>
+  <g id="face43" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="16.5987955832302" y1="13.6077038854987" x2="15.9545598302309" y2="13.3368790411021"/>
+    <line stroke="rgb(0,255,0)" x1="15.9545598302309" y1="13.3368790411021" x2="16.5987955832302" y2="13.6077038854987"/>
+  </g>
+  <g id="face44" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="17.2255071288769" y1="13.8685418724276" x2="16.5987955832302" y2="13.6077038854987"/>
+    <line stroke="rgb(0,255,0)" x1="16.5987955832302" y1="13.6077038854987" x2="17.2255071288769" y2="13.8685418724276"/>
+  </g>
+  <g id="face45" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="17.8296619378683" y1="14.1165205405928" x2="17.2255071288769" y2="13.8685418724276"/>
+    <line stroke="rgb(0,255,0)" x1="17.2255071288769" y1="13.8685418724276" x2="17.8296619378683" y2="14.1165205405928"/>
+  </g>
+  <g id="face46" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="18.4062262888114" y1="14.3487774422585" x2="17.8296619378683" y2="14.1165205405928"/>
+    <line stroke="rgb(0,255,0)" x1="17.8296619378683" y1="14.1165205405928" x2="18.4062262888114" y2="14.3487774422585"/>
+  </g>
+  <g id="face47" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="18.9501669371493" y1="14.5624420234734" x2="18.4062262888114" y2="14.3487774422585"/>
+    <line stroke="rgb(0,255,0)" x1="18.4062262888114" y1="14.3487774422585" x2="18.9501669371493" y2="14.5624420234734"/>
+  </g>
+  <g id="face48" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="19.4564496846525" y1="14.7546432534501" x2="18.9501669371493" y2="14.5624420234734"/>
+    <line stroke="rgb(0,255,0)" x1="18.9501669371493" y1="14.5624420234734" x2="19.4564496846525" y2="14.7546432534501"/>
+  </g>
+  <g id="face49" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="19.9200422404368" y1="14.9225158234355" x2="19.4564496846525" y2="14.7546432534501"/>
+    <line stroke="rgb(0,255,0)" x1="19.4564496846525" y1="14.7546432534501" x2="19.9200422404368" y2="14.9225158234355"/>
+  </g>
+  <g id="face50" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="20.3359106446907" y1="15.0631867952973" x2="19.9200422404368" y2="14.9225158234355"/>
+    <line stroke="rgb(0,255,0)" x1="19.9200422404368" y1="14.9225158234355" x2="20.3359106446907" y2="15.0631867952973"/>
+  </g>
+  <g id="face51" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="20.6990212952304" y1="15.1737913371188" x2="20.3359106446907" y2="15.0631867952973"/>
+    <line stroke="rgb(0,255,0)" x1="20.3359106446907" y1="15.0631867952973" x2="20.6990212952304" y2="15.1737913371188"/>
+  </g>
+  <g id="face52" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="21.0043408282897" y1="15.2514588949486" x2="20.6990212952304" y2="15.1737913371188"/>
+    <line stroke="rgb(0,255,0)" x1="20.6990212952304" y1="15.1737913371188" x2="21.0043408282897" y2="15.2514588949486"/>
+  </g>
+  <g id="face53" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="21.2468360589164" y1="15.2933232063615" x2="21.0043408282897" y2="15.2514588949486"/>
+    <line stroke="rgb(0,255,0)" x1="21.0043408282897" y1="15.2514588949486" x2="21.2468360589164" y2="15.2933232063615"/>
+  </g>
+  <g id="face54" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="21.4214730869038" y1="15.2965118100611" x2="21.2468360589164" y2="15.2933232063615"/>
+    <line stroke="rgb(0,255,0)" x1="21.2468360589164" y1="15.2933232063615" x2="21.4214730869038" y2="15.2965118100611"/>
+  </g>
+  <g id="face55" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="21.5219986226611" y1="15.2384403128926" x2="21.4214730869038" y2="15.2965118100611"/>
+    <line stroke="rgb(0,255,0)" x1="21.4214730869038" y1="15.2965118100611" x2="21.5219986226611" y2="15.2384403128926"/>
+  </g>
+  <g id="face56" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="21.5954186427901" y1="15.1017423402869" x2="21.5219986226611" y2="15.2384403128926"/>
+    <line stroke="rgb(0,255,0)" x1="21.5219986226611" y1="15.2384403128926" x2="21.5954186427901" y2="15.1017423402869"/>
+  </g>
+  <g id="face57" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="21.6484740019005" y1="14.8997607229192" x2="21.5954186427901" y2="15.1017423402869"/>
+    <line stroke="rgb(0,255,0)" x1="21.5954186427901" y1="15.1017423402869" x2="21.6484740019005" y2="14.8997607229192"/>
+  </g>
+  <g id="face58" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="21.6879052565797" y1="14.6458349536111" x2="21.6484740019005" y2="14.8997607229192"/>
+    <line stroke="rgb(0,255,0)" x1="21.6484740019005" y1="14.8997607229192" x2="21.6879052565797" y2="14.6458349536111"/>
+  </g>
+  <g id="face59" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="21.7204531422285" y1="14.3533064325291" x2="21.6879052565797" y2="14.6458349536111"/>
+    <line stroke="rgb(0,255,0)" x1="21.6879052565797" y1="14.6458349536111" x2="21.7204531422285" y2="14.3533064325291"/>
+  </g>
+  <g id="face60" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="21.752858453852" y1="14.0355213282019" x2="21.7204531422285" y2="14.3533064325291"/>
+    <line stroke="rgb(0,255,0)" x1="21.7204531422285" y1="14.3533064325291" x2="21.752858453852" y2="14.0355213282019"/>
+  </g>
+  <g id="face61" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="21.7918618672467" y1="13.7058157955977" x2="21.752858453852" y2="14.0355213282019"/>
+    <line stroke="rgb(0,255,0)" x1="21.752858453852" y1="14.0355213282019" x2="21.7918618672467" y2="13.7058157955977"/>
+  </g>
+  <g id="face62" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="21.8442041774178" y1="13.3775331422278" x2="21.7918618672467" y2="13.7058157955977"/>
+    <line stroke="rgb(0,255,0)" x1="21.7918618672467" y1="13.7058157955977" x2="21.8442041774178" y2="13.3775331422278"/>
+  </g>
+  <g id="face63" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="21.9166261346673" y1="13.0640171524397" x2="21.8442041774178" y2="13.3775331422278"/>
+    <line stroke="rgb(0,255,0)" x1="21.8442041774178" y1="13.3775331422278" x2="21.9166261346673" y2="13.0640171524397"/>
+  </g>
+  <g id="face64" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="22.0158682955824" y1="12.7786039812018" x2="21.9166261346673" y2="13.0640171524397"/>
+    <line stroke="rgb(0,255,0)" x1="21.9166261346673" y1="13.0640171524397" x2="22.0158682955824" y2="12.7786039812018"/>
+  </g>
+  <g id="face65" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="22.1486715669269" y1="12.5346412275511" x2="22.0158682955824" y2="12.7786039812018"/>
+    <line stroke="rgb(0,255,0)" x1="22.0158682955824" y1="12.7786039812018" x2="22.1486715669269" y2="12.5346412275511"/>
+  </g>
+  <g id="face66" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="22.3217766170464" y1="12.345469814818" x2="22.1486715669269" y2="12.5346412275511"/>
+    <line stroke="rgb(0,255,0)" x1="22.1486715669269" y1="12.5346412275511" x2="22.3217766170464" y2="12.345469814818"/>
+  </g>
+  <g id="face67" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="22.5419241440891" y1="12.224428758988" x2="22.3217766170464" y2="12.345469814818"/>
+    <line stroke="rgb(0,255,0)" x1="22.3217766170464" y1="12.345469814818" x2="22.5419241440891" y2="12.224428758988"/>
+  </g>
+  <g id="face68" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="22.8158549803129" y1="12.1848599370638" x2="22.5419241440891" y2="12.224428758988"/>
+    <line stroke="rgb(0,255,0)" x1="22.5419241440891" y1="12.224428758988" x2="22.8158549803129" y2="12.1848599370638"/>
+  </g>
+  <g id="face69" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="23.0969190477384" y1="12.2072283234183" x2="22.8158549803129" y2="12.1848599370638"/>
+    <line stroke="rgb(0,255,0)" x1="22.8158549803129" y1="12.1848599370638" x2="23.0969190477384" y2="12.2072283234183"/>
+  </g>
+  <g id="face70" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="23.3540283543615" y1="12.2618174857851" x2="23.0969190477384" y2="12.2072283234183"/>
+    <line stroke="rgb(0,255,0)" x1="23.0969190477384" y1="12.2072283234183" x2="23.3540283543615" y2="12.2618174857851"/>
+  </g>
+  <g id="face71" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="23.5890969207072" y1="12.3461822081076" x2="23.3540283543615" y2="12.2618174857851"/>
+    <line stroke="rgb(0,255,0)" x1="23.3540283543615" y1="12.2618174857851" x2="23.5890969207072" y2="12.3461822081076"/>
+  </g>
+  <g id="face72" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="23.8040381116507" y1="12.4578715522944" x2="23.5890969207072" y2="12.3461822081076"/>
+    <line stroke="rgb(0,255,0)" x1="23.5890969207072" y1="12.3461822081076" x2="23.8040381116507" y2="12.4578715522944"/>
+  </g>
+  <g id="face73" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="24.000766186135" y1="12.5944374412714" x2="23.8040381116507" y2="12.4578715522944"/>
+    <line stroke="rgb(0,255,0)" x1="23.8040381116507" y1="12.4578715522944" x2="24.000766186135" y2="12.5944374412714"/>
+  </g>
+  <g id="face74" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="24.1811950454762" y1="12.7534317979647" x2="24.000766186135" y2="12.5944374412714"/>
+    <line stroke="rgb(0,255,0)" x1="24.000766186135" y1="12.5944374412714" x2="24.1811950454762" y2="12.7534317979647"/>
+  </g>
+  <g id="face75" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="24.347238471781" y1="12.932408452645" x2="24.1811950454762" y2="12.7534317979647"/>
+    <line stroke="rgb(0,255,0)" x1="24.1811950454762" y1="12.7534317979647" x2="24.347238471781" y2="12.932408452645"/>
+  </g>
+  <g id="face76" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="24.5008100087382" y1="13.1289174208933" x2="24.347238471781" y2="12.932408452645"/>
+    <line stroke="rgb(0,255,0)" x1="24.347238471781" y1="12.932408452645" x2="24.5008100087382" y2="13.1289174208933"/>
+  </g>
+  <g id="face77" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="24.6438241537091" y1="13.3405125329806" x2="24.5008100087382" y2="13.1289174208933"/>
+    <line stroke="rgb(0,255,0)" x1="24.5008100087382" y1="13.1289174208933" x2="24.6438241537091" y2="13.3405125329806"/>
+  </g>
+  <g id="face78" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="24.7781946888005" y1="13.5647409434707" x2="24.6438241537091" y2="13.3405125329806"/>
+    <line stroke="rgb(0,255,0)" x1="24.6438241537091" y1="13.3405125329806" x2="24.7781946888005" y2="13.5647409434707"/>
+  </g>
+  <g id="face79" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="24.9058349192831" y1="13.7991622046687" x2="24.7781946888005" y2="13.5647409434707"/>
+    <line stroke="rgb(0,255,0)" x1="24.7781946888005" y1="13.5647409434707" x2="24.9058349192831" y2="13.7991622046687"/>
+  </g>
+  <g id="face80" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="25.0286591041" y1="14.0413206101214" x2="24.9058349192831" y2="13.7991622046687"/>
+    <line stroke="rgb(0,255,0)" x1="24.9058349192831" y1="13.7991622046687" x2="25.0286591041" y2="14.0413206101214"/>
+  </g>
+  <g id="face81" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="25.1485810253579" y1="14.2887742816254" x2="25.0286591041" y2="14.0413206101214"/>
+    <line stroke="rgb(0,255,0)" x1="25.0286591041" y1="14.0413206101214" x2="25.1485810253579" y2="14.2887742816254"/>
+  </g>
+  <g id="face82" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="25.2675151804182" y1="14.5390703737447" x2="25.1485810253579" y2="14.2887742816254"/>
+    <line stroke="rgb(0,255,0)" x1="25.1485810253579" y1="14.2887742816254" x2="25.2675151804182" y2="14.5390703737447"/>
+  </g>
+  <g id="face83" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="25.3447693212588" y1="14.7132738980176" x2="25.2675151804182" y2="14.5390703737447"/>
+    <line stroke="rgb(0,255,0)" x1="25.2675151804182" y1="14.5390703737447" x2="25.3447693212588" y2="14.7132738980176"/>
+  </g>
+  <g id="face84" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="25.4227134440872" y1="14.9083914582211" x2="25.3447693212588" y2="14.7132738980176"/>
+    <line stroke="rgb(0,255,0)" x1="25.3447693212588" y1="14.7132738980176" x2="25.4227134440872" y2="14.9083914582211"/>
+  </g>
+  <g id="face85" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="25.5013980935414" y1="15.1194391623456" x2="25.4227134440872" y2="14.9083914582211"/>
+    <line stroke="rgb(0,255,0)" x1="25.4227134440872" y1="14.9083914582211" x2="25.5013980935414" y2="15.1194391623456"/>
+  </g>
+  <g id="face86" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="25.5808747679312" y1="15.3414355025622" x2="25.5013980935414" y2="15.1194391623456"/>
+    <line stroke="rgb(0,255,0)" x1="25.5013980935414" y1="15.1194391623456" x2="25.5808747679312" y2="15.3414355025622"/>
+  </g>
+  <g id="face87" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="25.6611942503125" y1="15.5693975405337" x2="25.5808747679312" y2="15.3414355025622"/>
+    <line stroke="rgb(0,255,0)" x1="25.5808747679312" y1="15.3414355025622" x2="25.6611942503125" y2="15.5693975405337"/>
+  </g>
+  <g id="face88" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="25.7424073237412" y1="15.7983437684313" x2="25.6611942503125" y2="15.5693975405337"/>
+    <line stroke="rgb(0,255,0)" x1="25.6611942503125" y1="15.5693975405337" x2="25.7424073237412" y2="15.7983437684313"/>
+  </g>
+  <g id="face89" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="25.824565009691" y1="16.023291724754" x2="25.7424073237412" y2="15.7983437684313"/>
+    <line stroke="rgb(0,255,0)" x1="25.7424073237412" y1="15.7983437684313" x2="25.824565009691" y2="16.023291724754"/>
+  </g>
+  <g id="face90" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="25.9077176143815" y1="16.2392594248368" x2="25.824565009691" y2="16.023291724754"/>
+    <line stroke="rgb(0,255,0)" x1="25.824565009691" y1="16.023291724754" x2="25.9077176143815" y2="16.2392594248368"/>
+  </g>
+  <g id="face91" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="25.9919173513772" y1="16.441265360851" x2="25.9077176143815" y2="16.2392594248368"/>
+    <line stroke="rgb(0,255,0)" x1="25.9077176143815" y1="16.2392594248368" x2="25.9919173513772" y2="16.441265360851"/>
+  </g>
+  <g id="face92" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="26.0772142884795" y1="16.6243256407868" x2="25.9919173513772" y2="16.441265360851"/>
+    <line stroke="rgb(0,255,0)" x1="25.9919173513772" y1="16.441265360851" x2="26.0772142884795" y2="16.6243256407868"/>
+  </g>
+  <g id="face93" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="26.1636592087443" y1="16.7834601873242" x2="26.0772142884795" y2="16.6243256407868"/>
+    <line stroke="rgb(0,255,0)" x1="26.0772142884795" y1="16.6243256407868" x2="26.1636592087443" y2="16.7834601873242"/>
+  </g>
+  <g id="face94" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="26.2513031336453" y1="16.9136860621258" x2="26.1636592087443" y2="16.7834601873242"/>
+    <line stroke="rgb(0,255,0)" x1="26.1636592087443" y1="16.7834601873242" x2="26.2513031336453" y2="16.9136860621258"/>
+  </g>
+  <g id="face95" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="26.3401968462383" y1="17.0100212805268" x2="26.2513031336453" y2="16.9136860621258"/>
+    <line stroke="rgb(0,255,0)" x1="26.2513031336453" y1="16.9136860621258" x2="26.3401968462383" y2="17.0100212805268"/>
+  </g>
+  <g id="face96" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="26.430392798506" y1="17.0674819505173" x2="26.3401968462383" y2="17.0100212805268"/>
+    <line stroke="rgb(0,255,0)" x1="26.3401968462383" y1="17.0100212805268" x2="26.430392798506" y2="17.0674819505173"/>
+  </g>
+  <g id="face97" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="26.5411995188782" y1="17.1055787790782" x2="26.430392798506" y2="17.0674819505173"/>
+    <line stroke="rgb(0,255,0)" x1="26.430392798506" y1="17.0674819505173" x2="26.5411995188782" y2="17.1055787790782"/>
+  </g>
+  <g id="face98" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="26.651350112633" y1="17.1325753376338" x2="26.5411995188782" y2="17.1055787790782"/>
+    <line stroke="rgb(0,255,0)" x1="26.5411995188782" y1="17.1055787790782" x2="26.651350112633" y2="17.1325753376338"/>
+  </g>
+  <g id="face99" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="26.7618898047306" y1="17.1513793733594" x2="26.651350112633" y2="17.1325753376338"/>
+    <line stroke="rgb(0,255,0)" x1="26.651350112633" y1="17.1325753376338" x2="26.7618898047306" y2="17.1513793733594"/>
+  </g>
+  <g id="face100" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="26.8738638201315" y1="17.1648986334302" x2="26.7618898047306" y2="17.1513793733594"/>
+    <line stroke="rgb(0,255,0)" x1="26.7618898047306" y1="17.1513793733594" x2="26.8738638201315" y2="17.1648986334302"/>
+  </g>
+  <g id="face101" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="26.9883178606322" y1="17.17604229553" x2="26.8738638201315" y2="17.1648986334302"/>
+    <line stroke="rgb(0,255,0)" x1="26.8738638201315" y1="17.1648986334302" x2="26.9883178606322" y2="17.17604229553"/>
+  </g>
+  <g id="face102" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="27.1062976280291" y1="17.1877161994893" x2="26.9883178606322" y2="17.17604229553"/>
+    <line stroke="rgb(0,255,0)" x1="26.9883178606322" y1="17.17604229553" x2="27.1062976280291" y2="17.1877161994893"/>
+  </g>
+  <g id="face103" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="27.228849300955" y1="17.2028309535004" x2="27.1062976280291" y2="17.1877161994893"/>
+    <line stroke="rgb(0,255,0)" x1="27.1062976280291" y1="17.1877161994893" x2="27.228849300955" y2="17.2028309535004"/>
+  </g>
+  <g id="face104" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="27.3570171506979" y1="17.2242933510663" x2="27.228849300955" y2="17.2028309535004"/>
+    <line stroke="rgb(0,255,0)" x1="27.228849300955" y1="17.2028309535004" x2="27.3570171506979" y2="17.2242933510663"/>
+  </g>
+  <g id="face105" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="27.4918464022181" y1="17.2550125698706" x2="27.3570171506979" y2="17.2242933510663"/>
+    <line stroke="rgb(0,255,0)" x1="27.3570171506979" y1="17.2242933510663" x2="27.4918464022181" y2="17.2550125698706"/>
+  </g>
+  <g id="face106" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="27.634385141493" y1="17.2978944497439" x2="27.4918464022181" y2="17.2550125698706"/>
+    <line stroke="rgb(0,255,0)" x1="27.4918464022181" y1="17.2550125698706" x2="27.634385141493" y2="17.2978944497439"/>
+  </g>
+  <g id="face107" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="27.7856766861384" y1="17.3558491220423" x2="27.634385141493" y2="17.2978944497439"/>
+    <line stroke="rgb(0,255,0)" x1="27.634385141493" y1="17.2978944497439" x2="27.7856766861384" y2="17.3558491220423"/>
+  </g>
+  <g id="face108" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="27.9467672147867" y1="17.4317833802687" x2="27.7856766861384" y2="17.3558491220423"/>
+    <line stroke="rgb(0,255,0)" x1="27.7856766861384" y1="17.3558491220423" x2="27.9467672147867" y2="17.4317833802687"/>
+  </g>
+  <g id="face109" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="28.1187009987261" y1="17.5286078326155" x2="27.9467672147867" y2="17.4317833802687"/>
+    <line stroke="rgb(0,255,0)" x1="27.9467672147867" y1="17.4317833802687" x2="28.1187009987261" y2="17.5286078326155"/>
+  </g>
+  <g id="face110" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="28.3025256470978" y1="17.6492273652407" x2="28.1187009987261" y2="17.5286078326155"/>
+    <line stroke="rgb(0,255,0)" x1="28.1187009987261" y1="17.5286078326155" x2="28.3025256470978" y2="17.6492273652407"/>
+  </g>
+  <g id="face111" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="28.4798967942774" y1="17.7835397263152" x2="28.3025256470978" y2="17.6492273652407"/>
+    <line stroke="rgb(0,255,0)" x1="28.3025256470978" y1="17.6492273652407" x2="28.4798967942774" y2="17.7835397263152"/>
+  </g>
+  <g id="face112" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="28.6323079503309" y1="17.9189249688498" x2="28.4798967942774" y2="17.7835397263152"/>
+    <line stroke="rgb(0,255,0)" x1="28.4798967942774" y1="17.7835397263152" x2="28.6323079503309" y2="17.9189249688498"/>
+  </g>
+  <g id="face113" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="28.7616798114903" y1="18.0553006001813" x2="28.6323079503309" y2="17.9189249688498"/>
+    <line stroke="rgb(0,255,0)" x1="28.6323079503309" y1="17.9189249688498" x2="28.7616798114903" y2="18.0553006001813"/>
+  </g>
+  <g id="face114" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="28.8699311666424" y1="18.1925843660642" x2="28.7616798114903" y2="18.0553006001813"/>
+    <line stroke="rgb(0,255,0)" x1="28.7616798114903" y1="18.0553006001813" x2="28.8699311666424" y2="18.1925843660642"/>
+  </g>
+  <g id="face115" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="28.9589841425278" y1="18.3306918664905" x2="28.8699311666424" y2="18.1925843660642"/>
+    <line stroke="rgb(0,255,0)" x1="28.8699311666424" y1="18.1925843660642" x2="28.9589841425278" y2="18.3306918664905"/>
+  </g>
+  <g id="face116" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="29.0307556206887" y1="18.4695432313959" x2="28.9589841425278" y2="18.3306918664905"/>
+    <line stroke="rgb(0,255,0)" x1="28.9589841425278" y1="18.3306918664905" x2="29.0307556206887" y2="18.4695432313959"/>
+  </g>
+  <g id="face117" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="29.087169158374" y1="18.6090535839359" x2="29.0307556206887" y2="18.4695432313959"/>
+    <line stroke="rgb(0,255,0)" x1="29.0307556206887" y1="18.4695432313959" x2="29.087169158374" y2="18.6090535839359"/>
+  </g>
+  <g id="face118" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="29.1301416371262" y1="18.749142338792" x2="29.087169158374" y2="18.6090535839359"/>
+    <line stroke="rgb(0,255,0)" x1="29.087169158374" y1="18.6090535839359" x2="29.1301416371262" y2="18.749142338792"/>
+  </g>
+  <g id="face119" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="29.1615942300131" y1="18.8897260496284" x2="29.1301416371262" y2="18.749142338792"/>
+    <line stroke="rgb(0,255,0)" x1="29.1301416371262" y1="18.749142338792" x2="29.1615942300131" y2="18.8897260496284"/>
+  </g>
+  <g id="face120" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="29.1615951836855" y1="20.3046354436199" x2="29.1615942300131" y2="18.8897260496284"/>
+    <line stroke="rgb(0,255,0)" x1="29.1615942300131" y1="18.8897260496284" x2="29.1615951836855" y2="20.3046354436199"/>
+  </g>
+  <g id="face121" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="29.1301416371262" y1="20.4452189160382" x2="29.1615951836855" y2="20.3046354436199"/>
+    <line stroke="rgb(0,255,0)" x1="29.1615951836855" y1="20.3046354436199" x2="29.1301416371262" y2="20.4452189160382"/>
+  </g>
+  <g id="face122" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="29.087169158374" y1="20.5853074324762" x2="29.1301416371262" y2="20.4452189160382"/>
+    <line stroke="rgb(0,255,0)" x1="29.1301416371262" y1="20.4452189160382" x2="29.087169158374" y2="20.5853074324762"/>
+  </g>
+  <g id="face123" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="29.0307565743611" y1="20.7248180234343" x2="29.087169158374" y2="20.5853074324762"/>
+    <line stroke="rgb(0,255,0)" x1="29.087169158374" y1="20.5853074324762" x2="29.0307565743611" y2="20.7248180234343"/>
+  </g>
+  <g id="face124" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="28.9589841425278" y1="20.8636689115035" x2="29.0307565743611" y2="20.7248180234343"/>
+    <line stroke="rgb(0,255,0)" x1="29.0307565743611" y1="20.7248180234343" x2="28.9589841425278" y2="20.8636689115035"/>
+  </g>
+  <g id="face125" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="28.8699321203148" y1="21.001776888766" x2="28.9589841425278" y2="20.8636689115035"/>
+    <line stroke="rgb(0,255,0)" x1="28.9589841425278" y1="20.8636689115035" x2="28.8699321203148" y2="21.001776888766"/>
+  </g>
+  <g id="face126" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="28.7616798114903" y1="21.1390601182082" x2="28.8699321203148" y2="21.001776888766"/>
+    <line stroke="rgb(0,255,0)" x1="28.8699321203148" y1="21.001776888766" x2="28.7616798114903" y2="21.1390601182082"/>
+  </g>
+  <g id="face127" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="28.6323089040034" y1="21.2754355111215" x2="28.7616798114903" y2="21.1390601182082"/>
+    <line stroke="rgb(0,255,0)" x1="28.7616798114903" y1="21.1390601182082" x2="28.6323089040034" y2="21.2754355111215"/>
+  </g>
+  <g id="face128" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="28.479895840605" y1="21.4108213497014" x2="28.6323089040034" y2="21.2754355111215"/>
+    <line stroke="rgb(0,255,0)" x1="28.6323089040034" y1="21.2754355111215" x2="28.479895840605" y2="21.4108213497014"/>
+  </g>
+  <g id="face129" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="28.3025256470978" y1="21.545134068403" x2="28.479895840605" y2="21.4108213497014"/>
+    <line stroke="rgb(0,255,0)" x1="28.479895840605" y1="21.4108213497014" x2="28.3025256470978" y2="21.545134068403"/>
+  </g>
+  <g id="face130" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="28.1187014755623" y1="21.6657536010282" x2="28.3025256470978" y2="21.545134068403"/>
+    <line stroke="rgb(0,255,0)" x1="28.3025256470978" y1="21.545134068403" x2="28.1187014755623" y2="21.6657536010282"/>
+  </g>
+  <g id="face131" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="27.9467667379505" y1="21.7625769804936" x2="28.1187014755623" y2="21.6657536010282"/>
+    <line stroke="rgb(0,255,0)" x1="28.1187014755623" y1="21.6657536010282" x2="27.9467667379505" y2="21.7625769804936"/>
+  </g>
+  <g id="face132" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="27.7856766861384" y1="21.8385118347652" x2="27.9467667379505" y2="21.7625769804936"/>
+    <line stroke="rgb(0,255,0)" x1="27.9467667379505" y1="21.7625769804936" x2="27.7856766861384" y2="21.8385118347652"/>
+  </g>
+  <g id="face133" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="27.6343846646568" y1="21.8964666262727" x2="27.7856766861384" y2="21.8385118347652"/>
+    <line stroke="rgb(0,255,0)" x1="27.7856766861384" y1="21.8385118347652" x2="27.6343846646568" y2="21.8964666262727"/>
+  </g>
+  <g id="face134" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="27.4918473558905" y1="21.9393490425867" x2="27.6343846646568" y2="21.8964666262727"/>
+    <line stroke="rgb(0,255,0)" x1="27.6343846646568" y1="21.8964666262727" x2="27.4918473558905" y2="21.9393490425867"/>
+  </g>
+  <g id="face135" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="27.3570171506979" y1="21.9700674865322" x2="27.4918473558905" y2="21.9393490425867"/>
+    <line stroke="rgb(0,255,0)" x1="27.4918473558905" y1="21.9393490425867" x2="27.3570171506979" y2="21.9700674865322"/>
+  </g>
+  <g id="face136" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="27.228849300955" y1="21.9915298244936" x2="27.3570171506979" y2="21.9700674865322"/>
+    <line stroke="rgb(0,255,0)" x1="27.3570171506979" y1="21.9700674865322" x2="27.228849300955" y2="21.9915298244936"/>
+  </g>
+  <g id="face137" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="27.1062981048653" y1="22.0066443400866" x2="27.228849300955" y2="21.9915298244936"/>
+    <line stroke="rgb(0,255,0)" x1="27.228849300955" y1="21.9915298244936" x2="27.1062981048653" y2="22.0066443400866"/>
+  </g>
+  <g id="face138" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="26.9883178606322" y1="22.0183191977183" x2="27.1062981048653" y2="22.0066443400866"/>
+    <line stroke="rgb(0,255,0)" x1="27.1062981048653" y1="22.0066443400866" x2="26.9883178606322" y2="22.0183191977183"/>
+  </g>
+  <g id="face139" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="26.8738647738039" y1="22.0294620849593" x2="26.9883178606322" y2="22.0183191977183"/>
+    <line stroke="rgb(0,255,0)" x1="26.9883178606322" y1="22.0183191977183" x2="26.8738647738039" y2="22.0294620849593"/>
+  </g>
+  <g id="face140" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="26.7618898047306" y1="22.0429814046346" x2="26.8738647738039" y2="22.0294620849593"/>
+    <line stroke="rgb(0,255,0)" x1="26.8738647738039" y1="22.0294620849593" x2="26.7618898047306" y2="22.0429814046346"/>
+  </g>
+  <g id="face141" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="26.651350112633" y1="22.0617854403602" x2="26.7618898047306" y2="22.0429814046346"/>
+    <line stroke="rgb(0,255,0)" x1="26.7618898047306" y1="22.0429814046346" x2="26.651350112633" y2="22.0617854403602"/>
+  </g>
+  <g id="face142" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="26.5411995188782" y1="22.0887818797068" x2="26.651350112633" y2="22.0617854403602"/>
+    <line stroke="rgb(0,255,0)" x1="26.651350112633" y1="22.0617854403602" x2="26.5411995188782" y2="22.0887818797068"/>
+  </g>
+  <g id="face143" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="26.430392798506" y1="22.1268791254993" x2="26.5411995188782" y2="22.0887818797068"/>
+    <line stroke="rgb(0,255,0)" x1="26.5411995188782" y1="22.0887818797068" x2="26.430392798506" y2="22.1268791254993"/>
+  </g>
+  <g id="face144" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="26.3401977999108" y1="22.1843404511396" x2="26.430392798506" y2="22.1268791254993"/>
+    <line stroke="rgb(0,255,0)" x1="26.430392798506" y1="22.1268791254993" x2="26.3401977999108" y2="22.1843404511396"/>
+  </g>
+  <g id="face145" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="26.2513036104815" y1="22.2806749542862" x2="26.3401977999108" y2="22.1843404511396"/>
+    <line stroke="rgb(0,255,0)" x1="26.3401977999108" y1="22.1843404511396" x2="26.2513036104815" y2="22.2806749542862"/>
+  </g>
+  <g id="face146" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="26.1636592087443" y1="22.410900501263" x2="26.2513036104815" y2="22.2806749542862"/>
+    <line stroke="rgb(0,255,0)" x1="26.2513036104815" y1="22.2806749542862" x2="26.1636592087443" y2="22.410900501263"/>
+  </g>
+  <g id="face147" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="26.0772138116433" y1="22.5700349285913" x2="26.1636592087443" y2="22.410900501263"/>
+    <line stroke="rgb(0,255,0)" x1="26.1636592087443" y1="22.410900501263" x2="26.0772138116433" y2="22.5700349285913"/>
+  </g>
+  <g id="face148" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="25.9919178282134" y1="22.7530957747702" x2="26.0772138116433" y2="22.5700349285913"/>
+    <line stroke="rgb(0,255,0)" x1="26.0772138116433" y1="22.5700349285913" x2="25.9919178282134" y2="22.7530957747702"/>
+  </g>
+  <g id="face149" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="25.9077180912177" y1="22.9551014723662" x2="25.9919178282134" y2="22.7530957747702"/>
+    <line stroke="rgb(0,255,0)" x1="25.9919178282134" y1="22.7530957747702" x2="25.9077180912177" y2="22.9551014723662"/>
+  </g>
+  <g id="face150" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="25.824565009691" y1="23.1710692916581" x2="25.9077180912177" y2="22.9551014723662"/>
+    <line stroke="rgb(0,255,0)" x1="25.9077180912177" y1="22.9551014723662" x2="25.824565009691" y2="23.1710692916581"/>
+  </g>
+  <g id="face151" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="25.7424073237412" y1="23.3960174863988" x2="25.824565009691" y2="23.1710692916581"/>
+    <line stroke="rgb(0,255,0)" x1="25.824565009691" y1="23.1710692916581" x2="25.7424073237412" y2="23.3960174863988"/>
+  </g>
+  <g id="face152" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="25.6611940118944" y1="23.6249638335055" x2="25.7424073237412" y2="23.3960174863988"/>
+    <line stroke="rgb(0,255,0)" x1="25.7424073237412" y1="23.3960174863988" x2="25.6611940118944" y2="23.6249638335055"/>
+  </g>
+  <g id="face153" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="25.5808752447674" y1="23.8529259906861" x2="25.6611940118944" y2="23.6249638335055"/>
+    <line stroke="rgb(0,255,0)" x1="25.6611940118944" y1="23.6249638335055" x2="25.5808752447674" y2="23.8529259906861"/>
+  </g>
+  <g id="face154" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="25.5013985703776" y1="24.0749218540665" x2="25.5808752447674" y2="23.8529259906861"/>
+    <line stroke="rgb(0,255,0)" x1="25.5808752447674" y1="23.8529259906861" x2="25.5013985703776" y2="24.0749218540665"/>
+  </g>
+  <g id="face155" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="25.4227136825053" y1="24.2859693197729" x2="25.5013985703776" y2="24.0749218540665"/>
+    <line stroke="rgb(0,255,0)" x1="25.5013985703776" y1="24.0749218540665" x2="25.4227136825053" y2="24.2859693197729"/>
+  </g>
+  <g id="face156" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="25.3447690828407" y1="24.4810864031402" x2="25.4227136825053" y2="24.2859693197729"/>
+    <line stroke="rgb(0,255,0)" x1="25.4227136825053" y1="24.2859693197729" x2="25.3447690828407" y2="24.4810864031402"/>
+  </g>
+  <g id="face157" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="25.2675151804182" y1="24.6552908810855" x2="25.3447690828407" y2="24.4810864031402"/>
+    <line stroke="rgb(0,255,0)" x1="25.3447690828407" y1="24.4810864031402" x2="25.2675151804182" y2="24.6552908810855"/>
+  </g>
+  <g id="face158" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="25.1485815021941" y1="24.9055876884591" x2="25.2675151804182" y2="24.6552908810855"/>
+    <line stroke="rgb(0,255,0)" x1="25.2675151804182" y1="24.6552908810855" x2="25.1485815021941" y2="24.9055876884591"/>
+  </g>
+  <g id="face159" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="25.0286593425181" y1="25.1530399294545" x2="25.1485815021941" y2="24.9055876884591"/>
+    <line stroke="rgb(0,255,0)" x1="25.1485815021941" y1="24.9055876884591" x2="25.0286593425181" y2="25.1530399294545"/>
+  </g>
+  <g id="face160" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="24.9058349192831" y1="25.3951997654158" x2="25.0286593425181" y2="25.1530399294545"/>
+    <line stroke="rgb(0,255,0)" x1="25.0286593425181" y1="25.1530399294545" x2="24.9058349192831" y2="25.3951997654158"/>
+  </g>
+  <g id="face161" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="24.7781946888005" y1="25.6296195961052" x2="24.9058349192831" y2="25.3951997654158"/>
+    <line stroke="rgb(0,255,0)" x1="24.9058349192831" y1="25.3951997654158" x2="24.7781946888005" y2="25.6296195961052"/>
+  </g>
+  <g id="face162" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="24.6438243921273" y1="25.8538501523582" x2="24.7781946888005" y2="25.6296195961052"/>
+    <line stroke="rgb(0,255,0)" x1="24.7781946888005" y1="25.6296195961052" x2="24.6438243921273" y2="25.8538501523582"/>
+  </g>
+  <g id="face163" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="24.5008100087382" y1="26.0654445491911" x2="24.6438243921273" y2="25.8538501523582"/>
+    <line stroke="rgb(0,255,0)" x1="24.6438243921273" y1="25.8538501523582" x2="24.5008100087382" y2="26.0654445491911"/>
+  </g>
+  <g id="face164" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="24.347238471781" y1="26.2619535174395" x2="24.5008100087382" y2="26.0654445491911"/>
+    <line stroke="rgb(0,255,0)" x1="24.5008100087382" y1="26.0654445491911" x2="24.347238471781" y2="26.2619535174395"/>
+  </g>
+  <g id="face165" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="24.1811952838943" y1="26.4409301721198" x2="24.347238471781" y2="26.2619535174395"/>
+    <line stroke="rgb(0,255,0)" x1="24.347238471781" y1="26.2619535174395" x2="24.1811952838943" y2="26.4409301721198"/>
+  </g>
+  <g id="face166" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="24.000766186135" y1="26.5999250056492" x2="24.1811952838943" y2="26.4409301721198"/>
+    <line stroke="rgb(0,255,0)" x1="24.1811952838943" y1="26.4409301721198" x2="24.000766186135" y2="26.5999250056492"/>
+  </g>
+  <g id="face167" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="23.8040384692778" y1="26.7364908946263" x2="24.000766186135" y2="26.5999250056492"/>
+    <line stroke="rgb(0,255,0)" x1="24.000766186135" y1="26.5999250056492" x2="23.8040384692778" y2="26.7364908946263"/>
+  </g>
+  <g id="face168" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="23.5890970399163" y1="26.8481797619769" x2="23.8040384692778" y2="26.7364908946263"/>
+    <line stroke="rgb(0,255,0)" x1="23.8040384692778" y1="26.7364908946263" x2="23.5890970399163" y2="26.8481797619769"/>
+  </g>
+  <g id="face169" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="23.3540287119887" y1="26.9325430537907" x2="23.5890970399163" y2="26.8481797619769"/>
+    <line stroke="rgb(0,255,0)" x1="23.5890970399163" y1="26.8481797619769" x2="23.3540287119887" y2="26.9325430537907"/>
+  </g>
+  <g id="face170" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="23.0969191669475" y1="26.9871326929938" x2="23.3540287119887" y2="26.9325430537907"/>
+    <line stroke="rgb(0,255,0)" x1="23.3540287119887" y1="26.9325430537907" x2="23.0969191669475" y2="26.9871326929938"/>
+  </g>
+  <g id="face171" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="22.5419243825072" y1="26.9699327342602" x2="22.8158549803129" y2="27.0095010793482"/>
+    <line stroke="rgb(0,255,0)" x1="22.8158549803129" y1="27.0095010793482" x2="22.5419243825072" y2="26.9699327342602"/>
+  </g>
+  <g id="face172" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="22.3217768554645" y1="26.8488921552664" x2="22.5419243825072" y2="26.9699327342602"/>
+    <line stroke="rgb(0,255,0)" x1="22.5419243825072" y1="26.9699327342602" x2="22.3217768554645" y2="26.8488921552664"/>
+  </g>
+  <g id="face173" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="22.1486716786854" y1="26.6597183583523" x2="22.3217768554645" y2="26.8488921552664"/>
+    <line stroke="rgb(0,255,0)" x1="22.3217768554645" y1="26.8488921552664" x2="22.1486716786854" y2="26.6597183583523"/>
+  </g>
+  <g id="face174" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="22.0158683998903" y1="26.4157560815379" x2="22.1486716786854" y2="26.6597183583523"/>
+    <line stroke="rgb(0,255,0)" x1="22.1486716786854" y1="26.6597183583523" x2="22.0158683998903" y2="26.4157560815379"/>
+  </g>
+  <g id="face175" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="21.9166261644696" y1="26.1303457713172" x2="22.0158683998903" y2="26.4157560815379"/>
+    <line stroke="rgb(0,255,0)" x1="22.0158683998903" y1="26.4157560815379" x2="21.9166261644696" y2="26.1303457713172"/>
+  </g>
+  <g id="face176" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="21.8442042370224" y1="25.8168283510205" x2="21.9166261644696" y2="26.1303457713172"/>
+    <line stroke="rgb(0,255,0)" x1="21.9166261644696" y1="26.1303457713172" x2="21.8442042370224" y2="25.8168283510205"/>
+  </g>
+  <g id="face177" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="21.7918618672467" y1="25.4885461744868" x2="21.8442042370224" y2="25.8168283510205"/>
+    <line stroke="rgb(0,255,0)" x1="21.8442042370224" y1="25.8168283510205" x2="21.7918618672467" y2="25.4885461744868"/>
+  </g>
+  <g id="face178" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="21.752858453852" y1="25.1588408803007" x2="21.7918618672467" y2="25.4885461744868"/>
+    <line stroke="rgb(0,255,0)" x1="21.7918618672467" y1="25.4885461744868" x2="21.752858453852" y2="25.1588408803007"/>
+  </g>
+  <g id="face179" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="21.7204531422285" y1="24.8410533917924" x2="21.752858453852" y2="25.1588408803007"/>
+    <line stroke="rgb(0,255,0)" x1="21.752858453852" y1="25.1588408803007" x2="21.7204531422285" y2="24.8410533917924"/>
+  </g>
+  <g id="face180" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="21.6879051969752" y1="24.5485265396372" x2="21.7204531422285" y2="24.8410533917924"/>
+    <line stroke="rgb(0,255,0)" x1="21.7204531422285" y1="24.8410533917924" x2="21.6879051969752" y2="24.5485265396372"/>
+  </g>
+  <g id="face181" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="21.648473942296" y1="24.2946010087472" x2="21.6879051969752" y2="24.5485265396372"/>
+    <line stroke="rgb(0,255,0)" x1="21.6879051969752" y1="24.5485265396372" x2="21.648473942296" y2="24.2946010087472"/>
+  </g>
+  <g id="face182" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="21.5954187023946" y1="24.0926184377071" x2="21.648473942296" y2="24.2946010087472"/>
+    <line stroke="rgb(0,255,0)" x1="21.648473942296" y1="24.2946010087472" x2="21.5954187023946" y2="24.0926184377071"/>
+  </g>
+  <g id="face183" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="21.5219986822656" y1="23.9559207035195" x2="21.5954187023946" y2="24.0926184377071"/>
+    <line stroke="rgb(0,255,0)" x1="21.5954187023946" y1="24.0926184377071" x2="21.5219986822656" y2="23.9559207035195"/>
+  </g>
+  <g id="face184" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="21.4214730869038" y1="23.8978494447691" x2="21.5219986822656" y2="23.9559207035195"/>
+    <line stroke="rgb(0,255,0)" x1="21.5219986822656" y1="23.9559207035195" x2="21.4214730869038" y2="23.8978494447691"/>
+  </g>
+  <g id="face185" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="21.2468360589164" y1="23.9010382868868" x2="21.4214730869038" y2="23.8978494447691"/>
+    <line stroke="rgb(0,255,0)" x1="21.4214730869038" y1="23.8978494447691" x2="21.2468360589164" y2="23.9010382868868"/>
+  </g>
+  <g id="face186" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="21.0043410667078" y1="23.942901167791" x2="21.2468360589164" y2="23.9010382868868"/>
+    <line stroke="rgb(0,255,0)" x1="21.2468360589164" y1="23.9010382868868" x2="21.0043410667078" y2="23.942901167791"/>
+  </g>
+  <g id="face187" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="20.6990214144394" y1="24.0205692024571" x2="21.0043410667078" y2="23.942901167791"/>
+    <line stroke="rgb(0,255,0)" x1="21.0043410667078" y1="23.942901167791" x2="20.6990214144394" y2="24.0205692024571"/>
+  </g>
+  <g id="face188" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="20.3359106446907" y1="24.1311737442786" x2="20.6990214144394" y2="24.0205692024571"/>
+    <line stroke="rgb(0,255,0)" x1="20.6990214144394" y1="24.0205692024571" x2="20.3359106446907" y2="24.1311737442786"/>
+  </g>
+  <g id="face189" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="19.9200424788549" y1="24.2718459082309" x2="20.3359106446907" y2="24.1311737442786"/>
+    <line stroke="rgb(0,255,0)" x1="20.3359106446907" y1="24.1311737442786" x2="19.9200424788549" y2="24.2718459082309"/>
+  </g>
+  <g id="face190" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="19.4564499230706" y1="24.4397175245439" x2="19.9200424788549" y2="24.2718459082309"/>
+    <line stroke="rgb(0,255,0)" x1="19.9200424788549" y1="24.2718459082309" x2="19.4564499230706" y2="24.4397175245439"/>
+  </g>
+  <g id="face191" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="18.950166460313" y1="24.6319194697749" x2="19.4564499230706" y2="24.4397175245439"/>
+    <line stroke="rgb(0,255,0)" x1="19.4564499230706" y1="24.4397175245439" x2="18.950166460313" y2="24.6319194697749"/>
+  </g>
+  <g id="face192" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="18.4062262888114" y1="24.8455830973174" x2="18.950166460313" y2="24.6319194697749"/>
+    <line stroke="rgb(0,255,0)" x1="18.950166460313" y1="24.6319194697749" x2="18.4062262888114" y2="24.8455830973174"/>
+  </g>
+  <g id="face193" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="17.8296619378683" y1="25.0778397605649" x2="18.4062262888114" y2="24.8455830973174"/>
+    <line stroke="rgb(0,255,0)" x1="18.4062262888114" y1="24.8455830973174" x2="17.8296619378683" y2="25.0778397605649"/>
+  </g>
+  <g id="face194" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="17.2255056983683" y1="25.3258212897474" x2="17.8296619378683" y2="25.0778397605649"/>
+    <line stroke="rgb(0,255,0)" x1="17.8296619378683" y1="25.0778397605649" x2="17.2255056983683" y2="25.3258212897474"/>
+  </g>
+  <g id="face195" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="16.5987955832302" y1="25.5866583230039" x2="17.2255056983683" y2="25.3258212897474"/>
+    <line stroke="rgb(0,255,0)" x1="17.2255056983683" y1="25.3258212897474" x2="16.5987955832302" y2="25.5866583230039"/>
+  </g>
+  <g id="face196" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="15.9545598302309" y1="25.8574824521462" x2="16.5987955832302" y2="25.5866583230039"/>
+    <line stroke="rgb(0,255,0)" x1="16.5987955832302" y1="25.5866583230039" x2="15.9545598302309" y2="25.8574824521462"/>
+  </g>
+  <g id="face197" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="15.2978343065264" y1="26.1354245537316" x2="15.9545598302309" y2="25.8574824521462"/>
+    <line stroke="rgb(0,255,0)" x1="15.9545598302309" y1="25.8574824521462" x2="15.2978343065264" y2="26.1354245537316"/>
+  </g>
+  <g id="face198" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.6336520182554" y1="26.4176166964079" x2="15.2978343065264" y2="26.1354245537316"/>
+    <line stroke="rgb(0,255,0)" x1="15.2978343065264" y1="26.1354245537316" x2="14.6336520182554" y2="26.4176166964079"/>
+  </g>
+  <g id="face199" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.5959776665718" y1="26.4312389530989" x2="14.6336520182554" y2="26.4176166964079"/>
+    <line stroke="rgb(0,255,0)" x1="14.6336520182554" y1="26.4176166964079" x2="14.5959776665718" y2="26.4312389530989"/>
+  </g>
+  <g id="face200" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.5596446551315" y1="26.4398305878321" x2="14.5959776665718" y2="26.4312389530989"/>
+    <line stroke="rgb(0,255,0)" x1="14.5959776665718" y1="26.4312389530989" x2="14.5596446551315" y2="26.4398305878321"/>
+  </g>
+  <g id="face201" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.5248856800024" y1="26.4438040639245" x2="14.5596446551315" y2="26.4398305878321"/>
+    <line stroke="rgb(0,255,0)" x1="14.5596446551315" y1="26.4398305878321" x2="14.5248856800024" y2="26.4438040639245"/>
+  </g>
+  <g id="face202" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.4919320067436" y1="26.4435742288739" x2="14.5248856800024" y2="26.4438040639245"/>
+    <line stroke="rgb(0,255,0)" x1="14.5248856800024" y1="26.4438040639245" x2="14.4919320067436" y2="26.4435742288739"/>
+  </g>
+  <g id="face203" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.461013947242" y1="26.4395559301783" x2="14.4919320067436" y2="26.4435742288739"/>
+    <line stroke="rgb(0,255,0)" x1="14.4919320067436" y1="26.4435742288739" x2="14.461013947242" y2="26.4395559301783"/>
+  </g>
+  <g id="face204" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.4323670585825" y1="26.4321616311547" x2="14.461013947242" y2="26.4395559301783"/>
+    <line stroke="rgb(0,255,0)" x1="14.461013947242" y1="26.4395559301783" x2="14.4323670585825" y2="26.4321616311547"/>
+  </g>
+  <g id="face205" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.406221652652" y1="26.4218057024647" x2="14.4323670585825" y2="26.4321616311547"/>
+    <line stroke="rgb(0,255,0)" x1="14.4323670585825" y1="26.4321616311547" x2="14.406221652652" y2="26.4218057024647"/>
+  </g>
+  <g id="face206" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.3828094718458" y1="26.408902037934" x2="14.406221652652" y2="26.4218057024647"/>
+    <line stroke="rgb(0,255,0)" x1="14.406221652652" y1="26.4218057024647" x2="14.3828094718458" y2="26.408902037934"/>
+  </g>
+  <g id="face207" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.3127269475214" y1="21.5451271542781" x2="14.3127269475214" y2="26.3011599438483"/>
+    <line stroke="rgb(0,255,0)" x1="14.3127269475214" y1="26.3011599438483" x2="14.3127269475214" y2="21.5451271542781"/>
+  </g>
+  <g id="face208" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.3140558900234" y1="21.5121384335583" x2="14.3127269475214" y2="21.5451271542781"/>
+    <line stroke="rgb(0,255,0)" x1="14.3127269475214" y1="21.5451271542781" x2="14.3140558900234" y2="21.5121384335583"/>
+  </g>
+  <g id="face209" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.3179874045298" y1="21.4796844846418" x2="14.3140558900234" y2="21.5121384335583"/>
+    <line stroke="rgb(0,255,0)" x1="14.3140558900234" y1="21.5121384335583" x2="14.3179874045298" y2="21.4796844846418"/>
+  </g>
+  <g id="face210" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.3244423362305" y1="21.4478951261854" x2="14.3179874045298" y2="21.4796844846418"/>
+    <line stroke="rgb(0,255,0)" x1="14.3179874045298" y1="21.4796844846418" x2="14.3244423362305" y2="21.4478951261854"/>
+  </g>
+  <g id="face211" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.3333420071518" y1="21.4168999384277" x2="14.3244423362305" y2="21.4478951261854"/>
+    <line stroke="rgb(0,255,0)" x1="14.3244423362305" y1="21.4478951261854" x2="14.3333420071518" y2="21.4168999384277"/>
+  </g>
+  <g id="face212" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.3446024941218" y1="21.3868283823982" x2="14.3333420071518" y2="21.4168999384277"/>
+    <line stroke="rgb(0,255,0)" x1="14.3333420071518" y1="21.4168999384277" x2="14.3446024941218" y2="21.3868283823982"/>
+  </g>
+  <g id="face213" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.3581475033476" y1="21.3578102767535" x2="14.3446024941218" y2="21.3868283823982"/>
+    <line stroke="rgb(0,255,0)" x1="14.3446024941218" y1="21.3868283823982" x2="14.3581475033476" y2="21.3578102767535"/>
+  </g>
+  <g id="face214" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.3738950190022" y1="21.3299752017322" x2="14.3581475033476" y2="21.3578102767535"/>
+    <line stroke="rgb(0,255,0)" x1="14.3581475033476" y1="21.3578102767535" x2="14.3738950190022" y2="21.3299752017322"/>
+  </g>
+  <g id="face215" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.3917639789307" y1="21.3034527375729" x2="14.3738950190022" y2="21.3299752017322"/>
+    <line stroke="rgb(0,255,0)" x1="14.3738950190022" y1="21.3299752017322" x2="14.3917639789307" y2="21.3034527375729"/>
+  </g>
+  <g id="face216" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.4116766588318" y1="21.2783727029324" x2="14.3917639789307" y2="21.3034527375729"/>
+    <line stroke="rgb(0,255,0)" x1="14.3917639789307" y1="21.3034527375729" x2="14.4116766588318" y2="21.2783727029324"/>
+  </g>
+  <g id="face217" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.4335496123698" y1="21.2548642012129" x2="14.4116766588318" y2="21.2783727029324"/>
+    <line stroke="rgb(0,255,0)" x1="14.4116766588318" y1="21.2783727029324" x2="14.4335496123698" y2="21.2548642012129"/>
+  </g>
+  <g id="face218" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.457307022588" y1="21.2330576471165" x2="14.4335496123698" y2="21.2548642012129"/>
+    <line stroke="rgb(0,255,0)" x1="14.4335496123698" y1="21.2548642012129" x2="14.457307022588" y2="21.2330576471165"/>
+  </g>
+  <g id="face219" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.4828649663145" y1="21.2130820248363" x2="14.457307022588" y2="21.2330576471165"/>
+    <line stroke="rgb(0,255,0)" x1="14.457307022588" y1="21.2330576471165" x2="14.4828649663145" y2="21.2130820248363"/>
+  </g>
+  <g id="face220" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.5101447655756" y1="21.1950673914473" x2="14.4828649663145" y2="21.2130820248363"/>
+    <line stroke="rgb(0,255,0)" x1="14.4828649663145" y1="21.2130820248363" x2="14.5101447655756" y2="21.1950673914473"/>
+  </g>
+  <g id="face221" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.5390663118889" y1="21.1791429695609" x2="14.5101447655756" y2="21.1950673914473"/>
+    <line stroke="rgb(0,255,0)" x1="14.5101447655756" y1="21.1950673914473" x2="14.5390663118889" y2="21.1791429695609"/>
+  </g>
+  <g id="face222" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="14.7804016980526" y1="21.0661457232696" x2="14.5390663118889" y2="21.1791429695609"/>
+    <line stroke="rgb(0,255,0)" x1="14.5390663118889" y1="21.1791429695609" x2="14.7804016980526" y2="21.0661457232696"/>
+  </g>
+  <g id="face223" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="15.0471410098488" y1="20.9531481789557" x2="14.7804016980526" y2="21.0661457232696"/>
+    <line stroke="rgb(0,255,0)" x1="14.7804016980526" y1="21.0661457232696" x2="15.0471410098488" y2="20.9531481789557"/>
+  </g>
+  <g id="face224" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="15.3323572477343" y1="20.840151111478" x2="15.0471410098488" y2="20.9531481789557"/>
+    <line stroke="rgb(0,255,0)" x1="15.0471410098488" y1="20.9531481789557" x2="15.3323572477343" y2="20.840151111478"/>
+  </g>
+  <g id="face225" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="15.6291195974762" y1="20.7271538055822" x2="15.3323572477343" y2="20.840151111478"/>
+    <line stroke="rgb(0,255,0)" x1="15.3323572477343" y1="20.840151111478" x2="15.6291195974762" y2="20.7271538055822"/>
+  </g>
+  <g id="face226" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="15.930500105859" y1="20.6141567381045" x2="15.6291195974762" y2="20.7271538055822"/>
+    <line stroke="rgb(0,255,0)" x1="15.6291195974762" y1="20.7271538055822" x2="15.930500105859" y2="20.6141567381045"/>
+  </g>
+  <g id="face227" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="16.2295722501757" y1="20.5011591937906" x2="15.930500105859" y2="20.6141567381045"/>
+    <line stroke="rgb(0,255,0)" x1="15.930500105859" y1="20.6141567381045" x2="16.2295722501757" y2="20.5011591937906"/>
+  </g>
+  <g id="face228" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="16.519406646702" y1="20.3881618878948" x2="16.2295722501757" y2="20.5011591937906"/>
+    <line stroke="rgb(0,255,0)" x1="16.2295722501757" y1="20.5011591937906" x2="16.519406646702" y2="20.3881618878948"/>
+  </g>
+  <g id="face229" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="16.7930739117138" y1="20.275164581999" x2="16.519406646702" y2="20.3881618878948"/>
+    <line stroke="rgb(0,255,0)" x1="16.519406646702" y1="20.3881618878948" x2="16.7930739117138" y2="20.275164581999"/>
+  </g>
+  <g id="face230" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="17.0436484761765" y1="20.1621675145213" x2="16.7930739117138" y2="20.275164581999"/>
+    <line stroke="rgb(0,255,0)" x1="16.7930739117138" y1="20.275164581999" x2="17.0436484761765" y2="20.1621675145213"/>
+  </g>
+  <g id="face231" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="17.264199049021" y1="20.0491697317893" x2="17.0436484761765" y2="20.1621675145213"/>
+    <line stroke="rgb(0,255,0)" x1="17.0436484761765" y1="20.1621675145213" x2="17.264199049021" y2="20.0491697317893"/>
+  </g>
+  <g id="face232" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="17.4477991075403" y1="19.9361729027297" x2="17.264199049021" y2="20.0491697317893"/>
+    <line stroke="rgb(0,255,0)" x1="17.264199049021" y1="20.0491697317893" x2="17.4477991075403" y2="19.9361729027297"/>
+  </g>
+  <g id="face233" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="17.5875192680104" y1="19.8231753584158" x2="17.4477991075403" y2="19.9361729027297"/>
+    <line stroke="rgb(0,255,0)" x1="17.4477991075403" y1="19.9361729027297" x2="17.5875192680104" y2="19.8231753584158"/>
+  </g>
+  <g id="face234" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="17.6764334845602" y1="19.71017805252" x2="17.5875192680104" y2="19.8231753584158"/>
+    <line stroke="rgb(0,255,0)" x1="17.5875192680104" y1="19.8231753584158" x2="17.6764334845602" y2="19.71017805252"/>
+  </g>
+  <g id="face235" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="17.7076104661209" y1="19.5971807466241" x2="17.6764334845602" y2="19.71017805252"/>
+    <line stroke="rgb(0,255,0)" x1="17.6764334845602" y1="19.71017805252" x2="17.7076104661209" y2="19.5971807466241"/>
+  </g>
+  <g id="face236" fill="none" stroke="rgb(0,0,255)" stroke-width="1" stroke-miterlimit="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round">
+    <line stroke="rgb(0,255,0)" x1="17.676433007724" y1="19.4841834407283" x2="17.7076104661209" y2="19.5971807466241"/>
+    <line stroke="rgb(0,255,0)" x1="17.7076104661209" y1="19.5971807466241" x2="17.676433007724" y2="19.4841834407283"/>
+  </g>
+</svg>
