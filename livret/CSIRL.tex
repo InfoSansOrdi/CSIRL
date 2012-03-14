@@ -3,6 +3,8 @@
 \documentclass[final,hyperref={pdfpagelabels=false}]{beamer}
 %\usepackage{grffile}
 %\mode<presentation>{\usetheme{I6dv}}
+
+\usepackage[absolute,overlay]{textpos}
 \usepackage[french]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -135,34 +137,41 @@
 \begin{document}
 \begin{Coupe}
 \begin{frame}{}
+  \begin{textblock*}{50mm}[1,1](61mm,195mm)
+    \includegraphics[height=4\baselineskip]{img/pseudo_logo_CSIRL.pdf}
+  \end{textblock*}
 
-  \begin{center}
-    \structure{\LARGE CS IRL}
+  \begin{textblock*}{7cm}[0,1](67.6mm,190mm)
+    \vbox{\structure{\LARGE CS IRL}
 
     \medskip
-    {\large Computer Science In Real Life}
+    {\large Computer Science In Real Life}}
+  \end{textblock*}
 
-%
-% idee de slogan/titre
-% Computer Science Without Computer
-% (computer science - computer = science)
-%
+
+  \begin{center}
+    \structure{\Huge Les algorithmes}
+
     \bigskip
     \bigskip
     \includegraphics[width=.7\linewidth]{img/Hamiltonian_path.pdf}\label{img:hamiltonian}
-    \bigskip
-    \bigskip
+    \vspace{5\baselineskip}
 
-    \structure{\Huge Les algorithmes}
+
+    ~
+
   \end{center}
+
+  
 \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \begin{frame}
   \vspace{20\baselineskip}
   \vfill
   \begin{block}{À propos de ce document}
     \begin{itemize}
-    \item \copyright\ 2011 membres du projet CS IRL. Tous droits réservés.
+    \item \copyright\ 2011-2012 membres du projet CS IRL. Tous droits réservés.
 
     \item CS IRL est un \alert{projet libre et ouvert}: vous pouvez copier et
       modifier librement les ressources de ce projet sous les conditions
