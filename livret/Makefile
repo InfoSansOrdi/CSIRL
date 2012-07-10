@@ -1,7 +1,3 @@
-LATEXFILTER=/usr/share/texmf/scripts/latex-make/latexfilter.pl |\
-  grep -v '^LaTeX Font Warning:'|\
-  grep -v '^(Font) '
-
 include LaTeX.mk
 
 #CSIRL.pdf:latexmk -pdf CSIRL.tex
