@@ -1,0 +1,358 @@
+\input{img/defMaisons}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Activité: Base-ball multicolore}
+  \begin{block}{Matériel nécessaire}
+    \begin{itemize}
+    \item Plusieurs équipes bien différentiables, chacune composée d'une maison
+      et de deux bonshommes\\
+      (des legos, des bouts de bois, des cailloux, du fil électrique de
+      différentes couleurs, ou autres)
+
+    \item Il faut 5 équipes au minimum. 7 équipes sont préférables, et on peut
+      en utiliser une dizaine
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{Règles du jeu (exemple à quatre équipes)}
+    \begin{itemize}
+    \item \structure{Situation initiale:}~\\
+      On place 4 maisons autour du terrain, et on répartit 7 bonshommes au
+      hasard dans les maisons\\
+     (il manque donc l'un des bonshommes, qui est mis de coté et ne sera
+      pas utilisé)
+    \item \structure{Coups autorisés:}
+      \begin{itemize}\normalsize
+      \item On peut déplacer un seul bonhomme à la fois, d'une maison vers une
+        maison adjacente\\
+        $\leadsto$ il est interdit de traverser le terrain
+      \item On ne peut jamais avoir plus de 2 bonshommes par maison\\
+        $\leadsto$ on ne peut bouger que d'une maison adjacente vers la maison
+        où il y a un trou
+      \end{itemize}
+    \item  \structure{Situation finale:}
+      L'objectif est de ramener tous les bonshommes dans la maison de leur couleur.
+    \end{itemize}
+  \end{block}
+
+  \vspace{-\baselineskip}
+  \begin{columns}
+    \begin{column}{.17\linewidth}\center
+      \maisonQuatre{2/B,3/A, 5/D, 8/B,9/C, 11/D,12/A} {}
+
+      \structure{Situation initiale}
+    \end{column}
+    \begin{column}{.17\linewidth}\center
+      \maisonQuatre{2/B,3/A, 5/D, 8/B,9/C, 11/D,12/A}
+                   {
+                     \draw[->,ultra thick,draw=black!10!green] (bb 2) -> (bb 6);
+                     \draw[->,ultra thick,draw=black!10!green] (bb 3) -> (bb 6);
+                     \draw[->,ultra thick,draw=black!10!green] (bb 9) -> (bb 6);
+                     \draw[->,ultra thick,draw=black!10!green] (bb 8) -> (bb 6);}
+
+      \structure{Coups autorisés}
+    \end{column}
+    \begin{column}{.17\linewidth}\center
+      \maisonQuatre{2/B,3/A, 5/D, 8/B,9/C, 11/D,12/A}
+                   { \draw[->,ultra thick,draw=red] (bb 11) -> (bb 6);
+                     \draw[->,ultra thick,draw=red] (bb 12) -> (bb 6);
+                     \draw[->,ultra thick,draw=red] (bb 12) -> (bb 2);
+                     \draw[->,ultra thick,draw=red] (bb 2) -> (bb 12);
+                     \draw[->,ultra thick,draw=red] (bb 5) -> (bb 3);
+                     \draw[->,ultra thick,draw=red] (bb 5)
+                        .. controls (0pt,0pt) .. (bb 8);
+                     \draw[->,ultra thick,draw=red] (bb 11) -> (bb 9);
+                     \draw[->,ultra thick,draw=red] (bb 9) -> (bb 11);
+                   }
+
+      \structure{Coups interdits}
+    \end{column}
+    \begin{column}{.17\linewidth}\center
+      \maisonQuatre{2/A,3/A, 5/B,6/B, 8/C,9/C, 11/D}{}
+
+      \structure{Situation finale}
+    \end{column}
+  \end{columns}
+
+  \bigskip
+  \begin{block}{Objectif de l'activité}
+    \begin{itemize}
+    \item Le plus important n'est pas  de ramener les bonshommes dans leurs
+      maisons
+    \item L'objectif est d'expliquer comment on fait. On cherche donc
+      l'algorithme correspondant
+    \item Si on veut utiliser plus de couleurs, c'est possible.
+    \end{itemize}
+  \end{block}
+
+  \centerline{
+    \maisonCinq{1/A,2/A, 5/B,6/B, 9/C,10/C, 13/D,14/D, 17/E}{}
+    \maisonSix{2/A,4/A,  6/B,8/B, 10/C,12/C, 14/D,16/D, 18/E,20/E, 22/F}{}
+    \maisonSept{1/A,2/A, 5/B,6/B, 9/C,10/C, 13/D,14/D, 17/E,18/E, 21/F,22/F, 25/G}{}
+    \maisonPair{2/A,4/A, 6/B,8/B, 10/C,12/C, 14/D,16/D, 18/E,20/E, 22/F,24/F,
+      26/G,28/G, 30/H}{}{8}{32}
+               {1/A,2/B,3/C,4/D,5/E,6/F,7/G,8/H}
+    % Neuf maisons
+    \maisonImpair{1/A,2/A, 5/B,6/B, 9/C,10/C, 13/D,14/D, 17/E,18/E,
+                  21/F,22/F, 25/G,26/G, 29/H,30/H,  33/I}{}{9}{36}
+               {1/A,2/B,3/C,4/D,5/E,6/F,7/G,8/H,9/I}
+    % Dix maisons
+    \maisonPair{2/A,4/A, 6/B,8/B, 10/C,12/C, 14/D,16/D, 18/E,20/E, 22/F,24/F,
+      26/G,28/G, 30/H,32/H, 34/I,36/I, 38/J}{}{10}{40}
+               {1/A,2/B,3/C,4/D,5/E,6/F,7/G,8/H,9/I,10/J}
+  }
+
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\flecherond}[1]{
+  \draw[ultra thick] (0,0) circle (3mm);
+  \draw[ultra thick,rotate=#1*72] (3mm,0) -- +(-.15,-.08);
+  \draw[ultra thick,rotate=#1*72] (3mm,0) -- +(.08,-.15);
+  \draw[fill=white,draw=white,rotate=#1*72] (3mm,2.5pt) circle (2pt);
+}
+\begin{frame}{Un premier algorithme pour le base-ball multicolore}
+  \begin{block}{L'algorithme}
+    \begin{itemize}
+    \item On ne s'autorise qu'à tourner dans un seul sens.
+    \item On n'a plus 4 coups possibles, mais deux seulement (car 2 bonshommes
+      tourneraient à l'envers)
+    \item Entre ces deux bonshommes, je déplace celui dont la destination est la
+      plus lointaine
+    \end{itemize}
+  \end{block}
+
+
+  \begin{block}{Exemple d'exécution}
+    \input{ img/wrongAlgoExample}
+  \end{block}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\maisonOk}[1]{\foreach \x in {#1} {\draw[shift=(m.corner \x)] node
+    {\small x};}}
+\begin{frame}{Étude du premier algorithme pour le base-ball multicolore}
+  \begin{block}{Cet algorithme semble attirant}
+    \begin{itemize}
+    \item Il est très simple: on pourrait l'expliquer à un ordinateur
+    \item Il est relativement rapide: 20 coups pour 9 bonshommes, ce n'est pas
+      si mal
+    \item Seul problème: cet algorithme est faux: dans certains cas, il ne
+      termine jamais\ldots
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{Exemple d'exécution incorrecte}
+    \begin{itemize}
+    \item Il suffit d'inverser deux pions sur une situation gagnée (ici,
+      \pawn{A} et \pawn{D}), et on applique l'algorithme 
+    \end{itemize}\vspace{-\baselineskip}
+    \input{img/wrongAlgoExample2}
+  \end{block}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\newcommand{\ligneMaison}[2]{
+  \begin{tikzpicture}
+    \foreach \x/\col in {#1} {
+      \draw (.55*\x,.65) node[shape=circle,fill=\col,draw=black,inner sep=.1] {~~~};
+    }
+    \foreach \x/\col in {#2} {
+      \draw (.55*\x,.3) node[shape=circle,fill=\col,draw=black,inner sep=.1] {~~~};
+    }
+    \foreach \x/\col in {1/A, 2/B, 3/C, 4/D, 5/E} {
+      \draw (.55*\x,-.25) node[shape=ellipse,fill=\col,draw=black,rotate=90] {~~};
+    }
+  \end{tikzpicture}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Un autre algorithme pour le base-ball multicolore}
+  \begin{block}{Apprendre de ses échecs: {\color{black}notre algorithme boucle parfois à l'infini}}
+    \begin{itemize}\vspace{-.2\baselineskip}
+    \item Pour réparer cela, le plus simple est de s'interdire de boucler, en
+      coupant le cercle
+    \item Les bonhommes ne peuvent plus passer directement de la maison
+      \pawn{A} à \pawn{E}\\
+      (pour ne pas se tromper, le plus simple est de placer les maisons en ligne)
+%    \item Les règles de déplacement restent inchangées par ailleurs
+    \end{itemize}
+
+    \begin{columns}
+      \begin{column}{.2\linewidth}
+        ~
+      \end{column}
+      \begin{column}{.2\linewidth}\center
+        \maisonCinq{1/D,2/B, 5/A,6/C, 9/E, 12/D,13/A, 17/B,18/C}{
+          \draw[dashed,draw=red,ultra thick] (0,0) -- (.9,1.1);
+        }         
+      \end{column}
+
+      \begin{column}{.1\linewidth}\center
+        \Large$\leadsto$
+      \end{column}
+
+      \begin{column}{.2\linewidth}\center
+        \ligneMaison{1/B, 2/C,      4/D, 5/B}
+                    {1/D, 2/A, 3/E, 4/A, 5/C}
+      \end{column}
+      \begin{column}{.2\linewidth}
+        ~
+      \end{column}
+    \end{columns}
+  \end{block}
+
+  \bigskip
+
+  \begin{block}{Apprendre de ses réussites: {\color{black}le crépier}}
+    \begin{itemize}\vspace{-.2\baselineskip}
+    \item On a cherché à réduire la taille du problème à peu à peu\\
+      {(il y a 7 crèpes à trier. La plus grande va définitivement à sa place; il
+        reste 6 crèpes à trier)}
+    \item On s'est fixé des objectifs intermédiaires, qui décomposent le
+      problème en étapes que je sais faire\\
+      {(mettre la plus grande en haut pour parvenir à la mettre en bas)}
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{Nouvel algorithme}
+    \begin{itemize}\vspace{-.2\baselineskip}
+    \item On place les bonshommes de la première maison en premier, et on n'y
+      touche plus ensuite
+    \item On fera ensuite pareil pour la seconde maison, puis la troisième, et
+      ainsi de suite pour toutes
+    \item Pour ammener les pions \pawn{A} dans leur maison, je déplace tous
+      ceux qui me gènent
+    \item Pour déplacer ceux qui me gènent, je déplace le trou pour leur faire de
+      la place
+    \end{itemize}
+  \end{block}
+  \input{img/newAlgo}
+
+  \begin{itemize}
+  \item On peut maintenant oublier les \pawn{A}, qui sont à leur place définitive.
+  \item On place maintenant les \pawn{B} de la même manière, puis les \pawn{C},
+    puis les \pawn{D} et enfin le \pawn{E}
+  \end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{Coupe}
+\begin{frame}{Ce qu'il faut retenir du base-ball multicolore: corrections d'algorithmes}
+
+  Cet algorithme n'est pas tellement plus complexe ou plus long que le
+  précédent, et il est correct, lui.
+
+  \begin{block}{Comment être sûr de la \alert{correction} de cet algorithme?}
+    \begin{itemize}
+    \item \structure{On pourrait tester tous les cas}. Fastidieux, mais les
+      ordinateurs sont rapides; cela semble faisable jusqu'à une vingtaine ou
+      une cinquantaine de maisons (mais ça reste partiel)
+    \item \structure{On pourrait écrire une preuve mathématique}. Pas trivial
+      du tout, mais les chercheurs en informatique en ont écrite des plus
+      difficiles (c'est vite des maths un peu touffues).
+    \item \structure{Cela ressemble vraiment à un algorithme classique} (même
+      si cela ne prouve rien, au fond).
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{Qu'est ce qu'un \alert{algorithme classique}?}
+    \begin{itemize}
+    \item Effectivement, les informaticiens apprennent par cœur des algorithmes
+      (abstraits) à l'école.
+    \item Face à un problème nouveau, on cherche à se raccrocher à des
+      problèmes connus
+      \begin{itemize}
+      \item On se raccroche en trouvant des analogies ou en décomposant en
+        plusieurs problèmes connus
+      \item Quand des collègues informaticiens jouent au crêpier, ils demandent
+        avant tout si c'est "une tour de Hanoï" 
+      \end{itemize}
+    \item Ici, c'est assez proche d'un "tri à bulle", même si c'est pas
+      absolument identique.
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{Les algorithmes de tri sont ultra classiques en informatique}
+    \begin{itemize}
+    \item Ils sont assez simple pour expliquer les grandes lignes aux élèves\\
+      (comme «diviser pour régner» et autres grandes idées similaires --
+      récursion, algo gloutons, \ldots)
+    \item Les ordinateurs trient très souvent des données, car
+      beaucoup de problèmes sont plus simples après\\
+      (trouver un livre donné est plus simple dans une bibliothèque rangée, par exemple)
+    \item Du coup, au chapitre 2 de mon cours d'algorithmique, on apprend 5
+      algorithmes de tri par cœur: Tri à bulle, tri par sélection, tri par
+      insertion, tri fusion, tri rapide (et quinze autres en exos).
+    \item \alert{Les musiciens font leurs gammes, les informaticiens débutants
+      apprennent leurs algorithmes}
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{Que font les chercheurs en informatique?}
+    \begin{itemize}
+    \item Certains d'entre eux améliorent les algorithmes connus, ou en
+      inventent de nouveaux
+    \item Il faut également démontrer la correction de ces algorithmes
+    \item Quand plusieurs algorithmes existent, on étudie leurs \alert{performances} respectives
+    \item (d'autres chercheurs améliorent matériel et logiciel, établissent des
+      modèles, etc)
+    \end{itemize}
+  \end{block}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Ce qu'il faut retenir du base-ball multicolore: performance d'algorithmes}
+  \begin{block}{Comment comparer la performance des algorithmes?}
+    \begin{itemize}
+    \item Simplement en comptant les étapes. Par exemple sur le crépier, placer
+      la grande crêpe prend 3 coups au pire. Et c'est pareil pour les
+      suivantes, donc au pire, en $3\times n$ coups, j'ai tout trié
+    \item La performance de mon algo dépend beaucoup de la situation initiale:
+      \begin{itemize}
+      \item Si c'est déjà trié, c'est de la chance, je n'ai rien à faire
+        (\alert{meilleur cas}).
+      \item Si j'ai vraiment pas de bol, il faut que je fasse les 3 étapes par
+        crêpes (\alert{pire cas}).
+      \item En pratique, j'ai souvent quelques crêpes qui arrivent déjà face
+        cramée en haut, par exemple (\alert{cas moyen}).
+      \end{itemize}
+      Il faut bien comprendre que ceci ne dépend pas vraiment de l'algorithme,
+      mais plutôt de la situation initiale. Le pire cas n'est pas un bug de
+      l'algorithme, mais une situation initiale qui n'aide pas vraiment notre
+      façon de faire (pour le cas moyen, il faut faire des probas).
+    \item En pratique, une estimation de la performance est suffisante. Savoir
+      que le crêpier nécessite environ $n^2$ étapes suffit, pas besoin de
+      savoir que c'est $n^2+4$ ou $n^2-2$. Et même, $n^2$ ou $5\times
+      n^2$, c'est un peu la même chose\ldots  On le note $O(n^2)$      
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{À la recherche du meilleur algorithme possible}
+    \begin{itemize}
+    \item On arrive parfois à montrer qu'on a le meilleur algorithme
+      possible. Par exemple on ne peut pas trier les éléments en moins de $n$
+      étapes, car on doit forcément tous les considérer.
+    \item On peut aussi prouver qu'un tri comparatif ne peut pas se faire en
+      moins de $n\times log(n)$ étapes, car il n'accumule pas assez
+      d'information pour choisir la bonne permutation en moins d'étapes.
+    \item Et puis la plupart du temps, on ne sait pas prouver que l'algorithme
+      connu est le meilleur possible.  C'est alors le meilleur \textit{connu},
+      sans être forcément le meilleur \textit{possible}.
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{À la recherche de problèmes difficiles}
+    \begin{itemize}
+    \item On peut classifier les problèmes en fonction de la performance des
+      algorithmes les résolvant. \\
+      (cela permet de se forger un sens commun de ce qui est faisable avec un
+      ordinateur et éviter les problèmes si difficiles qu'ils sont quasi impossibles)
+    \item Il existe énormément de problèmes relativement simples pour lesquels
+      personne ne connaît de bon algorithme, sans que personne n'arrive non plus à
+      démontrer qu'un tel algorithme n'existe pas.
+    \item L'activité suivante sera l'occasion d'explorer un peu cette
+      classification des problèmes très durs.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "CSIRL"
+%%% End: 
