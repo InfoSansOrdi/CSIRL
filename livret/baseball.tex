@@ -38,7 +38,6 @@
   \begin{block}{Objectif de l'activité}
     Le plus important dans cet exercice n'est pas tant de résoudre le problème que d'\structure{expliquer clairement} comment on fait. On cherche donc l'\alert{algorithme} permettant de résoudre le problème.
   \end{block}
-
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\newcommand{\flecherond}[1]{
@@ -48,7 +47,6 @@
   %\draw[fill=white,draw=white,rotate=#1*72] (3mm,2.5pt) circle (2pt);
 %}
 \begin{frame}{Un premier algorithme pour le base-ball multicolore}
-
   En suivant les règles du jeu, on observe que quelque soit la disposition des bonshommes, il existe toujours 4 coups possibles : déplacer vers la case vide un des 4 bonshommes présents dans les deux maisons voisines.
 
   Notre algorithme sera donc une méthode permettant de choisir à chaque étape quel coup jouer parmis les 4 possibles.
@@ -81,96 +79,57 @@
   \begin{block}{Exemple d'exécution incorrecte}
     Il suffit de partir d'une situation gagnée et d'inverser deux bonshommes pour mettre notre algorithme en échec.
 \end{block}
-
   \begin{center}
     \includegraphics[width=0.8\linewidth]{img/baseball_ex2.pdf}
   \end{center}
-
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-%\newcommand{\ligneMaison}[2]{
-  %\begin{tikzpicture}
-    %\foreach \x/\col in {#1} {
-      %\draw (.55*\x,.65) node[shape=circle,fill=\col,draw=black,inner sep=.1] {~~~};
-    %}
-    %\foreach \x/\col in {#2} {
-      %\draw (.55*\x,.3) node[shape=circle,fill=\col,draw=black,inner sep=.1] {~~~};
-    %}
-    %\foreach \x/\col in {1/A, 2/B, 3/C, 4/D, 5/E} {
-      %\draw (.55*\x,-.25) node[shape=ellipse,fill=\col,draw=black,rotate=90] {~~};
-    %}
-  %\end{tikzpicture}
-%}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{frame}{Un autre algorithme pour le base-ball multicolore}
-  %\begin{block}{Apprendre de ses échecs: {\color{black}notre algorithme boucle parfois à l'infini}}
-    %\begin{itemize}\vspace{-.2\baselineskip}
-    %\item Pour réparer cela, le plus simple est de s'interdire de boucler, en
-      %coupant le cercle
-    %\item Les bonhommes ne peuvent plus passer directement de la maison
-      %\pawn{A} à \pawn{E}\\
-      %(pour ne pas se tromper, le plus simple est de placer les maisons en ligne)
-%%    \item Les règles de déplacement restent inchangées par ailleurs
-    %\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Un autre algorithme pour le base-ball multicolore}
+  \begin{block}{Apprendre de ses échecs: {\color{black}notre algorithme boucle parfois à l'infini}}
+    \begin{itemize}
+    \item Pour réparer cela, le plus simple est de s'interdire de boucler, en
+      coupant le cercle.
+    \item Pour ne pas se tromper, le plus simple est de placer les maisons en ligne.
+    \end{itemize}
 
-    %\begin{columns}
-      %\begin{column}{.2\linewidth}
-        %~
-      %\end{column}
-      %\begin{column}{.2\linewidth}\center
-        %\maisonCinq{1/D,2/B, 5/A,6/C, 9/E, 12/D,13/A, 17/B,18/C}{
-          %\draw[dashed,draw=red,ultra thick] (0,0) -- (.9,1.1);
-        %}         
-      %\end{column}
+    \begin{center}
+      \includegraphics[width=0.8\linewidth]{img/baseball_ligne.pdf}
+    \end{center}
+  \end{block}
 
-      %\begin{column}{.1\linewidth}\center
-        %\Large$\leadsto$
-      %\end{column}
+  \bigskip
 
-      %\begin{column}{.2\linewidth}\center
-        %\ligneMaison{1/B, 2/C,      4/D, 5/B}
-                    %{1/D, 2/A, 3/E, 4/A, 5/C}
-      %\end{column}
-      %\begin{column}{.2\linewidth}
-        %~
-      %\end{column}
-    %\end{columns}
-  %\end{block}
+  \begin{block}{Apprendre de ses réussites: {\color{black}le crépier}}
+    \begin{itemize}
+    \item On a cherché à réduire la taille du problème à peu à peu\\
+      {(il y a 7 crèpes à trier. La plus grande va définitivement à sa place; il
+        reste 6 crèpes à trier)}
+    \item On s'est fixé des objectifs intermédiaires, qui décomposent le
+      problème en étapes que je sais faire\\
+      {(mettre la plus grande en haut pour parvenir à la mettre en bas)}
+    \end{itemize}
+  \end{block}
 
-  %\bigskip
+  \begin{block}{Nouvel algorithme}
+    \begin{itemize}
+    \item On s'occupe d'abord des bonshommes de la première maison, et on n'y touche plus ensuite.
+    \item On répète pour la deuxième maison, et ainsi de suite pour toutes les autres.
+    \item Pour ammener les bonhommes dans leur maison, on déplace tous ceux qui gènent.
+    \item Pour déplacer ceux qui gènent, on déplace le trou pour leur faire de la place.
+    \end{itemize}
+  \end{block}
 
-  %\begin{block}{Apprendre de ses réussites: {\color{black}le crépier}}
-    %\begin{itemize}\vspace{-.2\baselineskip}
-    %\item On a cherché à réduire la taille du problème à peu à peu\\
-      %{(il y a 7 crèpes à trier. La plus grande va définitivement à sa place; il
-        %reste 6 crèpes à trier)}
-    %\item On s'est fixé des objectifs intermédiaires, qui décomposent le
-      %problème en étapes que je sais faire\\
-      %{(mettre la plus grande en haut pour parvenir à la mettre en bas)}
-    %\end{itemize}
-  %\end{block}
+  \begin{center}
+    \includegraphics[width=0.8\linewidth]{img/baseball_ex3.pdf}
+  \end{center}
 
-  %\begin{block}{Nouvel algorithme}
-    %\begin{itemize}\vspace{-.2\baselineskip}
-    %\item On place les bonshommes de la première maison en premier, et on n'y
-      %touche plus ensuite
-    %\item On fera ensuite pareil pour la seconde maison, puis la troisième, et
-      %ainsi de suite pour toutes
-    %\item Pour ammener les pions \pawn{A} dans leur maison, je déplace tous
-      %ceux qui me gènent
-    %\item Pour déplacer ceux qui me gènent, je déplace le trou pour leur faire de
-      %la place
-    %\end{itemize}
-  %\end{block}
-  %\input{img/newAlgo}
+  \begin{itemize}
+  \item On peut maintenant oublier les bonshommes de la première maison, qui sont à leur place définitive.
+  \item On recommence de la même manière avec la deuxième maison, et ainsi de suite ...
+  \end{itemize}
+\end{frame}
 
-  %\begin{itemize}
-  %\item On peut maintenant oublier les \pawn{A}, qui sont à leur place définitive.
-  %\item On place maintenant les \pawn{B} de la même manière, puis les \pawn{C},
-    %puis les \pawn{D} et enfin le \pawn{E}
-  %\end{itemize}
-%\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\end{Coupe}
 %\begin{frame}{Ce qu'il faut retenir du base-ball multicolore: corrections d'algorithmes}
