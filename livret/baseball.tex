@@ -130,125 +130,92 @@
   \end{itemize}
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\end{Coupe}
-%\begin{frame}{Ce qu'il faut retenir du base-ball multicolore: corrections d'algorithmes}
+\begin{frame}{Ce qu'il faut retenir du base-ball multicolore: corrections d'algorithmes}
+  Cet algorithme n'est pas tellement plus complexe ou plus long que le
+  précédent, mais il est correct, lui.
 
-  %Cet algorithme n'est pas tellement plus complexe ou plus long que le
-  %précédent, et il est correct, lui.
+  \begin{block}{Comment être sûr de la \alert{correction} de cet algorithme?}
+    \begin{itemize}
+    \item \structure{On pourrait tester tous les cas}. Ici, il n'y a pas de limite au nombre de maisons - il est donc impossible de vérifier tous les cas, tout comme il est impossible de compter jusqu'à l'infini. Cependant, on peut se contenter d'une preuve partielle en se limitant à tester tous les cas succeptibles d'être rencontrés - par exemple jusqu'à 20 ou 50 maisons.
+    \item \structure{On pourrait écrire une preuve mathématique}. Ce n'est pas trivial, mais les chercheurs en informatique en ont écrite des plus difficiles.
+    \item \structure{Cela ressemble vraiment à un algorithme classique} (même
+      si cela ne prouve rien, au fond).
+    \end{itemize}
+  \end{block}
 
-  %\begin{block}{Comment être sûr de la \alert{correction} de cet algorithme?}
-    %\begin{itemize}
-    %\item \structure{On pourrait tester tous les cas}. Fastidieux, mais les
-      %ordinateurs sont rapides; cela semble faisable jusqu'à une vingtaine ou
-      %une cinquantaine de maisons (mais ça reste partiel)
-    %\item \structure{On pourrait écrire une preuve mathématique}. Pas trivial
-      %du tout, mais les chercheurs en informatique en ont écrite des plus
-      %difficiles (c'est vite des maths un peu touffues).
-    %\item \structure{Cela ressemble vraiment à un algorithme classique} (même
-      %si cela ne prouve rien, au fond).
-    %\end{itemize}
-  %\end{block}
+  \begin{block}{Qu'est ce qu'un \alert{algorithme classique}?}
+    \begin{itemize}
+    \item Les informaticiens apprennent par cœur des algorithmes (abstraits) à l'école.
+    \item Face à un problème nouveau, on cherche à se raccrocher à des problèmes connus.
+      \begin{itemize}
+      \item On se raccroche en trouvant des analogies ou en décomposant en plusieurs problèmes connus.
+      \item Par exemple, quand des collègues informaticiens jouent au crêpier, ils demandent avant tout si c'est "une tour de Hanoï".
+      \end{itemize}
+    \item Ici, notre algorithme est proche d'un "tri à bulle", autre algorithme bien connu. Mais cette ressemblance ne suffit pas à prouver la correction de notre algorithme. Pour la prouver, on pourrait démontrer que notre algorithme est un cas particulier du tri à bulle.
+    \end{itemize}
+  \end{block}
 
-  %\begin{block}{Qu'est ce qu'un \alert{algorithme classique}?}
-    %\begin{itemize}
-    %\item Effectivement, les informaticiens apprennent par cœur des algorithmes
-      %(abstraits) à l'école.
-    %\item Face à un problème nouveau, on cherche à se raccrocher à des
-      %problèmes connus
-      %\begin{itemize}
-      %\item On se raccroche en trouvant des analogies ou en décomposant en
-        %plusieurs problèmes connus
-      %\item Quand des collègues informaticiens jouent au crêpier, ils demandent
-        %avant tout si c'est "une tour de Hanoï" 
-      %\end{itemize}
-    %\item Ici, c'est assez proche d'un "tri à bulle", même si c'est pas
-      %absolument identique.
-    %\end{itemize}
-  %\end{block}
-
-  %\begin{block}{Les algorithmes de tri sont ultra classiques en informatique}
-    %\begin{itemize}
-    %\item Ils sont assez simple pour expliquer les grandes lignes aux élèves\\
-      %(comme «diviser pour régner» et autres grandes idées similaires --
-      %récursion, algo gloutons, \ldots)
-    %\item Les ordinateurs trient très souvent des données, car
-      %beaucoup de problèmes sont plus simples après\\
-      %(trouver un livre donné est plus simple dans une bibliothèque rangée, par exemple)
+  \begin{block}{Les algorithmes de tri sont ultra classiques en informatique}
+    \begin{itemize}
+    \item Ils sont assez simple pour expliquer les grandes lignes aux élèves\\
+      (comme «diviser pour régner» et autres grandes idées similaires -- récursivité, algorithmes gloutons, \ldots)
+    \item Les ordinateurs trient très souvent des données, car beaucoup de problèmes sont plus simples après\\
+      (trouver un livre donné est plus simple dans une bibliothèque rangée, par exemple)
     %\item Du coup, au chapitre 2 de mon cours d'algorithmique, on apprend 5
       %algorithmes de tri par cœur: Tri à bulle, tri par sélection, tri par
       %insertion, tri fusion, tri rapide (et quinze autres en exos).
-    %\item \alert{Les musiciens font leurs gammes, les informaticiens débutants
-      %apprennent leurs algorithmes}
-    %\end{itemize}
-  %\end{block}
+    \item \alert{Les musiciens font leurs gammes, les informaticiens débutants
+      apprennent leurs algorithmes}
+    \end{itemize}
+  \end{block}
 
-  %\begin{block}{Que font les chercheurs en informatique?}
-    %\begin{itemize}
-    %\item Certains d'entre eux améliorent les algorithmes connus, ou en
-      %inventent de nouveaux
-    %\item Il faut également démontrer la correction de ces algorithmes
-    %\item Quand plusieurs algorithmes existent, on étudie leurs \alert{performances} respectives
-    %\item (d'autres chercheurs améliorent matériel et logiciel, établissent des
-      %modèles, etc)
-    %\end{itemize}
-  %\end{block}
-%\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{frame}{Ce qu'il faut retenir du base-ball multicolore: performance d'algorithmes}
-  %\begin{block}{Comment comparer la performance des algorithmes?}
-    %\begin{itemize}
-    %\item Simplement en comptant les étapes. Par exemple sur le crépier, placer
-      %la grande crêpe prend 3 coups au pire. Et c'est pareil pour les
-      %suivantes, donc au pire, en $3\times n$ coups, j'ai tout trié
-    %\item La performance de mon algo dépend beaucoup de la situation initiale:
-      %\begin{itemize}
-      %\item Si c'est déjà trié, c'est de la chance, je n'ai rien à faire
-        %(\alert{meilleur cas}).
-      %\item Si j'ai vraiment pas de bol, il faut que je fasse les 3 étapes par
-        %crêpes (\alert{pire cas}).
-      %\item En pratique, j'ai souvent quelques crêpes qui arrivent déjà face
-        %cramée en haut, par exemple (\alert{cas moyen}).
-      %\end{itemize}
-      %Il faut bien comprendre que ceci ne dépend pas vraiment de l'algorithme,
-      %mais plutôt de la situation initiale. Le pire cas n'est pas un bug de
-      %l'algorithme, mais une situation initiale qui n'aide pas vraiment notre
-      %façon de faire (pour le cas moyen, il faut faire des probas).
-    %\item En pratique, une estimation de la performance est suffisante. Savoir
-      %que le crêpier nécessite environ $n^2$ étapes suffit, pas besoin de
-      %savoir que c'est $n^2+4$ ou $n^2-2$. Et même, $n^2$ ou $5\times
-      %n^2$, c'est un peu la même chose\ldots  On le note $O(n^2)$      
-    %\end{itemize}
-  %\end{block}
+  \begin{block}{Que font les chercheurs en informatique?}
+    \begin{itemize}
+    \item Certains d'entre eux améliorent les algorithmes connus, ou en
+      inventent de nouveaux
+    \item Il faut également démontrer la correction de ces algorithmes
+    \item Quand plusieurs algorithmes existent, on étudie leurs \alert{performances} respectives
+    \item (d'autres chercheurs améliorent matériel et logiciel, établissent des
+      modèles, etc)
+    \end{itemize}
+  \end{block}
+\end{frame}
 
-  %\begin{block}{À la recherche du meilleur algorithme possible}
-    %\begin{itemize}
-    %\item On arrive parfois à montrer qu'on a le meilleur algorithme
-      %possible. Par exemple on ne peut pas trier les éléments en moins de $n$
-      %étapes, car on doit forcément tous les considérer.
-    %\item On peut aussi prouver qu'un tri comparatif ne peut pas se faire en
-      %moins de $n\times log(n)$ étapes, car il n'accumule pas assez
-      %d'information pour choisir la bonne permutation en moins d'étapes.
-    %\item Et puis la plupart du temps, on ne sait pas prouver que l'algorithme
-      %connu est le meilleur possible.  C'est alors le meilleur \textit{connu},
-      %sans être forcément le meilleur \textit{possible}.
-    %\end{itemize}
-  %\end{block}
+\begin{frame}{Ce qu'il faut retenir du base-ball multicolore: performance d'algorithmes}
+  \begin{block}{Comment comparer la performance des algorithmes?}
+    \begin{itemize}
+    \item Simplement en comptant les étapes. Par exemple sur le crépier, placer la grande crêpe prend au pire 3 coups - et c'est pareil pour les crêpes suivantes. Donc, dans le pire des cas notre algorithme prendra $3\times n$ coups pour trier la pile.
+    \item La performance de mon algo dépend beaucoup de la situation initiale:
+      \begin{itemize}
+      \item Si c'est déjà trié, c'est de la chance, je n'ai rien à faire
+        (\alert{meilleur cas}).
+      \item Si j'ai vraiment pas de bol, je dois faire les 3 étapes pour chaque crêpe (\alert{pire cas}).
+      \item En pratique, j'ai souvent une situation initiale intermédiaire (\alert{cas moyen}).
+      \end{itemize}
 
-  %\begin{block}{À la recherche de problèmes difficiles}
-    %\begin{itemize}
-    %\item On peut classifier les problèmes en fonction de la performance des
-      %algorithmes les résolvant. \\
-      %(cela permet de se forger un sens commun de ce qui est faisable avec un
-      %ordinateur et éviter les problèmes si difficiles qu'ils sont quasi impossibles)
-    %\item Il existe énormément de problèmes relativement simples pour lesquels
-      %personne ne connaît de bon algorithme, sans que personne n'arrive non plus à
-      %démontrer qu'un tel algorithme n'existe pas.
-    %\item L'activité suivante sera l'occasion d'explorer un peu cette
-      %classification des problèmes très durs.
-    %\end{itemize}
-  %\end{block}
-%\end{frame}
+      Il faut bien comprendre que ceci ne dépend pas vraiment de l'algorithme, mais plutôt de la situation initiale. Le pire cas n'est pas un bug de l'algorithme, mais une situation initiale qui n'aide pas vraiment notre façon de faire (pour estimer la performance d'un cas moyen, il faut utiliser des probabilités).
+    \item En pratique, une estimation de la performance est suffisante. Savoir
+      qu'un algorithme nécessite environ $n^2$ étapes suffit, inutile de préciser que c'est $n^2+4$ ou $n^2-2$, ou même $5\times n^2$ - pour des grandes valeurs de $n$ c'est sensiblement la même chose\ldots On note cette estimation de la complexité $O(n^2)$.
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{À la recherche du meilleur algorithme possible}
+    \begin{itemize}
+    \item On arrive parfois à montrer qu'on a le meilleur algorithme possible. Par exemple on ne peut pas trier les éléments en moins de $n$ étapes, car on doit forcément tous les considérer.
+    \item On peut aussi prouver qu'un tri comparatif ne peut pas se faire en moins de $n\times log(n)$ étapes, car il n'accumule pas assez d'information pour choisir la bonne permutation en moins d'étapes.
+    \item Mais la plupart du temps, on ne sait pas prouver que l'algorithme connu est le meilleur possible. C'est alors le meilleur \textit{connu}, sans être forcément le meilleur \textit{possible}.
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{À la recherche de problèmes difficiles}
+    \begin{itemize}
+    \item On peut classifier les problèmes en fonction de la performance des algorithmes les résolvant. \\
+      (cela permet de se forger un sens commun de ce qui est faisable avec un ordinateur et éviter les problèmes si difficiles qu'ils sont quasi impossibles)
+    \item Il existe énormément de problèmes relativement simples pour lesquels personne ne connaît de bon algorithme, sans que personne n'arrive non plus à démontrer qu'un tel algorithme n'existe pas.
+    \item L'activité suivante sera l'occasion d'explorer un peu cette classification des problèmes très durs.
+    \end{itemize}
+  \end{block}
+\end{frame}
 
 %%% Local Variables: 
 %%% mode: latex
