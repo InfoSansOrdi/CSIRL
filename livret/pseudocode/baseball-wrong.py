@@ -21,8 +21,8 @@ def compute(nb_places, nb_bases, etat):
   joueurdep = [(b,c) for b, c in etat if b==newbaselibre[0]]
   assert len(joueurdep)==nb_places, 'Not enough players in base %s (%s), %s'%(newbaselibre[0], joueurdep, etat)
 
-  joueurloin = max(joueurdep, key=lambda x: x[1]-x[0] if x[0]<=x[1]
-                                                   else x[1]-x[0]+nb_bases-1)
+  joueurloin = max(joueurdep, key=lambda x: x[0]-x[1] if x[0]>=x[1]
+                                                    else x[0]-x[1]+nb_bases)
   netat = list(etat)
   netat.remove(baselibre)
   netat.remove(joueurloin)
@@ -44,9 +44,7 @@ if __name__=='__main__':
   all_states = set(tuple(sorted((i%nb_bases, p) 
                               for i, p in zip(range(nb_places*nb_bases),
                                               perm)))
-                       for perm in perms(range(-1,nb_bases-1) +
-                             range(nb_bases)*(nb_places-1)))
-#  print compute(nb_places, nb_bases, etat)
+                       for perm in perms(range(-1,nb_bases-1) + range(nb_bases)*(nb_places-1)))
   
   # compute the outcome of all states
   for e in all_states:
