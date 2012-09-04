@@ -151,7 +151,7 @@ func generate(position int, permutation chan state, done chan int) {
   }
 
   // build the array to permute (must be in lexicographic order)
-  to_permute := make([]int, nb_base*2,nb_base*2);
+  to_permute := make([]int, nb_base*2);
   for i:=0;i<nb_base;i++ {
     to_permute[2*i] = i - 1
     to_permute[2*i+1] = i
@@ -161,7 +161,7 @@ func generate(position int, permutation chan state, done chan int) {
   // It's like to_permute, but data[0] == position-1, and position-1
   //   is removed from where it were later in the array.
   first := position-1
-  data = make([]int, nb_base*2,nb_base*2);
+  data = make([]int, nb_base*2);
   data[0]=first
   for i,from:=1,0;i<nb_base*2;from++ {
     if to_permute[from] == first {
@@ -180,7 +180,7 @@ func generate(position int, permutation chan state, done chan int) {
   // Let's generate the permutations (following http://en.wikipedia.org/wiki/Permutation#Generation_in_lexicographic_order)
   var a state;
   for {
-    a = make([]int, nb_base*2,nb_base*2)
+    a = make([]int, nb_base*2)
     copy(a,data);
     
     // Find the largest index k such that a[k] < a[k + 1].
@@ -262,7 +262,7 @@ func consumer(/* input */
  ok,looping,count := 0,0,0;
  memo := make(map[string]bool);
  
- data = make([]int, nb_base*2,nb_base*2); 
+ data = make([]int, nb_base*2); 
  for todo := range permutation {
    copy(data,todo);
    count++;
