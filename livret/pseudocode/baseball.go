@@ -4,7 +4,7 @@ import "fmt"
 import "runtime"
 import "time"
 
-const nb_base = 5
+const nb_base = 7
 const print_states_looping = false
 const print_states_ok = false
 const print_timings = true
@@ -141,11 +141,16 @@ func (e state) is_looping(memo map[string]bool) (bool) {
 
 ////////////////////////////////////////////////////////////////////
 /// The generator of permutations.
-// it takes the first position of its solutions as an argument, and
-// computes the permutations of the other positions.
+// it takes the first position of its solutions as an argument, 
+// computes the permutations of the other positions, and 
+// accumulates the amount of looping/terminating permutations it sees
 ////////////////////////////////////////////////////////////////////
-func generate(position int, permutation chan state, done chan int) {
-  var data state;
+func generate(position int, result chan handler) {
+  var a state;
+  a = make([]int, nb_base*2);
+  var acc handler;
+  acc.init(position+1);
+  
   if print_timings {
     fmt.Printf("[%s] Generator %d starting\n",now(), position+1);
   }
@@ -158,31 +163,25 @@ func generate(position int, permutation chan state, done chan int) {
   }
   
   // build the first version of the array, before launching the permutations
-  // It's like to_permute, but data[0] == position-1, and position-1
+  // It's like to_permute, but a[0] == position-1, and position-1
   //   is removed from where it were later in the array.
   first := position-1
-  data = make([]int, nb_base*2);
-  data[0]=first
+  a[0]=first
   for i,from:=1,0;i<nb_base*2;from++ {
     if to_permute[from] == first {
       first = -42; // never ignore any other elements
     } else {
-      data[i] = to_permute[from]
+      a[i] = to_permute[from]
       i++
     }
   }
-  //fmt.Println(position,": ",to_permute,"->",data);
+  //fmt.Println(position,": ",to_permute,"->",a);
   
-  // If this first permutation is valid, then send it to consumers
-  if data.is_initial() {
-    permutation <- data;
-  }
+  // the first permutation is ready to use
+  acc.consume(a)
+
   // Let's generate the permutations (following http://en.wikipedia.org/wiki/Permutation#Generation_in_lexicographic_order)
-  var a state;
-  for {
-    a = make([]int, nb_base*2)
-    copy(a,data);
-    
+  for {    
     // Find the largest index k such that a[k] < a[k + 1].
     k,l := -1,1;
     for i:=1;i<nb_base*2 -1;i++ {
@@ -197,9 +196,10 @@ func generate(position int, permutation chan state, done chan int) {
 
     // If no such index k exists, the permutation is the last permutation.
     if k == -1 {
-      done <- position;
+      result <- acc;
       if print_timings {
-        fmt.Printf("[%v] Generator %d terminating\n",now(),position+1);
+        fmt.Printf("[%v] Generator %d terminating (handled %d permutations)\n",
+	  now(),position+1,acc.terminating+acc.looping);
       }
       return;
     }
@@ -207,7 +207,7 @@ func generate(position int, permutation chan state, done chan int) {
     // compute l also when k is the last possible value
     if a[k]<a[nb_base*2 -1] { l = nb_base*2 -1; }
     
-    // Swap a[k] with a[l].
+    // Swap a[k] with a[l] -- go powa!
     a[k],a[l] = a[l], a[k]
     
     // Reverse the sequence from a[k + 1] up to and including the final element a[n].
@@ -218,25 +218,11 @@ func generate(position int, permutation chan state, done chan int) {
       a[n-j] = tmp;
     }
      
-    // the permutation is ready to use. Filter out the ones that are not sorted
-    if a.is_initial() {
-      permutation <- a;
-    }
-    data = a;
+    // the new permutation is ready to use. 
+    acc.consume(a);
   }
 }
 
-// A little gorouting used to close the permutation chanel when there
-// is no more producer
-/////
-func listen_and_close(sig_amount int, input chan int, toclose chan state) {
-  for i:=0;i<sig_amount;i++ {
-    <-input;
-  }
-  close(toclose);
-}
-
-//  data := []int{1,1, 0,2, -1,3, 0,2}; // not looping state
 
 ///////////////////////////////////////////////////////////////////////////////
 // The consumer goroutine. 
@@ -245,15 +231,48 @@ func listen_and_close(sig_amount int, input chan int, toclose chan state) {
 // or loops. It use its own memoizer for that, so that we can have
 // several consumers
 ///////////////////////////////////////////////////////////////////////////////
-type result struct { // how consumers say back to main what they found
-  terminating, looping int
+type handler struct { // how consumers say back to main what they found
+  rank int;
+  terminating, looping int;
+  memo map[string]bool;
+  data state; // Working area: we modify the state to compute whether it loops,
 }
 
-func consumer(/* input */
+func (h *handler) init(rank int) {
+  h.rank = rank;
+  h.terminating = 0;
+  h.looping = 0;
+  h.memo = make(map[string]bool);
+  h.data = make([]int, nb_base*2); 
+}
+
+func (h *handler) consume(todo state) {
+  // If we are passed a state that is not valid as initial state, just ignore it
+  if !todo.is_initial() {
+    return;
+  }
+
+  // copy the state before changing it (with is_looping), so that we can display it afterward
+  copy(h.data,todo);
+  if h.data.is_looping(h.memo) {
+     if print_states_looping { fmt.Println("XXX",todo,": looping"); }
+     h.looping++;
+  } else {
+     if print_states_ok { fmt.Println("XXX",todo,": OK"); }
+     h.terminating++;
+  }   
+  if (h.looping+h.terminating) %100000 == 0 && print_timings {
+     fmt.Printf("[%s] Consumer %d: states seen so far: %d; Looping: %d; Terminating: %d; Looping in %f%% of cases\n",
+                now(),h.rank,(h.looping+h.terminating),h.looping,h.terminating,100.0*float64(h.looping)/(float64(h.terminating)+float64(h.looping)));
+  }   
+}
+
+/*****************************
+func consumer(// input
               rank int,
               permutation chan state,
-	      /* output */
-	      results chan result /* where to say my numbers */) {
+	      // output 
+	      results chan result) {
 	      
  if print_timings {
    fmt.Printf("[%s] Consumer %d starting\n",now(),rank);
@@ -281,28 +300,19 @@ func consumer(/* input */
  if print_timings { 
    fmt.Printf("[%s] Consumer %d is done (handled %d permutations)\n", now(), rank,count);
  }
- results <- result{ok, looping};	    
 }
+******************************/
 
 func test_all() {
-  nb_consumer := runtime.NumCPU()/2; // Automatically tune the amount of consumers
-  if nb_consumer < 1 {nb_consumer = 1;} // (the generators need some CPU too)
-  
-  permutation := make(chan state, 1000);
-  done_generate := make(chan int, nb_base);
-  results := make(chan result, nb_consumer);
+  results := make(chan handler, nb_base);
 
-  go listen_and_close(nb_base,done_generate,permutation);
-  for i:=0;i<nb_consumer;i++ {
-    go consumer(i+1,permutation,results);
-  }
   for i:=0;i<nb_base;i++ {
-    go generate(i, permutation, done_generate);
+    go generate(i, results);
   }
    
-  // wait for all consumers, accumulating their results
+  // wait for all producers, accumulating their results
   ok,looping := 0,0;
-  for i:=0;i<nb_consumer;i++ {
+  for i:=0;i<nb_base;i++ {
     res := <- results;
     ok+=res.terminating;
     looping+=res.looping;
@@ -339,8 +349,11 @@ func test_one(data []int) {
 }
 
 func main() {
+  fmt.Printf("We have %d cores\n",runtime.NumCPU());
+  runtime.GOMAXPROCS(runtime.NumCPU()); // We want to run in parallel
   test_all();
  
+  //  test_one([]int{1,1, 0,2, -1,3, 0,2}); // not looping state, for nb_base=4
   //  test_one([]int{1, 1, -1, 4, 0, 0, 2, 2, 3, 3});  // Looping -- for nb_base=5
 }
 
