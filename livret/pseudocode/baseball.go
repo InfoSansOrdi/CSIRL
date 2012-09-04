@@ -4,7 +4,7 @@ import "fmt"
 import "runtime"
 import "time"
 
-const nb_base = 7
+const nb_base = 8
 const print_states_looping = false
 const print_states_ok = false
 const print_timings = true
@@ -349,7 +349,8 @@ func test_one(data []int) {
 }
 
 func main() {
-  fmt.Printf("We have %d cores\n",runtime.NumCPU());
+  fmt.Printf("We have %d cores (to compute %d bases)\n",
+             runtime.NumCPU(),nb_base);
   runtime.GOMAXPROCS(runtime.NumCPU()); // We want to run in parallel
   test_all();
  
