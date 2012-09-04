@@ -4,7 +4,7 @@ import "fmt"
 import "runtime"
 import "time"
 
-const nb_base = 8
+const nb_base = 5
 const print_states_looping = false
 const print_states_ok = false
 const print_timings = true
@@ -208,9 +208,7 @@ func generate(position int, permutation chan state, done chan int) {
     if a[k]<a[nb_base*2 -1] { l = nb_base*2 -1; }
     
     // Swap a[k] with a[l].
-    tmp := a[k];
-    a[k] = a[l];
-    a[l] = tmp;
+    a[k],a[l] = a[l], a[k]
     
     // Reverse the sequence from a[k + 1] up to and including the final element a[n].
     n := nb_base*2
