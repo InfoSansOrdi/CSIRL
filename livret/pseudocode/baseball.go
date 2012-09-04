@@ -4,7 +4,7 @@ import "fmt"
 import "runtime"
 import "time"
 
-const nb_base = 8
+const nb_base = 6
 const print_states_looping = false
 const print_states_ok = false
 const print_timings = true
@@ -119,6 +119,7 @@ func (e state) move() {
   }
   e.sort();
 }
+
 // Warning: it modifies the call receiver
 func (e state) is_looping(memo map[string]bool) (bool) { 
   str := e.toString();
@@ -225,9 +226,9 @@ func generate(position int, result chan handler) {
 
 
 ///////////////////////////////////////////////////////////////////////////////
-// The consumer goroutine. 
+// The consumer logic
 //
-// Takes permutations from the flow, and checks whether it terminates
+// Takes permutation passed to consume function, and checks whether it terminates
 // or loops. It use its own memoizer for that, so that we can have
 // several consumers
 ///////////////////////////////////////////////////////////////////////////////
@@ -261,61 +262,32 @@ func (h *handler) consume(todo state) {
      if print_states_ok { fmt.Println("XXX",todo,": OK"); }
      h.terminating++;
   }   
-  if (h.looping+h.terminating) %100000 == 0 && print_timings {
+  if ((h.looping+h.terminating) %100000 == 0) && print_timings {
      fmt.Printf("[%s] Consumer %d: states seen so far: %d; Looping: %d; Terminating: %d; Looping in %f%% of cases\n",
                 now(),h.rank,(h.looping+h.terminating),h.looping,h.terminating,100.0*float64(h.looping)/(float64(h.terminating)+float64(h.looping)));
   }   
 }
 
-/*****************************
-func consumer(// input
-              rank int,
-              permutation chan state,
-	      // output 
-	      results chan result) {
-	      
- if print_timings {
-   fmt.Printf("[%s] Consumer %d starting\n",now(),rank);
- }
- var data state;
- ok,looping,count := 0,0,0;
- memo := make(map[string]bool);
- 
- data = make([]int, nb_base*2); 
- for todo := range permutation {
-   copy(data,todo);
-   count++;
-   if count%100000 == 0 && print_timings {
-     fmt.Printf("[%s] Consumer %d: states seen so far: %d; Looping: %d; Terminating: %d; Looping in %f%% of cases\n",
-                now(),rank,count,looping,ok,100.0*float64(looping)/(float64(ok)+float64(looping)));
-   }   
-   if data.is_looping(memo) {
-     if print_states_looping { fmt.Println("XXX",todo,": looping"); }
-     looping++;
-   } else {
-     if print_states_ok { fmt.Println("XXX",todo,": OK"); }
-     ok++;
-   }   
- }
- if print_timings { 
-   fmt.Printf("[%s] Consumer %d is done (handled %d permutations)\n", now(), rank,count);
- }
-}
-******************************/
-
 func test_all() {
   results := make(chan handler, nb_base);
 
   for i:=0;i<nb_base;i++ {
-    go generate(i, results);
+    if (i!=1 || !filter_home) {
+      // no need to compute the permutations
+      go generate(i, results);
+    } else {
+      fmt.Println("Not launching generator 1: it would compute the permutations {0,...} and the nobody@home filter is in use");
+    }
   }
    
   // wait for all producers, accumulating their results
   ok,looping := 0,0;
   for i:=0;i<nb_base;i++ {
-    res := <- results;
-    ok+=res.terminating;
-    looping+=res.looping;
+    if (i!=1 || !filter_home) {
+      res := <- results;
+      ok+=res.terminating;
+      looping+=res.looping;
+    }
   }
 
   fmt.Printf("[%s] Amount of bases: %d; Filter @home: %t; Amount of permutations: %d; Looping: %d; Terminating: %d; Looping in %f%% of cases\n",
@@ -352,6 +324,7 @@ func main() {
   fmt.Printf("We have %d cores (to compute %d bases)\n",
              runtime.NumCPU(),nb_base);
   runtime.GOMAXPROCS(runtime.NumCPU()); // We want to run in parallel
+//  runtime.GOMAXPROCS(1); // We want to run in sequential
   test_all();
  
   //  test_one([]int{1,1, 0,2, -1,3, 0,2}); // not looping state, for nb_base=4
@@ -360,8 +333,8 @@ func main() {
 
 
 // Results when filter home is enabled:
-// [   10 ms]  #bases: 4; #permutations:      84 (    0 looping, 0%)
-// [  111 ms]  #bases: 5; #permutations:    1824 (   24 looping, 1.315789%)
-// [5.092 s]   #bases: 6; #permutations:   58860 ( 1251 looping, 2.125382%)
-// [7m37  s]   #bases: 7; #permutations: 2633940 (84444 looping, 3.205996%)
+// [  XX   10 ms]  #bases: 4; #permutations:      84 (    0 looping, 0%)
+// [  XX  111 ms]  #bases: 5; #permutations:    1824 (   24 looping, 1.315789%)
+// [  XX    s]  #bases: 6; #permutations:   58860 ( 1251 looping, 2.125382%)
+// [2m6      s]  #bases: 7; #permutations: 2633940 (84444 looping, 3.205996%)
 
