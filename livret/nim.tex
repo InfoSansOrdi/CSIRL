@@ -37,30 +37,40 @@
     \end{itemize}
   \end{block}
 
-  \begin{block}{Se convaincre de l'efficacité de la stratégie gagnante}
-    Prenons le dernier tour comme exemple. Il reste 4 objets, et J1 joue.
+  \begin{columns}
+    \begin{column}{0.7\linewidth}
 
-    \begin{columns}
-      \begin{column}{.55\linewidth}
+      \begin{block}{Se convaincre de l'efficacité de la stratégie gagnante}
+        Prenons le dernier tour comme exemple. Il reste 4 objets, et J1 joue.
+
         \begin{itemize}
         \item Si J1 prend \alert{1} objet, J2 en prend \structure{3} (dont le dernier) 
         \item Si J1 prend \alert{2} objets, J2 en prend \structure{2} (dont le dernier)
         \item Si J1 prend \alert{3} objets, J2 en prend \structure{1} (le dernier) 
         \end{itemize}        
-      \end{column}
-      \begin{column}{.45\linewidth}
-        \includegraphics[width=0.8\linewidth]{img/nim4.pdf}
-      \end{column}
-    \end{columns}
+        %\includegraphics[width=0.6\linewidth]{img/nim4.pdf}
 
-    Dans ce cas, si J2 sait jouer, J1 perd à tous les coups.
-    
-    En appliquant la même méthode, J2 peut guider le jeu de manière à passer de
-    16 objets à 12, puis 8 et enfin 4. Donc, si J2 sait jouer, J1 a perdu la
-    partie avant même de commencer.
-    
-    \center{\includegraphics[width=0.8\linewidth]{img/nim16.pdf}}
-  \end{block}
+        Dans ce cas, si J2 sait jouer, J1 perd à tous les coups.  En appliquant la même méthode, J2 peut guider le jeu de manière à passer de 16 objets à 12, puis 8 et enfin 4. Donc, si J2 sait jouer, J1 a perdu la partie avant même de commencer.
+        
+        \center{\includegraphics[width=\linewidth]{img/nim16.pdf}}
+      \end{block}
+
+    \end{column}
+    \begin{column}{0.3\linewidth}
+
+      \begin{block}{Pour aller plus loin}
+        On pourrait imaginer un cas plus général du jeu de Nim :
+
+        \begin{itemize}
+          \item Il y a $N$ objets sur la table au début du jeu (pour notre version, $N=16$)
+          \item Un joueur peut prendre jusqu'à $X$ objets à la fois (pour notre version, $X=3$)
+        \end{itemize}
+
+        Quelles modifications doit-on apporter à notre stratégie gagnante pour qu'elle marche dans le cas général ?
+      \end{block}
+
+    \end{column}
+  \end{columns}
 
   \begin{block}{Le rapport avec l'informatique}
     \begin{itemize}
@@ -76,17 +86,3 @@
   \end{block}
 
 \end{frame}
-
-\begin{frame}
-
-  \begin{block}{pour aller plus loin ...}
-    \begin{itemize}
-    \item Sous quelle condition est-on sûr de gagner si le nombre de objets n'est
-      pas un multiple de 4 ?
-    \item Que faudrait-il changer pour gagner à coup sûr si les joueurs ne peuvent
-      prendre qu'un ou deux objets à la fois ?
-    \end{itemize}
-  \end{block}
-
-\end{frame}
-
