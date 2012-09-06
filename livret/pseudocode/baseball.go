@@ -4,7 +4,7 @@ import "fmt"
 import "runtime"
 import "time"
 
-const nb_base = 6
+const nb_base = 3
 const print_states_looping = false
 const print_states_ok = false
 const print_timings = true
@@ -19,8 +19,22 @@ func now() (string) {
   return fmt.Sprintf("%v",time.Now().Sub(start));
 }
 
+
+// sort: modifies the given state to sort its elements
+// ie, within each base, ensure that the left elm is smaller than the right one
 func (e state) sort() {
-  for i:=0;i<nb_base;i++ {
+  for i:=0;i*2+1<2*nb_base;i++ {
+    rank:=i*2;
+    if e[rank] > e[rank+1] {
+      tmp := e[rank];
+      e[rank] = e[rank+1];
+      e[rank+1] = tmp;      
+    }
+  }
+}
+//
+func (e state) sort_until(max int) {
+  for i:=0;i*2+1<max;i++ {
     rank:=i*2;
     if e[rank] > e[rank+1] {
       tmp := e[rank];
@@ -30,12 +44,19 @@ func (e state) sort() {
   }
 }
 
-func (e state) is_sorted() (bool) {
-  if len(e) != nb_base*2 { 
-    fmt.Println("state cannot be sorted, its len is ",len(e),"instead of ",nb_base*2);
-    return false;
+
+func (e state) is_sorted(until ...int) (bool) {
+  var max int;
+  switch len(until) {
+  case 0: 
+    max = nb_base;
+  case 1: 
+    max = until[0];
+  default: 
+    fmt.Printf("Too many arguments to (%v).is_sorted(%v): 1 at max\n",e,until);
   }
-  for i:=0;i<nb_base;i++ {
+  
+  for i:=0;i*2+1<max;i++ {
     rank:=i*2;
     if e[rank] > e[rank+1] {
       return false;
@@ -321,9 +342,10 @@ func test_one(data []int) {
 }
 
 func main() {
-  fmt.Printf("We have %d cores (to compute %d bases)\n",
-             runtime.NumCPU(),nb_base);
-  runtime.GOMAXPROCS(runtime.NumCPU()); // We want to run in parallel
+  runtime.GOMAXPROCS(runtime.NumCPU());
+  fmt.Printf("We have %d cores (to compute %d bases); we use %d of them\n",
+             runtime.NumCPU(),nb_base,
+             runtime.GOMAXPROCS(-1));
 //  runtime.GOMAXPROCS(1); // We want to run in sequential
   test_all();
  
