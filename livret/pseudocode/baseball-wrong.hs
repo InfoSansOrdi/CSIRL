@@ -56,8 +56,8 @@ etatsInitiaux bases places =
   [Jeu bases places (A.array bornes p) | p <- paires]
   where bornes    = (0,bases*places-1)
         joueurs   = [0..bases*places-1]
-        positions = [j `div` places | j <- tail joueurs]
-        paires = [zip joueurs (0:pos) | pos <- nub $ permutations positions]
+        positions = [j `div` places | j <- joueurs]
+        paires = [zip joueurs pos | pos <- nub $ permutations positions]
 
 
 
@@ -93,6 +93,11 @@ algo hist@(h:hs) =
 proportionBoucles vs =
   boucles / fromIntegral (length vs)
   where boucles = foldr (\j score -> if not j then score+1 else score) 0 vs
+
+jeux32 = etatsInitiaux 3 2
+solutions32 = map (\j -> algo [j]) jeux32
+victoires32 = map victoire solutions32
+proportion32 = proportionBoucles victoires32
 
 jeux42 = etatsInitiaux 4 2
 solutions42 = map (\j -> algo [j]) jeux42
