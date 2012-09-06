@@ -1,16 +1,16 @@
 \begin{frame}{Activité: Base-ball multicolore}
   \begin{block}{Matériel nécessaire}
     \begin{itemize}
-    \item Plusieurs équipes bien différentiables, chacune composée d'une maison et de deux bonshommes (des legos, des bouts de bois, des cailloux, du fil électrique de différentes couleurs, ou autres) 
-    \item 4 équipes au minimum. On peut mettre des équipes supplémentaires pour augmenter la difficulté.
+    \item Plusieurs équipes bien différentiables, chacune composée d'une base et de deux joueurs (des legos, des bouts de bois, des cailloux, du fil électrique de différentes couleurs, ou autres) 
+    \item 4 équipes au minimum. On peut mettre des équipes ou des joueurs supplémentaires pour augmenter la difficulté.
     \end{itemize}
   \end{block}
 
   \begin{block}{Règles du jeu (exemple à quatre équipes)}
     \begin{itemize}
-      \item \structure{Installation :} disposer 4 maisons autour du terrain et répartir 7 bonshommes au hasard sur les maisons (le bonhomme restant n'est pas utilisé).
-      \item \structure{Coup autorisé :} déplacer un seul bonhomme à la fois, vers la maison contenant un seul bonhomme, depuis une des deux maisons voisines (interdit de traverser le terrain).
-    \item  \structure{Objectif :} Ramener tous les bonshommes dans la maison de leur couleur.
+      \item \structure{Installation :} disposer 4 bases autour du terrain et répartir 7 joueurs au hasard sur les bases (le joueur restant n'est pas utilisé).
+      \item \structure{Coup autorisé :} déplacer un seul joueur à la fois, vers la base disposant d'une place libre, depuis une des deux bases voisines (interdit de traverser le terrain).
+    \item  \structure{But :} Ramener tous les joueurs à leur base.
     \end{itemize}
   \end{block}
 
@@ -33,19 +33,22 @@
 
   \bigskip
   \begin{block}{Objectif de l'activité}
-    Le plus important dans cet exercice n'est pas tant de résoudre le problème que d'\structure{expliquer clairement} comment on fait. On cherche donc l'\alert{algorithme} permettant de résoudre le problème.
+    \begin{itemize}
+      \item Expliquer clairement la méthode pour résoudre le problème, c'est à dire décrire un \alert{algorithme}
+      \item Décrire le raisonnement qui a permis de trouver cet algorithme.
+    \end{itemize}
   \end{block}
 \end{frame}
 
 \begin{frame}{Un premier algorithme pour le base-ball multicolore}
-  En suivant les règles du jeu, on observe que quelque soit la disposition des bonshommes, il existe toujours 4 coups possibles : déplacer vers la case vide un des 4 bonshommes présents dans les deux maisons voisines.
+  En suivant les règles du jeu, on observe que quelque soit la disposition des joueurs, il existe toujours 4 coups possibles : déplacer vers la case vide un des 4 joueurs présents dans les deux bases voisines de la base ayant une place disponible.
 
   Notre algorithme sera donc une méthode permettant de choisir à chaque étape quel coup jouer parmis les 4 possibles.
 
   \begin{block}{L'algorithme}
     \begin{itemize}
-    \item On ne s'autorise à tourner que dans un seul sens. Ainsi, le nombre de coups possibles descends de 4 à 2 (car 2 bonshommes tourneraient à l'envers).
-    \item Parmis les 2 coups restants, on déplace le bonhomme qui a la plus grande distance à parcourir avant d'arriver à sa maison (Si la distance est la même, c'est que les deux bonhommes ont la même couleur - les deux coups sont donc équivalents).
+    \item On ne s'autorise à tourner que dans un seul sens. Ainsi, le nombre de coups possibles descends de 4 à 2 (car 2 joueurs tourneraient à l'envers).
+    \item Parmis les 2 coups restants, on déplace le joueur qui a la plus grande distance à parcourir avant d'arriver à sa base (Si la distance est la même, c'est que les deux joueurs ont la même couleur - les deux coups sont alors équivalents).
     \end{itemize}
   \end{block}
 
@@ -61,17 +64,17 @@
 \begin{frame}{Étude du premier algorithme pour le base-ball multicolore}
   \begin{block}{Cet algorithme semble attirant}
     \begin{itemize}
-    \item Il est très simple: on pourrait l'expliquer à un ordinateur
-    \item Il est relativement rapide: 15 coups pour 7 bonshommes, ce n'est pas si mal
+    \item Il est très simple: on pourrait l'expliquer à un ordinateur.
+    \item Il est relativement rapide: 15 coups pour 4 bases et 7 joueurs, ce n'est pas si mal.
     \item Seul problème: cet algorithme est faux: dans certains cas, il ne termine jamais\ldots
     \end{itemize}
   \end{block}
 
   \begin{block}{Exemple d'exécution incorrecte}
-    Il suffit de partir d'une situation gagnée et d'inverser deux bonshommes pour mettre notre algorithme en échec.
+    Il suffit de partir d'une situation gagnée et d'inverser deux joueurs de couleurs différentes pour mettre notre algorithme en échec.
 \end{block}
   \begin{center}
-    \includegraphics[width=0.8\linewidth]{img/baseball_ex2.pdf}
+    \includegraphics[width=0.7\linewidth]{img/baseball_ex2.pdf}
   \end{center}
 \end{frame}
 
@@ -80,7 +83,7 @@
     \begin{itemize}
     \item Pour réparer cela, le plus simple est de s'interdire de boucler, en
       coupant le cercle.
-    \item Pour ne pas se tromper, le plus simple est de placer les maisons en ligne.
+    \item Pour ne pas se tromper, le plus simple est de placer les bases en ligne.
     \end{itemize}
 
     \begin{center}
@@ -103,9 +106,9 @@
 
   \begin{block}{Nouvel algorithme}
     \begin{itemize}
-    \item On s'occupe d'abord des bonshommes de la première maison, et on n'y touche plus ensuite.
-    \item On répète pour la deuxième maison, et ainsi de suite pour toutes les autres.
-    \item Pour ammener les bonhommes dans leur maison, on déplace tous ceux qui gènent.
+    \item On s'occupe d'abord des joueurs de la première base, et on n'y touche plus ensuite.
+    \item On répète pour la deuxième base, et ainsi de suite pour toutes les autres.
+    \item Pour ammener les joueurs dans leur base, on déplace tous ceux qui gènent.
     \item Pour déplacer ceux qui gènent, on déplace le trou pour leur faire de la place.
     \end{itemize}
   \end{block}
@@ -115,8 +118,8 @@
   \end{center}
 
   \begin{itemize}
-  \item On peut maintenant oublier les bonshommes de la première maison, qui sont à leur place définitive.
-  \item On recommence de la même manière avec la deuxième maison, et ainsi de suite ...
+  \item On peut maintenant oublier les joueurs de la première base, qui sont à leur place définitive.
+  \item On recommence de la même manière avec la deuxième base, et ainsi de suite ...
   \end{itemize}
 \end{frame}
 
@@ -126,7 +129,7 @@
 
   \begin{block}{Comment être sûr de la \alert{correction} de cet algorithme?}
     \begin{itemize}
-    \item \structure{Tester tous les cas}. Ici, il n'y a pas de limite au nombre de maisons ou de bonshommes par maison - il est donc impossible de vérifier tous les cas, tout comme il est impossible de compter jusqu'à l'infini. Cependant, on peut se contenter d'une preuve partielle en se limitant aux cas succeptibles d'être rencontrés - par exemple jusqu'à 20 ou 50 maisons.
+    \item \structure{Tester tous les cas}. Ici, il n'y a pas de limite au nombre de base ou de joueurs par base - il est donc impossible de vérifier tous les cas, tout comme il est impossible de compter jusqu'à l'infini. Cependant, on peut se contenter d'une preuve partielle en se limitant aux cas succeptibles d'être rencontrés - par exemple jusqu'à 20 ou 50 bases.
     \item \structure{On pourrait écrire une preuve mathématique}. Ce n'est pas trivial, mais les chercheurs en informatique en ont écrite des plus difficiles.
     \item \structure{Cela ressemble vraiment à un algorithme classique} (même si cela ne prouve rien, au fond).
     \end{itemize}
@@ -170,38 +173,38 @@
   \end{block}
 \end{frame}
 
-\begin{frame}{Ce qu'il faut retenir du base-ball multicolore: performance d'algorithmes}
-  \begin{block}{Comment comparer la performance des algorithmes?}
-    \begin{itemize}
-    \item Simplement en comptant les étapes. Par exemple sur le crépier, placer la grande crêpe prend au pire 3 coups - et c'est pareil pour les crêpes suivantes. Donc, dans le pire des cas notre algorithme prendra $3\times n$ coups pour trier la pile.
-    \item La performance de mon algo dépend beaucoup de la situation initiale:
-      \begin{itemize}
-      \item Si c'est déjà trié, c'est de la chance, je n'ai rien à faire
-        (\alert{meilleur cas}).
-      \item Si j'ai vraiment pas de bol, je dois faire les 3 étapes pour chaque crêpe (\alert{pire cas}).
-      \item En pratique, j'ai souvent une situation initiale intermédiaire (\alert{cas moyen}).
-      \end{itemize}
+%\begin{frame}{Ce qu'il faut retenir du base-ball multicolore: performance d'algorithmes}
+  %\begin{block}{Comment comparer la performance des algorithmes?}
+    %\begin{itemize}
+    %\item Simplement en comptant les étapes. Par exemple sur le crépier, placer la grande crêpe prend au pire 3 coups - et c'est pareil pour les crêpes suivantes. Donc, dans le pire des cas notre algorithme prendra $3\times n$ coups pour trier la pile.
+    %\item La performance de mon algo dépend beaucoup de la situation initiale:
+      %\begin{itemize}
+      %\item Si c'est déjà trié, c'est de la chance, je n'ai rien à faire
+        %(\alert{meilleur cas}).
+      %\item Si j'ai vraiment pas de bol, je dois faire les 3 étapes pour chaque crêpe (\alert{pire cas}).
+      %\item En pratique, j'ai souvent une situation initiale intermédiaire (\alert{cas moyen}).
+      %\end{itemize}
 
-      Il faut bien comprendre que ceci ne dépend pas vraiment de l'algorithme, mais plutôt de la situation initiale. Le pire cas n'est pas un bug de l'algorithme, mais une situation initiale qui n'aide pas vraiment notre façon de faire (pour estimer la performance d'un cas moyen, il faut utiliser des probabilités).
-    \item En pratique, une estimation de la performance est suffisante. Savoir
-      qu'un algorithme nécessite environ $n^2$ étapes suffit, inutile de préciser que c'est $n^2+4$ ou $n^2-2$, ou même $5\times n^2$ - pour des grandes valeurs de $n$ c'est sensiblement la même chose\ldots On note cette estimation de la complexité $O(n^2)$.
-    \end{itemize}
-  \end{block}
+      %Il faut bien comprendre que ceci ne dépend pas vraiment de l'algorithme, mais plutôt de la situation initiale. Le pire cas n'est pas un bug de l'algorithme, mais une situation initiale qui n'aide pas vraiment notre façon de faire (pour estimer la performance d'un cas moyen, il faut utiliser des probabilités).
+    %\item En pratique, une estimation de la performance est suffisante. Savoir
+      %qu'un algorithme nécessite environ $n^2$ étapes suffit, inutile de préciser que c'est $n^2+4$ ou $n^2-2$, ou même $5\times n^2$ - pour des grandes valeurs de $n$ c'est sensiblement la même chose\ldots On note cette estimation de la complexité $O(n^2)$.
+    %\end{itemize}
+  %\end{block}
 
-  \begin{block}{À la recherche du meilleur algorithme possible}
-    \begin{itemize}
-    \item On arrive parfois à montrer qu'on a le meilleur algorithme possible. Par exemple on ne peut pas trier les éléments en moins de $n$ étapes, car on doit forcément tous les considérer.
-    \item On peut aussi prouver qu'un tri comparatif ne peut pas se faire en moins de $n\times log(n)$ étapes, car il n'accumule pas assez d'information pour choisir la bonne permutation en moins d'étapes.
-    \item Mais la plupart du temps, on ne sait pas prouver que l'algorithme connu est le meilleur possible. C'est alors le meilleur \textit{connu}, sans être forcément le meilleur \textit{possible}.
-    \end{itemize}
-  \end{block}
+  %\begin{block}{À la recherche du meilleur algorithme possible}
+    %\begin{itemize}
+    %\item On arrive parfois à montrer qu'on a le meilleur algorithme possible. Par exemple on ne peut pas trier les éléments en moins de $n$ étapes, car on doit forcément tous les considérer.
+    %\item On peut aussi prouver qu'un tri comparatif ne peut pas se faire en moins de $n\times log(n)$ étapes, car il n'accumule pas assez d'information pour choisir la bonne permutation en moins d'étapes.
+    %\item Mais la plupart du temps, on ne sait pas prouver que l'algorithme connu est le meilleur possible. C'est alors le meilleur \textit{connu}, sans être forcément le meilleur \textit{possible}.
+    %\end{itemize}
+  %\end{block}
 
-  \begin{block}{À la recherche de problèmes difficiles}
-    \begin{itemize}
-    \item On peut classifier les problèmes en fonction de la performance des algorithmes les résolvant. \\
-      (cela permet de se forger un sens commun de ce qui est faisable avec un ordinateur et éviter les problèmes si difficiles qu'ils sont quasi impossibles)
-    \item Il existe énormément de problèmes relativement simples pour lesquels personne ne connaît de bon algorithme, sans que personne n'arrive non plus à démontrer qu'un tel algorithme n'existe pas.
-    \item L'activité suivante sera l'occasion d'explorer un peu cette classification des problèmes très durs.
-    \end{itemize}
-  \end{block}
-\end{frame}
+  %\begin{block}{À la recherche de problèmes difficiles}
+    %\begin{itemize}
+    %\item On peut classifier les problèmes en fonction de la performance des algorithmes les résolvant. \\
+      %(cela permet de se forger un sens commun de ce qui est faisable avec un ordinateur et éviter les problèmes si difficiles qu'ils sont quasi impossibles)
+    %\item Il existe énormément de problèmes relativement simples pour lesquels personne ne connaît de bon algorithme, sans que personne n'arrive non plus à démontrer qu'un tel algorithme n'existe pas.
+    %\item L'activité suivante sera l'occasion d'explorer un peu cette classification des problèmes très durs.
+    %\end{itemize}
+  %\end{block}
+%\end{frame}
