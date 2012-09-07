@@ -26,9 +26,7 @@ func (e state) sort() {
   for i:=0;i<nb_base;i++ {
     rank:=i*2;
     if e[rank] > e[rank+1] {
-      tmp := e[rank];
-      e[rank] = e[rank+1];
-      e[rank+1] = tmp;      
+      e[rank], e[rank+1] = e[rank+1], e[rank];
     }
   }
 }
