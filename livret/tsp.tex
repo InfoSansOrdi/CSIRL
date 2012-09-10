@@ -33,14 +33,17 @@
 \begin{frame}{Ce qu'il faut retenir du plus court chemin : recherche de la solution optimale}
   
   \begin{itemize}
-    \item Le problème du chemin le plus court parait simple, mais est en réalité très compliqué et a de très nombreuses applications dans la vie de tous les jours : comment minimiser la tournée du facteur, la longueur des pistes d'un circuit imprimé, les déplacements d'un bras robotique ... C'est un problème très étudié, plus connu sous le nom de \textbf{"problème du voyageur de commerce"}.
-    \item Le problème du voyageur de commerce a fait l'objet de nombreux travaux, proposant des algorithmes pour le résoudre le plus rapidement possible.
+    \item Ce problème a de nombreuses applications dans la vie de tous les jours : minimiser la tournée du facteur, la longueur des pistes d'un circuit imprimé, les déplacements d'un bras robotique ... C'est un problème très étudié, plus connu sous le nom de \textbf{``problème du voyageur de commerce''}.
+    \item Le problème du voyageur de commerce appartient à une catégorie de problèmes très difficiles à résoudre. Pour ces problèmes, on ne dispose pas d'algorithmes assez performants pour le résoudre quand $n$ est élevé. 
+    \item Le problème du voyageur de commerce ayant fait l'objet de nombreuses études, beaucoup d'algorithmes ont été proposés pour le résoudre le plus efficacement possible.
   \end{itemize}
 
   \begin{block}{Trouver la solution optimale}
     
     \begin{itemize}
-      \item Dans le cas du voyageur de commerce, l'approche naïve consiste à calculer la longueur de tous les chemins et comparer les résultats pour trouver le plus court. La complexité d'une telle approche s'écrit $O(n!)$. Il existe cependant des algorithmes plus efficaces - par exemple, l'algorithme de Held-Karp a une complexité de $O(n^{2}2^n)$. Voici une petite comparaison de l'augmentation de la quantité de calculs nécessaires à mesure que $n$ augmente :
+      \item L'approche naïve consiste à calculer la longueur de tous les chemins possibles, et comparer les résultats pour ne retenir que le plus court. 
+      \item Pour $n$ villes, le nombre de chemins possible est $n!$. La performance de l'algorithme est donc $O(n!)$.
+      \item Il existe cependant des algorithmes plus efficaces - par exemple, l'algorithme de Held-Karp a une performance de $O(n^{2}2^n)$. Pour illustrer la différence, comparons l'augmentation des calculs nécessaires à mesure que $n$ augmente :
 
       \bigskip
 
@@ -57,7 +60,7 @@
 
       \bigskip
 
-      \item Ce tableau nous montre qu'avec la méthode naïve, en testant un milliard de chemins par seconde, il faudrait plus de \textbf{77 ans} pour trouver le chemin le plus court entre 20 sommets ! Dans les mêmes conditions, l'algorithme Held-Karp met moins d'\textbf{une demi seconde} pour trouver le même résultat !
+      \item Ce tableau indique qu'en testant un milliard de chemins par seconde, il faudrait à la méthode naïve plus de \textbf{77 ans} pour trouver le chemin le plus court entre 20 sommets ! Dans les mêmes conditions, l'algorithme Held-Karp met moins d'\textbf{une demi seconde} pour trouver le même résultat.
     \end{itemize}
   \end{block}
 
@@ -79,7 +82,7 @@
   \begin{block}{Les heuristiques et métaheuristiques}
 
     \begin{itemize}
-      \item Une heuristique est spécifique au problème qu'elle traite : elle exploite certaines propriétés du problème pour orienter la recherche vers des "régions" succeptibles de contenir des bonnes solutions.
+      \item Une heuristique est spécifique au problème qu'elle traite : elle exploite certaines propriétés du problème pour orienter la recherche vers des ``régions'' succeptibles de contenir des bonnes solutions.
         % \item ajouter un exemple pour illustrer l'espace des solutions et l'exploitation d'une connaissance empirique
       \item Certaines heuristiques sont assez génériques et peuvent s'appliquer à de nombreux problèmes, moyennant quelques adaptations. On parle alors de \alert{métaheuristiques}. Les métaheuristiques sont souvent inspirées de la nature. En voici quelques exemples : 
         \begin{itemize}
@@ -89,6 +92,16 @@
         \end{itemize}
     \end{itemize}
   \end{block}
+
+  \bigskip 
+
+  \begin{verse}
+    Un soir, alors qu'il rentre chez lui, Nasr Eddin perd sa bague. Un ami vient à passer par là et le voit chercher par terre sous le lampadaire. \\
+    - `` Nasr Eddin, que t'arrive-t-il ?\\
+    - Je cherche ma bague, je l'ai perdue dans l'allée un peu plus loin ...\\
+    - Mais alors, pourquoi la cherches-tu ici plutôt que là bas ?\\
+    - Parce qu'ici, il y a de la lumière ! ''
+  \end{verse}
 
   % illustration, développement ?
 %\end{frame}

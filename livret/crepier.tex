@@ -66,3 +66,49 @@
   \end{columns}
       
 \end{frame}
+
+\begin{frame}{Ce qu'il faut retenir du crêpier psycho-rigide : performance d'algorithmes}
+
+  \begin{block}{Pourquoi évaluer la performance d'un algorithme ?}
+
+    Évaluer la performance d'un algorithme nous permet :
+
+    \begin{itemize}
+      \item de se faire une idée du temps nécessaire pour résoudre un problème de plus grande taille (combien de temps pour un million de crêpes ?) ;
+      \item de le comparer à d'autres aglorithmes résolvant le même problème, pour savoir lequel est le meilleur.
+    \end{itemize}
+
+  \end{block}
+
+  \begin{block}{Comment évaluer la performance d'un algorithme ?}
+
+    \begin{itemize}
+      \item On compte le nombre de coups nécessaires dans le cas général. Pour le crêpier :
+        \begin{itemize}
+          \item pour ranger une crêpe, il faut entre $0$ coups (la crêpe est déjà rangée) et $3$ coups (amener en haut, retourner, amener à sa place) ;
+          \item pour $n$ crêpes (cas général), il faut entre $0$ et $3 \times n$ coups ;
+          \item la performance d'un algorithme sur un cas particulier dépend donc beaucoup de l'état initial, mais en règle générale on s'intéresse surtout aux cas intermédiaires, qui sont les plus probables.
+        \end{itemize}
+      \item $n$ est une variable qui exprime la taille du problème. La performance d'un algorithme est notée comme une fonction de la taille du problème nommée $O$.
+      \item La performance exprime un ordre de grandeur plutôt qu'une évaluation précise du temps d'exécution. Pour des grandes valeurs de $n$, il n'est pas très utile de faire la distinction entre $O(n)$, $O(n+4)$ ou encore $O(3 \times n)$ - surtout quand on compare avec un autre algorithme dont la performance est $O(n^2)$. 
+      \item On simplifie donc en retirant les constantes pour ne garder que les termes les plus importants. Pour le crêpier, on notera la performance de notre algorithme $O(n)$ ; on dit alors que le temps de calcul croit \textit{linéairement} avec $n$. En revanche, un algorithme $O(n^2)$ aurait une croissance \textit{quadratique}, et un algorithme $O(2^n)$ aurait une croissance \textit{exponentielle}.
+     \end{itemize}
+  \end{block}
+
+  \begin{block}{À la recherche du meilleur algorithme possible}
+    \begin{itemize}
+    \item On arrive parfois à montrer qu'on a le meilleur algorithme possible. Par exemple on ne peut pas trier les éléments en moins de $n$ étapes, car on doit forcément tous les considérer.
+    \item On peut aussi prouver qu'un tri comparatif ne peut pas se faire en moins de $n\times log(n)$ étapes, car il n'accumule pas assez d'information pour choisir la bonne permutation en moins d'étapes.
+    \item Mais la plupart du temps, on ne sait pas prouver que l'algorithme connu est le meilleur possible. C'est alors le meilleur \textit{connu}, sans être forcément le meilleur \textit{possible}.
+    \end{itemize}
+  \end{block}
+
+  %\begin{block}{À la recherche de problèmes difficiles}
+    %\begin{itemize}
+    %\item On peut classifier les problèmes en fonction de la performance des algorithmes les résolvant. \\
+      %(cela permet de se forger un sens commun de ce qui est faisable avec un ordinateur et éviter les problèmes si difficiles qu'ils sont quasi impossibles)
+    %\item Il existe énormément de problèmes relativement simples pour lesquels personne ne connaît de bon algorithme, sans que personne n'arrive non plus à démontrer qu'un tel algorithme n'existe pas.
+    %\item L'activité suivante sera l'occasion d'explorer un peu cette classification des problèmes très durs.
+    %\end{itemize}
+  %\end{block}
+\end{frame}
