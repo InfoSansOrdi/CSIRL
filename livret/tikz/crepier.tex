@@ -1,0 +1,29 @@
+\newcommand{\crepe}[4]{ % size yshift xshift flip
+	\draw [dashed, thick, yshift=#2*0.4cm, xshift=#3cm,rotate=#4*180] (-#1,0.1) -- (#1,0.1);
+	\draw [yshift=#2*0.4cm, xshift=#3cm,rotate=#4*180](-#1,0.1) -- (-#1,-0.1) -- (#1,-0.1) -- (#1,0.1);
+}
+
+\begin{tikzpicture}[scale=0.8]
+
+% \crepe{1cm}{0}{180};
+% \crepe{1.5cm}{(0,1.5)}{0};
+% \crepe{2cm}{(0,0)}{180};
+% \crepe{2.5cm}{(0,1)}{0};
+% \crepe{3cm}{(0,2)}{0};
+
+\crepe{1cm}{0}{0}{1};
+\crepe{1.5cm}{2}{0}{0};
+\crepe{2cm}{3}{0}{0};
+\crepe{2.5cm}{1}{0}{0};
+\crepe{3cm}{4}{0}{1};
+
+\draw [->,ultra thick,draw] (3,1) -- (5,1) ;
+
+\crepe{1cm}{4}{8}{1};
+\crepe{1.5cm}{3}{8}{1};
+\crepe{2cm}{2}{8}{1};
+\crepe{2.5cm}{1}{8}{1};
+\crepe{3cm}{0}{8}{1};
+
+
+\end{tikzpicture}
