@@ -14,6 +14,8 @@
 
 %\input{tikz/baseball.tex}
 
+\hyphenation{meil-leures}
+
 % récupérer un peu de place au dessus des titres
 \renewcommand{\chapterheadstartvskip}{\vspace *{-\baselineskip }} 
 
@@ -34,7 +36,7 @@
 }
 
 %\titlehead{Computer Science IRL}
-\title{Les Algorithmes \\ \includegraphics[width=0.7\textwidth]{img/Hamiltonian_path.pdf} \label{img:hamiltonian}}
+\title{Les Algorithmes \\ \includegraphics[width=0.7\linewidth]{img/Hamiltonian_path.pdf} \label{img:hamiltonian}}
 %\subject{Computer Science IRL}
 %\publishers{\includegraphics[width=5em]{img/pseudo_logo_CSIRL.pdf}} 
 \publishers{CS IRL \\ Computer Science In Real Life}
@@ -125,7 +127,7 @@ L'objectif de cette séance est d'introduire la notion fondamentale d'\textbf{al
 Bien entendu, il ne s'agit pas d'un cours complet sur le sujet ! Si vous souhaitez aller plus loin, voici un cours en 48h : \url{http://www.loria.fr/~quinson/Teaching/TOP/}.
 
 \begin{center}
-  \includegraphics[width=0.7\textwidth]{img/computer_science_major.PNG}
+  \includegraphics[width=0.7\linewidth]{img/computer_science_major.PNG}
   \label{img:CSmajor}
 \end{center}
 
@@ -338,9 +340,9 @@ A partir de ces enseignements, on peut construire l'algorithme suivant :
 % FIXME formulation complêtement merdique ! un ordi ne pourra pas comprendre ça ...
 \begin{itemize}
   \item On coupe le cercle de sorte que la base avec la place vide soit à l'extrémité droite.
-  \item On s'occupe des bases les unes après les autres, de gauche à droite
-  \item Pour ammener les joueurs dans leur base, on déplace tous ceux qui gènent.
-  \item Pour déplacer ceux qui gènent, on déplace le trou pour leur faire de la place.
+  \item On s'occupe des bases les unes après les autres, de gauche à droite.
+  \item Pour rapprocher un joueur de sa base, on déplace les joueurs des autres couleurs pour amener le trou à gauche du joueur à déplacer.
+  \item On répète l'opération jusqu'à ce que les deux joueurs soient revenus à leur base, et on n'y touche plus.
 \end{itemize}
 
 % FIXME tikz ? l'illustration est fausse, la base rouge devrait être à droite.
@@ -432,15 +434,31 @@ Ce tableau indique qu'en testant un milliard de chemins par seconde, il faudrait
 
 Pour ces problèmes complexes, on préfère souvent trouver une solution raisonnablement bonne (solution approchée) très rapidement, plutôt que de chercher très longtemps la solution optimale. Une \textbf{heuristique} est une méthode pour fouiller intelligemment l'espace des solutions possibles à la recherche des bonnes solutions. La recherche d'heuristiques efficaces fait parti du travail des chercheurs en informatique.
 
+\subsection*{Heuristique : le plus proche voisin}
+
+Partez d'une ville, et allez vers la ville la plus proche par laquelle vous n'êtes pas encore passé. Recommencez, jusqu'à passer par toutes les villes, et revenez au point de départ. Cette heuristique aura tendance à prendre de préférence les distances les plus courtes ... Mais elle n'aboutira pas forcément la meilleure solution !
+
+\begin{center}
+  %\input{tikz/tsp_greedy.tex}
+  \textit{illustration}
+\end{center}
+
 \subsection*{Heuristiques et méta-heuristiques}
 
 Une heuristique est spécifique au problème qu'elle traite : elle exploite certaines propriétés du problème pour orienter la recherche vers des \og régions \fg succeptibles de contenir des bonnes solutions. Cependant, certaines heuristiques reposent sur des concepts assez génériques pour s'appliquer à de nombreux problèmes, moyennant quelques adaptations. On parle alors de \textbf{métaheuristiques}. Les métaheuristiques sont souvent inspirées de la nature. En voici quelques exemples.
 
 \begin{description}
   \item[Le recuit-simulé] s'inspire d'un processus utilisé en metallurgie pour minimiser l'énergie d'un matériau.
-  \item[Les algorithmes génétiques] reproduisent les mécanismes de l'évolution dans le vivant : une population de solutions aléatoires est soumise à une sélection naturelle (les solutions les meilleures sont les plus adaptées) et de nouvelles solutions sont générées par croisement entre les solutions existantes et introduction de mutations aléatoires. Génération après génération, les solutions s'améliorent.
   \item[Les colonies de fourmis] s'inspirent du comportement des insectes sociaux : avez vous remarqué que les fourmis finissent toujours par trouver le chemin le plus court entre la fourmilière et la source de nourriture ?
+  \item[Les algorithmes génétiques] reproduisent les mécanismes de l'évolution dans le vivant :
+    \begin{itemize}
+      \item une population de solutions aléatoires est créée ;
+      \item on soumet cette population à une sélection naturelle (les meilleures solutions sont les plus adaptées) ;
+      \item on créé de nouvelles solutions à partir des solutions existantes par croisements et mutations ;
+    \end{itemize}
+    Génération après génération, on observe une amélioration des solutions.
 \end{description}
+
 
 \chapter*{Le coin de l'animateur}
 \label{chap:coin-animateur}
