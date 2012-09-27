@@ -436,12 +436,13 @@ Pour ces problèmes complexes, on préfère souvent trouver une solution raisonn
 
 \subsection*{Heuristique : le plus proche voisin}
 
-Partez d'une ville, et allez vers la ville la plus proche par laquelle vous n'êtes pas encore passé. Recommencez, jusqu'à passer par toutes les villes, et revenez au point de départ. Cette heuristique aura tendance à prendre de préférence les distances les plus courtes ... Mais elle n'aboutira pas forcément la meilleure solution !
+Partez d'une ville, et allez vers la ville la plus proche par laquelle vous n'êtes pas encore passé. Recommencez, jusqu'à passer par toutes les villes, et revenez au point de départ. Cette heuristique aura tendance à prendre de préférence les distances les plus courtes ... Mais elle n'aboutira pas forcément la meilleure solution. Par exemple :
 
 \begin{center}
-  %\input{tikz/tsp_greedy.tex}
-  \textit{illustration}
+  \input{tikz/tsp_greedy.tex}
 \end{center}
+
+Si on démarre de \tikz \node [shape=circle,draw] {A};, aller toujours vers le voisin le plus proche nous fait faire un trajet (\tikz \draw[->](0,0) -- (0.5,0);) beaucoup plus long que le trajet optimal (\tikz \draw [->,color=red] (0,0) -- (0.5,0);).
 
 \subsection*{Heuristiques et méta-heuristiques}
 
