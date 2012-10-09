@@ -10,15 +10,11 @@ CSIRL-couv.pdf: CSIRL.pdf
 	/usr/bin/pdfjam -o CSIRL-couv.pdf img/couverture.pdf 1 CSIRL.pdf 2-
 
 clean:
-<<<<<<< HEAD
-	rm CSIRL-couv.pdf CSIRL.pdf
-=======
-	-rm -Rf *.log *~ *.toc *.bbl *.blg *.ps *.brf \
+	rm -Rf *.log *~ *.toc *.bbl *.blg *.ps *.brf \
 	*.nav *.out *.snm *.vrb *.pag auto *.fdb_latexmk
 
 clean.all: clean
 	rm -Rf CSIRL-couv.pdf CSIRL.pdf
->>>>>>> 1d127cb3d017c8fb4887891bcb3799a191d0ec3e
 
 #2up.pdf: CSIRL.pdf
 #	/usr/bin/pdfjam --suffix nup --nup '2x1' --landscape --paper a4paper --landscape --delta '1mm 1mm' --frame 'true' --scale '.97' --outfile 2up.pdf -- CSIRL.pdf
