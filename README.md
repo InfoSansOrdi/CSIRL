@@ -16,4 +16,15 @@ d'aborder les notions fondamentales de manière cohérente et progressive.
 **SMN** est un projet libre : vous trouverez ici toutes les ressources
 nécessaires à la production du matériel pour les activités.
 
+## Séance algorithmique
+
+Cette séance introduit quelques principes fondamentaux de l'algorithmique au
+travers de quatre activités
+
+- *Jeu de Nim* : notion d'algorithme comme stratégie gagnante pour résoudre un
+  problème.
+- *Crêpier psycho-rigide* : formalisation et performance d'un algorithme.
+- *Baseball multicolore* : correction d'un algorithme.
+- *Plus court chemin* : complexité des problèmes, solution optimale et solution
+  approchée.
 
