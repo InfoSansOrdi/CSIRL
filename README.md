@@ -1,4 +1,4 @@
-# SMN - Sciences Manuelles du Numérique - déconstruire l'informatique pour mieux la saisir
+![SMN - Sciences Manuelles du Numérique - déconstruire l'informatique pour mieux la saisir](livret/img/logo_texte.png)
 
 Trop souvent, lorsque l'on parle d'informatique, on pense à l'ordinateur
 utilisé comme outil. L'informatique devient alors l'art d'utiliser l'ordinateur
