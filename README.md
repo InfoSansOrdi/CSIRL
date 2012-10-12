@@ -1,6 +1,6 @@
 # SMN - Sciences Manuelles du Numérique -- déconstruire l'informatique pour mieux la saisir
 
-https://github.com/jcb/CSIRL/raw/master/logo.png
+![](https://github.com/jcb/CSIRL/raw/master/logo.png)
 
 Trop souvent, lorsque l'on parle d'informatique, on pense à l'ordinateur
 utilisé comme outil. L'informatique devient alors l'art d'utiliser l'ordinateur
