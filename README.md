@@ -1,4 +1,4 @@
-![](logo.png)
+![](https://raw.github.com/jcb/CSIRL/master/logo.png)
 
 Trop souvent, lorsque l'on parle d'informatique, on pense à l'ordinateur
 utilisé comme outil. L'informatique devient alors l'art d'utiliser l'ordinateur
