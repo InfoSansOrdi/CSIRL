@@ -15,8 +15,8 @@ Pour cette tâche, le crêpier peut faire une seule action : glisser sa spatule 
 \encart{Matériel}{
   \begin{itemize}
   \item Des planchettes en bois de tailles et de couleurs différentes (faces
-    reconnaissables),
-  \item éventuellement une pelle à tarte pour retourner les planchettes.
+    reconnaissables)
+  \item Une pelle à tarte pour retourner les planchettes (optionnelle)
   \end{itemize}
 }
 
@@ -63,11 +63,7 @@ Pour évaluer la performance, on compte le nombre de \og coups \fg\ nécessaires
 
 Ici, $n$ est une variable qui exprime la taille du problème. La performance d'un algorithme est notée comme une fonction de la taille du problème nommée $O$. Pour le crêpier, on peut donc écrire $O(3 \times n)$.
 
-Le temps d'exécution variant selon l'état initial, la performance exprime
-l'ordre de grandeur du temps d'exécution. Pour des grandes valeurs de $n$, il
-n'est pas très utile de faire la distinction entre $O(n)$, $O(n+4)$ ou encore
-$O(3 \times n)$ --- en particulier quand on compare avec un autre algorithme
-dont la performance est $O(n^2)$ ---. 
+Le temps d'exécution variant selon l'état initial, la performance exprime l'ordre de grandeur du temps d'exécution. Pour des grandes valeurs de $n$, il n'est pas très utile de faire la distinction entre $O(n)$, $O(n+4)$ ou encore $O(3 \times n)$ --- en particulier quand on compare avec un autre algorithme dont la performance est $O(n^2)$.  
 
 On simplifie donc en retirant les constantes pour ne garder que les termes importants. Pour le crêpier, on notera donc la performance de notre algorithme $O(n)$ ; on dit alors que la performance de l'algorithme est \textit{linéaire}, car le temps de calcul croît linéairement avec $n$. Un algorithme avec une performance $O(n^2)$ est dit \textit{quadratique}, tandis qu'un algorithme $O(2^n)$ est dit \textit{exponentiel}.
 
@@ -88,7 +84,9 @@ L'objectif de cette activité est de trouver un algorithme, de le faire verbalis
   \item Expliquez les règles et demandez aux participants de tenter de résoudre le problème ;
   \item s'ils bloquent, conseillez-les. Par exemple : \og essaye d'abord de mettre la grande crêpe en bas \fg, ou encore \og où doit se trouver la grande crêpe pour pouvoir l'amener en bas ? \fg
   \item Quand les participants ont trouvé l'algorithme, demandez-leur de l'expliquer. 
-  \item Demandez ensuite de calculer le nombre de coups nécessaires pour ranger la pile de crêpes. Le nombre de coups dépendant de l'état initial, faites les généraliser en trouvant le nombre de coups maximal pour ranger une crêpe, puis $n$ crêpes.
+  \item Demandez ensuite de calculer le nombre de coups nécessaires pour ranger la pile de crêpes. Le nombre de coups dépendant de l'état initial, faites-les généraliser en trouvant le nombre de coups maximal pour ranger une crêpe, puis $n$ crêpes.
+  \item Le discours sur le $O(n)$ est volontairement approximatif. On veut faire sentir les choses; faire un vrai cours prend une douzaine d'heures (cf. \url{http://www.loria.fr/~quinson/Teaching/TOP/}).
+  %\item Au passage, le crêpier ne ressemble pas du tout aux tours de Hanoï: l'histoire ressemble un peu, mais la résolution est très différente (il y a $2^n-1$ étapes à Hanoï et $3\times n$ au crêpier).
 \end{itemize}
 
 

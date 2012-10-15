@@ -32,16 +32,16 @@ Le problème du voyageur de commerce appartient à une catégorie de problèmes 
 
 L'approche naïve consiste à calculer la longueur de tous les chemins possibles, et comparer les résultats pour ne retenir que le plus court. Pour $n$ villes, le nombre de chemins possible est $n!$. La performance de l'algorithme est donc $O(n!)$.
 
-Il existe cependant des algorithmes plus efficaces, par exemple l'algorithme de Held-Karp a une performance de $O(n^{2}2^n)$. Pour illustrer la différence, comparons l'augmentation des calculs nécessaires à mesure que $n$ augmente :
+Il existe cependant des algorithmes plus efficaces : par exemple, la performance de l'algorithme Held-Karp est $O(n^{2}2^n)$. Pour illustrer la différence, comparons l'augmentation des calculs nécessaires à mesure que $n$ augmente :
 
 \begin{center}
   \begin{tabular}{|l|llll|}
     \hline
-    nombre de sommets       & $5$   & $10$      & $15$            & $20$ \\
+    Nombre de sommets       & $5$   & $10$      & $15$            & $20$ \\
     \hline
-    %méthode naïve $O(n!)$   & 120 & 3628800 & 1307674368000 & 2432902008176640000 \\
+    %Méthode naïve $O(n!)$   & 120 & 3628800 & 1307674368000 & 2432902008176640000 \\
     %Held-Karp $O(n^{2}2^n)$ & 800 & 102400  & 7372800       & 419430400 \\
-    méthode naïve $O(n!)$   & $120$ & $3628800$ & $1.3 \times 10^{12}$ & $2.4 \times 10^{18}$ \\
+    Méthode naïve $O(n!)$   & $120$ & $3628800$ & $1.3 \times 10^{12}$ & $2.4 \times 10^{18}$ \\
     Held-Karp $O(n^{2}2^n)$ & $800$ & $102400$  & $7.3 \times 10^6$       & $4.1 \times 10^8$ \\
     \hline
   \end{tabular} 

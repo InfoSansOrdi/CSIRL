@@ -95,15 +95,12 @@ On peut maintenant ignorer la première base, qui est déjà rentrée.
 
 \section*{Correction d'algorithmes}
 
-Notre deuxième algorithme est un peu plus complexe que le précédent, mais il
-est correct --- une propriété très importante quand on écrit un algorithme ---. Mais comment être sûr de la \textbf{correction} d'un algorithme ? Il existe plusieurs approches :
+Notre deuxième algorithme est un peu plus complexe que le précédent, mais il est correct --- une propriété très importante quand on écrit un algorithme. Mais comment être sûr de la \textbf{correction} d'un algorithme ? Il existe plusieurs approches :
 
 \begin{description}
   \item[Tester tous les cas.] On vérifie que l'algorithme trouve la solution pour tous les cas possibles. Mais ça ne marche que pour un problème de taille finie, et montrer de cette manière que notre algorithme est correct pour 4 bases n'implique pas sa correction pour 5 bases.
-  \item[Écrire une preuve mathématique.] On peut prouver mathématiquement que cet algorithme fonctionne pour le cas général $m$ bases. Ce n'est pas trivial, mais les chercheurs en informatique en ont écrite des plus difficiles.
-  \item[Ça ressemble à un algo classique.] On peut observer une certaine
-    ressemblance avec un algorithme déjà connu. Mais ça ne prouve rien, au
-    fond{\ldots}
+  \item[Écrire une preuve mathématique.] On peut prouver mathématiquement que cet algorithme fonctionne pour le cas général $m$ bases. Ce n'est pas trivial, mais les chercheurs en informatique en ont écrit des plus difficiles.
+  \item[Ça ressemble à un algorithme classique.] On peut observer une certaine ressemblance avec un algorithme déjà connu. Mais ça ne prouve rien, au fond{\ldots}
 \end{description}
 
 \subsection*{Les algorithmes classiques}
@@ -114,9 +111,7 @@ Par exemple, quand des collègues informaticiens jouent au crêpier, ils demande
  
 \subsection*{Les algorithmes de tri}
 
-Les algorithmes de tri sont très classiques en informatique. D'une part, ils
-permettent d'expliquer les grands principes aux élèves (\og diviser pour régner
-\fg, récursivité, algorithmes gloutons {\ldots}). D'autre part, les ordinateurs trient très souvent des données, car beaucoup de problèmes sont plus simples après (trouver un livre est plus simple dans une bibliothèque rangée, par exemple). \textit{Les musiciens font leurs gammes, les informaticiens débutants apprennent leurs algorithmes}
+Les algorithmes de tri sont très classiques en informatique. D'une part, ils permettent d'expliquer les grands principes aux élèves (\og diviser pour régner \fg, récursivité, algorithmes gloutons {\ldots}). D'autre part, les ordinateurs trient très souvent des données, car beaucoup de problèmes sont plus simples après (trouver un livre est plus simple dans une bibliothèque rangée, par exemple). \textit{Les musiciens font leurs gammes, les informaticiens débutants apprennent leurs algorithmes}.
 
 %\subsection*{Le travail des chercheurs}
 
@@ -127,22 +122,18 @@ permettent d'expliquer les grands principes aux élèves (\og diviser pour régn
 L'objectif de cette activité est d'introduire la notion de correction d'algorithme.
 
 \begin{itemize}
-  \item Il faut laisser les participants chercher un peu en les faisant verbaliser
-  \item S'ils sont sur le point de trouver l'algo juste, on introduit très vite l'algo faux pour préserver un enchaînement logique: ``oui, ok, mais je vais vous montrer une façon de faire rigolote''
+  \item Laissez les participants chercher un peu en les faisant verbaliser.
+  \item S'ils sont sur le point de trouver l'algo juste, introduisez très vite l'algo faux pour préserver un enchaînement logique~: \og oui, ok, mais je vais vous montrer une façon de faire rigolote. \fg
   \item Quand l'algo juste est établi, et avant de parler de performance, on peut partir sur une variante :
     \begin{itemize}
     \item Chaque participant prend une couleur (une base placée au sol entre ses pieds)
     \item Chaque participant (sauf 1) prend un bonhomme dans chaque main
     \item À chaque étape, celui qui a une main libre prend un bonhomme dans la main d'un voisin
-    \item (attention, c'est fastidieux à 8 ou 9 couleurs, il vaut mieux faire deux rondes car l'algo semble $O(n^2)$)
+    \item (Attention, c'est fastidieux à 8 ou 9 couleurs, il vaut mieux faire deux rondes car l'algorithme semble $O(n^2)$)
     \end{itemize}
-  \item Expérimentalement, l'algo qui tourne converge très souvent vers la solution à 5 bases, mais converge souvent vers la boucle infinie quand il y a plus de couleurs. Ne tentez pas le diable ;)
+  \item Expérimentalement, l'algorithme qui tourne converge très souvent vers la solution à 5 bases, mais converge souvent vers la boucle infinie quand il y a plus de couleurs. Ne tentez pas le diable ;)
   \item Dans la disposition linéaire, il est plus simple de mettre la couleur avec un seul bonhomme à une extrémité, et commencer par remplir la maison de l'autre extrémité. Sinon, on se retrouve avec une maison remplie de un seul au milieu, et il faut comprendre que la solution passe par le stockage temporaire d'un pion de la maison d'à coté sur le trou.
-  \item Le discours sur le $O(n)$ est volontairement approximatif. On veut faire sentir les choses; faire un vrai cours prend une douzaine d'heures (cf. \url{http://www.loria.fr/~quinson/Teaching/TOP/}).
-  \item Il serait intéressant de prouver effectivement la correction de l'algorithme linéaire, ainsi que de quantifier la probabilité de fonctionnement de l'algo qui tourne en fonction du nombre de maisons
-  \item Au passage, le crêpier ne ressemble pas du tout aux tours de Hanoï:
-    l'histoire ressemble un peu, mais la résolution est très différente (il y a
-    $2^n-1$ étapes à Hanoï et $3\times n$ au crêpier{\ldots})
+  \item Il serait intéressant de prouver effectivement la correction de l'algorithme linéaire, ainsi que de quantifier la probabilité de fonctionnement de l'algo qui tourne en fonction du nombre de maisons.
 \end{itemize}
 
 
