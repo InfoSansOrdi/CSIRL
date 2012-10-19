@@ -18,6 +18,14 @@
    sodipodi:docname="couverture.svg">
   <defs
      id="defs4">
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3388"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3382"
+       is_visible="true" />
     <linearGradient
        inkscape:collect="always"
        id="linearGradient4943">
@@ -121,6 +129,10 @@
        y1="19.197445"
        x2="410.91162"
        y2="82.837059" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3388-6"
+       is_visible="true" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -129,22 +141,23 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="159.38389"
-     inkscape:cy="380.97738"
+     inkscape:zoom="7.9195959"
+     inkscape:cx="-7.8204966"
+     inkscape:cy="577.13845"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="mm"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:window-width="1280"
-     inkscape:window-height="785"
-     inkscape:window-x="0"
-     inkscape:window-y="15"
+     inkscape:window-width="1276"
+     inkscape:window-height="781"
+     inkscape:window-x="2"
+     inkscape:window-y="17"
      inkscape:window-maximized="0"
      inkscape:snap-grids="false"
-     inkscape:snap-to-guides="true" />
+     inkscape:snap-to-guides="true"
+     inkscape:snap-page="true" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -153,7 +166,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -162,47 +175,6 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-308.26768)">
-    <g
-       transform="translate(-227.13683,354.75521)"
-       id="layer1-2"
-       inkscape:label="Calque 1">
-      <g
-         transform="matrix(0.95463445,0,0,0.95463445,11.750883,20.223435)"
-         id="g3039">
-        <path
-           style="fill:#000000"
-           d="m 343.36884,666.33639 c 0.13933,-3.6387 0.30475,-18.4174 0.36758,-32.84154 l 0.11426,-26.22572 -40.45221,-10.58023 c -22.24872,-5.81914 -40.38993,-10.64252 -40.3138,-10.71865 0.0761,-0.0761 9.54672,-2.7763 21.04578,-6.00039 l 20.90737,-5.86198 0.11931,8.70616 0.1193,8.70616 2.3065,0.65889 c 1.26857,0.36239 9.002,2.39065 17.1854,4.50723 l 14.8789,3.84835 0.87667,-1.11451 c 0.48217,-0.61298 6.94716,-8.62995 14.36666,-17.8155 l 13.48998,-16.70099 -13.99528,-3.49592 -13.99528,-3.49593 -2.23915,2.5986 c -1.23153,1.42923 -2.84091,3.26728 -3.5764,4.08456 l -1.33725,1.48596 -1.97066,-3.8129 c -1.79912,-3.48099 -2.06665,-3.79293 -3.0733,-3.58357 -0.60645,0.12613 -16.3852,4.58499 -35.06389,9.90858 -18.67869,5.32358 -34.02468,9.61582 -34.10222,9.53831 -0.0775,-0.0775 8.47078,-9.64025 18.99625,-21.25053 l 19.13723,-21.1096 34.32718,-10.31671 c 33.08785,-9.94424 34.34999,-10.28637 34.95879,-9.47627 0.34738,0.46224 1.29359,2.14252 2.10269,3.73396 l 1.47109,2.89352 -12.96195,15.40083 c -7.12907,8.47046 -12.81877,15.52632 -12.64378,15.67968 0.175,0.15336 8.20755,2.20805 17.85012,4.56597 l 17.53194,4.28713 0,1.86756 c 0,1.02716 -0.4022,15.51917 -0.89377,32.20446 l -0.89377,30.33691 -16.79899,22.34039 c -9.23945,12.28722 -17.09051,22.63811 -17.44682,23.00198 -0.57011,0.58222 -0.61743,-0.13199 -0.39448,-5.95425 z"
-           id="path3821"
-           inkscape:connector-curvature="0" />
-        <g
-           id="g3033"
-           transform="translate(-10,0)">
-          <text
-             sodipodi:linespacing="125%"
-             id="text2991"
-             y="585.50592"
-             x="397.07767"
-             style="font-size:31.75597191px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Bebas Neue;-inkscape-font-specification:Bebas Neue"
-             xml:space="preserve"><tspan
-               id="tspan2995"
-               y="585.50592"
-               x="397.07767"
-               sodipodi:role="line">sciences manuelles du numerique</tspan></text>
-          <text
-             transform="scale(0.98785338,1.012296)"
-             sodipodi:linespacing="125%"
-             id="text2993"
-             y="594.86456"
-             x="401.74588"
-             style="font-size:13.94233131px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:GeosansLight;-inkscape-font-specification:GeosansLight Medium"
-             xml:space="preserve"><tspan
-               y="594.86456"
-               x="401.74588"
-               id="tspan2996"
-               sodipodi:role="line">DÉCONSTRUIRE L'INFORMATIQUE POUR MIEUX LA COMPRENDRE</tspan></text>
-        </g>
-      </g>
-    </g>
     <g
        id="g3265"
        transform="translate(0,35.43307)">
@@ -416,5 +388,60 @@
            id="tspan3223"
            sodipodi:role="line">les algorithmes</tspan></text>
     </g>
+    <g
+       transform="translate(-227.27514,354.75521)"
+       id="layer1-3"
+       inkscape:label="Calque 1">
+      <g
+         id="g3262">
+        <path
+           style="fill:#000000"
+           d="m 339.54261,656.33111 c 0.13301,-3.47363 0.29092,-17.58189 0.3509,-31.35167 l 0.10908,-25.03597 -38.61708,-10.10026 c -21.23939,-5.55515 -38.55761,-10.15971 -38.48494,-10.23239 0.0727,-0.0726 9.11363,-2.65035 20.09103,-5.72818 l 19.95889,-5.59604 0.1139,8.3112 0.11389,8.3112 2.20186,0.62899 c 1.21102,0.34595 8.59362,2.2822 16.40578,4.30276 l 14.20391,3.67377 0.8369,-1.06395 c 0.4603,-0.58517 6.632,-8.23845 13.71491,-17.00729 l 12.878,-15.94334 -13.36038,-3.33733 -13.36038,-3.33733 -2.13757,2.48071 c -1.17566,1.36439 -2.71203,3.11906 -3.41415,3.89926 l -1.27658,1.41855 -1.88126,-3.63992 c -1.71751,-3.32308 -1.9729,-3.62087 -2.93388,-3.421 -0.57894,0.1204 -15.64188,4.37699 -33.4732,9.45907 -17.83132,5.08207 -32.48113,9.17959 -32.55515,9.1056 -0.074,-0.074 8.08649,-9.20292 18.13447,-20.28649 l 18.26906,-20.15195 32.76991,-9.84869 c 31.5868,-9.49311 32.79168,-9.81972 33.37286,-9.04637 0.33162,0.44127 1.23491,2.04532 2.0073,3.56456 l 1.40436,2.76226 -12.37393,14.70216 c -6.80565,8.08619 -12.23724,14.82196 -12.07019,14.96836 0.16707,0.14641 7.83521,2.10788 17.04034,4.35884 l 16.7366,4.09264 0,1.78284 c 0,0.98056 -0.38396,14.81513 -0.85323,30.74348 l -0.85322,28.96066 -16.03689,21.32691 c -8.8203,11.7298 -16.31519,21.61112 -16.65534,21.95848 -0.54425,0.55581 -0.58942,-0.126 -0.37658,-5.68413 z"
+           id="path3821"
+           inkscape:connector-curvature="0" />
+        <g
+           id="g3256">
+          <text
+             sodipodi:linespacing="125%"
+             id="text2991"
+             y="579.16754"
+             x="381.26855"
+             style="font-size:30.31534386px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Bebas Neue;-inkscape-font-specification:Bebas Neue"
+             xml:space="preserve"><tspan
+               id="tspan2995"
+               y="579.16754"
+               x="381.26855"
+               sodipodi:role="line">sciences manuelles du numerique</tspan></text>
+          <text
+             transform="scale(0.98822043,1.01192)"
+             sodipodi:linespacing="125%"
+             id="text2993"
+             y="588.07452"
+             x="385.60806"
+             style="font-size:13.31477547px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:GeosansLight;-inkscape-font-specification:GeosansLight Medium"
+             xml:space="preserve"><tspan
+               y="588.07452"
+               x="385.60806"
+               id="tspan2996"
+               sodipodi:role="line">DECONSTRUIRE L'INFORMATIQUE POUR MIEUX LA COMPRENDRE</tspan></text>
+        </g>
+      </g>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.54330709;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 0,910.62989 0,875.19681"
+       id="path3386"
+       inkscape:path-effect="#path-effect3388"
+       inkscape:original-d="M 0,910.62989 0,875.19681"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.54330709;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 0,485.43304 0,449.99996"
+       id="path3386-5"
+       inkscape:path-effect="#path-effect3388-6"
+       inkscape:original-d="M 0,485.43304 0,449.99996"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
   </g>
 </svg>

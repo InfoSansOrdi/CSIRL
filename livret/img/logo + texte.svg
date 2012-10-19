@@ -27,16 +27,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2"
-     inkscape:cx="256.67438"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="328.16765"
      inkscape:cy="72.759664"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1280"
-     inkscape:window-height="785"
-     inkscape:window-x="0"
-     inkscape:window-y="15"
+     inkscape:window-width="1276"
+     inkscape:window-height="781"
+     inkscape:window-x="2"
+     inkscape:window-y="17"
      inkscape:window-maximized="0"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -55,7 +55,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -65,14 +65,14 @@
      id="layer1"
      transform="translate(-259.02659,-512.52653)">
     <g
-       id="g3005">
+       id="g3262">
       <path
          inkscape:connector-curvature="0"
          id="path3821"
          d="m 339.54261,656.33111 c 0.13301,-3.47363 0.29092,-17.58189 0.3509,-31.35167 l 0.10908,-25.03597 -38.61708,-10.10026 c -21.23939,-5.55515 -38.55761,-10.15971 -38.48494,-10.23239 0.0727,-0.0726 9.11363,-2.65035 20.09103,-5.72818 l 19.95889,-5.59604 0.1139,8.3112 0.11389,8.3112 2.20186,0.62899 c 1.21102,0.34595 8.59362,2.2822 16.40578,4.30276 l 14.20391,3.67377 0.8369,-1.06395 c 0.4603,-0.58517 6.632,-8.23845 13.71491,-17.00729 l 12.878,-15.94334 -13.36038,-3.33733 -13.36038,-3.33733 -2.13757,2.48071 c -1.17566,1.36439 -2.71203,3.11906 -3.41415,3.89926 l -1.27658,1.41855 -1.88126,-3.63992 c -1.71751,-3.32308 -1.9729,-3.62087 -2.93388,-3.421 -0.57894,0.1204 -15.64188,4.37699 -33.4732,9.45907 -17.83132,5.08207 -32.48113,9.17959 -32.55515,9.1056 -0.074,-0.074 8.08649,-9.20292 18.13447,-20.28649 l 18.26906,-20.15195 32.76991,-9.84869 c 31.5868,-9.49311 32.79168,-9.81972 33.37286,-9.04637 0.33162,0.44127 1.23491,2.04532 2.0073,3.56456 l 1.40436,2.76226 -12.37393,14.70216 c -6.80565,8.08619 -12.23724,14.82196 -12.07019,14.96836 0.16707,0.14641 7.83521,2.10788 17.04034,4.35884 l 16.7366,4.09264 0,1.78284 c 0,0.98056 -0.38396,14.81513 -0.85323,30.74348 l -0.85322,28.96066 -16.03689,21.32691 c -8.8203,11.7298 -16.31519,21.61112 -16.65534,21.95848 -0.54425,0.55581 -0.58942,-0.126 -0.37658,-5.68413 z"
          style="fill:#000000" />
       <g
-         id="g2999">
+         id="g3256">
         <text
            xml:space="preserve"
            style="font-size:30.31534386px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Bebas Neue;-inkscape-font-specification:Bebas Neue"
@@ -86,16 +86,16 @@
              id="tspan2995">sciences manuelles du numerique</tspan></text>
         <text
            xml:space="preserve"
-           style="font-size:14.34953594px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:GeosansLight;-inkscape-font-specification:GeosansLight Medium"
-           x="357.64984"
-           y="633.77679"
+           style="font-size:13.31477547px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:GeosansLight;-inkscape-font-specification:GeosansLight Medium"
+           x="385.60806"
+           y="588.07452"
            id="text2993"
            sodipodi:linespacing="125%"
-           transform="scale(1.0650202,0.93894936)"><tspan
+           transform="scale(0.98822043,1.01192)"><tspan
              sodipodi:role="line"
              id="tspan2996"
-             x="357.64984"
-             y="633.77679">DECONSTRUIRE L'INFORMATIQUE POUR MIEUX LA SAISIR</tspan></text>
+             x="385.60806"
+             y="588.07452">DECONSTRUIRE L'INFORMATIQUE POUR MIEUX LA COMPRENDRE</tspan></text>
       </g>
     </g>
   </g>
