@@ -53,3 +53,8 @@ court possible ? Ce problème d'optimisation aux applications innombrables nous
 permet d'introduire la notion de complexité pour classer les problèmes, et la
 recherche de solution optimale ou approchée.
 
+### Les 8 reines (en cours de développement)
+
+Comment placer huit reines sur un échiquier de sorte qu'aucune ne soit sur la
+trajectoire d'une autre ? La résolution de ce problème nous permet d'introduire
+les notions de récursivité et de back-tracking.
