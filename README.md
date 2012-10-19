@@ -21,10 +21,35 @@ nécessaires à la production du matériel pour les activités.
 Cette séance introduit quelques principes fondamentaux de l'algorithmique au
 travers de quatre activités
 
-- *Jeu de Nim* : notion d'algorithme comme stratégie gagnante pour résoudre un
-  problème.
-- *Crêpier psycho-rigide* : formalisation et performance d'un algorithme.
-- *Baseball multicolore* : correction d'un algorithme.
-- *Plus court chemin* : complexité des problèmes, solution optimale et solution
-  approchée.
+### Le jeu de Nim
+
+Deux joueurs ramassent tour à tour 1, 2 ou 3 allumettes sur une table. Celui
+qui prend la dernière à gagné. A travers ce jeu bien connu, nous introduisons
+la notion d'algorithme comme stratégie gagnante pour résoudre un problème.
+
+### Le crêpier psycho-rigide
+
+Ce problème de tri assez simple nous permet d'introduire la notion de
+formalisation d'algorithme. En effet, un algorithme n'est utile que si on peut
+l'expliquer à un ordinateur. Le but de l'exercice est donc de trouver la
+solution au problème, puis de l'exprimer étape par étape, de manière
+rigoureuse. Au passage, c'est aussi l'occasion d'introduire la notion de
+performance en calculant le nombre d'étapes nécessaires à résoudre un problème
+de taille N.
+
+### Le baseball multicolore
+
+Des joueurs de couleur se déplacent pour rejoindre la base de leur couleur en
+tournant autour du terrain. Il existe diverses méthodes pour résoudre le
+problème, mais comment être sûr qu'une méthode donnée est correcte ? Cette
+activité introduit la notion de correction d'algorithme, et les moyens utilisés
+par les chercheurs en informatique pour la prouver.
+
+### Plus court chemin
+
+Sur une planche à clous, on fait passer un fil une fois et une seule par chaque
+clou avant de revenir au point de départ. Comment trouver le chemin le plus
+court possible ? Ce problème d'optimisation aux applications innombrables nous
+permet d'introduire la notion de complexité pour classer les problèmes, et la
+recherche de solution optimale ou approchée.
 
