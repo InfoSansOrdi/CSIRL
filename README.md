@@ -16,18 +16,18 @@ d'aborder les notions fondamentales de manière cohérente et progressive.
 **SMN** est un projet libre : vous trouverez ici toutes les ressources
 nécessaires à la production du matériel pour les activités.
 
-## Séance algorithmique
+# Séance algorithmique
 
 Cette séance introduit quelques principes fondamentaux de l'algorithmique au
 travers de quatre activités
 
-### Le jeu de Nim
+## Le jeu de Nim
 
 Deux joueurs ramassent tour à tour 1, 2 ou 3 allumettes sur une table. Celui
 qui prend la dernière à gagné. A travers ce jeu bien connu, nous introduisons
 la notion d'algorithme comme stratégie gagnante pour résoudre un problème.
 
-### Le crêpier psycho-rigide
+## Le crêpier psycho-rigide
 
 Ce problème de tri assez simple nous permet d'introduire la notion de
 formalisation d'algorithme. En effet, un algorithme n'est utile que si on peut
@@ -37,7 +37,7 @@ rigoureuse. Au passage, c'est aussi l'occasion d'introduire la notion de
 performance en calculant le nombre d'étapes nécessaires à résoudre un problème
 de taille N.
 
-### Le baseball multicolore
+## Le baseball multicolore
 
 Des joueurs de couleur se déplacent pour rejoindre la base de leur couleur en
 tournant autour du terrain. Il existe diverses méthodes pour résoudre le
@@ -45,7 +45,7 @@ problème, mais comment être sûr qu'une méthode donnée est correcte ? Cette
 activité introduit la notion de correction d'algorithme, et les moyens utilisés
 par les chercheurs en informatique pour la prouver.
 
-### Plus court chemin
+## Plus court chemin
 
 Sur une planche à clous, on fait passer un fil une fois et une seule par chaque
 clou avant de revenir au point de départ. Comment trouver le chemin le plus
@@ -53,8 +53,19 @@ court possible ? Ce problème d'optimisation aux applications innombrables nous
 permet d'introduire la notion de complexité pour classer les problèmes, et la
 recherche de solution optimale ou approchée.
 
-### Les 8 reines (en cours de développement)
+## Les 8 reines (en cours de développement)
 
 Comment placer huit reines sur un échiquier de sorte qu'aucune ne soit sur la
 trajectoire d'une autre ? La résolution de ce problème nous permet d'introduire
 les notions de récursivité et de back-tracking.
+
+# Ressources
+
+- Vous trouverez les version PDF des différentes activités dans [la section
+  "downloads" de ce site](https://github.com/jcb/CSIRL/downloads).
+- Si vous souhaitez fabriquer vous-même un kit, [le répertoire
+  "supports"](https://github.com/jcb/CSIRL/tree/master/supports) contient
+quelques fichiers qui pourront vous aider, tels que des plans de découpe pour
+la fabrication des crêpes.
+- Des vidéos explicatives des activités produites par Inria seront bientôt
+  disponibles en ligne.
