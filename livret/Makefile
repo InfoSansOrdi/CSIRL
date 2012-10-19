@@ -9,6 +9,12 @@ CSIRL.pdf:
 CSIRL-couv.pdf: CSIRL.pdf
 	/usr/bin/pdfjam -o CSIRL-couv.pdf img/couverture.pdf 1 CSIRL.pdf 2-
 
+standalone:
+	/usr/bin/pdflatex baseball.tex
+	/usr/bin/pdflatex crepier.tex
+	/usr/bin/pdflatex nim.tex
+	/usr/bin/pdflatex tsp.tex
+
 clean:
 	rm -Rf *.log *~ *.toc *.bbl *.blg *.ps *.brf \
 	*.nav *.out *.snm *.vrb *.pag auto *.fdb_latexmk
