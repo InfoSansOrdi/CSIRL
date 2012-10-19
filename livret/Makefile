@@ -9,9 +9,6 @@ CSIRL.pdf:
 CSIRL-couv.pdf: CSIRL.pdf
 	/usr/bin/pdfjam -o CSIRL-couv.pdf img/couverture.pdf 1 CSIRL.pdf 2-
 
-CSIRL-pdf1.3.pdf: CSIRL-couv.pdf
-	gs -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -dSAFER -dCompatibilityLevel=1.3 -sOutputFile=CSIRL-pdf1.3.pdf CSIRL-couv.pdf
-
 clean:
 	rm -Rf *.log *~ *.toc *.bbl *.blg *.ps *.brf \
 	*.nav *.out *.snm *.vrb *.pag auto *.fdb_latexmk
