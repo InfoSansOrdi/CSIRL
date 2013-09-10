@@ -3,9 +3,6 @@ include LaTeX.mk
 
 default: SMN.pdf baseball.pdf crepier.pdf nim.pdf tsp.pdf
 
-couverture: SMN.pdf
-	/usr/bin/pdfjam -o SMN-couv.pdf img/couverture.pdf 1 SMN.pdf 2-
-
 standalone:
 	/usr/bin/pdflatex baseball.tex
 	/usr/bin/pdflatex crepier.tex
