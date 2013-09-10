@@ -1,16 +1,14 @@
 \chapter*{Le Base-ball multicolore}
 
-On dispose de quatre bases de couleurs différentes. Trois des bases sont
-associées à deux joueurs de la même couleur tandis que la dernière base n'est
-associée qu'à un seul joueur. 
-
-Le but du jeu est de déplacer les joueurs afin d'amener chaque joueur sur la
-base correspondant à sa couleur. Il y a cependant trois contraintes :
+On dispose de quatre bases de couleurs différentes, et deux joueurs associés à
+chaque base. Le but du jeu est de déplacer les joueurs afin d'amener chaque
+joueur sur la base correspondant à sa couleur. Il y a cependant trois
+contraintes :
 
 \begin{itemize}
 \item les bases sont disposées en cercle, et un joueur ne peut se déplacer que
-  vers les deux bases voisines (il ne peut pas traverser le terrain);
-\item on ne peut déplacer qu'un joueur à la fois;
+  vers les deux bases voisines (il ne peut pas traverser le terrain) ;
+\item on ne peut déplacer qu'un joueur à la fois ;
 \item chaque base a deux places, et un joueur ne peut se déplacer vers une base
   que si elle possède une place libre.
 \end{itemize}
@@ -88,17 +86,12 @@ l'infini.
 
 \section*{Deuxième algorithme}
 
-Notre premier algorithme étant faux, réfléchissons à un autre
-algorithme. 
+Notre premier algorithme étant faux, réfléchissons à un autre algorithme. 
 
-Plusieures approches seraient possibles, mais nous allons commencer par
-\textit{apprendre de nos échecs}. Puisque notre premier algorithme boucle parfois à
-l'infini, nous allons casser le cercle. Nous allons maintenant chercher un
-algorithme où l'on ne fera jamais de tour complet. C'est un choix de notre part,
-et si nous trouvons un tel algorithme, il sera valide.
-
-Pour cela, on coupe le cercle comme on couperait un collier.  Pour ne pas se
-tromper, on peut disposer les bases en ligne.
+Commençons par \textit{apprendre de nos échecs}. Notre premier algorithme boucle
+parfois à l'infini. Pour réparer cela, on pourrait s'interdire de faire un tour
+complet en coupant le cercle. Pour ne pas se tromper, cela revient à disposer
+les bases sur une ligne.
 
 % FIXME tikz ?
 \begin{center}

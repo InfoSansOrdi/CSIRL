@@ -1,26 +1,45 @@
 \chapter*{Le plus court chemin}
 
-Soit un ensemble de villes représenté par des clous plantés dans une planche de
-bois. Le but du jeu est de trouver le plus court chemin passant une fois et une
-seule par chaque ville et terminant sur la ville de départ. Pour représenter le
-chemin, on attache une ficelle à un clou et on la fait passer de clou en clou.
+Voici un problème à plusieurs millions! C'est très sérieux: résolvez ce
+problème, et vous serez riches et célèbres. Mais malheureusement, c'est un moyen
+plutôt compliqué de devenir riche.
 
-\begin{center}
-  \includegraphics[width=0.5\linewidth]{img/tsp.pdf}
-  \label{img:tsp}
-\end{center}
+\bigskip
+\begin{wrapfigure}{r}{0.4\linewidth}
+  \vspace{-\baselineskip}
+  \includegraphics[width=\linewidth]{img/electric_city.jpg}
+  \vspace{-2\baselineskip}
+  \label{img:electric:city}
+\end{wrapfigure}
+%\begin{center}
+%\end{center}
+
+Imaginez que vous fabriquiez des circuits électroniques, comme des téléviseurs.
+Pour souder les compsants sur le circuit, il faut percer des trous dans votre
+plaque de PCB. Pour cela, un robot doté d'une perceuse va d'un emplacement à
+l'autre pour faire les trous.
+
+\medskip
+On sent bien que si on s'y prend mal, la tête fait trop de déplacements et perd
+du temps, donc de l'argent. En revanche, on voit beaucoup moins bien comment
+trouver le meilleur chemin possible\ldots
 
 \encart{Matériel}{
   \begin{itemize}
-  \item Une planche avec des trous au hasard,
-  \item autant de longs clous que de trous,
-  \item une ficelle suffisamment longue et \textbf{qui ne soit pas élastique},
-  \item un marqueur.
+  \item Une planche plantée de clous, disposés au hasard,
+%  \item autant de longs clous que de trous,
+  \item une ficelle suffisamment longue (et pas trop élastique),%\textbf{qui ne soit pas élastique},
+  \item un marqueur (pour marquer sur la ficelle la longueur du chemin)
   \end{itemize}
 }
 
-Il existe un grand nombre de chemins possibles. Arriverez-vous à trouver le plus
-court ?
+Le but du jeu est de trouver le plus court chemin passant une fois et une seule
+par chaque clou et terminant sur le clou de départ (la perceuse doit être prête
+pour la prochaine plaque). On attache une ficelle à un clou et on fait passer la
+ficelle de clou en clou, en bouclant.
+
+\bigskip
+Parviendrez-vous à trouver le plus court chemin ?
 
 \newpage
 
