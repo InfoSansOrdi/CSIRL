@@ -1,47 +1,57 @@
 \chapter*{Les 8 reines}
 
-On dispose d'un échiquier de dimension $8 \times 8$, et de $8$ reines disposées sur celui-ci. Sachant qu'aux échecs une reine peut se déplacer en ligne, en colonne ou en diagonale, \textbf{comment disposer disposer les reines sur l'échiquier de sorte qu'aucune ne soit sur la trajectoire d'une autre ?} Et comment trouver toutes les solutions possibles à ce problème ?
+On dispose d'un échiquier de dimension $8 \times 8$, et de $8$ reines disposées
+sur celui-ci. Sachant qu'aux échecs une reine peut se déplacer en ligne, en
+colonne ou en diagonale, \textbf{comment disposer disposer les reines sur
+  l'échiquier de sorte qu'aucune ne soit sur la trajectoire d'une autre ?} Et
+comment trouver toutes les solutions possibles à ce problème ?
 
 \setchessboard{
     showmover=false
 }
 
 \begin{figure}[h!]
-    \centering
-    \chessboard[
-        addpieces=Qc3,
-        pgfstyle=straightmove,
-        linewidth=0.01em,
-        color=red,
-        markmoves={c3-c1,c3-c8,c3-a3,c3-h3},
-        markmoves={c3-h8,c3-a1,c3-a5,c3-e1},
-        addpieces=Qg5,
-        pgfstyle=straightmove,
-        linewidth=0.01em,
-        color=blue,
-        markmoves={g5-g1,g5-g8,g5-a5,g5-h5},
-        markmoves={g5-d8,g5-h4,g5-c1,g5-h6},
-    ]
+  \centering
+  \chessboard[
+    addpieces=Qc3,
+    pgfstyle=straightmove,
+    linewidth=0.01em,
+    color=red,
+    markmoves={c3-c1,c3-c8,c3-a3,c3-h3},
+    markmoves={c3-h8,c3-a1,c3-a5,c3-e1},
+    addpieces=Qg5,
+    pgfstyle=straightmove,
+    linewidth=0.01em,
+    color=blue,
+    markmoves={g5-g1,g5-g8,g5-a5,g5-h5},
+    markmoves={g5-d8,g5-h4,g5-c1,g5-h6},
+  ]
 \end{figure}
 
 \encart{Matériel}{
-    \begin{itemize}
-        \item Un plateau quadrillé (on peut le dessiner sur une feuille) ;
-        \item 8 pièces à poser sur le plateau pour représenter les reines.
-    \end{itemize}
+  \begin{itemize}
+  \item Un plateau quadrillé (on peut le dessiner sur une feuille) ;
+  \item 8 pièces à poser sur le plateau pour représenter les reines.
+  \end{itemize}
 }
 
 \newpage
 
 \section*{Dimension du problème}
 
-Pour se faire une idée de la dimension du problème, calculons le nombre de configurations possibles pour 8 reines sur un échiquier :
+Pour se faire une idée de la dimension du problème, calculons le nombre de
+configurations possibles pour 8 reines sur un échiquier :
 
 \begin{equation}
     \frac{64!}{(64-8)! \times 8!} = 4426165368
 \end{equation}
 
-Nous sommes donc à la recherche de quelques solutions parmi plus de 4 milliards de configurations possibles. Comme souvent, la solution stupide est de tester toutes les configurations pour trouver les solutions. Dans un cas comme celui-ci, un ordinateur sera assez puissant pour résoudre le problème en un temps acceptable. En revanche, cette approche est exclue pour un humain. Nous allons donc devoir procéder d'une manière plus intelligente ...
+Nous sommes donc à la recherche de quelques solutions parmi plus de 4 milliards
+de configurations possibles. Comme souvent, la solution stupide est de tester
+toutes les configurations pour trouver les solutions. Dans un cas comme
+celui-ci, un ordinateur sera assez puissant pour résoudre le problème en un
+temps acceptable. En revanche, cette approche est exclue pour un humain. Nous
+allons donc devoir procéder d'une manière plus intelligente ...
 
 \section*{Résolution récursive}
 
