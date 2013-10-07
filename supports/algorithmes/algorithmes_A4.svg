@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="173.95028"
-     inkscape:cy="713.75057"
+     inkscape:cx="175.97059"
+     inkscape:cy="188.47124"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -62,7 +62,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -86,7 +86,7 @@
              width="179.24606"
              id="rect4209-2" /></flowRegion><flowPara
            style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Sans;-inkscape-font-specification:Sans"
-           id="flowPara4211-5">Version: 20131005</flowPara></flowRoot>      <rect
+           id="flowPara4211-5">Version: 20131007</flowPara></flowRoot>      <rect
          y="304.09448"
          x="-903.54333"
          height="141.73228"
@@ -285,8 +285,9 @@
              x="25.606581"
              height="27.344261"
              width="371.49432"
-             id="rect4217-4-9" /></flowRegion><flowPara
-           style="font-size:16px;fill:#000080"
+             id="rect4217-4-9"
+             style="fill:#000000" /></flowRegion><flowPara
+           style="font-size:16px;fill:#000000"
            id="flowPara4219-2-8">http://www.loria.fr/~quinson/Mediation/SMN/</flowPara></flowRoot>      <g
          transform="matrix(0.84359431,0,0,0.84359431,-632.94941,-969.88189)"
          id="g3441-7">
@@ -439,7 +440,7 @@
              width="179.24606"
              id="rect4209-2-4" /></flowRegion><flowPara
            style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Sans;-inkscape-font-specification:Sans"
-           id="flowPara4211-5-2">Version: 20131005</flowPara></flowRoot>      <rect
+           id="flowPara4211-5-2">Version: 20131007</flowPara></flowRoot>      <rect
          y="304.09448"
          x="-903.54333"
          height="141.73228"
@@ -638,8 +639,9 @@
              x="25.606581"
              height="27.344261"
              width="371.49432"
-             id="rect4217-4-9-1" /></flowRegion><flowPara
-           style="font-size:16px;fill:#000080"
+             id="rect4217-4-9-1"
+             style="fill:#000000" /></flowRegion><flowPara
+           style="font-size:16px;fill:#000000"
            id="flowPara4219-2-8-9">http://www.loria.fr/~quinson/Mediation/SMN/</flowPara></flowRoot>      <g
          transform="matrix(0.84359431,0,0,0.84359431,-632.94941,-969.88189)"
          id="g3441-7-4">
