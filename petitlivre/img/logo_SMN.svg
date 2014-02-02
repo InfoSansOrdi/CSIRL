@@ -28,7 +28,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4142136"
-     inkscape:cx="330.99607"
+     inkscape:cx="332.41028"
      inkscape:cy="72.759663"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -55,7 +55,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -83,7 +83,7 @@
              sodipodi:role="line"
              x="381.26855"
              y="579.16754"
-             id="tspan2995">sciences manuelles du numerique</tspan></text>
+             id="tspan2995">sciences manuelles du numérique</tspan></text>
         <text
            xml:space="preserve"
            style="font-size:13.31477547px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:GeosansLight;-inkscape-font-specification:GeosansLight Medium"
@@ -95,7 +95,7 @@
              sodipodi:role="line"
              id="tspan2996"
              x="385.60806"
-             y="588.07452">DECONSTRUIRE L'INFORMATIQUE POUR MIEUX LA COMPRENDRE</tspan></text>
+             y="588.07452">DÉCONSTRUIRE L'INFORMATIQUE POUR MIEUX LA COMPRENDRE</tspan></text>
       </g>
     </g>
   </g>
