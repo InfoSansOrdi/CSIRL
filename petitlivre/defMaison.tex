@@ -17,18 +17,20 @@
   #2
 \end{tikzpicture} }
 \newcommand{\maisonImpair}[5]{ \begin{tikzpicture}
-  \node[name=m,shape=regular polygon,regular polygon sides=#3,
-        minimum size=24mm, inner sep=0pt]{};
-  \node[name=b,shape=regular polygon,regular polygon sides=#4,minimum size=14mm]{};
+  \node[name=m,shape=regular polygon,regular polygon sides=#3,minimum size=18mm, inner sep=0pt]{};
+  \node[name=b,shape=regular polygon,regular polygon sides=#4,minimum size=12mm]{};
   \foreach \base/\maison in {#5} {
     \draw[shift=(m.corner \base)]
-       node[shape=ellipse,fill=\maison,draw=black,rotate=(360/#3)*(\base-1)] {~~};
+       node[shape=ellipse,fill=\maison,draw=black,rotate=(360/#3)*(\base-1),name=m \base] {~~~~~};
   }
   \foreach \base/\maison in {#1} {
     \draw[shift=(b.corner \base)]
        node[shape=circle,fill=\maison,draw=black,inner sep=.1] {~~~};
   }
   \foreach \bb in {1,...,#4} {\draw[shift=(b.corner \bb)] node[name=bb \bb] {};}
+
+
+
 %  \foreach \bb in {1,...,#4} {\draw[shift=(b.corner \bb)] node[name=bb \bb]{\tiny\bb};}%debug the bonshommes names
   #2
 \end{tikzpicture} }

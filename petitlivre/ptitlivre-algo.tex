@@ -141,12 +141,12 @@ pion veut rejoindre sa base.
 
 %\vspace{-.5\baselineskip}
 \begin{minipage}{.5\linewidth}\center
-  \maisonQuatre{2/B,3/A, 5/D, 8/B,9/C, 11/D,12/A} {}
+  \maisonCinq{1/A,2/B, 5/E,6/C,   9/D, 13/B,14/A, 17/C,18/D} {}
 
  \textbf{Situation initiale} 
 \end{minipage}~
 \begin{minipage}{.5\linewidth}\center
-  \maisonQuatre{2/A,3/A, 5/B,6/B, 8/C,9/C, 11/D}{}
+  \maisonCinq{1/A,2/A, 5/B,6/B, 9/C,10/C, 13/D,14/D, 17/E}{}
 
   \textbf{Situation finale}
 \end{minipage}
@@ -156,25 +156,28 @@ pion veut rejoindre sa base.
 entre deux bases pleines.
 
 \begin{minipage}{.5\linewidth}\center
-  \maisonQuatre{2/B,3/A, 5/D, 8/B,9/C, 11/D,12/A}
-                {
-                  \draw[->,ultra thick,draw=black!10!green] (bb 2) -> (bb 6);
-                  \draw[->,ultra thick,draw=black!10!green] (bb 3) -> (bb 6);
-                  \draw[->,ultra thick,draw=black!10!green] (bb 9) -> (bb 6);
-                  \draw[->,ultra thick,draw=black!10!green] (bb 8) -> (bb 6);}
+  \maisonCinq{1/A,2/B, 5/E,6/C,   9/D, 13/B,14/A, 17/C,18/D}
+             {
+                  \draw[->,ultra thick,draw=black!10!green] (bb 5) .. controls (0pt,0pt).. (bb 10);
+                  \draw[->,ultra thick,draw=black!10!green] (bb 6) .. controls (0pt,0pt).. (bb 10);
+                  \draw[->,ultra thick,draw=black!10!green] (bb 13) .. controls (0pt,0pt).. (bb 10);
+                  \draw[->,ultra thick,draw=black!10!green] (bb 14) .. controls (0pt,0pt).. (bb 10);}
 
   \textbf{Coups autorisés}
 \end{minipage}~\begin{minipage}{.5\linewidth}\center
-  \maisonQuatre{2/B,3/A, 5/D, 8/B,9/C, 11/D,12/A}
-               { \draw[->,ultra thick,draw=red] (bb 11) -> (bb 6);
-                 \draw[->,ultra thick,draw=red] (bb 12) -> (bb 6);
-                 \draw[->,ultra thick,draw=red] (bb 12) -> (bb 2);
-                 \draw[->,ultra thick,draw=red] (bb 2) -> (bb 12);
-                 \draw[->,ultra thick,draw=red] (bb 5) -> (bb 3);
-                 \draw[->,ultra thick,draw=red] (bb 5)
-                       .. controls (0pt,0pt) .. (bb 8);
-                 \draw[->,ultra thick,draw=red] (bb 11) -> (bb 9);
-                 \draw[->,ultra thick,draw=red] (bb 9) -> (bb 11);
+  \maisonCinq{1/A,2/B, 5/E,6/C,   9/D, 13/B,14/A, 17/C,18/D}{
+    % Des marqueurs pour faire des fleches en rond
+    \node[name=c,shape=regular polygon,regular polygon sides=5,rotate=72*4,minimum size=12mm]{};
+    \foreach \cc in {1,...,5} {\draw[shift=(c.corner \cc)] node[name=cc \cc] {};}
+
+    \draw[<->,ultra thick,draw=red,bend left=45] (cc 1) -- (cc 2);
+    \draw[<->,ultra thick,draw=red,bend left=45] (cc 2) -- (cc 3);
+    \draw[<->,ultra thick,draw=red,bend left=45] (cc 5) -- (cc 1);
+
+    \draw[<->,ultra thick,draw=red,bend left=45] (cc 3) -- (cc 1);
+    \draw[<->,ultra thick,draw=red,bend left=45] (cc 2) -- (cc 5);
+    \draw[<->,ultra thick,draw=red,bend left=45] (cc 1) -- (cc 4);
+    \draw[<->,ultra thick,draw=red,bend left=45] (cc 4) -- (cc 2);
                 }
 
   \textbf{Coups interdits}
