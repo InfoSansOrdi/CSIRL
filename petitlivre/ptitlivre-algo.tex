@@ -37,7 +37,7 @@ l'informatique
 \begin{minipage}{.8\linewidth}
   \begin{spacing}{.5}
     \hbox to \linewidth{\tiny~\hfill Vous pouvez copier, modifier et diffuser librement ce document,}
-    \hbox to \linewidth{\tiny~\hfill à condition de laisser ces mêmes droits à vos lecteurs.}
+    \hbox to \linewidth{\tiny~\hfill à la seule condition de laisser ces mêmes droits à vos lecteurs.}
   \end{spacing}
 \end{minipage}%
 ~
@@ -151,9 +151,9 @@ pion veut rejoindre sa base.
   \textbf{Situation finale}
 \end{minipage}
 
-À chaque coup, l'emplacement vide est occupé par un pion d'une
+À chaque coup, la place vide est occupée par un pion d'une
 \textbf{base voisine}, sans traverser le terrain. On n'échange pas
-entre deux bases pleines.
+entre deux bases pleines. On a 4 possibilités.
 
 \begin{minipage}{.5\linewidth}\center
   \maisonCinq{1/C,2/B, 5/E,6/C,   9/D, 13/B,14/A, 17/A,18/D}
@@ -178,6 +178,7 @@ entre deux bases pleines.
     \draw[<->,ultra thick,draw=red,bend left=45] (cc 2) -- (cc 5);
     \draw[<->,ultra thick,draw=red,bend left=45] (cc 1) -- (cc 4);
     \draw[<->,ultra thick,draw=red,bend left=45] (cc 4) -- (cc 2);
+    \draw[<->,ultra thick,draw=red,bend left=45] (cc 5) -- (cc 3);
   }
   \textbf{Coups interdits}
 \end{minipage}
@@ -201,17 +202,81 @@ souvent\footnote{Il fonctionne dans presque toutes les situations
   initiales où aucun pion n'est dans sa base: 100\% à 4 bases, 98,7\%
   à 5 bases et 97,8\% à 6 bases.} mais pas tout le temps.
 
-\begin{minipage}{.4\linewidth}
-  \maisonCinq{1/A,2/A, 5/D,6/B, 9/C,10/C, 13/B,14/D, 17/E}{}    
+\begin{minipage}{.36\linewidth}
+  \maisonCinq{1/A,2/A, 5/D,6/B, 9/C,10/C, 13/B,14/D, 17/E}{
+    % Flèche en rond
+    \draw[ultra thick] (0,0) circle (3mm);
+    \draw[ultra thick,rotate=5*72] (3mm,0) -- +(-.15,-.08);
+    \draw[ultra thick,rotate=5*72] (3mm,0) -- +(.08,-.15);
+    \draw[fill=white,draw=white,rotate=5*72] (3mm,2.5pt) circle (2pt);
+  }
 \end{minipage}~
-\begin{minipage}{.6\linewidth}
-  Par exemple si on inverse deux pions sur le plateau trié,
-  l'algorithme de s'arrête jamais car les deux pions ne pourront
-  jamais se doubler.
+\begin{minipage}{.63\linewidth}
+  Par exemple si on inverse deux pions \pawn{B} et \pawn{D} sur le
+  plateau trié, l'algorithme de s'arrête jamais car les pions ne
+  pourront jamais se doubler.
+\end{minipage}
+
+\newpage
+\newcommand{\ligneMaison}[2]{
+  \begin{tikzpicture}
+    \foreach \x/\col in {#1} {
+      \draw (.55*\x,.5) node[shape=circle,fill=\col,draw=black,inner sep=.1] {~~~};
+    }
+    \foreach \x/\col in {#2} {
+      \draw (.55*\x,.25) node[shape=circle,fill=\col,draw=black,inner sep=.1] {~~~};
+    }
+    \foreach \x/\col in {1/A, 2/B, 3/C, 4/D, 5/E} {
+      \draw (.55*\x,-.25) node[shape=ellipse,fill=\col,draw=black,rotate=90] {~~~};
+    }
+  \end{tikzpicture}
+}
+\subsection*{Trouver un algorithme correct}
+\vspace{-.5\baselineskip}
+
+Pour éviter de tourner en boucle, on va couper le cercle entre
+\pawn{A} et \pawn{E} (on peut se refuser un mouvement valide si on
+veut).
+
+\begin{minipage}{.5\linewidth}
+  \centerline{\resizebox{!}{2.6\baselineskip}{
+    \maisonCinq{1/C,2/B, 5/E,6/C, 9/D, 12/B,13/A, 17/A,18/D}{
+      \draw[dashed,draw=red,ultra thick] (0,0) -- (.9,1.1);
+    }   
+  }}
+\end{minipage}~
+\begin{minipage}{.5\linewidth}
+  \ligneMaison{1/C, 2/E,      4/B, 5/A}
+              {1/B, 2/C, 3/D, 4/A, 5/D}
+
 \end{minipage}
 
 
-\newpage ~\vfill \centerline{(page 7 vide pour l'instant)} \vfill
+Ensuite, on cherche à résoudre peu à peu le problème (comme au
+crêpier): d'abord les \pawn{A}, puis \pawn{B}, puis \pawn{C},
+puis \pawn{D}, et enfin \pawn{E}.
+
+\vspace{-.8\baselineskip}
+\subsection*{Cet algorithme est correct}
+\vspace{-.5\baselineskip}
+
+On pourrait démontrer qu'il faut au plus N étapes pour ranger
+\pawn{A}, N pour \pawn{B}, etc.
+
+Mais on préfère constater qu'il s'agit du célèbre tri à bulle, que
+l'on sait correct.
+
+\vspace{-.8\baselineskip}
+\subsection*{C'est de l'informatique}
+\vspace{-.5\baselineskip}
+
+Il existe un catalogue d'algorithmes classiques enseignés en école
+d'informatique.
+
+Certains chercheurs en ajoutent au catalogue et démontrent qu'ils
+sont corrects.
+
+
 \newpage ~\vfill \centerline{(page 8 vide pour l'instant)} \vfill
 
 \end{document}
