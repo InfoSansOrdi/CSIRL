@@ -141,7 +141,7 @@ pion veut rejoindre sa base.
 
 %\vspace{-.5\baselineskip}
 \begin{minipage}{.5\linewidth}\center
-  \maisonCinq{1/A,2/B, 5/E,6/C,   9/D, 13/B,14/A, 17/C,18/D} {}
+  \maisonCinq{1/C,2/B, 5/E,6/C,   9/D, 13/B,14/A, 17/A,18/D} {}
 
  \textbf{Situation initiale} 
 \end{minipage}~
@@ -156,7 +156,7 @@ pion veut rejoindre sa base.
 entre deux bases pleines.
 
 \begin{minipage}{.5\linewidth}\center
-  \maisonCinq{1/A,2/B, 5/E,6/C,   9/D, 13/B,14/A, 17/C,18/D}
+  \maisonCinq{1/C,2/B, 5/E,6/C,   9/D, 13/B,14/A, 17/A,18/D}
              {
                   \draw[->,ultra thick,draw=black!10!green] (bb 5) .. controls (0pt,0pt).. (bb 10);
                   \draw[->,ultra thick,draw=black!10!green] (bb 6) .. controls (0pt,0pt).. (bb 10);
@@ -165,7 +165,7 @@ entre deux bases pleines.
 
   \textbf{Coups autorisés}
 \end{minipage}~\begin{minipage}{.5\linewidth}\center
-  \maisonCinq{1/A,2/B, 5/E,6/C,   9/D, 13/B,14/A, 17/C,18/D}{
+  \maisonCinq{1/C,2/B, 5/E,6/C,   9/D, 13/B,14/A, 17/A,18/D}{
     % Des marqueurs pour faire des fleches en rond
     \node[name=c,shape=regular polygon,regular polygon sides=5,rotate=72*4,minimum size=12mm]{};
     \foreach \cc in {1,...,5} {\draw[shift=(c.corner \cc)] node[name=cc \cc] {};}
@@ -178,12 +178,38 @@ entre deux bases pleines.
     \draw[<->,ultra thick,draw=red,bend left=45] (cc 2) -- (cc 5);
     \draw[<->,ultra thick,draw=red,bend left=45] (cc 1) -- (cc 4);
     \draw[<->,ultra thick,draw=red,bend left=45] (cc 4) -- (cc 2);
-                }
-
+  }
   \textbf{Coups interdits}
 \end{minipage}
 
-\newpage ~\vfill \centerline{(page 6 vide pour l'instant)} \vfill
+\newpage 
+\subsection*{Trouver un premier algorithme}
+\vspace{-.5\baselineskip}
+
+On arrive à ramener les pions chez eux, mais il est difficile
+d'expliquer comment.
+
+Il faut dire à l'ordinateur lequel des 4 coups possible faire à chaque
+fois.
+
+Une idée simple à expliquer est de tourner toujours dans le même sens
+(peu importe lequel) pour n'avoir que deux choix, puis de déplacer le
+pion des deux qui a le plus de chemin à faire jusqu'à sa base.
+
+Cet algorithme est simple, efficace \textbf{et faux}: il marche
+souvent\footnote{Il fonctionne dans presque toutes les situations
+  initiales où aucun pion n'est dans sa base: 100\% à 4 bases, 98,7\%
+  à 5 bases et 97,8\% à 6 bases.} mais pas tout le temps.
+
+\begin{minipage}{.4\linewidth}
+  \maisonCinq{1/A,2/A, 5/D,6/B, 9/C,10/C, 13/B,14/D, 17/E}{}    
+\end{minipage}~
+\begin{minipage}{.6\linewidth}
+  Par exemple si on inverse deux pions sur le plateau trié,
+  l'algorithme de s'arrête jamais car les deux pions ne pourront
+  jamais se doubler.
+\end{minipage}
+
 
 \newpage ~\vfill \centerline{(page 7 vide pour l'instant)} \vfill
 \newpage ~\vfill \centerline{(page 8 vide pour l'instant)} \vfill
