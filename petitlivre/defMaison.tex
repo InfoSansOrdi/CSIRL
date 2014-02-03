@@ -1,0 +1,53 @@
+\newcommand{\maisonPair}[5]{ \begin{tikzpicture}
+  \node[name=m,shape=regular polygon,regular polygon sides=#3,minimum size=18mm,rotate=(360/#3)]{};
+  \node[name=b,shape=regular polygon,regular polygon sides=#4,minimum size=12mm,rotate=(360/#4)/2]{};
+  \foreach \base/\maison in {#5} {
+    \draw[shift=(m.corner \base)]
+       node[shape=ellipse,fill=\maison,draw=black,rotate=((360/#3)*(\base-1))+(360/#3/2)] {~~~~~};
+  }
+  \foreach \bb in {1,...,#4} {
+    \draw[shift=(b.corner \bb)] node[name=bb \bb]{};
+  }
+  \foreach \base/\maison in {#1} {
+    \draw[shift=(b.corner \base)]
+       node[name=bb \base,shape=circle,fill=\maison,draw=black,inner sep=.1]
+       {~~~};
+%         {\footnotesize\base};
+  }
+  #2
+\end{tikzpicture} }
+\newcommand{\maisonImpair}[5]{ \begin{tikzpicture}
+  \node[name=m,shape=regular polygon,regular polygon sides=#3,
+        minimum size=24mm, inner sep=0pt]{};
+  \node[name=b,shape=regular polygon,regular polygon sides=#4,minimum size=14mm]{};
+  \foreach \base/\maison in {#5} {
+    \draw[shift=(m.corner \base)]
+       node[shape=ellipse,fill=\maison,draw=black,rotate=(360/#3)*(\base-1)] {~~};
+  }
+  \foreach \base/\maison in {#1} {
+    \draw[shift=(b.corner \base)]
+       node[shape=circle,fill=\maison,draw=black,inner sep=.1] {~~~};
+  }
+  \foreach \bb in {1,...,#4} {\draw[shift=(b.corner \bb)] node[name=bb \bb] {};}
+%  \foreach \bb in {1,...,#4} {\draw[shift=(b.corner \bb)] node[name=bb \bb]{\tiny\bb};}%debug the bonshommes names
+  #2
+\end{tikzpicture} }
+
+\newcommand{\maisonQuatre}[2]{\maisonPair{#1}{#2}{4}{12}{1/A,2/B,3/C,4/D}}
+\newcommand{\maisonCinq}[2]{\maisonImpair{#1}{#2}{5}{20}{1/A,2/B,3/C,4/D,5/E}}
+\newcommand{\maisonSix}[2]{\maisonPair{#1}{#2}{6}{24}{1/A,2/B,3/C,4/D,5/E,6/F}}
+\newcommand{\maisonSept}[2]{\maisonImpair{#1}{#2}{7}{28}{1/A,2/B,3/C,4/D,5/E,6/F,7/G}}
+
+\colorlet{A}{green!60}
+\colorlet{B}{red!80}
+\colorlet{C}{purple!40}
+\colorlet{D}{black!2!yellow}
+\colorlet{E}{blue!70}
+\colorlet{F}{orange!80}
+\colorlet{G}{olive}
+\colorlet{H}{magenta}
+\colorlet{I}{lime}
+\colorlet{J}{pink}
+
+\newcommand{\pawn}[1]{\tikz \draw node[shape=circle,fill=#1,draw=black,inner sep=.1] {~~~};}
+

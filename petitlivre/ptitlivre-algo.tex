@@ -6,7 +6,7 @@
 \usepackage{graphicx}
 \usepackage{tabularx}
 \usepackage{color}
-\usepackage{tikz}
+\usepackage{tikz}\usetikzlibrary{shapes.geometric}
 \usepackage{url}
 \usepackage{import,palatino}
 \usepackage{pdfpages,wrapfig,setspace}
@@ -132,20 +132,56 @@ avec la PLM, l'\textit{exerciseur de l'apprenti programmeur}.\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Le baseball multicolore}
+\input{defMaison.tex}
 
-Plusieurs bases sont disposées en cercle.\\
-Des bonhommes disposés autour veulent rejoindre leur base. 
-Il y a deux bonhommes par base, sauf une couleur avec un seul bonhomme et un emplacement vide.
+\vspace{-.5\baselineskip} %
+Plusieurs bases sont disposées en cercle.  Il y a deux pions par base,
+sauf une couleur avec un seul pion et un emplacement vide.  Chaque
+pion veut rejoindre sa base.
 
-\smallskip
-\centerline{\includegraphics[width=.7\linewidth]{img/baseball_but-du-jeu.pdf}}
+%\vspace{-.5\baselineskip}
+\begin{minipage}{.5\linewidth}\center
+  \maisonQuatre{2/B,3/A, 5/D, 8/B,9/C, 11/D,12/A} {}
 
-À chaque coup, le bonhomme d'une base \textbf{voisine} occupe l'emplacement
-libre. On ne traverse pas le terrain, on échange pas entre deux bases pleines.
+ \textbf{Situation initiale} 
+\end{minipage}~
+\begin{minipage}{.5\linewidth}\center
+  \maisonQuatre{2/A,3/A, 5/B,6/B, 8/C,9/C, 11/D}{}
 
-\centerline{\includegraphics[width=.4\linewidth]{img/baseball_un-coup.pdf}}
+  \textbf{Situation finale}
+\end{minipage}
+
+À chaque coup, l'emplacement vide est occupé par un pion d'une
+\textbf{base voisine}, sans traverser le terrain. On n'échange pas
+entre deux bases pleines.
+
+\begin{minipage}{.5\linewidth}\center
+  \maisonQuatre{2/B,3/A, 5/D, 8/B,9/C, 11/D,12/A}
+                {
+                  \draw[->,ultra thick,draw=black!10!green] (bb 2) -> (bb 6);
+                  \draw[->,ultra thick,draw=black!10!green] (bb 3) -> (bb 6);
+                  \draw[->,ultra thick,draw=black!10!green] (bb 9) -> (bb 6);
+                  \draw[->,ultra thick,draw=black!10!green] (bb 8) -> (bb 6);}
+
+  \textbf{Coups autorisés}
+\end{minipage}~\begin{minipage}{.5\linewidth}\center
+  \maisonQuatre{2/B,3/A, 5/D, 8/B,9/C, 11/D,12/A}
+               { \draw[->,ultra thick,draw=red] (bb 11) -> (bb 6);
+                 \draw[->,ultra thick,draw=red] (bb 12) -> (bb 6);
+                 \draw[->,ultra thick,draw=red] (bb 12) -> (bb 2);
+                 \draw[->,ultra thick,draw=red] (bb 2) -> (bb 12);
+                 \draw[->,ultra thick,draw=red] (bb 5) -> (bb 3);
+                 \draw[->,ultra thick,draw=red] (bb 5)
+                       .. controls (0pt,0pt) .. (bb 8);
+                 \draw[->,ultra thick,draw=red] (bb 11) -> (bb 9);
+                 \draw[->,ultra thick,draw=red] (bb 9) -> (bb 11);
+                }
+
+  \textbf{Coups interdits}
+\end{minipage}
 
 \newpage ~\vfill \centerline{(page 6 vide pour l'instant)} \vfill
+
 \newpage ~\vfill \centerline{(page 7 vide pour l'instant)} \vfill
 \newpage ~\vfill \centerline{(page 8 vide pour l'instant)} \vfill
 
