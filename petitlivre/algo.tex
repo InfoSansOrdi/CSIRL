@@ -21,7 +21,7 @@
 %  
 %\end{picture}\vspace{-2.5\baselineskip}
 \begin{center}
-  \textbf{\Large qu'est ce qu'un {\Huge Algorithme}}
+  \textbf{{\huge Les Algorithmes} \Large qu'est ce que c'est? }
   
   \includegraphics[width=.5\linewidth]{img/Hamiltonian_path.pdf}
 
@@ -123,7 +123,7 @@ Un algorithme, ce n'est pas forcément compliqué. Tout le monde peut en découv
 
 \smallskip
 Un ordinateur est très obéissant: il lui faut des instructions
-précises et sans ambiguïté.
+\textbf{précises}, \textbf{sans ambiguïté}.
 
 \vspace{-.5\baselineskip}
 \subsection*{Aller plus loin}
@@ -163,10 +163,10 @@ entre deux bases pleines. On a 4 possibilités.
 \begin{minipage}{.5\linewidth}\center
   \maisonCinq{1/C,2/B, 5/E,6/C,   9/D, 13/B,14/A, 17/A,18/D}
              {
-                  \draw[->,ultra thick,draw=black!10!green] (bb 5) .. controls (0pt,0pt).. (bb 10);
-                  \draw[->,ultra thick,draw=black!10!green] (bb 6) .. controls (0pt,0pt).. (bb 10);
-                  \draw[->,ultra thick,draw=black!10!green] (bb 13) .. controls (0pt,0pt).. (bb 10);
-                  \draw[->,ultra thick,draw=black!10!green] (bb 14) .. controls (0pt,0pt).. (bb 10);}
+                  \draw[->,thick,draw=black!10!green] (bb 5) .. controls (0pt,0pt).. (bb 10);
+                  \draw[->,thick,draw=black!10!green] (bb 6) .. controls (0pt,0pt).. (bb 10);
+                  \draw[->,thick,draw=black!10!green] (bb 13) .. controls (0pt,0pt).. (bb 10);
+                  \draw[->,thick,draw=black!10!green] (bb 14) .. controls (0pt,0pt).. (bb 10);}
 
   \textbf{Coups autorisés}
 \end{minipage}~\begin{minipage}{.5\linewidth}\center
@@ -175,15 +175,15 @@ entre deux bases pleines. On a 4 possibilités.
     \node[name=c,shape=regular polygon,regular polygon sides=5,rotate=72*4,minimum size=12mm]{};
     \foreach \cc in {1,...,5} {\draw[shift=(c.corner \cc)] node[name=cc \cc] {};}
 
-    \draw[<->,ultra thick,draw=red,bend left=45] (cc 1) -- (cc 2);
-    \draw[<->,ultra thick,draw=red,bend left=45] (cc 2) -- (cc 3);
-    \draw[<->,ultra thick,draw=red,bend left=45] (cc 5) -- (cc 1);
+    \draw[<->,thick,draw=red,bend left=45] (cc 1) -- (cc 2);
+    \draw[<->,thick,draw=red,bend left=45] (cc 2) -- (cc 3);
+    \draw[<->,thick,draw=red,bend left=45] (cc 5) -- (cc 1);
 
-    \draw[<->,ultra thick,draw=red,bend left=45] (cc 3) -- (cc 1);
-    \draw[<->,ultra thick,draw=red,bend left=45] (cc 2) -- (cc 5);
-    \draw[<->,ultra thick,draw=red,bend left=45] (cc 1) -- (cc 4);
-    \draw[<->,ultra thick,draw=red,bend left=45] (cc 4) -- (cc 2);
-    \draw[<->,ultra thick,draw=red,bend left=45] (cc 5) -- (cc 3);
+    \draw[<->,thick,draw=red,bend left=45] (cc 3) -- (cc 1);
+    \draw[<->,thick,draw=red,bend left=45] (cc 2) -- (cc 5);
+    \draw[<->,thick,draw=red,bend left=45] (cc 1) -- (cc 4);
+    \draw[<->,thick,draw=red,bend left=45] (cc 4) -- (cc 2);
+    \draw[<->,thick,draw=red,bend left=45] (cc 5) -- (cc 3);
   }
   \textbf{Coups interdits}
 \end{minipage}
@@ -285,9 +285,8 @@ sont corrects.
 \newpage
 \section*{C'est de l'informatique}
 \vspace{-.5\baselineskip} %
-En trois activités débranchées, nous avons découvert que les
-algorithmes sont simples et utiles. Les algorithmiciens en appliquent
-à la vie de tous les jours, méthodiquement.
+En fait, les algorithmes sont simples et très utiles. Nous en
+appliquons méthodiquement tout le temps, parfois sans le savoir.
 
 Les problèmes peuvent souvent être résolus par différents algorithmes.
 Mais pour certains problèmes, on ne connaît pas d'algorithme
@@ -301,7 +300,7 @@ Distinguer ce que les ordinateurs peuvent faire de la science fiction
 est indispensable, même pour les utilisateurs [avertis].
 
 Apprendre l'algorithmique ne se fait pas en une heure, mais il existe
-de nombreuses ressources libres en ligne pour cela.
+beaucoup ressources libres en ligne pour cela.
 
 L'\textit{exerciseur de l'apprenti programmeur}\\ explore
 ces notions de façon ludique.\\
