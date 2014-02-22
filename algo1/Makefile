@@ -1,9 +1,14 @@
-all: algo1-petitlivre.pdf algo1-supports.pdf
+all: algo1-petitlivre.pdf algo1-supports.pdf algo1-livret.pdf
 
 include LaTeX.mk
 
-# Fabrique le petit livre
-#########################
+# Fabrique le livret de l'animateur
+###################################
+
+# (bon, en fait, LaTeX.mk fait ça pour nous très bien)
+
+# Fabrique le petit livre du participant
+########################################
 
 algo1-petitlivre.pdf: algo1-petitlivre-page1.pdf algo1-petitlivre-page2.pdf
 	pdfjoin algo1-petitlivre-page1.pdf algo1-petitlivre-page2.pdf --outfile algo1-petitlivre.pdf
