@@ -1,0 +1,31 @@
+%!TEX encoding = UTF-8 Unicode
+%!TEX root = ../fiche.tex
+
+\begin{tikzpicture}
+
+% define base units ------------------------------------------------------------
+	\def\delta{1/10}
+
+% draw grid --------------------------------------------------------------------
+	\draw[step=1, gray, very thin] (-1,-1) grid (11,7);
+
+% draw rectangles --------------------------------------------------------------
+	\def\rect{
+%		coord_x / coord_y / size_x /size_y
+		0 / 0 / 1 / 2,
+		0 / 2 / 5 / 2,
+		0 / 4 / 4 / 1,
+		0 / 5 / 5 / 1,
+		1 / 0 / 4 / 2,
+		4 / 4 / 1 / 1,
+		5 / 0 / 3 / 3,
+		5 / 3 / 5 / 3,
+		8 / 0 / 2 / 3
+	}
+	\foreach \x / \y / \sx / \sy in \rect
+	{
+		\draw[thick] (\x,\y) rectangle +(\sx,\sy);
+		\fill (\x+1.2\delta,\y+\sy-1.2\delta) circle (0.5\delta);
+	}
+
+\end{tikzpicture}

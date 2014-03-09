@@ -1,0 +1,103 @@
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt,final,french]{article}	% mettre la langue principale en dernier
+
+
+%------------------------------------------------------------------------------+
+%    ENCODAGE                                                                  |
+%------------------------------------------------------------------------------+
+
+% format de sauvegarde -----------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+
+
+%------------------------------------------------------------------------------+
+%    MISE EN PAGE DU DOCUMENT                                                  |
+%------------------------------------------------------------------------------+
+
+% taille des pages (A4 serré) ----------
+\usepackage{geometry}
+\geometry{a4paper}
+\geometry{margin=10mm} % change marges par défaut
+
+% i18n ---------------------------------
+\usepackage{babel}
+\usepackage{isodate}
+
+% figures ------------------------------
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\graphicspath{{./img/}}
+\usetikzlibrary{patterns, shapes.geometric}
+
+% fond de la fiche ---------------------
+%\usepackage{background}
+%\backgroundsetup{
+%	scale=1,
+%	contents={
+%		\includegraphics[height=\textheight]{background_right}
+%	}
+%}
+
+%------------------------------------------------------------------------------+
+%    MACROS                                                                    |
+%------------------------------------------------------------------------------+
+
+% macros génériques --------------------
+\newcommand{\cleardoubleemptypage}{\newpage{\pagestyle{empty}\cleardoublepage}}
+\newcommand{\shell}[1]{\texttt{#1}}
+\newcommand{\fixme}{\shell{/!\textbackslash~FIXME~/!\textbackslash}}
+
+%------------------------------------------------------------------------------+
+%    DOCUMENT                                                                  |
+%------------------------------------------------------------------------------+
+\begin{document}
+
+\pagestyle{empty}	% numérotation cachée sur les premières pages
+
+\begin{center}
+	~
+	\vfill
+	\resizebox{0.9\textwidth}{!}{\input{square_packing_sol1}}
+	\vfill
+	\resizebox{0.9\textwidth}{!}{\input{square_packing_sol2}}
+	\vfill
+	~
+\end{center}
+
+\clearpage
+
+\begin{center}
+	~
+	\vfill
+	\resizebox{0.9\textwidth}{!}{\input{triangle_packing}}
+	\vfill
+	~
+\end{center}
+
+\clearpage
+
+\begin{center}
+	~
+	\vfill
+	\resizebox{0.9\textwidth}{!}{\input{star_packing}}
+	\vfill
+	~
+\end{center}
+
+\clearpage
+
+\begin{center}
+	~
+	\vfill
+	\resizebox{0.9\textwidth}{!}{\input{circle_packing}}
+	\vfill
+	~
+\end{center}
+
+\clearpage
+
+\end{document}
