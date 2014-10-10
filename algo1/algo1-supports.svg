@@ -14,10 +14,63 @@
    height="524.40942"
    id="svg3173"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
-   sodipodi:docname="algorithmes_A5.svg">
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="algo1-supports.svg">
   <defs
-     id="defs3175" />
+     id="defs3175">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mend"
+       style="overflow:visible;">
+      <path
+         id="path3828"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Mend"
+       style="overflow:visible;">
+      <path
+         id="path3846"
+         style="fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.6) rotate(180) translate(0,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;">
+      <path
+         id="path3822"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lend"
+       style="overflow:visible;">
+      <path
+         id="path3840"
+         style="fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(1.1) rotate(180) translate(1,0)" />
+    </marker>
+  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -25,24 +78,25 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="319.52776"
-     inkscape:cy="295.45234"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="731.87252"
+     inkscape:cy="413.46052"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:window-width="1920"
-     inkscape:window-height="993"
+     inkscape:window-height="1027"
      inkscape:window-x="0"
-     inkscape:window-y="27"
-     inkscape:window-maximized="1">
+     inkscape:window-y="31"
+     inkscape:window-maximized="1"
+     inkscape:snap-from-guide="false">
     <inkscape:grid
        type="xygrid"
        id="grid3357"
        empspacing="5"
-       visible="true"
-       enabled="true"
-       snapvisiblegridlinesonly="true"
+       visible="false"
+       enabled="false"
+       snapvisiblegridlinesonly="false"
        units="mm"
        spacingx="9.5mm"
        spacingy="9.5mm"
@@ -79,7 +133,7 @@
            y="124.42849"
            style="font-size:10px" /></flowRegion><flowPara
          id="flowPara4211"
-         style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Sans;-inkscape-font-specification:Sans">Version: 20131007</flowPara></flowRoot>    <rect
+         style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Sans;-inkscape-font-specification:Sans">Version: 20141010</flowPara></flowRoot>    <rect
        style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-width:3.3661418;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect2999-0-5"
        width="336.61417"
@@ -413,5 +467,28 @@
        x="-506.6929"
        y="-1038.1888"
        transform="scale(-1,-1)" />
+    <g
+       id="g5945"
+       transform="matrix(0.8,0,0,0.8,775.79789,492.1583)">
+      <path
+         transform="translate(209.34498,704.09898)"
+         d="m -309.03291,-54.635031 c -4.01187,14.065336 -19.12261,22.463028 -33.18609,18.449342 -14.07001,-4.015552 -22.47047,-19.132097 -18.45417,-33.201085 4.01762,-14.073594 19.13843,-22.476116 33.21133,-18.458114 3.42926,0.979103 6.65392,2.645933 9.43586,4.877368"
+         sodipodi:t0="0.32842529"
+         sodipodi:argument="-8.5040598"
+         sodipodi:radius="26.871956"
+         sodipodi:revolution="1.2110775"
+         sodipodi:expansion="0.001"
+         sodipodi:cy="-62.0079"
+         sodipodi:cx="-334.84253"
+         id="path3045"
+         style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none"
+         sodipodi:type="spiral" />
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4819"
+         d="m -124.87401,614.25188 19.66141,10"
+         style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend)" />
+    </g>
   </g>
 </svg>
