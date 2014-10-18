@@ -78,9 +78,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8284271"
-     inkscape:cx="731.87252"
-     inkscape:cy="413.46052"
+     inkscape:zoom="2"
+     inkscape:cx="391.06792"
+     inkscape:cy="449.65786"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -133,7 +133,7 @@
            y="124.42849"
            style="font-size:10px" /></flowRegion><flowPara
          id="flowPara4211"
-         style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Sans;-inkscape-font-specification:Sans">Version: 20141010</flowPara></flowRoot>    <rect
+         style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Sans;-inkscape-font-specification:Sans">Version: 20141018</flowPara></flowRoot>    <rect
        style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-width:3.3661418;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect2999-0-5"
        width="336.61417"
@@ -326,7 +326,7 @@
        xml:space="preserve"
        id="flowRoot4213-3"
        style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       transform="matrix(0.95,0,0,0.95,46.192903,617.45817)"><flowRegion
+       transform="matrix(0.95,0,0,0.95,94.192903,617.45817)"><flowRegion
          id="flowRegion4215-4"><rect
            id="rect4217-4"
            width="371.49432"
@@ -335,7 +335,7 @@
            y="125.64785"
            style="fill:#000000" /></flowRegion><flowPara
          id="flowPara4219-2"
-         style="font-size:16px;fill:#000000">http://www.loria.fr/~quinson/Mediation/SMN/</flowPara></flowRoot>    <g
+         style="font-size:16px;fill:#000000">http://www.loria.fr/~quinson/SMN/</flowPara></flowRoot>    <g
        id="g3419"
        transform="matrix(0.84359431,0,0,0.84359431,266.31043,-355.51976)">
       <g
