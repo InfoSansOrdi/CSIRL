@@ -16,16 +16,17 @@
 ** binaire :
 *** chevalet binaire : une série de rangée où on pose des jetons 1 0 et
     opérations (+ - ×), on doit pouvoir jour sur les deux faces des jetons pour
-    mettre en place un système d'auto-correction ; cf. prototype de Loïc
+    mettre en place un système d'auto-correction ; cf. prototype de Loïc ici :
+    http://wiki.nybi.cc/index.php/ChevaletBinaire
 *** ou alors des cartes ordonnées ayant des points (représentant un bit en fait) 
     pour écrire des nombres. Il faut écrire des entiers avec ces cartes. On
     peut imaginer donner des correspondance binaire<->lettres et faire
     coder/décoder un message
-** image : un enfant  définit une image sur un cadran avec des jetons bicolores 
-   (1 jeton = 1 "pixel"). Un enfant tourne le dos et doit reproduire ce que son
-   camarade lui dicte. À la fin, on vérifie les erreurs. On leur demande
-   d'aller vite, ils doivent donc trouver des stratégies pour encoder
-   l'information efficacement : pixel par pixel, couleur+nombre, etc.
+** image : (« le boolier ») un enfant  définit une image sur un cadran avec des 
+   jetons bicolores (1 jeton = 1 "pixel"). Un enfant tourne le dos et doit 
+   reproduire ce que son camarade lui dicte. À la fin, on vérifie les erreurs. 
+   On leur demande d'aller vite, ils doivent donc trouver des stratégies pour 
+   encoder l'information efficacement : pixel par pixel, couleur+nombre, etc.
    ex sur une image Rouge/Noir :
    R R N N N R N R N R R R N R R R R R
    vs
@@ -49,3 +50,4 @@
 ** reprendre l'activité de Véronique Cortier
 * reprendre l'activité chou/chèvre/loup, mais je ne me souviens plus bien de
   l'objet de l'activité
+* faire une machine de turing avec un bandeau flexible, un curseur, etc. 
