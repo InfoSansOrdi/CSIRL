@@ -1,30 +1,32 @@
-\newcommand{\maisonPair}[5]{ \begin{tikzpicture}
-  \node[name=m,shape=regular polygon,regular polygon sides=#3,minimum size=18mm,rotate=(360/#3)]{};
-  \node[name=b,shape=regular polygon,regular polygon sides=#4,minimum size=12mm,rotate=(360/#4)/2]{};
+
+\newcommand{\maisonPair}[5]{ 
+  \node[name=#1 m,at=(#1.base),shape=regular polygon,thin,regular polygon sides=#3,minimum size=8.5mm,rotate=(360/#3)] {};
+  \node[name=#1 b,at=(#1.base),shape=regular polygon,thin,regular polygon sides=#4,minimum size=15mm,rotate=(360/#4)/2]{};
   \foreach \base/\maison in {#5} {
-    \draw[shift=(m.corner \base)]
-       node[shape=ellipse,fill=\maison,draw=black,rotate=((360/#3)*(\base-1))+(360/#3/2)] {~~~~~};
+    \draw[shift=(#1 m.corner \base)]
+       node[shape=ellipse,fill=\maison,draw=black,thin,rotate=((360/#3)*(\base-1))+(360/#3/2)]
+           {~~~};
   }
   \foreach \bb in {1,...,#4} {
-    \draw[shift=(b.corner \bb)] node[name=bb \bb]{};
+    \draw[shift=(#1 b.corner \bb)] node[name=bb \bb]{};
   }
-  \foreach \base/\maison in {#1} {
-    \draw[shift=(b.corner \base)]
-       node[name=bb \base,shape=circle,fill=\maison,draw=black,inner sep=.1]
-       {~~~};
-%         {\footnotesize\base};
+  \foreach \base/\maison in {#2} {
+    \draw[shift=(#1 b.corner \base)]
+       node[name=bb \base,shape=circle,fill=\maison,thin,draw=\maison,inner sep=.1]
+           {~~~};
   }
-  #2
-\end{tikzpicture} }
+}
+
+
 \newcommand{\maisonImpair}[5]{ \begin{tikzpicture}
-  \node[name=m,shape=regular polygon,regular polygon sides=#3,minimum size=18mm, inner sep=0pt]{};
-  \node[name=b,shape=regular polygon,regular polygon sides=#4,minimum size=12mm]{};
+  \node[name=maison,shape=regular polygon,regular polygon sides=#3,minimum size=18mm, inner sep=0pt]{};
+  \node[name=base,shape=regular polygon,regular polygon sides=#4,minimum size=12mm]{};
   \foreach \base/\maison in {#5} {
-    \draw[shift=(m.corner \base)]
+    \draw[shift=(maison.corner \base)]
        node[shape=ellipse,fill=\maison,draw=black,rotate=(360/#3)*(\base-1),name=m \base] {~~~~~};
   }
   \foreach \base/\maison in {#1} {
-    \draw[shift=(b.corner \base)]
+    \draw[shift=(base.corner \base)]
        node[shape=circle,fill=\maison,draw=black,inner sep=.1] {~~~};
   }
   \foreach \bb in {1,...,#4} {\draw[shift=(b.corner \bb)] node[name=bb \bb] {};}
@@ -50,6 +52,8 @@
 \colorlet{H}{magenta}
 \colorlet{I}{lime}
 \colorlet{J}{pink}
+\colorlet{Z}{white}
 
+\newcommand{\Pawn}[1]{\node[shape=circle,fill=#1,draw=black,inner sep=.1] {~~~}}
 \newcommand{\pawn}[1]{\tikz \draw node[shape=circle,fill=#1,draw=black,inner sep=.1] {~~~};}
 
