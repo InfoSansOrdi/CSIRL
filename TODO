@@ -1,7 +1,9 @@
 
 * Programmation
-  - http://xorballs.dskl.net/ 
+** http://xorballs.dskl.net/ 
     un puzzle qui ressemble à de la programmation, en 2D
+** robozzle / turzzle, mais avec des carter qui donnent des ordres : tourner,
+  avancer, boucle, etc.
 * Réseau
   - https://righteousit.wordpress.com/2010/06/27/practical-visual-three-dimensional-pedagogy-for-internet-protocol-packet-header-control-fields/
     TCP/IP avec des legos
@@ -9,3 +11,43 @@
   différents algorithmes de défragmentation. Peut-être même que le
   swap puzzle en est un ?
   http://teachinglondoncomputing.org/resources/inspiring-unplugged-classroom-activities/the-swap-puzzle-activity/
+
+* codage de l'information :
+** binaire :
+*** chevalet binaire : une série de rangée où on pose des jetons 1 0 et
+    opérations (+ - ×), on doit pouvoir jour sur les deux faces des jetons pour
+    mettre en place un système d'auto-correction ; cf. prototype de Loïc ici :
+    http://wiki.nybi.cc/index.php/ChevaletBinaire
+*** ou alors des cartes ordonnées ayant des points (représentant un bit en fait) 
+    pour écrire des nombres. Il faut écrire des entiers avec ces cartes. On
+    peut imaginer donner des correspondance binaire<->lettres et faire
+    coder/décoder un message
+** image : (« le boolier ») un enfant  définit une image sur un cadran avec des 
+   jetons bicolores (1 jeton = 1 "pixel"). Un enfant tourne le dos et doit 
+   reproduire ce que son camarade lui dicte. À la fin, on vérifie les erreurs. 
+   On leur demande d'aller vite, ils doivent donc trouver des stratégies pour 
+   encoder l'information efficacement : pixel par pixel, couleur+nombre, etc.
+   ex sur une image Rouge/Noir :
+   R R N N N R N R N R R R N R R R R R
+   vs
+   2R 3N 1R 1N 1R 1N 3R 1N 5R
+   vs
+   il existe deux couleurs, on commence par rouge : 2 3 1 1 1 1 3 1 5
+   Ensuite on peut généraliser à plus de couleurs
+   => on doit aussi pouvoir faire de la compression de données dans cet esprit,
+   mais je ne sais pas trop comment
+* code correcteur d'erreur, cf prototype avec un cadran et des jetons bicolores
+* Ordinapoche : objet physique en carton + surface effacable pour expliquer le
+  fonctionnement de l'ordinateur. Il faut représenter les registres, les cases
+  mémoire, pouvoir bouger des languettes d-e papier pour pointer au bon
+  endroit, etc. L'ordinapoche est _vraiment_ un bon modèle.
+* cryptographie : 
+** explication du chiffrement symétrique/asymétrique, de la
+  signature et du chiffrement. Version facile : avoir un jeu de cadenas + clefs
+  (dans l'idéal, il faudrait plusieurs cadenas avec la même clef, et plusieurs
+  clefs pour le même cadenas) + des boîtes (une carte avec l'icône email peut
+  faire l'affaire). Ensuite, on déroule le principe avec la célèbre analogie.
+** reprendre l'activité de Véronique Cortier
+* reprendre l'activité chou/chèvre/loup, mais je ne me souviens plus bien de
+  l'objet de l'activité
+* faire une machine de turing avec un bandeau flexible, un curseur, etc. 

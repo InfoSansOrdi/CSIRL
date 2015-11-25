@@ -14,7 +14,10 @@ mains*. Ces activités sont regroupées en séances thématiques, permettant ain
 d'aborder les notions fondamentales de manière cohérente et progressive.
 
 **SMN** est un projet libre : vous trouverez ici toutes les ressources
-nécessaires à la production du matériel pour les activités.
+nécessaires à la production du matériel pour les activités. Notez qu'il
+s'appelait **CSIRL** comme **Computer Science In Real Life**, d'où le nom du
+dépôt. Pour des raisons marketing, il a été renommé en français en incluant le
+mot numérique.
 
 # Séance algorithmique
 
