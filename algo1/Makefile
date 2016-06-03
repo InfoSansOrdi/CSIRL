@@ -20,10 +20,11 @@ algo1-petitlivre-page1.pdf: algo1-petitlivre-content.pdf
 #######################
 
 algo1-supports.pdf: algo1-supports.svg
-	inkscape --export-pdf=algo1-supports-A5.pdf algo1-supports.svg
+	inkscape --export-png=algo1-supports.png --export-dpi=360 algo1-supports.svg 
+	convert algo1-supports.png algo1-supports-A5.pdf
 	pdf180 algo1-supports-A5.pdf
 	pdfjam --outfile algo1-supports.pdf --no-landscape --papersize {210mm,297mm} --nup 1x2 algo1-supports-A5.pdf algo1-supports-A5-rotated180.pdf
-	rm algo1-supports-A5.pdf algo1-supports-A5-rotated180.pdf
+	rm algo1-supports-A5.pdf algo1-supports-A5-rotated180.pdf algo1-supports.png
 
 clean-all:
 	rm -f algo1-petitlivre-page1.pdf algo1-petitlivre-page2.pdf algo1-petitlivre-content.pdf
