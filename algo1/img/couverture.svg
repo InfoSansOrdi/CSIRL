@@ -14,7 +14,7 @@
    height="744.09448"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.3.1 r9886"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="couverture.svg">
   <defs
      id="defs4">
@@ -141,11 +141,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="7.9195959"
-     inkscape:cx="-7.8204966"
-     inkscape:cy="577.13845"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="157.77096"
+     inkscape:cy="431.64625"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g3265"
      showgrid="false"
      units="mm"
      showguides="true"
@@ -153,7 +153,7 @@
      inkscape:window-width="1276"
      inkscape:window-height="781"
      inkscape:window-x="2"
-     inkscape:window-y="17"
+     inkscape:window-y="32"
      inkscape:window-maximized="0"
      inkscape:snap-grids="false"
      inkscape:snap-to-guides="true"
@@ -387,6 +387,24 @@
            x="261.84564"
            id="tspan3223"
            sodipodi:role="line">les algorithmes</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;line-height:100%;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+         x="-815.21423"
+         y="34.974983"
+         id="text3398"
+         sodipodi:linespacing="100%"
+         transform="matrix(0,-1,1,0,0,0)"><tspan
+           sodipodi:role="line"
+           id="tspan3400"
+           x="-815.21423"
+           y="34.974983"
+           style="font-size:35px;fill:#ff0000;fill-opacity:1;line-height:100%;">Petit manuel en cours de réécriture</tspan><tspan
+           sodipodi:role="line"
+           x="-815.21423"
+           y="78.724983"
+           id="tspan3402"
+           style="font-size:35px;fill:#ff0000;fill-opacity:1;line-height:100%;">Utilisez-le avec prudence</tspan></text>
     </g>
     <g
        transform="translate(-227.27514,354.75521)"
