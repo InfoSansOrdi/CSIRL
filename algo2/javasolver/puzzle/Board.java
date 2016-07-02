@@ -45,14 +45,16 @@ public class Board {
 			Piece topNeighbour = this.pieces[y - 1][x];
 			allowed &= (topNeighbour.getValueAt(Piece.BOTTOM) + piece.getValueAt(Piece.TOP)) == 0;
 		}
-		/* Two extra rules to get a looping board */
-		if (x == Main.XDIM -1) {
-			Piece rightNeighbour = this.pieces[y][0];
-			allowed &= (rightNeighbour.getValueAt(Piece.LEFT) + piece.getValueAt(Piece.RIGHT)) == 0;
-		}
-		if (y == Main.YDIM -1) {
-			Piece bottomNeighbour = this.pieces[0][x];
-			allowed &= (bottomNeighbour.getValueAt(Piece.TOP) + piece.getValueAt(Piece.BOTTOM)) == 0;
+		
+		if (Main.toric) { /* Two extra rules to get a looping board */
+			if (x == Main.XDIM -1) {
+				Piece rightNeighbour = this.pieces[y][0];
+				allowed &= (rightNeighbour.getValueAt(Piece.LEFT) + piece.getValueAt(Piece.RIGHT)) == 0;
+			}
+			if (y == Main.YDIM -1) {
+				Piece bottomNeighbour = this.pieces[0][x];
+				allowed &= (bottomNeighbour.getValueAt(Piece.TOP) + piece.getValueAt(Piece.BOTTOM)) == 0;
+			}
 		}
 		
 		if (allowed) {

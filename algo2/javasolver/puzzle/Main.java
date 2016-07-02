@@ -6,141 +6,124 @@ import java.util.Scanner;
 
 public class Main {
 	
-	public static final int maxval = 4;
-	public static final int XDIM = 4;
-	public static final int YDIM = 4;
+	public static final int maxval = 3;
+	public static int XDIM = 3;
+	public static int YDIM = 4;
+	public static boolean toric = true;
 	
 	public static void main(String[] args) {
 		printBanner();
-
-		// This will not return!!!
-		searchGenerated();
 		
-		NineSquarePuzzle puzzle = new NineSquarePuzzle();
-		String dataPath = null; // = "../data/data1.txt";
 
-		if (args.length > 0 && args[0].equals("--generate")) {
-			puzzle.generate();
-			dataPath = "generated";
-		} else if (args.length > 0 && (new File(args[0])).exists()) {
+		if (args.length > 0 && (new File(args[0])).exists()) {
+			NineSquarePuzzle puzzle = new NineSquarePuzzle();
+			String dataPath = null; // = "../data/data1.txt";
 			dataPath = args[0];
 			puzzle.load(args[0]);
-		} else {
-			boolean stopAsking = false;
-			Scanner s = new Scanner(System.in);
-			while (!stopAsking) {
-				System.out.print("Veuillez saisir le nom du fichier de données (ou q pour quitter) -> ");
-				String input = s.nextLine();
-				if (input.equals("q")) {
-					exit();
-				} else {
-					File f = new File(input);
-					stopAsking = (f.exists() && f.isFile());
-					dataPath = input;
-					System.out.println();
-				}
-			}
-			puzzle.load(dataPath);
-		}
-
-		// Display the board
-		StringBuffer[] lines = new StringBuffer[5];
-		int piecePerLine = 4;
-		int y = 0;
-		while (y*piecePerLine < puzzle.getPieces().getCount()) {
-			for (int l=0; l<lines.length;l++)
-				lines[l] = new StringBuffer();
-			for (int x=0; x<4;x++)
-				puzzle.getPieces().at(y*piecePerLine + x).toBuffers(lines);
-			for (int l=0; l<lines.length;l++)
-				System.out.println(lines[l]);
-			
-			y++;
-		}
-		
-		/*
-		System.out.println(String.format("Le puzzle \"%s\" (%s) %s", puzzle.getTitle(), dataPath,
-				puzzle.isPerfect() ? "est parfait." : "n'est pas parfait."));
-		*/
-		
-		System.out.println("\nCalcul des solutions en cours...\n");
-
-		Instrumentations.begin();
-		puzzle.solve();
-		Instrumentations.end();
-
-		List<Board> solutions = puzzle.getSolutions();
-
-		int i = 0;
-		for (Board b : solutions) {
-			i++;
-			System.out.println(String.format("Solution %d:\n%s", (++i), b.toString()));
-		}
-			
-		System.out.println(String.format("Temps de calcul estimé %s pour trouver %d solution(s)", Instrumentations
-				.getTotalTimeStr(), solutions.size()));
-
-		Instrumentations.printReport();
-	}
-
-	private static void searchGenerated() {
-		while (true) {
-			NineSquarePuzzle puzzle = new NineSquarePuzzle();
-			puzzle.generate();
-			
 			// Display the board
-			StringBuffer initialBoard = new StringBuffer();
 			StringBuffer[] lines = new StringBuffer[5];
+			int piecePerLine = 4;
 			int y = 0;
-			while (y*XDIM < puzzle.getPieces().getCount()) {
+			while (y*piecePerLine < puzzle.getPieces().getCount()) {
 				for (int l=0; l<lines.length;l++)
 					lines[l] = new StringBuffer();
-				for (int x=0; x<XDIM;x++)
-					puzzle.getPieces().at(y*XDIM + x).toBuffers(lines);
+				for (int x=0; x<4;x++)
+					puzzle.getPieces().at(y*piecePerLine + x).toBuffers(lines);
 				for (int l=0; l<lines.length;l++)
-					initialBoard.append(lines[l]+"\n");
+					System.out.println(lines[l]);
 				
 				y++;
 			}
-
-			StringBuffer file = new StringBuffer();
-			for (Piece p : puzzle.getPieces()) {
-				file.append(p.getLabel() + " ");
-				for (int side=0; side<4;side++)
-					file.append(p.getValueAt(side) + " ");
-				file.append("\n");
-			}
 			
+			System.out.println("\nCalcul des solutions en cours...\n");
+
 			Instrumentations.begin();
 			puzzle.solve();
 			Instrumentations.end();
 
 			List<Board> solutions = puzzle.getSolutions();
 
-			if (solutions.size() > 0) {
+			int i = 0;
+			for (Board b : solutions) {
+				i++;
+				System.out.println(String.format("Solution %d:\n%s", (++i), b.toString()));
+			}
 				
-				System.out.println("\nInitial board: "+initialBoard);
+			System.out.println(String.format("Temps de calcul estimé %s pour trouver %d solution(s)", Instrumentations
+					.getTotalTimeStr(), solutions.size()));
+
+			Instrumentations.printReport();
+			
+		} else {
+			System.out.println("Searching for a generated "+XDIM+"x"+YDIM+(toric?" toric":"")+" board with "+maxval+" values.");
+			System.out.println("Specify a filename on the command line to solve a given instance.");
+			int tryAmount = 0;
+			while (true) {
+				if (tryAmount % 25 == 0 && tryAmount++ != 0) {
+					System.out.println();
+					System.out.print(tryAmount);
+				}
+				NineSquarePuzzle puzzle = new NineSquarePuzzle();
+				puzzle.generate();
 				
-				System.out.println(String.format("Input file:\nGenerated data with %d solution(s)",solutions.size()));
-				System.out.println(file.toString());
-				
-				int i = 0;
-				for (Board b : solutions) {
-					i++;
-					System.out.println(String.format("Solution %d:\n%s", (++i), b.toString()));
+				// Display the board in a buffer
+				StringBuffer initialBoard = new StringBuffer();
+				StringBuffer[] lines = new StringBuffer[5];
+				int y = 0;
+				while (y*XDIM < puzzle.getPieces().getCount()) {
+					for (int l=0; l<lines.length;l++)
+						lines[l] = new StringBuffer();
+					for (int x=0; x<XDIM;x++)
+						puzzle.getPieces().at(y*XDIM + x).toBuffers(lines);
+					for (int l=0; l<lines.length;l++)
+						initialBoard.append(lines[l]+"\n");
+					
+					y++;
+				}
+
+				StringBuffer file = new StringBuffer();
+				for (Piece p : puzzle.getPieces()) {
+					file.append(p.getLabel() + " ");
+					for (int side=0; side<4;side++)
+						file.append(p.getValueAt(side) + " ");
+					file.append("\n");
 				}
 				
-				System.out.println(String.format("Temps de calcul estimé %s pour trouver %d solution(s)", Instrumentations
-						.getTotalTimeStr(), solutions.size()));
+				Instrumentations.begin();
+				puzzle.solve();
+				Instrumentations.end();
 
-				Instrumentations.printReport();
+				List<Board> solutions = puzzle.getSolutions();
 
-				
-				exit();
-			} else {
-				System.out.print(".");
-			}
+				if (solutions.size() > 0) {
+					
+					System.out.println("\nInitial board:\n"+initialBoard);
+					
+					System.out.println(String.format("Input file:\nGenerated data with %d solution(s)",solutions.size()));
+					System.out.println(file.toString());
+					
+					int i = 0;
+					for (Board b : solutions) {
+						i++;
+						System.out.println(String.format("Solution %d:\n%s", (++i), b.toString()));
+					}
+					
+					System.out.println(String.format("Temps de calcul estimé %s pour trouver %d solution(s)", Instrumentations
+							.getTotalTimeStr(), solutions.size()));
+
+					Instrumentations.printReport();
+
+					
+					exit();
+				} else {
+					System.out.print(".");
+				}
+			}			
 		}
+
+	}
+
+	private static void searchGenerated() {
 	}
 	
 	private static void exit() {

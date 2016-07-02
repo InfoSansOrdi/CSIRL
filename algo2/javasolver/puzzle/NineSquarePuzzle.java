@@ -40,7 +40,9 @@ public class NineSquarePuzzle {
 	}
 
 	public void solve() {
-		pieces.shuffle();
+		// There is no need to shuffle if we are not searching for a toric world: we'll try every possibility
+		if (Main.toric)
+			pieces.shuffle();
 		solve(0, 0);
 		//solveR();
 	}
@@ -84,12 +86,15 @@ public class NineSquarePuzzle {
 		int index = 0;
 		Piece current = null;
 		while (index < this.pieces.getCount() 
-				&& (x!=0||y!=0||index==0) // Lock the upper left piece to be the first of the pool (to kill symmetries)
+				&& ((!Main.toric) || x!=0||y!=0||index==0) // Lock the upper left piece to be the first of the pool (to kill symmetries)
 			  ) {
 			if (this.pieces.isPieceAvailableAt(index)) {
 				current = this.pieces.takePieceAt(index);
-				// Upper left piece cannot rotate (to kill symmetries)
-				for (int rotation = 0; rotation < (x==0 && y==0 ? 1 : 4); rotation++) {
+				// Upper left piece cannot rotate on square boards (to kill symmetries)
+				int maxRotation = 4;
+				if (Main.XDIM==Main.YDIM && x==0 && y==0)
+					maxRotation = 1;
+				for (int rotation = 0; rotation < maxRotation; rotation++) {
 					Instrumentations.piecesTriedCount++;
 					// if (this.board.putPieceAt(current, x, y)) {
 					if (this.board.appendPieceAt(current, x, y)) {
