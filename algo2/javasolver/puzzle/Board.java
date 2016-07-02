@@ -2,21 +2,19 @@ package puzzle;
 
 public class Board {
 
-	public static final int DIMENSION = 4;
-
 	private Piece[][] pieces;
 
 	public Board() {
-		this.pieces = new Piece[DIMENSION][DIMENSION];
+		this.pieces = new Piece[Main.YDIM][Main.XDIM];
 	}
 
 	public boolean putPieceAt(Piece piece, int x, int y) {
 		int top = ((y > 0) && (this.pieces[y - 1][x] != null)) ? this.pieces[y - 1][x].getValueAt(Piece.BOTTOM)
 				+ piece.getValueAt(Piece.TOP) : 0;
-		int right = ((x < DIMENSION - 1) && (this.pieces[y][x + 1] != null)) ? this.pieces[y][x + 1]
+		int right = ((x < Main.XDIM - 1) && (this.pieces[y][x + 1] != null)) ? this.pieces[y][x + 1]
 				.getValueAt(Piece.LEFT)
 				+ piece.getValueAt(Piece.RIGHT) : 0;
-		int bottom = ((y < DIMENSION - 1) && (this.pieces[y + 1][x] != null)) ? this.pieces[y + 1][x]
+		int bottom = ((y < Main.YDIM - 1) && (this.pieces[y + 1][x] != null)) ? this.pieces[y + 1][x]
 				.getValueAt(Piece.TOP)
 				+ piece.getValueAt(Piece.BOTTOM) : 0;
 		int left = ((x > 0) && (this.pieces[y][x - 1] != null)) ? this.pieces[y][x - 1].getValueAt(Piece.RIGHT)
@@ -48,11 +46,11 @@ public class Board {
 			allowed &= (topNeighbour.getValueAt(Piece.BOTTOM) + piece.getValueAt(Piece.TOP)) == 0;
 		}
 		/* Two extra rules to get a looping board */
-		if (x == Board.DIMENSION -1) {
+		if (x == Main.XDIM -1) {
 			Piece rightNeighbour = this.pieces[y][0];
 			allowed &= (rightNeighbour.getValueAt(Piece.LEFT) + piece.getValueAt(Piece.RIGHT)) == 0;
 		}
-		if (y == Board.DIMENSION -1) {
+		if (y == Main.YDIM -1) {
 			Piece bottomNeighbour = this.pieces[0][x];
 			allowed &= (bottomNeighbour.getValueAt(Piece.TOP) + piece.getValueAt(Piece.BOTTOM)) == 0;
 		}
@@ -70,11 +68,11 @@ public class Board {
 	
 	
 	public boolean isFull() {
-		return nextX == 0 && nextY == Board.DIMENSION;
+		return nextX == 0 && nextY == Main.YDIM;
 	}
 	
 	private void nextPosition() {
-		if (nextX < Board.DIMENSION - 1) {
+		if (nextX < Main.XDIM - 1) {
 			nextX++;
 		} else {
 			nextX = 0;
@@ -86,7 +84,7 @@ public class Board {
 		if (nextX > 0) {
 			nextX--;
 		} else {
-			nextX = Board.DIMENSION - 1;
+			nextX = Main.XDIM - 1;
 			nextY--;
 		}		
 	}
@@ -116,8 +114,8 @@ public class Board {
 	@Override
 	public Board clone() {
 		Board copy = new Board();
-		for (int y = 0; y < DIMENSION; y++) {
-			for (int x = 0; x < DIMENSION; x++) {
+		for (int y = 0; y < Main.YDIM; y++) {
+			for (int x = 0; x < Main.XDIM; x++) {
 				copy.pieces[y][x] = this.pieces[y][x].clone();
 			}
 		}
@@ -128,10 +126,10 @@ public class Board {
 	public String toString() {
 		StringBuffer res = new StringBuffer();
 		StringBuffer[] lines = new StringBuffer[5];
-		for (int y = 0; y < DIMENSION; y++) {
+		for (int y = 0; y < Main.YDIM; y++) {
 			for (int l=0; l<lines.length;l++)
 				lines[l] = new StringBuffer();
-			for (int x = 0; x < DIMENSION; x++) 
+			for (int x = 0; x < Main.XDIM; x++) 
 				this.pieces[y][x].toBuffers(lines);
 			for (int l=0; l<lines.length;l++)
 				res.append(lines[l]+"\n");

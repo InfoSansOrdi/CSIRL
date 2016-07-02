@@ -75,10 +75,11 @@ public class NineSquarePuzzle {
 	private boolean solve(int x, int y) {
 		Instrumentations.recursiveCallCount++;
 		
-		if (x == 0 && y == Board.DIMENSION) {
+		if (x == 0 && y == Main.YDIM) {
 			this.solutions.add(this.board.clone());
 			return true;
 		}
+		//System.out.print(x+","+y+" ");
 
 		int index = 0;
 		Piece current = null;
@@ -93,7 +94,7 @@ public class NineSquarePuzzle {
 					// if (this.board.putPieceAt(current, x, y)) {
 					if (this.board.appendPieceAt(current, x, y)) {
 						Instrumentations.piecesSuccessfullyTriedCount++;
-						if (x == Board.DIMENSION - 1) {
+						if (x == Main.XDIM - 1) {
 							solve(0, y + 1);
 						} else {
 							solve(x + 1, y);
@@ -110,33 +111,51 @@ public class NineSquarePuzzle {
 		return true;
 	}
 
-	public void generate(int size, int maxval, int maxocc) {
+	public void generate() {
+		// maxocc: amount of each symbol that we want = #sides * #cells / #symbols
+		double maxoccD = 4.0 * Main.XDIM * Main.YDIM / (Main.maxval*2);
+		int maxocc = (int)maxoccD;
+		if (maxoccD != (double)maxocc) {
+			System.err.println("Max occurence of each symbol is not an integer: "+maxoccD);
+			maxocc+=1;
+		}
 		Random r = new Random(System.currentTimeMillis());
 		
 		this.title  = "generated";
-		this.pieces = new Pool(size*size);
+		this.pieces = new Pool(Main.XDIM * Main.YDIM);
 		
 		char[] names = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
-		int[] occ = new int[2*maxval+1];
-		for (int rank=0; rank < size*size; rank++) {
+		int[] occ = new int[2*Main.maxval+1];
+		for (int rank=0; rank < Main.XDIM * Main.YDIM; rank++) {
 			
 			Piece p = new Piece(names[rank]);
 			for (int side=0; side<4; side++) {
 				int val = 0;
+				int count=0;
 				while (val == 0 // Don't produce 0
-						|| occ[val+maxval] >= maxocc) // Dont produce more of a given value than expected
-					val = r.nextInt(2*maxval+1) - maxval;
-				occ[val + maxval]++;
+						|| occ[val+Main.maxval] >= maxocc) {// Dont produce more of a given value than expected
+					val = r.nextInt(2*Main.maxval+1) - Main.maxval;
+					if (count++ == 1000) {
+						System.err.println("Cannot produce a new side value. Maxocc="+maxocc);
+						for (int j=0;j<2*Main.maxval+1;j++)
+							System.out.println("#"+(j-Main.maxval)+" -> "+occ[j]);
+						System.exit(1);						
+					}
+				}
+				occ[val + Main.maxval]++;
 				
 				p.setValueAt(side, val);
 			}
 			pieces.addPiece(p);
-			/*
-			System.out.println(p.toString());
-			for (int i=0;i<2*maxval+1;i++)
-				System.out.println("#"+(i-maxval)+"->"+occ[i]);
-			 */
 		}
+		for (int i=0;i<2*Main.maxval+1;i++)
+			if (i-Main.maxval != 0 && occ[i]!=maxocc) {
+				System.err.println("I have "+occ[i]+" of "+(i-Main.maxval)+" instead of "+maxocc);
+				for (int j=0;j<2*Main.maxval+1;j++)
+					System.out.println("#"+(j-Main.maxval)+" -> "+occ[j]);
+				System.exit(1);
+			}
+		System.out.print("g");
 	}
 	
 	public void load(String path) {

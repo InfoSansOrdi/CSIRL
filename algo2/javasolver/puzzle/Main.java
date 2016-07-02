@@ -6,6 +6,10 @@ import java.util.Scanner;
 
 public class Main {
 	
+	public static final int maxval = 4;
+	public static final int XDIM = 4;
+	public static final int YDIM = 4;
+	
 	public static void main(String[] args) {
 		printBanner();
 
@@ -16,7 +20,7 @@ public class Main {
 		String dataPath = null; // = "../data/data1.txt";
 
 		if (args.length > 0 && args[0].equals("--generate")) {
-			puzzle.generate(4, 4, 8);
+			puzzle.generate();
 			dataPath = "generated";
 		} else if (args.length > 0 && (new File(args[0])).exists()) {
 			dataPath = args[0];
@@ -82,18 +86,17 @@ public class Main {
 	private static void searchGenerated() {
 		while (true) {
 			NineSquarePuzzle puzzle = new NineSquarePuzzle();
-			puzzle.generate(4, 4, 8);
+			puzzle.generate();
 			
 			// Display the board
 			StringBuffer initialBoard = new StringBuffer();
 			StringBuffer[] lines = new StringBuffer[5];
-			int piecePerLine = 4;
 			int y = 0;
-			while (y*piecePerLine < puzzle.getPieces().getCount()) {
+			while (y*XDIM < puzzle.getPieces().getCount()) {
 				for (int l=0; l<lines.length;l++)
 					lines[l] = new StringBuffer();
-				for (int x=0; x<4;x++)
-					puzzle.getPieces().at(y*piecePerLine + x).toBuffers(lines);
+				for (int x=0; x<XDIM;x++)
+					puzzle.getPieces().at(y*XDIM + x).toBuffers(lines);
 				for (int l=0; l<lines.length;l++)
 					initialBoard.append(lines[l]+"\n");
 				

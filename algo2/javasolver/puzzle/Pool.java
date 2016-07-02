@@ -52,7 +52,7 @@ public class Pool implements Iterable<Piece> {
 		return this.available[index];
 	}
 
-     	/** True if all pieces are perfect, ie if they contain 1, 2, 3 and 4 each, with two positives and two negatives */
+	/** True if all pieces are perfect, ie if they contain 1, 2, 3 and 4 each, with two positives and two negatives */
 	public boolean isPerfect() {
 		for (Piece p : this.pieces) {
 			if (!p.isPerfect())
