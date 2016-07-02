@@ -6,14 +6,14 @@ import java.util.Scanner;
 
 public class Main {
 	
-	public static final int maxval = 3;
-	public static int XDIM = 3;
+	public static final int maxval = 4;
+	public static int XDIM = 4;
 	public static int YDIM = 4;
 	public static boolean toric = true;
+	public static boolean signed = false;
 	
 	public static void main(String[] args) {
 		printBanner();
-		
 
 		if (args.length > 0 && (new File(args[0])).exists()) {
 			NineSquarePuzzle puzzle = new NineSquarePuzzle();
@@ -55,13 +55,13 @@ public class Main {
 			Instrumentations.printReport();
 			
 		} else {
-			System.out.println("Searching for a generated "+XDIM+"x"+YDIM+(toric?" toric":"")+" board with "+maxval+" values.");
+			System.out.println("Searching for a generated "+XDIM+"x"+YDIM+(toric?" toric":"")+(signed?" signed":"")+" board with "+maxval+" values.");
 			System.out.println("Specify a filename on the command line to solve a given instance.");
 			int tryAmount = 0;
 			while (true) {
-				if (tryAmount % 25 == 0 && tryAmount++ != 0) {
+				if (++tryAmount % 25 == 0) {
 					System.out.println();
-					System.out.print(tryAmount);
+					System.out.print(tryAmount+" tries so far. ");
 				}
 				NineSquarePuzzle puzzle = new NineSquarePuzzle();
 				puzzle.generate();
@@ -105,8 +105,11 @@ public class Main {
 					int i = 0;
 					for (Board b : solutions) {
 						i++;
-						System.out.println(String.format("Solution %d:\n%s", (++i), b.toString()));
+						if (i<50)
+							System.out.println(String.format("Solution %d:\n%s", (++i), b.toString()));
 					}
+					if (i==50)
+						System.out.println("(more results omitted)");
 					
 					System.out.println(String.format("Temps de calcul estimé %s pour trouver %d solution(s)", Instrumentations
 							.getTotalTimeStr(), solutions.size()));
@@ -135,7 +138,7 @@ public class Main {
 		System.out.println(LOGO);
 	}
 
-	private static final String VERSION = "20140205";
+	private static final String VERSION = "20160702";
 	private static final String LOGO = " __________                __      __                        __                 \n"
 			+ " \\______   \\_____    ____ |  | ___/  |_____________    ____ |  | __ ___________ \n"
 			+ "  |    |  _/\\__  \\ _/ ___\\|  |/ /\\   __\\_  __ \\__  \\ _/ ___\\|  |/ // __ \\_  __ \\\n"

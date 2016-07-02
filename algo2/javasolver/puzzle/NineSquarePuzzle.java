@@ -118,7 +118,7 @@ public class NineSquarePuzzle {
 
 	public void generate() {
 		// maxocc: amount of each symbol that we want = #sides * #cells / #symbols
-		double maxoccD = 4.0 * Main.XDIM * Main.YDIM / (Main.maxval*2);
+		double maxoccD = (4.0 * Main.XDIM * Main.YDIM) / (Main.maxval*(Main.signed?2:1));
 		int maxocc = (int)maxoccD;
 		if (maxoccD != (double)maxocc) {
 			System.err.println("Max occurence of each symbol is not an integer: "+maxoccD);
@@ -139,9 +139,13 @@ public class NineSquarePuzzle {
 				int count=0;
 				while (val == 0 // Don't produce 0
 						|| occ[val+Main.maxval] >= maxocc) {// Dont produce more of a given value than expected
+					
 					val = r.nextInt(2*Main.maxval+1) - Main.maxval;
+					if (!Main.signed && val<0)
+						val = -val;
+						
 					if (count++ == 1000) {
-						System.err.println("Cannot produce a new side value. Maxocc="+maxocc);
+						System.err.println("Cannot produce a new side value for rank "+rank+". Maxocc="+maxocc);
 						for (int j=0;j<2*Main.maxval+1;j++)
 							System.out.println("#"+(j-Main.maxval)+" -> "+occ[j]);
 						System.exit(1);						
@@ -154,7 +158,7 @@ public class NineSquarePuzzle {
 			pieces.addPiece(p);
 		}
 		for (int i=0;i<2*Main.maxval+1;i++)
-			if (i-Main.maxval != 0 && occ[i]!=maxocc) {
+			if ((Main.signed || i >Main.maxval) && i-Main.maxval != 0 && occ[i]!=maxocc) {
 				System.err.println("I have "+occ[i]+" of "+(i-Main.maxval)+" instead of "+maxocc);
 				for (int j=0;j<2*Main.maxval+1;j++)
 					System.out.println("#"+(j-Main.maxval)+" -> "+occ[j]);

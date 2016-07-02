@@ -27,6 +27,18 @@ public class Board {
 
 		return allowed;
 	}
+	private boolean matchingTopBottom(Piece top, Piece bottom) {
+		if (Main.signed)
+			return top.getValueAt(Piece.BOTTOM) + bottom.getValueAt(Piece.TOP) == 0;
+		else
+			return top.getValueAt(Piece.BOTTOM) == bottom.getValueAt(Piece.TOP);
+	}
+	private boolean matchingLeftRight(Piece left, Piece right) {
+		if (Main.signed)
+			return left.getValueAt(Piece.RIGHT) + right.getValueAt(Piece.LEFT) == 0;
+		else
+			return left.getValueAt(Piece.RIGHT) == right.getValueAt(Piece.LEFT);
+	}
 
 	public boolean appendPieceAt(Piece piece, int x, int y) {
 		boolean allowed = false;
@@ -35,25 +47,25 @@ public class Board {
 			allowed = true;
 		} else if (y == 0) {
 			Piece leftNeighbour = this.pieces[y][x - 1];
-			allowed = (leftNeighbour.getValueAt(Piece.RIGHT) + piece.getValueAt(Piece.LEFT)) == 0;
+			allowed = matchingLeftRight(leftNeighbour, piece);
 		} else if (x == 0) {
 			Piece topNeighbour = this.pieces[y - 1][x];
-			allowed = (topNeighbour.getValueAt(Piece.BOTTOM) + piece.getValueAt(Piece.TOP)) == 0;
+			allowed = matchingTopBottom(topNeighbour, piece);
 		} else {
 			Piece leftNeighbour = this.pieces[y][x - 1];
-			allowed = (leftNeighbour.getValueAt(Piece.RIGHT) + piece.getValueAt(Piece.LEFT)) == 0;
+			allowed = matchingLeftRight(leftNeighbour, piece);
 			Piece topNeighbour = this.pieces[y - 1][x];
-			allowed &= (topNeighbour.getValueAt(Piece.BOTTOM) + piece.getValueAt(Piece.TOP)) == 0;
+			allowed &= matchingTopBottom(topNeighbour, piece);
 		}
 		
 		if (Main.toric) { /* Two extra rules to get a looping board */
 			if (x == Main.XDIM -1) {
 				Piece rightNeighbour = this.pieces[y][0];
-				allowed &= (rightNeighbour.getValueAt(Piece.LEFT) + piece.getValueAt(Piece.RIGHT)) == 0;
+				allowed &= matchingLeftRight(piece, rightNeighbour);
 			}
 			if (y == Main.YDIM -1) {
 				Piece bottomNeighbour = this.pieces[0][x];
-				allowed &= (bottomNeighbour.getValueAt(Piece.TOP) + piece.getValueAt(Piece.BOTTOM)) == 0;
+				allowed &= matchingTopBottom(piece, bottomNeighbour);
 			}
 		}
 		
