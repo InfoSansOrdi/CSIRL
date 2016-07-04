@@ -37,15 +37,20 @@ public class Main {
 			}
 			
 			// Check if we must set a sign to the values
-			boolean boardSigned = false ;
+			boolean boardSigned = false;
+			// Search for negative values 
+			for (Piece p : puzzle.getPieces()) 
+				for (int side = 0; side<4; side++)
+					boardSigned |= (p.getValueAt(side) < 0);
+
 			if (signed) {
-				// Search for negative values 
-				for (Piece p : puzzle.getPieces()) 
-					for (int side = 0; side<4; side++)
-						boardSigned |= (p.getValueAt(side) < 0);
-				
 				if (!boardSigned)
 					System.out.println("Recomputing signed values for the board.");
+			} else  {
+				if (boardSigned) {
+					System.out.println("Your dataset is signed, bailing out.");
+					exit();
+				}
 			}
 			
 			System.out.println("\nComputing solutions...\n");
@@ -189,11 +194,6 @@ public class Main {
 }
 /* Toric Signed Mac Mahon, 168 solutions
 +----------++----------++----------++----------++----------++----------+
-|     1    ||     1    ||    -2    ||     2    ||     1    ||    -2    |
-| 2 [A3]  1||-1 [X3] -2|| 2 [L0] -2|| 2 [P1] -3|| 3 [B3]  1||-1 [G1] -2|
-|    -1    ||    -3    ||    -2    ||     1    ||    -1    ||     1    |
-+----------++----------++----------++----------++----------++----------+
-+----------++----------++----------++----------++----------++----------+
 |     1    ||     3    ||     2    ||    -1    ||     1    ||    -1    |
 | 2 [V0]  3||-3 [O1] -3|| 3 [U0]  3||-3 [D0]  2||-2 [M3]  2||-2 [E2] -2|
 |     2    ||     2    ||    -2    ||     3    ||     2    ||     3    |
@@ -207,6 +207,11 @@ public class Main {
 |    -1    ||     3    ||    -2    ||    -3    ||     1    ||     3    |
 | 3 [T2]  3||-3 [H0]  1||-1 [S3]  1||-1 [W1] -1|| 1 [Q3] -1|| 1 [J2] -3|
 |    -1    ||    -1    ||     2    ||    -2    ||    -1    ||     2    |
++----------++----------++----------++----------++----------++----------+
++----------++----------++----------++----------++----------++----------+
+|     1    ||     1    ||    -2    ||     2    ||     1    ||    -2    |
+| 2 [A3]  1||-1 [X3] -2|| 2 [L0] -2|| 2 [P1] -3|| 3 [B3]  1||-1 [G1] -2|
+|    -1    ||    -3    ||    -2    ||     1    ||    -1    ||     1    |
 +----------++----------++----------++----------++----------++----------+
 
 
