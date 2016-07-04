@@ -2,52 +2,98 @@ package puzzle;
 
 import java.io.File;
 import java.util.List;
-import java.util.Scanner;
+import java.util.Random;
 
 public class Main {
 	
-	public static final int maxval = 4;
-	public static int XDIM = 4;
+	public static final int maxval = 3;
+	public static int XDIM = 6;
 	public static int YDIM = 4;
-	public static boolean toric = true;
-	public static boolean signed = false;
+	public static boolean toric = false;
+	public static boolean signed = true;
 	
 	public static void main(String[] args) {
 		printBanner();
 
 		if (args.length > 0 && (new File(args[0])).exists()) {
+			String dataPath = args[0];
+			System.out.println("Searching for a "+XDIM+"x"+YDIM+(toric?" toric":" non-toric")+" solution with "+maxval+(signed?" signed":" non-signed")+" values using the pieces of "+dataPath+".");
 			NineSquarePuzzle puzzle = new NineSquarePuzzle();
-			String dataPath = null; // = "../data/data1.txt";
-			dataPath = args[0];
-			puzzle.load(args[0]);
+			puzzle.load(dataPath);
+		
+			if (puzzle.getPieces().getCount() != XDIM*YDIM) {
+				System.err.println("Got "+puzzle.getPieces().getCount()+" pieces for a "+XDIM+"x"+YDIM+" board. Bailing out");
+				System.exit(1);
+			}
 			// Display the board
 			StringBuffer[] lines = new StringBuffer[5];
-			int piecePerLine = 4;
-			int y = 0;
-			while (y*piecePerLine < puzzle.getPieces().getCount()) {
+			for (int y=0;y<YDIM;y++) {
 				for (int l=0; l<lines.length;l++)
 					lines[l] = new StringBuffer();
-				for (int x=0; x<4;x++)
-					puzzle.getPieces().at(y*piecePerLine + x).toBuffers(lines);
+				for (int x=0; x<XDIM;x++)
+					puzzle.getPieces().at(y*XDIM + x).toBuffers(lines);
 				for (int l=0; l<lines.length;l++)
 					System.out.println(lines[l]);
-				
-				y++;
 			}
 			
-			System.out.println("\nCalcul des solutions en cours...\n");
+			// Check if we must set a sign to the values
+			boolean boardSigned = false ;
+			if (signed) {
+				// Search for negative values 
+				for (Piece p : puzzle.getPieces()) 
+					for (int side = 0; side<4; side++)
+						boardSigned |= (p.getValueAt(side) < 0);
+				
+				if (!boardSigned)
+					System.out.println("Recomputing signed values for the board.");
+			}
+			
+			System.out.println("\nComputing solutions...\n");
 
+			// do only once if we are not requested for a signed board, or if the board is already signed
+			boolean done = (!signed || boardSigned);
 			Instrumentations.begin();
-			puzzle.solve();
+		    Random rnd = new Random(System.currentTimeMillis());
+			while (!done) {
+				// Randomly flip the sign of the values
+				if (signed != boardSigned) {
+					int sum=42;
+					while (sum != 0) {
+						System.out.print(".");
+						sum=0;
+						for (Piece p : puzzle.getPieces()) 
+							for (int side = 0; side<4; side++) {
+								if (rnd.nextBoolean())
+									p.flipSign(side);
+								sum += p.getValueAt(side);
+							}
+					}
+					System.out.print("g");
+				}
+				
+				puzzle.solve();
+				
+				// Recompute a new board if no solution found (or too much solutions) and more than one loop requested
+				if (!done) { // More than one solution requested
+					if (puzzle.getSolutions().size() > 16) {
+						puzzle.reset();
+						System.out.println("Too much solutions. Let's take another try");
+					}
+					if (! puzzle.getSolutions().isEmpty())
+						done = true;
+				}
+			}
 			Instrumentations.end();
 
 			List<Board> solutions = puzzle.getSolutions();
 
 			int i = 0;
 			for (Board b : solutions) {
-				i++;
-				System.out.println(String.format("Solution %d:\n%s", (++i), b.toString()));
+				if (i<25)
+					System.out.println(String.format("Solution %d:\n%s", ++i, b.toString()));
 			}
+			if (i>=25)
+				System.out.println("(more results omitted)\n\n");
 				
 			System.out.println(String.format("Temps de calcul estimé %s pour trouver %d solution(s)", Instrumentations
 					.getTotalTimeStr(), solutions.size()));
@@ -55,11 +101,12 @@ public class Main {
 			Instrumentations.printReport();
 			
 		} else {
-			System.out.println("Searching for a generated "+XDIM+"x"+YDIM+(toric?" toric":"")+(signed?" signed":"")+" board with "+maxval+" values.");
+			System.out.println("Searching for a generated "+XDIM+"x"+YDIM+(toric?" toric":" non-toric")+" board with "+maxval+(signed?" signed":" non-signed")+" values.");
 			System.out.println("Specify a filename on the command line to solve a given instance.");
 			int tryAmount = 0;
+			Instrumentations.begin();
 			while (true) {
-				if (++tryAmount % 25 == 0) {
+				if (++tryAmount % 50 == 0) {
 					System.out.println();
 					System.out.print(tryAmount+" tries so far. ");
 				}
@@ -69,16 +116,13 @@ public class Main {
 				// Display the board in a buffer
 				StringBuffer initialBoard = new StringBuffer();
 				StringBuffer[] lines = new StringBuffer[5];
-				int y = 0;
-				while (y*XDIM < puzzle.getPieces().getCount()) {
+				for (int y=0;y<YDIM;y++) {
 					for (int l=0; l<lines.length;l++)
 						lines[l] = new StringBuffer();
 					for (int x=0; x<XDIM;x++)
 						puzzle.getPieces().at(y*XDIM + x).toBuffers(lines);
 					for (int l=0; l<lines.length;l++)
 						initialBoard.append(lines[l]+"\n");
-					
-					y++;
 				}
 
 				StringBuffer file = new StringBuffer();
@@ -89,13 +133,12 @@ public class Main {
 					file.append("\n");
 				}
 				
-				Instrumentations.begin();
 				puzzle.solve();
-				Instrumentations.end();
 
 				List<Board> solutions = puzzle.getSolutions();
 
 				if (solutions.size() > 0) {
+					Instrumentations.end();
 					
 					System.out.println("\nInitial board:\n"+initialBoard);
 					
@@ -104,12 +147,11 @@ public class Main {
 					
 					int i = 0;
 					for (Board b : solutions) {
-						i++;
-						if (i<50)
-							System.out.println(String.format("Solution %d:\n%s", (++i), b.toString()));
+						if (i<25)
+							System.out.println(String.format("Solution %d:\n%s", ++i, b.toString()));
 					}
-					if (i==50)
-						System.out.println("(more results omitted)");
+					if (i>=25)
+						System.out.println("(more results omitted)\n\n");
 					
 					System.out.println(String.format("Temps de calcul estimé %s pour trouver %d solution(s)", Instrumentations
 							.getTotalTimeStr(), solutions.size()));
@@ -126,9 +168,6 @@ public class Main {
 
 	}
 
-	private static void searchGenerated() {
-	}
-	
 	private static void exit() {
 		System.out.println("Good bye.");
 		System.exit(0);
@@ -138,7 +177,7 @@ public class Main {
 		System.out.println(LOGO);
 	}
 
-	private static final String VERSION = "20160702";
+	private static final String VERSION = "20160703";
 	private static final String LOGO = " __________                __      __                        __                 \n"
 			+ " \\______   \\_____    ____ |  | ___/  |_____________    ____ |  | __ ___________ \n"
 			+ "  |    |  _/\\__  \\ _/ ___\\|  |/ /\\   __\\_  __ \\__  \\ _/ ___\\|  |/ // __ \\_  __ \\\n"
@@ -148,7 +187,29 @@ public class Main {
 			+ "                                                                     v." + VERSION + "\n";
 
 }
-/*
+/* Toric Signed Mac Mahon, 168 solutions
++----------++----------++----------++----------++----------++----------+
+|     1    ||     1    ||    -2    ||     2    ||     1    ||    -2    |
+| 2 [A3]  1||-1 [X3] -2|| 2 [L0] -2|| 2 [P1] -3|| 3 [B3]  1||-1 [G1] -2|
+|    -1    ||    -3    ||    -2    ||     1    ||    -1    ||     1    |
++----------++----------++----------++----------++----------++----------+
++----------++----------++----------++----------++----------++----------+
+|     1    ||     3    ||     2    ||    -1    ||     1    ||    -1    |
+| 2 [V0]  3||-3 [O1] -3|| 3 [U0]  3||-3 [D0]  2||-2 [M3]  2||-2 [E2] -2|
+|     2    ||     2    ||    -2    ||     3    ||     2    ||     3    |
++----------++----------++----------++----------++----------++----------+
++----------++----------++----------++----------++----------++----------+
+|    -2    ||    -2    ||     2    ||    -3    ||    -2    ||    -3    |
+| 3 [K0]  3||-3 [I3] -2|| 2 [C1]  3||-3 [F1]  3||-3 [R1]  1||-1 [N2] -3|
+|     1    ||    -3    ||     2    ||     3    ||    -1    ||    -3    |
++----------++----------++----------++----------++----------++----------+
++----------++----------++----------++----------++----------++----------+
+|    -1    ||     3    ||    -2    ||    -3    ||     1    ||     3    |
+| 3 [T2]  3||-3 [H0]  1||-1 [S3]  1||-1 [W1] -1|| 1 [Q3] -1|| 1 [J2] -3|
+|    -1    ||    -1    ||     2    ||    -2    ||    -1    ||     2    |
++----------++----------++----------++----------++----------++----------+
+
+
 +----------++----------++----------++----------+
 |     3    ||    -1    ||     4    ||     3    |
 |-1 [P0]  4||-4 [G3] -2|| 2 [O1] -2|| 2 [L0]  1|

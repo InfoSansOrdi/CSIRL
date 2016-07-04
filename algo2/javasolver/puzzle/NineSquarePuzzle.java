@@ -79,6 +79,10 @@ public class NineSquarePuzzle {
 		
 		if (x == 0 && y == Main.YDIM) {
 			this.solutions.add(this.board.clone());
+			if (solutions.isEmpty()) {
+				System.out.println("Found solution #"+(solutions.size()+1));
+				System.out.println(board);
+			}
 			return true;
 		}
 		//System.out.print(x+","+y+" ");
@@ -90,6 +94,9 @@ public class NineSquarePuzzle {
 			  ) {
 			if (this.pieces.isPieceAvailableAt(index)) {
 				current = this.pieces.takePieceAt(index);
+				if (x==0 && y==0)
+					System.out.print(current.getLabel());
+				
 				// Upper left piece cannot rotate on square boards (to kill symmetries)
 				int maxRotation = 4;
 				if (Main.XDIM==Main.YDIM && x==0 && y==0)
@@ -185,6 +192,10 @@ public class NineSquarePuzzle {
 					e.printStackTrace();
 				}
 		}
+	}
+
+	public void reset() {
+		this.solutions = new ArrayList<Board>();
 	}
 
 }

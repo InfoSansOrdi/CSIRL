@@ -58,6 +58,13 @@ public class Board {
 			allowed &= matchingTopBottom(topNeighbour, piece);
 		}
 		
+		/* Make sure that the border is all of the same color
+		if (y==0 && piece.getValueAt(Piece.TOP) != 1)
+			allowed = false;
+		if (x==0 && piece.getValueAt(Piece.LEFT) != 2)
+			allowed = false;
+		*/
+		
 		if (Main.toric) { /* Two extra rules to get a looping board */
 			if (x == Main.XDIM -1) {
 				Piece rightNeighbour = this.pieces[y][0];

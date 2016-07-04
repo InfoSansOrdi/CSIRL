@@ -124,4 +124,8 @@ public class Piece {
 
 		return true;
 	}
+
+	public void flipSign(int side) {
+		values[side] = -values[side];
+	}
 }
