@@ -40,10 +40,30 @@ public class NineSquarePuzzle {
 	}
 
 	public void solve() {
-		// There is no need to shuffle if we are not searching for a toric world: we'll try every possibility
-		if (Main.toric)
-			pieces.shuffle();
-		solve(0, 0);
+		if (Main.toric) {
+
+			// Lock the upper left piece to kill a symmetry
+			Piece upperLeft = pieces.takePieceAt(0);
+			int maxRotation = 4;
+			if (Main.XDIM==Main.YDIM)
+				maxRotation = 1; // a square has 2 axis symmetries
+			else
+				maxRotation = 2; // a rectangle has only one of them
+			
+			for (int rotation = 0; rotation < maxRotation; rotation++) {
+				System.out.print("\n"+upperLeft.getLabel()+rotation);
+				Instrumentations.piecesTriedCount++;
+				if (this.board.appendPieceAt(upperLeft, 0, 0)) {
+					Instrumentations.piecesSuccessfullyTriedCount++;
+					solve(1, 0);
+					this.board.removePieceAt(0, 0);
+				}
+				upperLeft.rotateClockwise();
+			}
+
+		} else {
+			solve(0, 0);
+		}
 		//solveR();
 	}
 
@@ -73,37 +93,39 @@ public class NineSquarePuzzle {
 		return true;	
 	}
 
-
+	int nbSolutions = 0;
 	private boolean solve(int x, int y) {
 		Instrumentations.recursiveCallCount++;
 		
-		if (x == 0 && y == Main.YDIM) {
-			this.solutions.add(this.board.clone());
+		if (x == 0 && y == Main.YDIM) { // FOUND!
+			nbSolutions++;
 			if (solutions.isEmpty()) {
 				System.out.println("Found solution #"+(solutions.size()+1));
 				System.out.println(board);
+			} else if ((nbSolutions <1000 && nbSolutions % 10==0) || nbSolutions % 1000 == 0){
+				System.out.println(" (" + nbSolutions +" solutions) ");
 			}
+			if (solutions.size()<1000)
+				this.solutions.add(this.board.clone());
 			return true;
 		}
-		//System.out.print(x+","+y+" ");
 
 		int index = 0;
 		Piece current = null;
-		while (index < this.pieces.getCount() 
-				&& ((!Main.toric) || x!=0||y!=0||index==0) // Lock the upper left piece to be the first of the pool (to kill symmetries)
-			  ) {
+		while (index < this.pieces.getCount()) {
 			if (this.pieces.isPieceAvailableAt(index)) {
 				current = this.pieces.takePieceAt(index);
 				if (x==0 && y==0)
-					System.out.print(current.getLabel());
+					System.out.print("\n"+current.getLabel());
+				if (x==1 && y==0)
+					System.out.print((""+current.getLabel()).toLowerCase());
+				if (x==2 && y==0)
+					System.out.print(".");
 				
-				// Upper left piece cannot rotate on square boards (to kill symmetries)
+				// Kill symmetries by reducing the allowed rotations on the upper left piece
 				int maxRotation = 4;
-				if (Main.XDIM==Main.YDIM && x==0 && y==0)
-					maxRotation = 1;
 				for (int rotation = 0; rotation < maxRotation; rotation++) {
 					Instrumentations.piecesTriedCount++;
-					// if (this.board.putPieceAt(current, x, y)) {
 					if (this.board.appendPieceAt(current, x, y)) {
 						Instrumentations.piecesSuccessfullyTriedCount++;
 						if (x == Main.XDIM - 1) {

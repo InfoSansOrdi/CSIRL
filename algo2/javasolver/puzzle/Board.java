@@ -41,6 +41,7 @@ public class Board {
 	}
 
 	public boolean appendPieceAt(Piece piece, int x, int y) {
+		//System.out.println("Append "+piece.getLabel()+piece.getRotation()+" at "+x+","+y);
 		boolean allowed = false;
 
 		if (x == 0 && y == 0) {

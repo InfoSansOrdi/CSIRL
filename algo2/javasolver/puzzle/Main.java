@@ -9,14 +9,15 @@ public class Main {
 	public static final int maxval = 3;
 	public static int XDIM = 6;
 	public static int YDIM = 4;
-	public static boolean toric = false;
+	public static boolean toric = true;
 	public static boolean signed = true;
 	
 	public static void main(String[] args) {
+		Random rnd = new Random(System.currentTimeMillis());
 		printBanner();
 
-		if (args.length > 0 && (new File(args[0])).exists()) {
-			String dataPath = args[0];
+		String dataPath = args[0];
+		if (args.length > 0 && (new File(dataPath)).exists()) {
 			System.out.println("Searching for a "+XDIM+"x"+YDIM+(toric?" toric":" non-toric")+" solution with "+maxval+(signed?" signed":" non-signed")+" values using the pieces of "+dataPath+".");
 			NineSquarePuzzle puzzle = new NineSquarePuzzle();
 			puzzle.load(dataPath);
@@ -43,24 +44,20 @@ public class Main {
 				for (int side = 0; side<4; side++)
 					boardSigned |= (p.getValueAt(side) < 0);
 
-			if (signed) {
-				if (!boardSigned)
-					System.out.println("Recomputing signed values for the board.");
-			} else  {
-				if (boardSigned) {
-					System.out.println("Your dataset is signed, bailing out.");
-					exit();
-				}
+			if (signed && !boardSigned) {
+				System.out.println("Recomputing signed values for the board.");
+			} if (!signed && boardSigned) {
+				System.out.println("Your dataset is signed, bailing out.");
+				exit();
 			}
 			
 			System.out.println("\nComputing solutions...\n");
-
-			// do only once if we are not requested for a signed board, or if the board is already signed
-			boolean done = (!signed || boardSigned);
 			Instrumentations.begin();
-		    Random rnd = new Random(System.currentTimeMillis());
+			
+			// do only once if we are not requested for a signed board, or if the board is already signed
+			boolean done = false;
 			while (!done) {
-				// Randomly flip the sign of the values
+				// Randomly flip the sign of the values, ensuring that the sum of all values is 0 (if not, the board is probably impossible)
 				if (signed != boardSigned) {
 					int sum=42;
 					while (sum != 0) {
@@ -79,7 +76,9 @@ public class Main {
 				puzzle.solve();
 				
 				// Recompute a new board if no solution found (or too much solutions) and more than one loop requested
-				if (!done) { // More than one solution requested
+				if (signed == boardSigned) {
+					done = true;
+				} else {
 					if (puzzle.getSolutions().size() > 16) {
 						puzzle.reset();
 						System.out.println("Too much solutions. Let's take another try");
