@@ -139,23 +139,28 @@ public class Board {
 		for (int y = 0; y < Main.YDIM; y++) {
 			for (int x = 0; x < Main.XDIM; x++) {
 				copy.pieces[y][x] = this.pieces[y][x].clone();
+				this.pieces[y][x].addPosition(x, y); // To compute the position frequencies
 			}
 		}
 		return copy;
 	}
 	
-	@Override
-	public String toString() {
+	public String toString(boolean showFreq) {
 		StringBuffer res = new StringBuffer();
 		StringBuffer[] lines = new StringBuffer[5];
 		for (int y = 0; y < Main.YDIM; y++) {
 			for (int l=0; l<lines.length;l++)
 				lines[l] = new StringBuffer();
 			for (int x = 0; x < Main.XDIM; x++) 
-				this.pieces[y][x].toBuffers(lines);
+				this.pieces[y][x].toBuffers(lines,showFreq);
 			for (int l=0; l<lines.length;l++)
 				res.append(lines[l]+"\n");
 		}
 		return res.toString();
+	}
+	
+	@Override
+	public String toString() {
+		return toString(false);
 	}
 }

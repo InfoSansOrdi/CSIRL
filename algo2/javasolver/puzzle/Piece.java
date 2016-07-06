@@ -1,6 +1,8 @@
 package puzzle;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Piece {
 
@@ -13,6 +15,7 @@ public class Piece {
 	private int[] values;
 	private char label;
 	private int rotation;
+	private Set<String> positions = new HashSet<>();
 
 	public Piece(char label) {
 		this.label = label;
@@ -69,6 +72,7 @@ public class Piece {
 		for (int i=0; i<FACE_COUNT; i++)
 			copy.values[i] = this.values[i];
 		copy.rotation = this.rotation;
+		copy.positions = this.positions; // Share the positions between instances !!
 		return copy;
 	}
 
@@ -83,12 +87,20 @@ public class Piece {
 		return bf.toString();
 	}
 	
-	public void toBuffers(StringBuffer[] lines) {
+	public void toBuffers(StringBuffer[] lines, boolean showFreqs) {
 		lines[0].append("+----------+");
 		lines[1].append(String.format("|    %2d    |", getValueAt(TOP)));
 		lines[2].append(String.format("|%2d [%c%d] %2d|", getValueAt(LEFT), this.label, this.rotation, getValueAt(RIGHT)));
-		lines[3].append(String.format("|    %2d    |", getValueAt(BOTTOM)));
+		lines[3].append(String.format("|    %2d", getValueAt(BOTTOM)));
+		if (showFreqs)
+			lines[3].append(String.format("(%2d)|", positions.size()));
+		else
+			lines[3].append("    |");
 		lines[4].append("+----------+");
+	}
+	
+	public void addPosition(int x, int y) {
+		positions.add(""+x+","+y);
 	}
 
 	@Override

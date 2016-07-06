@@ -12,6 +12,8 @@ public class Main {
 	public static boolean toric = true;
 	public static boolean signed = true;
 	
+	public static int bestKnownSolution = 86;
+	
 	public static void main(String[] args) {
 		Random rnd = new Random(System.currentTimeMillis());
 		printBanner();
@@ -32,7 +34,7 @@ public class Main {
 				for (int l=0; l<lines.length;l++)
 					lines[l] = new StringBuffer();
 				for (int x=0; x<XDIM;x++)
-					puzzle.getPieces().at(y*XDIM + x).toBuffers(lines);
+					puzzle.getPieces().at(y*XDIM + x).toBuffers(lines,false);
 				for (int l=0; l<lines.length;l++)
 					System.out.println(lines[l]);
 			}
@@ -91,12 +93,12 @@ public class Main {
 
 			List<Board> solutions = puzzle.getSolutions();
 
-			int i = 0;
-			for (Board b : solutions) {
-				if (i<25)
-					System.out.println(String.format("Solution %d:\n%s", ++i, b.toString()));
-			}
-			if (i>=25)
+			int i = 1; // First board already displayed
+			for (Board b: solutions) 
+				if (i<5)
+					System.out.println(String.format("Solution %d:\n%s", ++i, b.toString(true)));
+
+			if (i>=5)
 				System.out.println("(more results omitted)\n\n");
 				
 			System.out.println(String.format("Temps de calcul estimé %s pour trouver %d solution(s)", Instrumentations
@@ -124,7 +126,7 @@ public class Main {
 					for (int l=0; l<lines.length;l++)
 						lines[l] = new StringBuffer();
 					for (int x=0; x<XDIM;x++)
-						puzzle.getPieces().at(y*XDIM + x).toBuffers(lines);
+						puzzle.getPieces().at(y*XDIM + x).toBuffers(lines,false);
 					for (int l=0; l<lines.length;l++)
 						initialBoard.append(lines[l]+"\n");
 				}

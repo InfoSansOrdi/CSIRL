@@ -93,20 +93,20 @@ public class NineSquarePuzzle {
 		return true;	
 	}
 
-	int nbSolutions = 0;
 	private boolean solve(int x, int y) {
 		Instrumentations.recursiveCallCount++;
 		
 		if (x == 0 && y == Main.YDIM) { // FOUND!
-			nbSolutions++;
-			if (solutions.isEmpty()) {
-				System.out.println("Found solution #"+(solutions.size()+1));
-				System.out.println(board);
-			} else if ((nbSolutions <1000 && nbSolutions % 10==0) || nbSolutions % 1000 == 0){
-				System.out.println(" (" + nbSolutions +" solutions) ");
-			}
+			Instrumentations.nbSolutions++;
 			if (solutions.size()<1000)
 				this.solutions.add(this.board.clone());
+			if (solutions.size() < 2) {
+				System.out.println("Found solution #"+(solutions.size()));
+				System.out.println(board.toString(true));
+			} else if ((Instrumentations.nbSolutions <1000 && Instrumentations.nbSolutions % 10==0) 
+					   || Instrumentations.nbSolutions % 1000 == 0){
+				System.out.println(" (" + Instrumentations.nbSolutions +" solutions) ");
+			}
 			return true;
 		}
 

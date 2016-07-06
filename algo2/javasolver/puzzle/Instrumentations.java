@@ -8,6 +8,13 @@ public class Instrumentations {
 	private static long endTime = 0;
 	public static int piecesTriedCount = 0;
 	public static int piecesSuccessfullyTriedCount = 0;
+	public static int nbSolutions = 0;
+	
+	public static void reset() {
+		piecesTriedCount = 0;
+		piecesSuccessfullyTriedCount = 0;
+		nbSolutions = 0;
+	}
 
 	public static void begin() {
 		startTime = System.currentTimeMillis();
