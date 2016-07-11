@@ -39,7 +39,11 @@ public class NineSquarePuzzle {
 		return this.pieces.isPerfect();
 	}
 
-	public void solve() {
+	public void solve() throws TooMuchSolutionsException {
+		// caution, the previous exploration was maybe brutally cut by an exception
+		for (int i=0; i<pieces.getCount(); i++)
+			pieces.releasePieceAt(i);
+		
 		if (Main.toric) {
 
 			// Lock the upper left piece to kill a symmetry
@@ -49,7 +53,7 @@ public class NineSquarePuzzle {
 				maxRotation = 1; // a square has 2 axis symmetries
 			else
 				maxRotation = 2; // a rectangle has only one of them
-			
+
 			for (int rotation = 0; rotation < maxRotation; rotation++) {
 				System.out.print("\n"+upperLeft.getLabel()+rotation);
 				Instrumentations.piecesTriedCount++;
@@ -60,6 +64,7 @@ public class NineSquarePuzzle {
 				}
 				upperLeft.rotateClockwise();
 			}
+			pieces.releasePieceAt(0);
 
 		} else {
 			solve(0, 0);
@@ -93,7 +98,7 @@ public class NineSquarePuzzle {
 		return true;	
 	}
 
-	private boolean solve(int x, int y) {
+	private boolean solve(int x, int y) throws TooMuchSolutionsException {
 		Instrumentations.recursiveCallCount++;
 		
 		if (x == 0 && y == Main.YDIM) { // FOUND!
@@ -105,8 +110,11 @@ public class NineSquarePuzzle {
 				System.out.println(board.toString(true));
 			} else if ((Instrumentations.nbSolutions <1000 && Instrumentations.nbSolutions % 10==0) 
 					   || Instrumentations.nbSolutions % 1000 == 0){
-				System.out.println(" (" + Instrumentations.nbSolutions +" solutions) ");
+				System.out.print(" (" + Instrumentations.nbSolutions +" solutions) ");
 			}
+			//if (Instrumentations.nbSolutions > Main.bestKnownSolution) 
+			//	throw new TooMuchSolutionsException();
+			
 			return true;
 		}
 
@@ -119,8 +127,6 @@ public class NineSquarePuzzle {
 					System.out.print("\n"+current.getLabel());
 				if (x==1 && y==0)
 					System.out.print((""+current.getLabel()).toLowerCase());
-				if (x==2 && y==0)
-					System.out.print(".");
 				
 				// Kill symmetries by reducing the allowed rotations on the upper left piece
 				int maxRotation = 4;
@@ -220,4 +226,19 @@ public class NineSquarePuzzle {
 		this.solutions = new ArrayList<Board>();
 	}
 
+	public String toString() {
+		// Display the board
+		StringBuffer res = new StringBuffer();
+		StringBuffer[] lines = new StringBuffer[5];
+		for (int y=0;y<Main.YDIM;y++) {
+			for (int l=0; l<lines.length;l++)
+				lines[l] = new StringBuffer();
+			for (int x=0; x<Main.XDIM;x++)
+				getPieces().at(y*Main.XDIM + x).toBuffers(lines,false);
+			for (int l=0; l<lines.length;l++)
+				res.append(lines[l]+"\n");
+		}
+			
+		return res.toString();
+	}
 }

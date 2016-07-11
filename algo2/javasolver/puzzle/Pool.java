@@ -96,4 +96,23 @@ public class Pool implements Iterable<Piece> {
 		return result;
 	}
 
+	public void flipSigns(Piece northSol, Piece southSol, Piece eastSol, boolean northFlip) {
+		Piece north=null, south=null, east = null;
+		for (int i=0; i<pieces.length; i++) {
+			if (northSol.getLabel() == pieces[i].getLabel())
+				north = pieces[i];
+			if (southSol.getLabel() == pieces[i].getLabel())
+				south = pieces[i];
+			if (eastSol.getLabel() == pieces[i].getLabel())
+				east = pieces[i];
+		}
+		if (northFlip) {
+			north.flipSign(Piece.BOTTOM);
+			south.flipSign(Piece.TOP);
+		} else {
+			north.flipSign(Piece.RIGHT);
+			east.flipSign(Piece.LEFT);			
+		}
+	}
+	
 }

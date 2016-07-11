@@ -12,7 +12,7 @@ public class Main {
 	public static boolean toric = true;
 	public static boolean signed = true;
 	
-	public static int bestKnownSolution = 86;
+	public static int bestKnownSolution = 60;
 	
 	public static void main(String[] args) {
 		Random rnd = new Random(System.currentTimeMillis());
@@ -28,16 +28,7 @@ public class Main {
 				System.err.println("Got "+puzzle.getPieces().getCount()+" pieces for a "+XDIM+"x"+YDIM+" board. Bailing out");
 				System.exit(1);
 			}
-			// Display the board
-			StringBuffer[] lines = new StringBuffer[5];
-			for (int y=0;y<YDIM;y++) {
-				for (int l=0; l<lines.length;l++)
-					lines[l] = new StringBuffer();
-				for (int x=0; x<XDIM;x++)
-					puzzle.getPieces().at(y*XDIM + x).toBuffers(lines,false);
-				for (int l=0; l<lines.length;l++)
-					System.out.println(lines[l]);
-			}
+			System.out.println(puzzle);
 			
 			// Check if we must set a sign to the values
 			boolean boardSigned = false;
@@ -59,6 +50,7 @@ public class Main {
 			// do only once if we are not requested for a signed board, or if the board is already signed
 			boolean done = false;
 			while (!done) {
+				
 				// Randomly flip the sign of the values, ensuring that the sum of all values is 0 (if not, the board is probably impossible)
 				if (signed != boardSigned) {
 					int sum=42;
@@ -75,10 +67,59 @@ public class Main {
 					System.out.print("g");
 				}
 				
-				puzzle.solve();
+				int realBest = Main.bestKnownSolution;
+				Main.bestKnownSolution = 1;
+				try {
+					puzzle.solve();
+				} catch (TooMuchSolutionsException e1) {
+					// Ignore
+				}
+				Main.bestKnownSolution = realBest;
+				System.out.println("Done computing the initial board. Let's try to improve it.");
+				Instrumentations.nbSolutions = Integer.MAX_VALUE;
+				while (Instrumentations.nbSolutions > 20) {
+					int posX = rnd.nextInt(XDIM-1);
+					int posY = rnd.nextInt(YDIM-1);
+
+					Board solution = puzzle.getSolutions().get(0);
+					Piece northSol = solution.getPieceAt(posX,           posY);
+					Piece southSol = solution.getPieceAt(posX,           (posY+1) % YDIM);
+					Piece eastSol = solution.getPieceAt((posX+1) % XDIM, posY);
+					boolean northFlip = rnd.nextBoolean();
+					puzzle.getPieces().flipSigns(northSol, southSol, eastSol, northFlip);
+					
+					System.out.println("Flip "+posX+","+posY+".\n"+northSol+eastSol+"\n"+southSol);
+					System.out.println(puzzle);
+					
+					Instrumentations.nbSolutions = 0;
+					puzzle.getSolutions().clear();
+					try {
+						puzzle.solve();
+					} catch (TooMuchSolutionsException e) {
+						Instrumentations.nbSolutions = Integer.MAX_VALUE;
+					} 
+					if (Instrumentations.nbSolutions > Main.bestKnownSolution) {
+						System.out.println("XXXXXXXXXXXXXXXXXXXX\nToo much solution. Flipping back!!\nXXXXXXXXXXXXXXXXXXXX\n");
+						puzzle.getPieces().flipSigns(northSol, southSol, eastSol, northFlip);
+					} else if (Instrumentations.nbSolutions == 0) {
+						System.out.println("XXXXXXXXXXXXXXXXXXXX\nBugBugBug: no solution found. Ouch.\nXXXXXXXXXXXXXXXXXXXX\n");
+						System.exit(1);
+					} else {
+						Main.bestKnownSolution = Instrumentations.nbSolutions;
+						System.out.println("XXXXXXXXXXXXXXXXXXXX\nNew record: "+Main.bestKnownSolution+"\nXXXXXXXXXXXXXXXXXXXX\n");
+						StringBuffer file = new StringBuffer();
+						for (Piece p : puzzle.getPieces()) {
+							file.append(p.getLabel() + " ");
+							for (int side=0; side<4;side++)
+								file.append(p.getValueAt(side) + " ");
+							file.append("\n");
+						}
+						System.out.println(file.toString());
+					}
+				}
 				
 				// Recompute a new board if no solution found (or too much solutions) and more than one loop requested
-				if (signed == boardSigned) {
+				if (signed == boardSigned && Instrumentations.nbSolutions > 20) {
 					done = true;
 				} else {
 					if (puzzle.getSolutions().size() > 16) {
@@ -139,7 +180,11 @@ public class Main {
 					file.append("\n");
 				}
 				
-				puzzle.solve();
+				try {
+					puzzle.solve();
+				} catch (TooMuchSolutionsException e) {
+					e.printStackTrace();
+				}
 
 				List<Board> solutions = puzzle.getSolutions();
 
