@@ -1,0 +1,276 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[left=3cm,right=3cm,bottom=3cm]{geometry}
+%,top=2cm,bottom=2cm
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern} 
+\usepackage[french]{babel}
+\usepackage{tikz}
+\usepackage{color} %for todos
+
+\usepackage{hyperref}
+
+\newcommand{\todo}[1]{\textcolor{red}{[#1]}}
+\newcommand{\ttodo}[1]{\textcolor{red}{[TODO: #1]}}
+\newcommand{\question}[2]{\noindent \textcolor{red}{#1}\\ #2}
+
+\title{Activité réseau} 
+
+\author{Annie Gravey (Télécom Bretagne / IRISA)}
+\date{}
+\pagestyle{empty}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\section{Phase 1 : explication de l'objectif}
+
+Quand une source envoie un fichier à un destinataire, la source doit être certaine que le fichier est bien reçu. Or il peut y avoir des erreurs dans le réseau, qui peut perdre des informations.
+
+\textcolor{red}{Distribuer des localisations (source= Brest) et des
+  destinations possibles (dont Rennes et Pekin par exemple)\\
+  Donner à Brest un paquet bleu.\\
+  Lui demander de le faire parvenir à Rennes\\
+  QUESTION : comment Brest peut être certaine que Rennes a bien reçu le paquet ?\\ 
+  On peut guider les élèves : Parler de lettre recommandée avec accusé de réception}
+
+Donner un accusé de réception au récepteur
+
+
+\section{Phase 2 : la notion d'accusé de réception}
+
+Voler soit un paquet, soit un accusé de réception
+L’accusé de réception peut aussi se perdre !
+
+\textcolor{red}{QUESTION : que peut faire la source pour décider si le paquet
+doit être retransmis ? Laisser les élèves s’exprimer. Il doit bien y en avoir
+un qui pense à un temps limite d’attente ! sinon, leur parler d’un minuteur}
+
+Donner le rôle de minuteur à un élève ; le faire se placer derrière la source
+ou à côté (son voisin par exemple). Faire compter lentement (``Mississipi'') par
+exemple jusqu’à 5. Faire marcher le système entre source et destination proches
+avec un faible délai Peut se faire avec plusieurs paquets bleus non numérotés
+et plusieurs accusés de réception non numérotés
+
+Déplacer la destination beaucoup plus loin : 5 ne suffit plus !  Montrer que le
+minuteur doit tenir compte du temps d’aller-retour entre Brest et la
+destination.
+
+\textit{On peut discuter des temps figurant sur les cartons de localisations
+  Parler de la vitesse de la lumière : aller de la terre à Mars et retour (100
+  millions de km : 300 secondes, pour un AR : 10 minutes !) de la vitesse du
+  signal dans les câbles : un peu plus lente, 5s pour un million de km}
+
+
+\section{Phase 3 : formalisation du protocole de transport en mode assuré}
+
+\textcolor{red}{QUESTION: quel algorithme pour la destination ? quel algo pour
+  la source ? Les élèves doivent proposer des algos qui permettent de conclure
+cette première partie.}
+
+\textcolor{red}{Algorithme pour la destination 
+  \begin{itemize}
+    \item LE RÉCEPTEUR ENVOIE un ACCUSÉ DE RÉCEPTION quand il reçoit un PAQUET
+  \end{itemize}
+  Algorithme pour la source 
+  \begin{itemize}
+    \item 1. QUAND LA SOURCE ENVOIE UN PAQUET, ELLE LANCE SON MINUTEUR
+    \item 2. SI LA SOURCE REÇOIT L’ACCUSÉ DE RÉCEPTION AVANT L’EXPIRATION DU
+      MINUTEUR, C’EST TERMINÉ, LE PAQUET PEUT ÊTRE EFFACÉ PAR LA SOURCE
+    \item 3. SI LE MINUTEUR EXPIRE AVANT RÉCEPTION DE L’ACCUSÉ DE RÉCEPTION, LA
+      SOURCE REPART À L’ÉTAPE 1, RENVOIT LE PAQUET ET RELANCE SON MINUTEUR
+  \end{itemize}
+  Dire que quand une source et une destination mettent en œuvre chacun leur
+  algorithme, il s’agit d’un PROTOCOLE.
+}
+
+\emph{On peut avoir la question suivante : que se passe-t-il si la source
+  reçoit l’accusé de réception de la première émission après avoir retransmis
+  le paquet ? si la source respecte son algorithme elle réalise le 2) : jette
+  le paquet et considère que tout s’est bien passé. Mais elle risque alors
+  recevoir plus tard un accusé de réception sur un paquet qu’elle n’a pas gardé
+  en mémoire. Dans la vraie vie, les messages sont identifiés, et la
+  destination ne considère pas les accusés de réception de paquets qu’elle
+n’attend pas.}
+
+\section{Phase 3 : une transmission efficace}
+
+
+Un fichier peut être tout petit ou très gros !  Le réseau n’accepte pas de
+transporter en une fois un gros fichier. Un gros fichier est découpé en de
+multiples paquets qui sont numérotés et doivent être tous reçus pour
+reconstruire le fichier.
+
+
+Donner les paquets numérotés à la source, les accusés numérotés à la
+destination qui doit rester lointaine. 
+
+Les faire envoyer et recevoir les paquets avec la règle suivante
+
+\textcolor{red}{DONNER LES RÈGLES : 
+  \begin{itemize}
+    \item LE RÉCEPTEUR ENVOIE L’ACCUSÉ DE RÉCEPTION K S’IL A TOUT REÇU LE
+      PAQUET K ; 
+    \item LA SOURCE NE JETTE LE PAQUET K QUE S’IL A REÇU L’ACCUSÉ DE K ; IL
+      PEUT ALORS ENVOYER K+1.
+  \end{itemize}
+}
+
+C’est très lent !
+
+\textcolor{red}{QUESTION : QUE PEUT ON FAIRE POUR ACCÉLERER LE TRANSFERT ?\\
+LES RÈGLES COMPLÈTES SONT COMPLIQUÉES, SURTOUT POUR LA SOURCE !\\
+Algorithme pour la destination :
+\begin{itemize}
+  \item LE RÉCEPTEUR ENVOIE L’ACCUSÉ DE RÉCEPTION K S’IL A TOUT REÇU TOUS LES
+    PAQUETS JUSQU’AU PAQUET K ; S’IL REÇOIT K+2 AU LIEU DE K+1, IL ENVOIE DE
+    NOUVEAU L’ACCUSÉ DE RÉCEPTION K, MAIS GARDE EN MÉMOIRE TOUS LES PAQUETS
+    REÇUS.a
+\end{itemize}
+Algorithme pour la source :
+\begin{itemize}
+    \item LA SOURCE DISPOSE D’UNE FENETRE : ELLE PEUT PRENDRE DE L’AVANCE PAR
+      RAPPORT AUX ACCUSÉS DE RÉCEPTION. SUPPOSONS QUE LA FENÊTRE SOIT DE TAILLE
+      2
+    \item QUAND LA SOURCE ENVOIE LE PAQUET K, ELLE LANCE SON MINUTEUR ; ELLE
+      PEUT AUSSI ENVOYER LE PAQUET K+1 EN LANÇANT UN AUTRE MINUTEUR (LE
+      MINUTEUR EST SPÉCIFIQUE AU PAQUET)
+    \item SI LA SOURCE REÇOIT L’ACCUSÉ DE RÉCEPTION DE K AVANT L’EXPIRATION DU
+      MINUTEUR K, LE PAQUET K PEUT ÊTRE EFFACÉ PAR LA SOURCE, ET LA SOURCE PEUT
+      ENVOYER LE PAQUET K+2
+    \item SI LA SOURCE REÇOIT L’ACCUSÉ DE RÉCEPTION DE K+1 AVANT L’EXPIRATION
+      DU MINUTEUR, LES PAQUETS K ET K+1 PEUVENT ÊTRE EFFACÉS PAR LA SOURCE, ET
+      LA SOURCE PEUT ENVOYER LES PAQUETS K+2 ET K+3
+    \item SI LE MINUTEUR D’UN PAQUET EXPIRE AVANT RÉCEPTION DE L’ACCUSÉ DE
+      RÉCEPTION DE CE PAQUET, LA SOURCE RENVOIT LE PAQUET ET RELANCE LE
+      MINUTEUR DE CE PAQUET
+    \item SI LA SOURCE REÇOIT UN ACCUSÉ DE RÉCEPTION D’UN PAQUET INFÉRIEUR À K,
+      ELLE NE LE CONSIDÈRE PAS
+  \end{itemize}
+  Version simplifiée pour la source :
+  \begin{itemize}
+    \item POUR UNE FENETRE DE 2, la source PEUT ENVOYER K+1 ET K+2 Si elle A
+      RECU L’ACCUSÉ DE RECEPTION K. LA SOURCE NE JETTE LE PAQUET K QUE S’IL
+      elle a REÇU ACCUSÉ DE K OU AU DESSUS ; 
+  \end{itemize}
+}
+
+Commencer avec une fenêtre de 2 paquets. Trouver un second minuteur !\\
+Faire tourner le protocole, 
+\begin{itemize}
+  \item en volant par exemple 2 fois de suite le même paquet ;
+  \item en volant seulement un accusé de réception.
+\end{itemize}
+
+
+\section*{Conclusion}
+\begin{itemize}
+  \item La source a mis en œuvre un algorithme, compliqué ! les minuteurs, les
+    paquets qu’on garde en copie…
+  \item La destination a aussi mis en œuvre un autre algorithme, plus simple
+  \item Ensemble, ils ont fait marcher un PROTOCOLE
+\end{itemize}
+
+
+\emph{L’Internet, le téléphone, la télévision sur box, les RESEAUX en général, tout
+cela marche avec des protocoles. Celui que l’on a vu ici est le plus répandu,
+qui permet de garantir que tout fichier envoyé peut être bien reçu, même si
+cela prend du temps !}
+
+\section*{Questions possibles}
+
+\question{Comment le paquet connaît il son chemin ?}{ce n’est pas le paquet qui
+  connaît le chemin, ce sont les machines par oû transitent les paquets. Chaque
+  paquet indique sa SOURCE et sa DESTINATION. Dans des réseaux simples, on peut
+  mettre les machines en anneau : on arrivera toujours à son destinataire !
+  dans un réseau plus compliqué, les machines sont arrangées comme sur une
+  toile d’araignée et il faut d’autres PROTOCOLES pour apprendre où envoyer un
+paquet, en fonction de sa destination }
+
+\question{Les fichiers sont-ils gros dans l’Internet ?}{Il y a énormément de
+  tout petits fichiers qui peuvent être portés dans un seul paquet. On parle de
+  souris. Il y a aussi des gros fichiers : des videos par exemple. On parle
+  alors d’éléphants. L’Internet peut porter à la fois des souris et des
+  éléphants parce que tous les éléphants ont été découpés en un grand nombre de
+paquets.}
+
+\question{Comment sait-on combien de temps mettre sur le minuteur ?}{
+  \begin{itemize}
+    \item On a vu que la durée du minuteur dépendait de la distance ;
+    \item On ne peut pas se mettre d’accord avant ! car justement on n’a pas
+      commencé à parler à sa destination ;
+    \item En fait, au début, il y a une valeur très grande (3s) (\emph{on peut
+      revenir sur les distances données sur les cartons}) et au fur et à mesure,
+      la source calcule le temps d’aller-retour et prend une durée plus grande
+      que ce temps moyen.
+  \end{itemize}
+  }
+
+\question{Qu’est ce qui fait qu’un même fichier peut arriver vite chez moi et
+lentement chez mon voisin ?}{Cela peut dépendre de mon accès Internet ! Par
+  exemple, considérons le contenu d’un DVD (environ 40Gbits) :
+\begin{itemize}
+  \item Sur un accès fibre très rapide, le fichier peut arriver en 40 secondes
+    ;
+  \item Sur un accès numéricable, il mettra déjà 10 fois plus de temps, près de
+    7 minutes ;
+  \item Sur un accès DSL, ce serait plutôt une heure, ou plus.
+\end{itemize}
+}
+
+\question{Pourquoi cela prend parfois plus de temps de charger un fichier depuis chez
+mon voisin que depuis les USA ?}{En fait, la durée n’est pas seulement fonction
+  de la distance, mais aussi des caractéristiques du serveur !  Par exemple,
+  sur une bretelle d’autoroute, le péage n’a que 2 barrières, il ne peut pas
+  servir beaucoup de voitures par heure. Sur un gros péage, il peut y avoir
+  jusqu’à 20 barrières, qui permettent de servir plus de voitures par heure. Le
+  petit péage, c’est l’ordinateur du voisin, le gros péage, un serveur YouTube.
+20 barrières de péage sont suffisantes sauf les jours de grand départ. Les
+péages sont CONGESTIONNES ; les réseaux peuvent aussi l’être !}
+
+
+\question{Est-ce que ce protocole est utilisé ?}{Sur L’INTERNET il est très
+utilisé (vente sur Internet, transmission de photos, de documents
+administratifs…) ; dans certains cas, on ne l’utilise pas car cela ralentirait
+trop les échanges : par exemple pour le téléphone sur Internet, ce n’est pas
+utilisé, ni pour la TV sur box (on voit parfois des images figées, ou des
+petits carrés verts : certains paquets ont été perdus !).  Il y a d’autres
+PROTOCOLES : par exemple avec un satellite, on enverra des accusés plus
+compliqués, en disant explicitement ce qui n’a pas été reçu.}
+
+
+\question{Pourquoi n’y a-t-il pas d’accusé de réception à l’accusé de réception
+?}{Parce que l’accusé de réception n’est pas important, ce qui est important
+c’est le paquet ! c’est la source qui fait les choses compliquées, le
+destinataire a un algorithme beaucoup plus simple}
+
+
+\question{Et un \emph{chat}, cela va dans les 2 sens !}{Et bien chacun est à la fois
+source et destination}
+
+
+\question{Quels sont les métiers des réseaux ?}{\begin{itemize}
+    \item Tout le monde utilise les réseaux ;
+    \item Toute l’informatique a besoin de réseaux ; par exemple les
+      applications sur mobile
+    \item Toutes les entreprises et les services publics ont besoin d’être sur
+      Internet : une grosse structure a besoin d’un technicien ou ingénieur
+      réseau pour tout faire marcher
+    \item Il y a les entreprises qui vendent des services réseau : orange,
+      numéricable, free \dots ;
+    \item Il y a les fabricants d’équipements de réseau : Alcatel, Nokia,
+      Thales (pour l’armée…).
+  \end{itemize}
+}
+
+\question{Est ce qu’il y a encore des choses à inventer dans les réseaux ?}{Oui
+  ! en 5 ans, entre 2014 et 2019, on prédit que le trafic aura triplé de volume
+  ! Il faut des machines toujours plus puissantes, des tuyaux toujours plus
+  gros, des méthodes toujours plus intelligentes pour supporter une telle
+croissance. Analogie avec l’automobile : il y en avait déjà au 19ème siècle, et
+il y a toujours de nouvelles inventions pour les perfectionner.}
+
+
+\end{document}
