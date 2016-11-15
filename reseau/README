@@ -1,6 +1,39 @@
 Activité réseau
+===============
 
-L'objectif de cette activité est de montrer comment transite l'information et ce qu'est un « protocole ».
+Objectif
+--------
 
-Pre-requis : 
-* savoir ce q'est un « algorithme » (le mot sera utilisé de nombreuses fois dans l'activité)
+Cette activité permet de montrer comment transite l'information et d'expliquer
+le concept de « protocole ».
+
+
+Pre-requis
+----------
+
+- Savoir ce q'est un « algorithme » (le mot sera utilisé de nombreuses fois
+  dans l'activité)
+
+
+Matériel
+--------
+
+Des fiches de trois types (ou couleurs) :
+- quelques destinations (4 suffisent)
+- des messages (~16)
+- des accusés réception (~16)
+
+TODO: proposer un support tout fait / donner la procédure pour les fabriquer
+
+
+Déroulé
+-------
+
+TODO
+
+
+Ce qui est effectivement montré
+-------------------------------
+
+Dans cette activité, on explique essentiellement les grandes lignes de TCP.
+
