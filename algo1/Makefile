@@ -1,7 +1,5 @@
 all: algo1-petitlivre.pdf algo1-supports.pdf algo1-livret.pdf
 
-#include LaTeX.mk
-
 # Fabrique le livret de l'animateur
 ###################################
 
