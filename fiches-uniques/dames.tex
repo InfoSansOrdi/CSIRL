@@ -1,8 +1,8 @@
-\chapter*{Les 8 reines}
+\chapter*{Les 8 dames}
 
-On dispose d'un échiquier de dimension $8 \times 8$, et de $8$ reines disposées
-sur celui-ci. Sachant qu'aux échecs une reine peut se déplacer en ligne, en
-colonne ou en diagonale, \textbf{comment disposer disposer les reines sur
+On dispose d'un échiquier de dimension $8 \times 8$, et de $8$ dames disposées
+sur celui-ci. Sachant qu'aux échecs une dames peut se déplacer en ligne, en
+colonne ou en diagonale, \textbf{comment disposer disposer les dames sur
   l'échiquier de sorte qu'aucune ne soit sur la trajectoire d'une autre ?} Et
 comment trouver toutes les solutions possibles à ce problème ?
 
@@ -31,7 +31,7 @@ comment trouver toutes les solutions possibles à ce problème ?
 \encart{Matériel}{
   \begin{itemize}
   \item Un plateau quadrillé (on peut le dessiner sur une feuille) ;
-  \item 8 pièces à poser sur le plateau pour représenter les reines.
+  \item 8 pièces à poser sur le plateau pour représenter les dames.
   \end{itemize}
 }
 
@@ -40,7 +40,7 @@ comment trouver toutes les solutions possibles à ce problème ?
 \section*{Dimension du problème}
 
 Pour se faire une idée de la dimension du problème, calculons le nombre de
-configurations possibles pour 8 reines sur un échiquier :
+configurations possibles pour 8 dames sur un échiquier :
 
 \begin{equation}
     \frac{64!}{(64-8)! \times 8!} = 4426165368
@@ -58,9 +58,9 @@ allons donc devoir procéder d'une manière plus intelligente ...
 Une manière de construire une solution est de procéder par étapes.
 
 1 démarrer d'un échiquier vide
-2 ajouter une reine sur une case libre
+2 ajouter une dames sur une case libre
 3 recommencer 2 tant que c'est possible
-4 si on atteint 8 reines, on a trouvé une solution
+4 si on atteint 8 dames, on a trouvé une solution
 
 % FIXME l'idée à faire passer : solution partielle, on ajoute un élément pour créer une nouvelle solution.
 
