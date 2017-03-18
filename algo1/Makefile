@@ -1,4 +1,4 @@
-all: algo1-petitlivre.pdf algo1-supports.pdf algo1-livret.pdf
+all: algo1-petitlivre.pdf algo1-supports.pdf algo1-livret.pdf algo1-petitlivre.png
 
 # Fabrique le livret de l'animateur
 ###################################
@@ -19,6 +19,9 @@ algo1-petitlivre-content.pdf: algo1-petitlivre-content.tex
 
 algo1-petitlivre-page2.pdf: algo1-petitlivre-page2.tex
 	latexmk --synctex=1 -pdf algo1-petitlivre-page2.tex
+	
+algo1-petitlivre.png: algo1-petitlivre-page1.pdf
+	inkscape --export-png=algo1-petitlivre.png --export-background='#ffffff' --export-height=300 --export-dpi=360 algo1-petitlivre-page1.pdf
 
 # Fabrique les supports
 #######################
@@ -33,7 +36,7 @@ $(SUPPORT).pdf: $(SUPPORT).svg
 	#inkscape --without-gui --file=$(SUPPORT).svg --export-pdf=$(SUPPORT).pdf 
 	pdf180 $(SUPPORT)-A5.pdf
 	pdfjam --outfile $(SUPPORT).pdf --no-landscape --papersize '{210mm,297mm}' --nup 1x2 $(SUPPORT)-A5.pdf $(SUPPORT)-A5-rotated180.pdf
-	rm $(SUPPORT)-A5.pdf $(SUPPORT)-A5-rotated180.pdf $(SUPPORT).png
+	rm $(SUPPORT)-A5.pdf $(SUPPORT)-A5-rotated180.pdf
 
 clean:
 	rm -Rf *.log *.aux *~ *.toc *.brf *.bbl *.blg *.ps *.fdb_latexmk \
