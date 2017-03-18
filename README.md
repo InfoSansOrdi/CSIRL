@@ -64,11 +64,11 @@ les notions de récursivité et de back-tracking.
 
 # Ressources
 
-- Vous trouverez les version PDF des différentes activités dans [la section
-  "downloads" de ce site](https://github.com/jcb/CSIRL/downloads).
+- Vous trouverez les version PDF des différentes activités sur  [le
+  wiki de ce projet](https://github.com/InfoSansOrdi/CSIRL/wiki).
 - Si vous souhaitez fabriquer vous-même un kit, [le répertoire
   "supports"](https://github.com/jcb/CSIRL/tree/master/supports) contient
-quelques fichiers qui pourront vous aider, tels que des plans de découpe pour
-la fabrication des crêpes.
+  quelques fichiers qui pourront vous aider, tels que des plans de découpe pour
+  la fabrication des crêpes.
 - Des vidéos explicatives des activités produites par Inria seront bientôt
   disponibles en ligne.
